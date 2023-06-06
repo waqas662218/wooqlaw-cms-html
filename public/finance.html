@@ -21,7 +21,7 @@
 </head>
 
 <body class="overflow-hidden">
-    <header class="z-30 relative flex items-center justify-between w-full px-3 md:px-5 py-3 bg-white drop-shadow-sm h-18">
+    <header class="relative z-30 flex items-center justify-between w-full px-3 py-3 bg-white md:px-5 drop-shadow-sm h-18">
 
         <!-- Logo -->
         <div class="flex items-center gap-3">
@@ -45,16 +45,16 @@
                     </defs>
                 </svg>            
             </a>
-            <div class="md:flex items-center divide-x hidden h-5">
-                <h2 class="text-base text-gray-500 pr-3">
+            <div class="items-center hidden h-5 divide-x md:flex">
+                <h2 class="pr-3 text-base text-gray-500">
                     <span class="font-semibold">Welcome</span>
                     <span>Komal Riaz</span>
                 </h2>
-                <div class="text-gray-500 text-sm px-3">
+                <div class="px-3 text-sm text-gray-500">
                     <span>Sun, 12 Dec</span>
                     <span class="font-bold">08:35 PM</span>
                 </div>
-                <div class="flex items-center gap-3 pl-3 h-full">
+                <div class="flex items-center h-full gap-3 pl-3">
                     <svg width="49" height="36" viewBox="0 0 49 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7419_83985)">
                         <path d="M10.0859 7.13434L7.41015 4.54219L5.31412 6.58405L7.97503 9.1762L10.0859 7.13434ZM5.98306 15.3307H1.52344V18.227H5.98306V15.3307ZM19.3619 0.921875H16.3889V5.19385H19.3619V0.921875ZM30.4367 6.58405L28.3407 4.54219L25.6798 7.13434L27.7758 9.1762L30.4367 6.58405ZM25.6649 26.4234L28.3258 29.03L30.4218 26.9882L27.746 24.396L25.6649 26.4234ZM29.7677 15.3307V18.227H34.2274V15.3307H29.7677ZM17.8754 8.0901C12.9549 8.0901 8.95615 11.9856 8.95615 16.7789C8.95615 21.5722 12.9549 25.4676 17.8754 25.4676C22.7959 25.4676 26.7947 21.5722 26.7947 16.7789C26.7947 11.9856 22.7959 8.0901 17.8754 8.0901ZM16.3889 32.6359H19.3619V28.3639H16.3889V32.6359ZM5.31412 26.9737L7.41015 29.0155L10.0711 26.4089L7.97503 24.3671L5.31412 26.9737Z" fill="#FBAB0F"/>
@@ -75,7 +75,7 @@
                         </clipPath>
                         </defs>
                     </svg>
-                    <div class="text-gray-500 text-sm">
+                    <div class="text-sm text-gray-500">
                         <span class="font-bold">26</span>                        
                         <span class="font-medium">°C</span>
                     </div>
@@ -252,12 +252,12 @@
         <div class="relative w-full h-full px-5 overflow-x-hidden overflow-y-auto bg-gray-100 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
                 <div class="py-5">
-                    <div class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-4 gap-3">
+                    <div class="grid grid-cols-1 gap-3 lg:grid-cols-5 xl:grid-cols-4">
                         <div class="grow lg:col-span-3 xl:col-span-3">
                             <div x-data="{ selectedTabIndex: window.innerWidth < 768 ? null : 0 }" x-tabs x-model="selectedTabIndex">
-                                <ul class="hidden w-full md:grid md:grid-cols-4 mb-1 gap-px text-xs md:text-sm font-medium rounded-t-xl overflow-x-auto md:overflow-hidden md:w-fit" x-tabs:list>
+                                <ul class="hidden w-full gap-px mb-1 overflow-x-auto text-xs font-medium md:grid md:grid-cols-4 md:text-sm rounded-t-xl md:overflow-hidden md:w-fit" x-tabs:list>
                                     <li class="w-full">
-                                        <button class="w-full py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center border-b-2" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
+                                        <button class="flex items-center justify-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.5647 12.0269C18.9947 11.8769 18.3247 11.7969 17.5247 11.7969C16.4147 11.7969 16.0047 12.0669 15.4347 12.4969C15.4047 12.5169 15.3747 12.5469 15.3447 12.5769L14.3947 13.5869C13.5947 14.4269 12.1547 14.4369 11.3547 13.5769L10.4047 12.5769C10.3747 12.5469 10.3447 12.5169 10.3147 12.4969C9.74469 12.0669 9.33469 11.7969 8.22469 11.7969C7.42469 11.7969 6.75469 11.8769 6.18469 12.0269C3.80469 12.6669 3.80469 14.5569 3.80469 16.2169V17.1469C3.80469 19.6569 3.80469 22.4969 9.15469 22.4969H16.5947C20.1447 22.4969 21.9447 20.6969 21.9447 17.1469V16.2169C21.9447 14.5569 21.9447 12.6669 19.5647 12.0269ZM15.2047 18.8969H10.5447C10.1647 18.8969 9.85469 18.5869 9.85469 18.1969C9.85469 17.8069 10.1647 17.4969 10.5447 17.4969H15.2047C15.5847 17.4969 15.8947 17.8069 15.8947 18.1969C15.8947 18.5869 15.5847 18.8969 15.2047 18.8969Z"/>
                                                 <path d="M13.5431 3.17C13.5431 2.8 13.2431 2.5 12.8731 2.5C12.5031 2.5 12.2031 2.8 12.2031 3.17V4.5H13.5531V3.17H13.5431Z"/>
@@ -267,7 +267,7 @@
                                         </button>
                                     </li>
                                     <li class="w-full">
-                                        <button class="w-full py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center border-b-2" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
+                                        <button class="flex items-center justify-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21.425 12.7344H17.945C16.965 12.7344 16.095 13.2744 15.655 14.1544L14.815 15.8144C14.615 16.2144 14.215 16.4644 13.775 16.4644H10.495C10.185 16.4644 9.745 16.3944 9.455 15.8144L8.615 14.1644C8.175 13.2944 7.295 12.7444 6.325 12.7444H2.825C2.435 12.7444 2.125 13.0544 2.125 13.4444V16.7044C2.125 20.3344 4.305 22.5044 7.945 22.5044H16.325C19.755 22.5044 21.865 20.6244 22.125 17.2844V13.4344C22.125 13.0544 21.815 12.7344 21.425 12.7344Z"/>
                                                 <path d="M16.315 2.5H7.935C4.295 2.5 2.125 4.67 2.125 8.31V11.35C2.345 11.27 2.585 11.23 2.825 11.23H6.325C7.875 11.23 9.265 12.09 9.955 13.48L10.705 14.95H13.565L14.315 13.47C15.005 12.09 16.395 11.23 17.945 11.23H21.425C21.665 11.23 21.905 11.27 22.125 11.35V8.31C22.125 4.67 19.955 2.5 16.315 2.5ZM10.575 5.91H13.675C14.055 5.91 14.375 6.22 14.375 6.6C14.375 6.99 14.055 7.3 13.675 7.3H10.575C10.195 7.3 9.875 6.99 9.875 6.6C9.875 6.22 10.195 5.91 10.575 5.91ZM14.455 10.09H9.795C9.415 10.09 9.105 9.78 9.105 9.4C9.105 9.01 9.415 8.7 9.795 8.7H14.455C14.835 8.7 15.145 9.01 15.145 9.4C15.145 9.78 14.835 10.09 14.455 10.09Z"/>
@@ -276,7 +276,7 @@
                                         </button>
                                     </li>
                                     <li class="w-full">
-                                        <button class="w-full py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center border-b-2" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
+                                        <button class="flex items-center justify-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M9.875 20.5V22.5C9.875 22.9142 10.2108 23.25 10.625 23.25C11.0392 23.25 11.375 22.9142 11.375 22.5V20.5H9.875Z"/>
                                                 <path d="M15.375 20.5H13.875V22.5C13.875 22.9142 14.2108 23.25 14.625 23.25C15.0392 23.25 15.375 22.9142 15.375 22.5V20.5Z"/>
@@ -288,7 +288,7 @@
                                         </button>
                                     </li>
                                     <li class="w-full">
-                                        <button class="w-full py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center border-b-2" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
+                                        <button class="flex items-center justify-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" x-tabs:tab>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11.6272 2.49219C6.65719 2.49219 2.61719 6.53219 2.61719 11.5022C2.61719 16.4722 6.65719 20.5122 11.6272 20.5122C16.5972 20.5122 20.6372 16.4722 20.6372 11.5022C20.6372 6.53219 16.5972 2.49219 11.6272 2.49219ZM11.6272 13.7522H8.62719C8.21719 13.7522 7.87719 13.4122 7.87719 13.0022C7.87719 12.5922 8.21719 12.2522 8.62719 12.2522H11.6272C12.0372 12.2522 12.3772 12.5922 12.3772 13.0022C12.3772 13.4122 12.0372 13.7522 11.6272 13.7522ZM14.6272 10.7522H8.62719C8.21719 10.7522 7.87719 10.4122 7.87719 10.0022C7.87719 9.59219 8.21719 9.25219 8.62719 9.25219H14.6272C15.0372 9.25219 15.3772 9.59219 15.3772 10.0022C15.3772 10.4122 15.0372 10.7522 14.6272 10.7522Z"/>
                                                 <path d="M22.617 19.45C22.287 18.84 21.587 18.5 20.647 18.5C19.937 18.5 19.327 18.79 18.967 19.29C18.607 19.79 18.527 20.46 18.747 21.13C19.177 22.43 19.927 22.72 20.337 22.77C20.397 22.78 20.457 22.78 20.527 22.78C20.967 22.78 21.647 22.59 22.307 21.6C22.837 20.83 22.937 20.06 22.617 19.45Z"/>
@@ -298,9 +298,9 @@
                                     </li>
                                 </ul>
 
-                                <div class="content flex flex-col gap-1 md:gap-0 rounded-lg overflow-hidden md:rounded-none" x-tabs:panels>
+                                <div class="flex flex-col gap-1 overflow-hidden rounded-lg content md:gap-0 md:rounded-none" x-tabs:panels>
                                     <div x-disclosure>
-                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="w-full py-4 px-2 md:px-4 flex md:hidden gap-1 bg-white items-center border-b-2" x-disclosure:button>
+                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="flex items-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.5647 12.0269C18.9947 11.8769 18.3247 11.7969 17.5247 11.7969C16.4147 11.7969 16.0047 12.0669 15.4347 12.4969C15.4047 12.5169 15.3747 12.5469 15.3447 12.5769L14.3947 13.5869C13.5947 14.4269 12.1547 14.4369 11.3547 13.5769L10.4047 12.5769C10.3747 12.5469 10.3447 12.5169 10.3147 12.4969C9.74469 12.0669 9.33469 11.7969 8.22469 11.7969C7.42469 11.7969 6.75469 11.8769 6.18469 12.0269C3.80469 12.6669 3.80469 14.5569 3.80469 16.2169V17.1469C3.80469 19.6569 3.80469 22.4969 9.15469 22.4969H16.5947C20.1447 22.4969 21.9447 20.6969 21.9447 17.1469V16.2169C21.9447 14.5569 21.9447 12.6669 19.5647 12.0269ZM15.2047 18.8969H10.5447C10.1647 18.8969 9.85469 18.5869 9.85469 18.1969C9.85469 17.8069 10.1647 17.4969 10.5447 17.4969H15.2047C15.5847 17.4969 15.8947 17.8069 15.8947 18.1969C15.8947 18.5869 15.5847 18.8969 15.2047 18.8969Z"/>
                                                 <path d="M13.5431 3.17C13.5431 2.8 13.2431 2.5 12.8731 2.5C12.5031 2.5 12.2031 2.8 12.2031 3.17V4.5H13.5531V3.17H13.5431Z"/>
@@ -309,7 +309,7 @@
                                             <span>Finance</span>
                                         </button>
                                         <div x-tabs:panel x-disclosure:panel>
-                                            <section class="bg-gray-50 py-3 sm:py-5">
+                                            <section class="py-3 bg-gray-50 sm:py-5">
                                                 <div class="px-4 mx-auto max-w-screen-2xl lg:px-12">
                                                     <div class="relative overflow-hidden bg-white shadow-md sm:rounded-lg">
                                                         <div class="flex flex-col px-4 py-3 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4">
@@ -323,7 +323,7 @@
                                                                             Create New
                                                                         </button>
                                                                         
-                                                                        <div x-cloak class="z-10 absolute left-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                                                        <div x-cloak class="absolute left-0 z-10 w-40 mt-2 bg-white rounded-md shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
                                                                             <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
                                                                                 Invoice
                                                                             </a>
@@ -380,21 +380,21 @@
                                                                         <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
                                                                             <div class="flex items-center space-x-2.5">
                                                                                 <img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
-                                                                                <div class="font-medium dark:text-white"><h3 class="text-sm mb-0 font-medium text-gray-900">Abdur Rehman Majeed </h3>
-                                                                                    <p class="text-xs mb-0 text-gray-500">08/05/2023</p>
+                                                                                <div class="font-medium dark:text-white"><h3 class="mb-0 text-sm font-medium text-gray-900">Abdur Rehman Majeed </h3>
+                                                                                    <p class="mb-0 text-xs text-gray-500">08/05/2023</p>
                                                                                 </div>
                                                                             </div>
                                                                         </td>
                                                                         <td class="px-4 py-2">
                                                                             <div x-data >
                                                                                 <div x-menu>
-                                                                                    <button class="rounded-md bg-gray-100 h-8 w-8 mx-auto flex items-center justify-center" x-menu:button>
+                                                                                    <button class="flex items-center justify-center w-8 h-8 mx-auto bg-gray-100 rounded-md" x-menu:button>
                                                                                         <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                                             <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path>
                                                                                         </svg>
                                                                                     </button>
                                                                                     
-                                                                                    <div x-cloak class="z-10 absolute right-0 mt-2 w-40 rounded-md bg-white shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
+                                                                                    <div x-cloak class="absolute right-0 z-10 w-40 mt-2 bg-white rounded-md shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
                                                                                         <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500">                                                                      
                                                                                             Payment
                                                                                         </a>
@@ -456,7 +456,7 @@
                                         </div>
                                     </div>
                                     <div x-disclosure>
-                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="w-full py-4 px-2 md:px-4 flex md:hidden gap-1 bg-white items-center border-b-2" x-disclosure:button>
+                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="flex items-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21.425 12.7344H17.945C16.965 12.7344 16.095 13.2744 15.655 14.1544L14.815 15.8144C14.615 16.2144 14.215 16.4644 13.775 16.4644H10.495C10.185 16.4644 9.745 16.3944 9.455 15.8144L8.615 14.1644C8.175 13.2944 7.295 12.7444 6.325 12.7444H2.825C2.435 12.7444 2.125 13.0544 2.125 13.4444V16.7044C2.125 20.3344 4.305 22.5044 7.945 22.5044H16.325C19.755 22.5044 21.865 20.6244 22.125 17.2844V13.4344C22.125 13.0544 21.815 12.7344 21.425 12.7344Z"/>
                                                 <path d="M16.315 2.5H7.935C4.295 2.5 2.125 4.67 2.125 8.31V11.35C2.345 11.27 2.585 11.23 2.825 11.23H6.325C7.875 11.23 9.265 12.09 9.955 13.48L10.705 14.95H13.565L14.315 13.47C15.005 12.09 16.395 11.23 17.945 11.23H21.425C21.665 11.23 21.905 11.27 22.125 11.35V8.31C22.125 4.67 19.955 2.5 16.315 2.5ZM10.575 5.91H13.675C14.055 5.91 14.375 6.22 14.375 6.6C14.375 6.99 14.055 7.3 13.675 7.3H10.575C10.195 7.3 9.875 6.99 9.875 6.6C9.875 6.22 10.195 5.91 10.575 5.91ZM14.455 10.09H9.795C9.415 10.09 9.105 9.78 9.105 9.4C9.105 9.01 9.415 8.7 9.795 8.7H14.455C14.835 8.7 15.145 9.01 15.145 9.4C15.145 9.78 14.835 10.09 14.455 10.09Z"/>
@@ -468,7 +468,7 @@
                                         </div>
                                     </div>
                                     <div x-disclosure>
-                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="w-full py-4 px-2 md:px-4 flex md:hidden gap-1 bg-white items-center border-b-2" x-disclosure:button>
+                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="flex items-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M9.875 20.5V22.5C9.875 22.9142 10.2108 23.25 10.625 23.25C11.0392 23.25 11.375 22.9142 11.375 22.5V20.5H9.875Z"/>
                                                 <path d="M15.375 20.5H13.875V22.5C13.875 22.9142 14.2108 23.25 14.625 23.25C15.0392 23.25 15.375 22.9142 15.375 22.5V20.5Z"/>
@@ -484,7 +484,7 @@
                                         </div>
                                     </div>
                                     <div x-disclosure>
-                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="w-full py-4 px-2 md:px-4 flex md:hidden gap-1 bg-white items-center border-b-2" x-disclosure:button>
+                                        <button :class="$disclosure.isOpen ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" class="flex items-center w-full gap-1 px-2 py-4 bg-white border-b-2 md:px-4 md:hidden" x-disclosure:button>
                                             <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11.6272 2.49219C6.65719 2.49219 2.61719 6.53219 2.61719 11.5022C2.61719 16.4722 6.65719 20.5122 11.6272 20.5122C16.5972 20.5122 20.6372 16.4722 20.6372 11.5022C20.6372 6.53219 16.5972 2.49219 11.6272 2.49219ZM11.6272 13.7522H8.62719C8.21719 13.7522 7.87719 13.4122 7.87719 13.0022C7.87719 12.5922 8.21719 12.2522 8.62719 12.2522H11.6272C12.0372 12.2522 12.3772 12.5922 12.3772 13.0022C12.3772 13.4122 12.0372 13.7522 11.6272 13.7522ZM14.6272 10.7522H8.62719C8.21719 10.7522 7.87719 10.4122 7.87719 10.0022C7.87719 9.59219 8.21719 9.25219 8.62719 9.25219H14.6272C15.0372 9.25219 15.3772 9.59219 15.3772 10.0022C15.3772 10.4122 15.0372 10.7522 14.6272 10.7522Z"/>
                                                 <path d="M22.617 19.45C22.287 18.84 21.587 18.5 20.647 18.5C19.937 18.5 19.327 18.79 18.967 19.29C18.607 19.79 18.527 20.46 18.747 21.13C19.177 22.43 19.927 22.72 20.337 22.77C20.397 22.78 20.457 22.78 20.527 22.78C20.967 22.78 21.647 22.59 22.307 21.6C22.837 20.83 22.937 20.06 22.617 19.45Z"/>
@@ -504,13 +504,13 @@
 
                                
 
-                                <!-- <ul class="hidden w-full md:grid md:grid-cols-4 mb-1 gap-px text-xs md:text-sm font-medium rounded-t-xl overflow-x-auto md:overflow-hidden md:w-fit" role="tablist">
+                                <!-- <ul class="hidden w-full gap-px mb-1 overflow-x-auto text-xs font-medium md:grid md:grid-cols-4 md:text-sm rounded-t-xl md:overflow-hidden md:w-fit" role="tablist">
                                    <li class="basis-auto shrink-0 grow-0">
                                     <a
                                       @click.prevent="activeTab = 'inbox'"
                                       :class="activeTab === 'inbox' ? 'text-violet-700 border-b-2 border-violet-700' : 'text-gray-500 border-b-2 border-white'"
                                       href="#inbox"
-                                      class="py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center"
+                                      class="flex items-center justify-center gap-1 px-2 py-4 bg-white md:px-4"
                                       role="tab"
                                       aria-selected="true"
                                     >
@@ -528,7 +528,7 @@
                                       @click.prevent="activeTab = 'case'"
                                       :class="activeTab === 'case' ? 'text-violet-700 border-b-2 border-violet-700' : 'text-gray-500 border-b-2 border-white'"
                                       href="#case"
-                                      class="py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center"
+                                      class="flex items-center justify-center gap-1 px-2 py-4 bg-white md:px-4"
                                       role="tab"
                                       aria-selected="false"
                                     >
@@ -546,7 +546,7 @@
                                       @click.prevent="activeTab = 'inquiries'"
                                       :class="activeTab === 'inquiries' ? 'text-violet-700 border-b-2 border-violet-700' : 'text-gray-500 border-b-2 border-white'"
                                       href="#inquiries"
-                                      class="py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center"
+                                      class="flex items-center justify-center gap-1 px-2 py-4 bg-white md:px-4"
                                       role="tab"
                                     >
                                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
@@ -564,7 +564,7 @@
                                       @click.prevent="activeTab = 'timesheet'"
                                       :class="activeTab === 'timesheet' ? 'text-violet-700 border-b-2 border-violet-700' : 'text-gray-500 border-b-2 border-white'"
                                       href="#timesheet"
-                                      class="py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center"
+                                      class="flex items-center justify-center gap-1 px-2 py-4 bg-white md:px-4"
                                       role="tab"
                                     >
                                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
@@ -581,13 +581,13 @@
                         </div>
                         <div class="shrink-0 w-full max-w-[400px] lg:col-span-2 xl:col-span-1">
                             <div x-data="{ activeTab: 'timeline' }">
-                                <ul class="grid grid-cols-3 mb-1 gap-px text-xs md:text-sm font-medium rounded-t-xl overflow-hidden w-full" role="tablist">
+                                <ul class="grid w-full grid-cols-3 gap-px mb-1 overflow-hidden text-xs font-medium md:text-sm rounded-t-xl" role="tablist">
                                   <li>
                                     <a
                                       @click.prevent="activeTab = 'timeline'"
                                       :class="activeTab === 'timeline' ? 'text-violet-700 border-b-2 border-violet-700' : 'text-gray-500 border-b-2 border-white'"
                                       href="#timeline"
-                                      class="py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center"
+                                      class="flex items-center justify-center gap-1 px-2 py-4 bg-white md:px-4"
                                       role="tab"
                                       aria-selected="true"
                                     >
@@ -604,7 +604,7 @@
                                       @click.prevent="activeTab = 'calendar'"
                                       :class="activeTab === 'calendar' ? 'text-violet-700 border-b-2 border-violet-700' : 'text-gray-500 border-b-2 border-white'"
                                       href="#calendar"
-                                      class="py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center"
+                                      class="flex items-center justify-center gap-1 px-2 py-4 bg-white md:px-4"
                                       role="tab"
                                       aria-selected="false"
                                     >
@@ -622,7 +622,7 @@
                                       @click.prevent="activeTab = 'notes'"
                                       :class="activeTab === 'notes' ? 'text-violet-700 border-b-2 border-violet-700' : 'text-gray-500 border-b-2 border-white'"
                                       href="#notes"
-                                      class="py-4 px-2 md:px-4 flex justify-center gap-1 bg-white items-center"
+                                      class="flex items-center justify-center gap-1 px-2 py-4 bg-white md:px-4"
                                       role="tab"
                                     >
                                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 25" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
@@ -685,7 +685,7 @@
         </div>
         <aside class="z-20 flex flex-col flex-shrink-0 h-full lg:flex" :class="chats ? 'w-20' : 'w-0'">
             <div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-t border-l border-gray-200">
-                <div class="flex flex-col pt-5 pb-4 md:overflow-y-hidden overflow-y-auto md:hover:overflow-y-auto">
+                <div class="flex flex-col pt-5 pb-4 overflow-y-auto md:overflow-y-hidden md:hover:overflow-y-auto">
                     <div class="px-3 mb-5 space-y-1">
                         <h3 class="mb-5 text-xs font-medium text-center text-gray-500 underline underline-offset-8">Cases</h3>
                         <ul class="pb-5 space-y-3">
