@@ -828,6 +828,12 @@ select {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mb-2\.5 {
+  margin-bottom: 0.625rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .line-clamp-6 {
   overflow: hidden;
   display: -webkit-box;
@@ -994,6 +1000,18 @@ select {
 .w-full {
   width: 100%;
 }
+.w-2\/5 {
+  width: 40%;
+}
+.w-28 {
+  width: 7rem;
+}
+.w-48 {
+  width: 12rem;
+}
+.w-96 {
+  width: 24rem;
+}
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1008,6 +1026,15 @@ select {
 }
 .max-w-xs {
   max-width: 20rem;
+}
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+.max-w-\[330px\] {
+  max-width: 330px;
+}
+.max-w-\[360px\] {
+  max-width: 360px;
 }
 .flex-1 {
   flex: 1 1 0%;
