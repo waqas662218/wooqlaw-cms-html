@@ -828,6 +828,9 @@ select {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mb-28 {
+  margin-bottom: 7rem;
+}
 .block {
   display: block;
 }
@@ -896,6 +899,9 @@ select {
 }
 .h-full {
   height: 100%;
+}
+.h-10 {
+  height: 2.5rem;
 }
 .max-h-\[100dvh\] {
   max-height: 100dvh;
@@ -969,6 +975,9 @@ select {
 }
 .w-2\/6 {
   width: 33.333333%;
+}
+.w-32 {
+  width: 8rem;
 }
 .max-w-3xl {
   max-width: 48rem;
@@ -1514,6 +1523,9 @@ select {
 .pt-5 {
   padding-top: 1.25rem;
 }
+.pl-10 {
+  padding-left: 2.5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1672,6 +1684,10 @@ select {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-sky-600 {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;
@@ -2004,6 +2020,10 @@ select {
 .focus\:ring-primary-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(37 99 235 / var(--tw-ring-opacity));
+}
+.focus\:ring-gray-100:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(243 244 246 / var(--tw-ring-opacity));
 }
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;

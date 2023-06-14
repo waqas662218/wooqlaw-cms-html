@@ -272,7 +272,7 @@
                         <li aria-current="page">
                             <div class="flex items-center">
                             <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Contacts</span>
+                            <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Cases</span>
                             </div>
                         </li>
                         </ol>
@@ -282,7 +282,7 @@
                             <div class="flex items-center space-x-4">
                                 <div>
                                     <div class="relative" >
-                                        <button onclick="createcontact.showModal()" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
+                                        <button onclick="createcase.showModal()" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
                                             <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                                             </svg>
@@ -292,7 +292,7 @@
                                 </div>
                             </div>
                             <div class="relative" x-menu>
-                                <button class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-900 bg-gray-200 border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-300 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200" x-menu:button>
+                                <button class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200" x-menu:button>
                                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-4 h-4 mr-2 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd"></path>
                                     </svg>
@@ -778,7 +778,152 @@
         </aside>
     </div>
 
-    <dialog id="createcontact" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto max-h-[100dvh]">
+    <dialog id="createcase" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Create Case
+                </h3>
+                <button onclick="createcase.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-5">
+                <div class="flex flex-col items-start w-full gap-2 p-4 bg-gray-100 md:gap-5 rounded-xl">
+                    <div class="flex flex-col w-full gap-2 md:flex-row md:gap-5">
+                        <div class="flex flex-col w-full gap-2 Contact">
+                            <div class="flex items-center justify-between gap-2">
+                                <label for="Contact" class="block text-sm font-medium text-gray-900">Contact
+                                </label>
+                                <a class="text-sm font-normal text-sky-600" href="javascript:;" onclick="createcontact.showModal()">
+                                    + Create New
+                                </a>
+                            </div>
+                            <select id="Contact" class="flex flex-col items-start border border-gray-300 bg-white text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9" placeholder="" required="">
+                                <option selected="" class="flex items-center text-xs font-normal md:text-sm ">
+                                    Select from list Or create new
+                                </option>
+                                <option value="1">+923340660661</option>
+                                <option value="2">+923340660661</option>
+                                <option value="3">+923340660661</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-full gap-2 Contact ">
+                            <label for="input-group-1" class="block text-sm font-medium text-gray-900">Case ID</label>
+                            <div class="flex w-full">
+                                <input type="text" id="input-group-1" class="flex flex-col items-start border border-gray-300 bg-white text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full px-2.5 py-2 h-9" placeholder="IMG552">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-2">
+                        <label for="default-input" class="block text-sm font-medium text-gray-900">Title</label>
+                        <input type="text" id="default-input" class="flex flex-col items-start border border-gray-300 bg-white text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 md:w-full px-2.5 py-2 h-9                                                                                                                                                                                                                                                                   " placeholder="e.g. Rosie property dispute case">
+                    </div>
+                    <div class="flex flex-col w-full gap-2 md:flex-row md:gap-5">
+                        <div class="flex flex-col w-full gap-2">
+                            <div class="flex items-center justify-between gap-2">
+                                <label for="assignee" class="block text-sm font-medium text-gray-900">Primary Assignee
+                                </label>
+                            </div>
+                            <select id="assignee" class="flex flex-col items-start border border-gray-300 bg-white text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9" placeholder="" required="">
+                                <option selected="" class="flex items-center text-xs font-normal text-gray-500 md:text-sm">
+                                    Kiran Muneer
+                                </option>
+                                <option value="1">Arshad mehmood kiani</option>
+                                <option value="2">Tanveer Iqbal Khan</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-full gap-2 area">
+                            <label for="area" class="block text-sm font-medium text-gray-900">Law Area
+                            </label>
+                            <select id="area" class="flex flex-col items-start border border-gray-300 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full px-2.5 py-2 h-9" placeholder="" required="">
+                                <option selected="" class="flex items-center text-xs font-normal text-gray-500 md:text-sm">
+                                    Select law area
+                                </option>
+                                <option value="isl">Islamabad</option>
+                                <option value="lhr2">lahore</option>
+                                <option value="khi">karachi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- advance options -->
+                <div x-data x-disclosure class="flex flex-col justify-between w-full gap-2 overflow-hidden border rounded-lg">
+                    <h2 class="flex items-center justify-between w-full p-5 bg-gray-100 rounded-lg h-14"> 
+                        <button type="button" class="flex items-center justify-center w-full p-2 text-gray-900 rounded-lg" x-disclosure:button>
+                            <div class="flex items-center justify-between w-full gap-2 md:gap-5">         
+                                <div class="flex items-center w-full gap-1">
+                                    <span class="text-sm font-medium text-gray-900 md:text-base">
+                                        Advance Options                        
+                                    </span>
+                                </div>
+                                <span>
+                                    <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>   
+                            </div>
+                        </button>
+                    </h2>
+                    <div x-disclosure:panel class="flex flex-col gap-2">
+                        <div class="flex flex-col items-start w-full gap-10 p-3 bg-white">
+                            <div class="flex flex-col items-center justify-center w-full gap-5 md:flex-row">
+                                <div class="flex flex-col w-full h-16 gap-2 status">
+                                    <label for="status" class="block text-sm font-medium text-gray-900">Status
+                                    </label>
+                                    <select id="status" class="flex flex-col bg-gray-50 items-start border border-gray-300 text-gray-500-900 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full px-2.5 py-2 h-9" placeholder="" required="">
+                                        <option selected="" class="flex items-center text-xs font-normal md:text-sm">
+                                            Open
+                                        </option>
+                                        <option value="Avalible">Avalible</option>
+                                        <option value="not-avalible">Not Avalible</option>
+                                    </select>
+                                </div>
+                                <div class="flex items-end justify-center w-full gap-2 md:gap-5">
+                                    <div class="flex flex-col w-full h-16 gap-2 Billing">
+                                        <label for="Billing" class="block text-sm font-medium text-gray-900">
+                                            Billing Rate
+                                        </label>
+                                        <select id="Billing" class="flex flex-col items-start border border-gray-300 bg-gray-50 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9" placeholder="" required="">
+                                            <option selected="" class="flex items-center text-xs font-normal md:text-sm ">
+                                                Fixed Fee
+                                            </option>
+                                            <option value="1">10000</option>
+                                            <option value="2">20000</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" id="first_name" class="flex items-start bg-gray-50 border border-gray-300 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-32 px-2.5 py-2 h-9" placeholder="" required="">
+                                </div>
+                            </div>
+                            <!-- date -->
+                            <div class="flex flex-col items-start w-full gap-2 md:flex-row md:gap-6">
+                                <div class="flex flex-col items-start w-full gap-2 open-date">
+                                    <label for="open-date" class="flex items-center text-sm font-normal">Open
+                                        date</label>
+                                    <input type="date" id="start" name="trip-start" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 h-10">
+        
+                                </div>
+                                <!-- Due-date -->
+                                <div class="flex flex-col items-start w-full gap-2 close-date">
+                                    <label for="close-date" class="flex items-center text-sm font-normal">Close
+                                        date</label>
+                                    <input type="date" id="start" name="trip-start" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 h-10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="createcontact" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
         <form method="dialog">
             <!-- Modal header -->
             <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
@@ -1021,7 +1166,6 @@
             </div>
         </form>
     </dialog>
-
 
 </body>
 
