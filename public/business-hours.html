@@ -26,6 +26,7 @@
 <body>
 
     <div class="max-w-5xl py-10 mx-auto flex flex-col gap-2.5">
+        <!-- Monday -->
         <div x-data x-disclosure default-open>
             <h2>
                 <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-gray-200 rounded-t-xl hover:bg-gray-200" x-disclosure:button>
@@ -41,7 +42,7 @@
                             <div class="relative overflow-hidden bg-white">
                                 <div class="flex items-center justify-end p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
                                     <div class="flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 md:w-auto md:flex-row md:space-y-0 md:items-center md:space-x-3">
-                                        <button type="button" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+                                        <button onclick="createbusinesshours.showModal()" type="button" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
                                             <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                                             </svg>
@@ -228,6 +229,7 @@
                 </div>
             </div>
         </div>
+        <!-- Tuesday -->
         <div x-data x-disclosure>
             <h2>
                 <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-gray-200 rounded-t-xl hover:bg-gray-200" x-disclosure:button>
@@ -430,6 +432,7 @@
                 </div>
             </div>
         </div>
+        <!-- Wednesday -->
         <div x-data x-disclosure>
             <h2>
                 <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-gray-200 rounded-t-xl hover:bg-gray-200" x-disclosure:button>
@@ -632,6 +635,7 @@
                 </div>
             </div>
         </div>
+        <!-- Thursday -->
         <div x-data x-disclosure>
             <h2>
                 <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-gray-200 rounded-t-xl hover:bg-gray-200" x-disclosure:button>
@@ -834,6 +838,7 @@
                 </div>
             </div>
         </div>
+        <!-- Friday -->
         <div x-data x-disclosure>
             <h2>
                 <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-gray-200 rounded-t-xl hover:bg-gray-200" x-disclosure:button>
@@ -1036,6 +1041,7 @@
                 </div>
             </div>
         </div>
+        <!-- Saturday -->
         <div x-data x-disclosure>
             <h2>
                 <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-gray-200 rounded-t-xl hover:bg-gray-200" x-disclosure:button>
@@ -1238,6 +1244,7 @@
                 </div>
             </div>
         </div>
+        <!-- Sunday -->
         <div x-data x-disclosure>
             <h2>
                 <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-900 bg-gray-100 border border-gray-200 rounded-t-xl hover:bg-gray-200" x-disclosure:button>
@@ -1441,6 +1448,341 @@
             </div>
         </div>
     </div>
+
+
+    <dialog id="createbusinesshours" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Opening Business hours for Monday
+                </h3>
+                <button onclick="createbusinesshours.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-8 p-6">
+                <div class="flex flex-col items-start w-full gap-5 p-4 bg-gray-100 rounded-xl">
+                    <div class="flex flex-col w-full gap-5 md:flex-row">
+                        <div class="flex flex-col w-full gap-2 start-time">
+                            <div class="flex items-center justify-between gap-2">
+                                <label for="start-time" class="block text-sm font-medium text-gray-900">Start Time
+                                </label>
+                            </div>
+                            <input type="time" id="start-time" name="trip-start"
+                                class="block w-full h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="flex flex-col w-full gap-2 End-time ">
+                            <label for="End-time" class="block text-sm font-medium text-gray-900">End Time</label>
+                            <div class="flex w-full">
+                                <input type="time" id="End-time" name="trip-start"
+                                    class="block w-full h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-5 md:flex-row">
+                        <div class="flex flex-col w-full gap-2">
+                            <div class="flex items-center justify-between gap-2">
+                                <label for="assignee" class="block text-sm font-medium text-gray-900">Duration
+                                </label>
+                            </div>
+                            <select id="assignee"
+                                class="flex flex-col items-start border border-gray-300 bg-white text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 px-2.5 py-2 h-9"
+                                placeholder="" required>
+                                <option selected class="flex items-center text-xs font-normal text-gray-500 md:text-sm">
+                                    Select duration
+                                </option>
+                                <option value="15">15 minutes</option>
+                                <option value="30">30 minutes</option>
+                                <option value="45">45 minutes</option>
+                                <option value="60">60 minutes</option>
+                                <option value="75">75 minutes</option>
+                                <option value="90">90 minutes</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col w-full gap-2 area">
+                            <label for="area" class="block text-sm font-medium text-gray-900">Location
+                            </label>
+                            <select id="area"
+                                class="flex flex-col items-start border border-gray-300 text-gray-500 text-xs md:text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 w-full px-2.5 py-2 h-9"
+                                placeholder="" required>
+                                <option selected class="flex items-center text-xs font-normal text-gray-500 md:text-sm">
+                                    Select location
+                                </option>
+                                <option value="isl">Islamabad</option>
+                                <option value="lhr2">lahore</option>
+                                <option value="khi">karachi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Consultation Modes -->
+                <div class="flex flex-col w-full gap-4">
+                    <span class="text-base font-medium text-gray-900">
+                        Consultation Modes*
+                    </span>
+                    <!-- Phone -->
+                    <div x-data class="">
+                        <div x-disclosure class="overflow-hidden border border-gray-200 rounded-lg ">
+                            <div class="flex flex-col items-start w-full gap-2 ">
+                                <button x-disclosure:button
+                                    class="flex items-center justify-between w-full p-5 text-base font-medium text-gray-900 bg-gray-100">
+                                    <div class="flex gap-2 ">
+                                        <span class="flex items-center justify-center w-6 h-6 bg-white rounded-lg">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.4171 9.67962L12.0755 10.0193C12.0755 10.0193 11.2636 10.8266 9.04734 8.62293C6.83109 6.41926 7.64303 5.61193 7.64303 5.61193L7.85814 5.39804C8.38805 4.87113 8.43801 4.02518 7.97568 3.40761L7.02994 2.14431C6.45771 1.37994 5.35197 1.27896 4.69609 1.93112L3.51889 3.10164C3.19367 3.42501 2.97574 3.84419 3.00217 4.3092C3.06978 5.49886 3.60804 8.05849 6.61152 11.0449C9.79661 14.2119 12.7851 14.3378 14.0072 14.2239C14.3938 14.1878 14.7299 13.9909 15.0008 13.7216L16.0663 12.6622C16.7854 11.9471 16.5827 10.7212 15.6625 10.221L14.2296 9.44206C13.6254 9.11362 12.8893 9.2101 12.4171 9.67962Z"
+                                                    fill="#4B5563" />
+                                            </svg>
+                                        </span>
+                                        <span>Phone</span>
+                                    </div>
+                                    <div class="flex gap-5 ">
+                                        <span class="h-6">
+                                            <label class="relative inline-flex items-center cursor-pointer">
+                                                <input type="checkbox" value="" class="sr-only peer">
+                                                <div
+                                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                                                </div>
+                                            </label>
+                                        </span>
+                                        <span>
+                                            <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+                            <div x-disclosure:panel x-collapse>
+                                <div class="flex flex-col items-start w-full gap-10 p-3 bg-white">
+                                    <div class="w-full ">
+                                        <label for="Price"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                                        <input type="email" id="Price"
+                                            class="block w-full px-4 py-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="e.g. PKR 500" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- video-->
+                    <div x-data class="">
+                        <div x-disclosure class="overflow-hidden border border-gray-200 rounded-lg ">
+                            <div class="flex flex-col items-start w-full gap-2 ">
+                                <button x-disclosure:button
+                                    class="flex items-center justify-between w-full p-5 text-base font-medium text-gray-900 bg-gray-100">
+                                    <div class="flex gap-2 ">
+                                        <span class="flex items-center justify-center w-6 h-6 bg-white rounded-lg">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M2 8.625V9.375C2 11.8406 2 13.0734 2.68097 13.9032C2.80563 14.0551 2.94492 14.1944 3.09682 14.319C3.92658 15 5.15939 15 7.625 15C10.0906 15 11.3234 15 12.1532 14.319C12.3051 14.1944 12.4444 14.0551 12.569 13.9032C13.0952 13.262 13.2148 12.3802 13.242 10.875L13.7438 11.1219C15.2032 11.8516 15.9329 12.2164 16.4664 11.8867C17 11.5569 17 10.7411 17 9.10942V8.89058C17 7.2589 17 6.44306 16.4664 6.11331C15.9329 5.78355 15.2032 6.14841 13.7438 6.87812L13.242 7.12502C13.2148 5.61977 13.0952 4.73798 12.569 4.09682C12.4444 3.94492 12.3051 3.80563 12.1532 3.68097C11.3234 3 10.0906 3 7.625 3C5.15939 3 3.92658 3 3.09682 3.68097C2.94492 3.80563 2.80563 3.94492 2.68097 4.09682C2 4.92658 2 6.15939 2 8.625Z"
+                                                    fill="#4B5563" />
+                                            </svg>
+                                        </span>
+                                        <span>Video</span>
+                                    </div>
+                                    <div class="flex gap-5 ">
+                                        <span class="h-6">
+                                            <label class="relative inline-flex items-center cursor-pointer">
+                                                <input type="checkbox" value="" class="sr-only peer">
+                                                <div
+                                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                                                </div>
+                                            </label>
+                                        </span>
+                                        <span>
+                                            <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+                            <div x-disclosure:panel x-collapse>
+                                <div class="flex flex-col items-start w-full gap-3 p-3 bg-white">
+                                    <div class="flex flex-col items-start justify-center gap-3 p-4 rounded-md bg-amber-100">
+                                        <div class="flex flex-col items-start gap-1.5 w-full">
+                                            <div class="flex items-center gap-2 text-amber-700">
+                                                <span>
+                                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_182749_81290)">
+                                                            <path
+                                                                d="M9.75 6C9.75 5.58579 9.41421 5.25 9 5.25C8.58579 5.25 8.25 5.58579 8.25 6C8.25 6.41421 8.58579 6.75 9 6.75C9.41421 6.75 9.75 6.41421 9.75 6Z"
+                                                                fill="#8E4B10" />
+                                                            <path
+                                                                d="M9 13.3125C9.31066 13.3125 9.5625 13.0607 9.5625 12.75V8.25C9.5625 7.93934 9.31066 7.6875 9 7.6875C8.68934 7.6875 8.4375 7.93934 8.4375 8.25V12.75C8.4375 13.0607 8.68934 13.3125 9 13.3125Z"
+                                                                fill="#8E4B10" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M9.04303 0.9375H8.95697C7.22568 0.937491 5.86889 0.937484 4.81028 1.07981C3.72673 1.22549 2.87171 1.5295 2.2006 2.2006C1.5295 2.87171 1.22549 3.72673 1.07981 4.81028C0.937484 5.86889 0.937491 7.22567 0.9375 8.95695V9.04303C0.937491 10.7743 0.937484 12.1311 1.07981 13.1897C1.22549 14.2733 1.5295 15.1283 2.2006 15.7994C2.87171 16.4705 3.72673 16.7745 4.81028 16.9202C5.8689 17.0625 7.22567 17.0625 8.95697 17.0625H9.04303C10.7743 17.0625 12.1311 17.0625 13.1897 16.9202C14.2733 16.7745 15.1283 16.4705 15.7994 15.7994C16.4705 15.1283 16.7745 14.2733 16.9202 13.1897C17.0625 12.1311 17.0625 10.7743 17.0625 9.04303V8.95697C17.0625 7.22567 17.0625 5.8689 16.9202 4.81028C16.7745 3.72673 16.4705 2.87171 15.7994 2.2006C15.1283 1.5295 14.2733 1.22549 13.1897 1.07981C12.1311 0.937484 10.7743 0.937491 9.04303 0.9375ZM2.9961 2.9961C3.42334 2.56886 4.00138 2.32369 4.96018 2.19478C5.93517 2.0637 7.21633 2.0625 9 2.0625C10.7837 2.0625 12.0648 2.0637 13.0398 2.19478C13.9986 2.32369 14.5767 2.56886 15.0039 2.9961C15.4311 3.42334 15.6763 4.00138 15.8052 4.96018C15.9363 5.93517 15.9375 7.21633 15.9375 9C15.9375 10.7837 15.9363 12.0648 15.8052 13.0398C15.6763 13.9986 15.4311 14.5767 15.0039 15.0039C14.5767 15.4311 13.9986 15.6763 13.0398 15.8052C12.0648 15.9363 10.7837 15.9375 9 15.9375C7.21633 15.9375 5.93517 15.9363 4.96018 15.8052C4.00138 15.6763 3.42334 15.4311 2.9961 15.0039C2.56886 14.5767 2.32369 13.9986 2.19478 13.0398C2.0637 12.0648 2.0625 10.7837 2.0625 9C2.0625 7.21633 2.0637 5.93517 2.19478 4.96018C2.32369 4.00138 2.56886 3.42334 2.9961 2.9961Z"
+                                                                fill="#8E4B10" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_182749_81290">
+                                                                <rect width="18" height="18" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </span>
+                                                <span class="text-base font-semibold">
+                                                    Zoom video integration missing
+                                                </span>
+                                            </div>
+                                            <span class="text-sm font-normal text-amber-700">
+                                                In order to do zoom video calls you need to integrate zoom first, Kindly
+                                                click the “Setup zoom” button below to integrate zoom with wooqlaw.
+                                            </span>
+                                        </div>
+                                        <button class="flex items-center justify-center w-40 h-8 gap-2 px-3 py-2 text-xs font-medium text-white rounded-lg bg-amber-700">
+                                            Setup Zoom Integration
+                                        </button>
+                                    </div>
+                                    <div class="w-full ">
+                                        <label for="Price-1"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                                        <input type="email" id="Price-1"
+                                            class="block w-full px-4 py-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="e.g. PKR 500" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- At Office-->
+                    <div x-data class="">
+                        <div x-disclosure class="overflow-hidden border border-gray-200 rounded-lg">
+                            <div class="flex flex-col items-start w-full gap-2 ">
+                                <button x-disclosure:button
+                                    class="flex items-center justify-between w-full p-5 text-base font-medium text-gray-900 bg-gray-100">
+                                    <div class="flex gap-2 ">
+                                        <span class="flex items-center justify-center w-6 h-6 bg-white rounded-lg">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.67899 2.29621C5.24272 2.81154 5.15221 3.56581 4.97119 5.07436L4.903 5.64256C4.71513 7.20815 4.6212 7.99094 5.0688 8.49547C5.51641 9 6.30482 9 7.88163 9H8.4375V10.3125H5.25C5.00928 10.3125 4.78369 10.3773 4.58973 10.4904L4.38052 9.86277C4.32897 9.70809 4.2926 9.59896 4.22601 9.45531C4.1616 9.31637 4.1288 9.26136 4.07744 9.1769C3.86376 8.82555 3.58539 8.52033 3.13433 8.32138C2.70956 8.13403 2.17885 8.0625 1.5 8.0625C1.18934 8.0625 0.9375 8.31434 0.9375 8.625C0.9375 8.93566 1.18934 9.1875 1.5 9.1875C2.12053 9.1875 2.46711 9.25666 2.68034 9.35071C2.86729 9.43317 2.98765 9.55004 3.11624 9.76148C3.13904 9.79897 3.14849 9.81469 3.1586 9.83328C3.16836 9.85122 3.18156 9.87715 3.20535 9.92846C3.24335 10.0104 3.26167 10.0638 3.3175 10.2313L3.96637 12.1779C3.9907 12.2509 4.02854 12.3155 4.07618 12.3701C4.37493 13.1409 5.12364 13.6875 6 13.6875H8.4375V14.562C7.57006 14.8058 6.87738 15.4641 6.59137 16.3221C6.49313 16.6168 6.6524 16.9354 6.94712 17.0336C7.24184 17.1319 7.56039 16.9726 7.65863 16.6779C7.7914 16.2796 8.07347 15.9547 8.4375 15.7654V16.5C8.4375 16.8107 8.68934 17.0625 9 17.0625C9.31066 17.0625 9.5625 16.8107 9.5625 16.5V15.7654C9.92653 15.9547 10.2086 16.2796 10.3414 16.6779C10.4396 16.9726 10.7582 17.1319 11.0529 17.0336C11.3476 16.9354 11.5069 16.6168 11.4086 16.3221C11.1226 15.4641 10.4299 14.8058 9.5625 14.562V13.6875H12C12.8764 13.6875 13.6251 13.1409 13.9238 12.3701C13.9715 12.3155 14.0093 12.2509 14.0336 12.1779L14.6825 10.2313C14.7383 10.0638 14.7566 10.0104 14.7947 9.92846C14.8184 9.87715 14.8316 9.85122 14.8414 9.83328C14.8515 9.81469 14.861 9.79897 14.8838 9.76148C15.0123 9.55004 15.1327 9.43317 15.3197 9.35071C15.5329 9.25666 15.8795 9.1875 16.5 9.1875C16.8107 9.1875 17.0625 8.93566 17.0625 8.625C17.0625 8.31434 16.8107 8.0625 16.5 8.0625C15.8212 8.0625 15.2904 8.13403 14.8657 8.32138C14.4146 8.52033 14.1362 8.82555 13.9226 9.1769C13.8712 9.26136 13.8384 9.31637 13.774 9.45531C13.7074 9.59896 13.671 9.7081 13.6195 9.86278L13.4103 10.4904C13.2163 10.3773 12.9907 10.3125 12.75 10.3125H9.5625V9H10.1186C11.6954 9 12.4838 9 12.9314 8.49547C13.379 7.99094 13.2851 7.20815 13.0972 5.64257L13.029 5.07436C12.848 3.56581 12.7575 2.81154 12.3212 2.29621C12.1828 2.13267 12.0217 1.98974 11.8428 1.87176C11.2792 1.5 10.5195 1.5 9.00011 1.5C7.48074 1.5 6.72106 1.5 6.15742 1.87176C5.97855 1.98974 5.81744 2.13267 5.67899 2.29621Z"
+                                                    fill="#4B5563" />
+                                            </svg>
+                                        </span>
+                                        <span>At-Office</span>
+                                    </div>
+                                    <div class="flex gap-5 ">
+                                        <span class="h-6">
+                                            <label class="relative inline-flex items-center cursor-pointer">
+                                                <input type="checkbox" value="" class="sr-only peer">
+                                                <div
+                                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+                                                </div>
+                                            </label>
+                                        </span>
+                                        <span>
+                                            <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+                            <div x-disclosure:panel x-collapse>
+                                <div class="flex flex-col items-start w-full gap-3 p-3 bg-white">
+                                    <div class="flex flex-col w-full gap-2">
+                                        <label for="Price-2"
+                                            class="block text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                                        <input type="email" id="Price-2"
+                                            class="block w-full px-4 py-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="e.g. PKR 500" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-start w-full gap-6">
+                    <span class="text-base font-medium text-gray-900">
+                        Do you want to replicate this schedule?
+                    </span>
+                    <div class="flex w-full gap-5">
+                        <div class="flex flex-col items-start w-48 gap-5">
+                            <span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    <span class="ml-3 text-sm font-medium text-gray-900 ">Monday</span>
+                                    </label>
+                            </span>
+                            <span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    <span class="ml-3 text-sm font-medium text-gray-900 ">Tuesday</span>
+                                    </label>
+                            </span>
+                            <span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    <span class="ml-3 text-sm font-medium text-gray-900">Wednesday</span>
+                                    </label>
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-start w-48 gap-5">
+                            <span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    <span class="ml-3 text-sm font-medium text-gray-900 ">Thursday</span>
+                                    </label>
+                            </span>
+                            <span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    <span class="ml-3 text-sm font-medium text-gray-900 ">Friday</span>
+                                    </label>
+                            </span>
+                            <span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    <span class="ml-3 text-sm font-medium text-gray-900">Saturday</span>
+                                    </label>
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-start w-48 gap-5">
+                            <span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    <span class="ml-3 text-sm font-medium text-gray-900 ">Sunday</span>
+                                    </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 
 </html>
