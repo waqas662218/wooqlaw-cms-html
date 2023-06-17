@@ -252,6 +252,11 @@
         <div class="relative w-full h-full px-5 overflow-x-hidden overflow-y-auto bg-gray-100 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
                 <div class="py-5">
+                    <div class="p-4 bg-white">
+                        <button onclick="rightmodal.showModal()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Right Modal</button>
+                        <button onclick="leftmodal.showModal()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Left Modal</button>
+                        <button onclick="centermodal.showModal()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Center Modal</button>
+                    </div>
                     <div class="grid grid-cols-1 gap-3 lg:grid-cols-5 xl:grid-cols-4">
                         <div class="grow lg:col-span-3 xl:col-span-3">
                             <div x-data="{ selectedTabIndex: window.innerWidth < 768 ? null : 0 }" x-tabs x-model="selectedTabIndex">
@@ -791,8 +796,95 @@
             </div>
         </aside>
     </div>
-
-
+    <dialog id="rightmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Right Modal
+                </h3>
+                <button onclick="rightmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+                <h3>Right Modal Content</h3>
+                <button onclick="innermodal.showModal()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Center Modal</button>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="innermodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Inner Modal
+                </h3>
+                <button onclick="innermodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+                <h3>Inner Modal Content</h3>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="leftmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow end-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Left Modal
+                </h3>
+                <button onclick="leftmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+                <h3>Left Modal Content</h3>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="centermodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Center Modal
+                </h3>
+                <button onclick="centermodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+                <h3>Center Modal Content</h3>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 
 </html>
