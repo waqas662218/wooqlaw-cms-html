@@ -165,7 +165,7 @@
             <div class="relative flex w-full min-h-0 pt-0 bg-white border-gray-200 md:border-t md:flex-1 md:flex-col">
                 <div class="flex w-full py-2 overflow-y-auto md:py-5 md:flex-1 md:flex-col">
                     <div class="w-full px-3 space-y-1 md:flex-1">
-                        <ul class="flex justify-between w-full gap-2 md:gap-5 md:flex-col">
+                        <ul class="flex justify-around w-full gap-2 md:gap-5 md:flex-col">
                             <li>
                                 <a href="./index.html" class="flex flex-col items-center justify-center gap-1 font-medium text-violet-700 text-2xs hover:text-violet-700">
                                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
@@ -468,7 +468,7 @@
                     </div>
                     <div x-data x-tabs>
                         <ul class="flex flex-col w-full gap-1 mb-1 text-xs font-medium md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:text-sm md:rounded-t-xl" x-tabs:list>
-                            <li>
+                            <li class="basis-auto shrink-0 grow-0 md:grow">
                                 <a
                                     x-tabs:tab
                                     :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
@@ -483,14 +483,15 @@
                                         </svg>                               
                                         <span>Law Firm Profile</span>
                                     </div>
-                                    <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-2 md:hidden">
+                                        <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">Incomplete Profile</span>
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"/>
                                         </svg>                                            
                                     </div>
                                 </a>
                             </li>
-                            <li>
+                            <li class="basis-auto shrink-0 grow-0 md:grow">
                                 <a
                                 x-tabs:tab
                                 :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
@@ -505,12 +506,12 @@
                                         </svg>                   
                                         <span>My Profile</span>
                                     </div>
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"/>
                                     </svg> 
                                 </a>
                             </li>
-                            <li>
+                            <li class="basis-auto shrink-0 grow-0 md:grow">
                                 <a
                                     x-tabs:tab
                                     :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
@@ -526,12 +527,12 @@
                                         </svg>                                 
                                         <span>Business Hours</span>
                                     </div>
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"/>
                                     </svg> 
                                 </a>
                             </li>
-                            <li>
+                            <li class="basis-auto shrink-0 grow-0 md:grow">
                                 <a
                                     x-tabs:tab
                                     :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
@@ -547,12 +548,12 @@
                                         </svg>                          
                                         <span>Practice Portfolio</span>
                                     </div>
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"/>
                                     </svg> 
                                 </a>
                             </li>
-                            <li>
+                            <li class="basis-auto shrink-0 grow-0 md:grow">
                                 <a
                                 x-tabs:tab
                                 :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
@@ -568,7 +569,7 @@
                                         </svg>                                                                                                   
                                         <span>Recommendations</span>
                                     </div>
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"/>
                                     </svg> 
                                 </a>
