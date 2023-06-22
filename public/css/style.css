@@ -2831,6 +2831,10 @@ select {
     max-width: 72rem;
   }
 
+  .md\:max-w-\[288px\] {
+    max-width: 288px;
+  }
+
   .md\:flex-1 {
     flex: 1 1 0%;
   }
