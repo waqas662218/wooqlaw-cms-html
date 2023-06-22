@@ -4447,16 +4447,16 @@
             <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-5" x-data="{
                 selectedTabIndex: 0,
             }">
-                <div class="flex flex-wrap gap-5" x-tabs x-model="selectedTabIndex">
-                    <div class="flex flex-col items-center justify-center w-full gap-4 p-3 md:p-5 rounded-xl bg-gray-50 md:w-72 shrink-0">
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-3" x-tabs x-model="selectedTabIndex">
+                    <div class="flex flex-col items-center justify-center w-full gap-4 p-3 md:p-5 rounded-xl bg-gray-50 shrink-0">
                         <div class="flex justify-center">
                             <svg class="w-20 h-20 md:w-32 md:h-32" viewBox="0 0 125 126" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M52.0837 21.5332H72.917C92.5588 21.5332 102.38 21.5332 108.482 27.6351C114.584 33.7371 114.584 43.558 114.584 63.1999C114.584 82.8417 114.584 92.6627 108.482 98.7646C102.38 104.867 92.5589 104.867 72.917 104.867H52.0837C32.4418 104.867 22.6209 104.867 16.5189 98.7646C10.417 92.6627 10.417 82.8417 10.417 63.1999C10.417 43.558 10.417 33.7371 16.5189 27.6351C22.6209 21.5332 32.4418 21.5332 52.0837 21.5332ZM69.0107 47.5749C69.0107 45.4175 70.7596 43.6686 72.917 43.6686H98.9587C101.116 43.6686 102.865 45.4175 102.865 47.5749C102.865 49.7322 101.116 51.4811 98.9587 51.4811H72.917C70.7596 51.4811 69.0107 49.7322 69.0107 47.5749ZM74.2191 63.1999C74.2191 61.0425 75.968 59.2936 78.1253 59.2936H98.9587C101.116 59.2936 102.865 61.0425 102.865 63.1999C102.865 65.3572 101.116 67.1061 98.9587 67.1061H78.1253C75.968 67.1061 74.2191 65.3572 74.2191 63.1999ZM79.4274 78.8249C79.4274 76.6675 81.1763 74.9186 83.3337 74.9186H98.9587C101.116 74.9186 102.865 76.6675 102.865 78.8249C102.865 80.9822 101.116 82.7311 98.9587 82.7311H83.3337C81.1763 82.7311 79.4274 80.9822 79.4274 78.8249ZM57.292 47.5749C57.292 53.3278 52.6283 57.9915 46.8753 57.9915C41.1224 57.9915 36.4587 53.3278 36.4587 47.5749C36.4587 41.8219 41.1224 37.1582 46.8753 37.1582C52.6283 37.1582 57.292 41.8219 57.292 47.5749ZM46.8753 89.2415C67.7087 89.2415 67.7087 84.5778 67.7087 78.8249C67.7087 73.0719 58.3813 68.4082 46.8753 68.4082C35.3694 68.4082 26.042 73.0719 26.042 78.8249C26.042 84.5778 26.042 89.2415 46.8753 89.2415Z" fill="#6D28D9"/>
                             </svg>
                         </div>
                 
-                        <ol class="relative flex w-full overflow-x-auto text-gray-500 md:overflow-visible md:block md:ml-4 md:border-l md:border-gray-200" x-tabs:list>                  
-                            <li class="relative pl-5 ml-6 mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400'" x-tabs:tab>            
+                        <ol class="relative flex justify-center w-full overflow-x-auto text-gray-500 md:overflow-visible md:block md:ml-4 md:border-l md:border-gray-200" x-tabs:list>                  
+                            <li class="relative pl-5 ml-6 h-7 md:mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400 hidden md:block'" x-tabs:tab>            
                                 <span class="absolute flex items-center justify-center rounded-lg w-7 h-7 md:w-8 md:h-8 -left-4 md:-left-10" :class="$tab.isSelected ? 'bg-primary-100' : 'bg-gray-100'">
                                     <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7069 5.29279C16.8944 5.48031 16.9997 5.73462 16.9997 5.99979C16.9997 6.26495 16.8944 6.51926 16.7069 6.70679L8.70692 14.7068C8.51939 14.8943 8.26508 14.9996 7.99992 14.9996C7.73475 14.9996 7.48045 14.8943 7.29292 14.7068L3.29292 10.7068C3.11076 10.5182 3.00997 10.2656 3.01224 10.0034C3.01452 9.74119 3.11969 9.49038 3.3051 9.30497C3.49051 9.11956 3.74132 9.01439 4.00352 9.01211C4.26571 9.00983 4.51832 9.11063 4.70692 9.29279L7.99992 12.5858L15.2929 5.29279C15.4804 5.10532 15.7348 5 15.9999 5C16.2651 5 16.5194 5.10532 16.7069 5.29279Z"/>
@@ -4464,7 +4464,7 @@
                                 </span>
                                 <h3 class="pt-1 text-sm font-medium leading-tight md:text-base">Personal Info</h3>
                             </li>
-                            <li class="relative pl-5 ml-6 mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400'" x-tabs:tab>            
+                            <li class="relative pl-5 ml-6 h-7 md:mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400 hidden md:block'" x-tabs:tab>            
                                 <span class="absolute flex items-center justify-center rounded-lg w-7 h-7 md:w-8 md:h-8 -left-4 md:-left-10"  :class="$tab.isSelected ? 'bg-primary-100' : 'bg-gray-100'">
 
                                     <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -4473,7 +4473,7 @@
                                 </span>
                                 <h3 class="pt-1 text-sm font-medium leading-tight md:text-base">Qualification & Experience</h3>
                             </li>
-                            <li class="relative pl-5 ml-6 mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400'" x-tabs:tab>            
+                            <li class="relative pl-5 ml-6 h-7 md:mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400 hidden md:block'" x-tabs:tab>            
                                 <span class="absolute flex items-center justify-center rounded-lg w-7 h-7 md:w-8 md:h-8 -left-4 md:-left-10"  :class="$tab.isSelected ? 'bg-primary-100' : 'bg-gray-100'">
 
                                     <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -4482,7 +4482,7 @@
                                 </span>
                                 <h3 class="pt-1 text-sm font-medium leading-tight md:text-base">Work Address</h3>
                             </li>
-                            <li class="relative pl-5 ml-6 mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400'" x-tabs:tab>            
+                            <li class="relative pl-5 ml-6 h-7 md:mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400 hidden md:block'" x-tabs:tab>            
                                 <span class="absolute flex items-center justify-center rounded-lg w-7 h-7 md:w-8 md:h-8 -left-4 md:-left-10"  :class="$tab.isSelected ? 'bg-primary-100' : 'bg-gray-100'">
 
                                     <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -4491,7 +4491,7 @@
                                 </span>
                                 <h3 class="pt-1 text-sm font-medium leading-tight md:text-base">Services</h3>
                             </li>
-                            <li class="relative pl-5 ml-6 mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400'" x-tabs:tab>            
+                            <li class="relative pl-5 ml-6 h-7 md:mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400 hidden md:block'" x-tabs:tab>            
                                 <span class="absolute flex items-center justify-center rounded-lg w-7 h-7 md:w-8 md:h-8 -left-4 md:-left-10"  :class="$tab.isSelected ? 'bg-primary-100' : 'bg-gray-100'">
 
                                     <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -4500,7 +4500,7 @@
                                 </span>
                                 <h3 class="pt-1 text-sm font-medium leading-tight md:text-base">Profile Type</h3>
                             </li>
-                            <li class="relative pl-5 ml-6 mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400'" x-tabs:tab>            
+                            <li class="relative pl-5 ml-6 h-7 md:mb-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400 hidden md:block'" x-tabs:tab>            
                                 <span class="absolute flex items-center justify-center rounded-lg w-7 h-7 md:w-8 md:h-8 -left-4 md:-left-10"  :class="$tab.isSelected ? 'bg-primary-100' : 'bg-gray-100'">
 
                                     <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -4509,7 +4509,7 @@
                                 </span>
                                 <h3 class="pt-1 text-sm font-medium leading-tight md:text-base">Mobile & Email Verification</h3>
                             </li>
-                            <li class="relative pl-5 ml-6 whitespace-nowrap md:whitespace-normal md:pl-0" :cl whitespace-nowrap md:whitespace-normal pl-5 md:pl-0ass="$tab.isSelected ? 'text-primary-700' : 'text-gray-400'" x-tabs:tab>            
+                            <li class="relative pl-5 ml-6 h-7 whitespace-nowrap md:whitespace-normal md:pl-0" :class="$tab.isSelected ? 'text-primary-700' : 'text-gray-400 hidden md:block'" x-tabs:tab>            
                                 <span class="absolute flex items-center justify-center rounded-lg w-7 h-7 md:w-8 md:h-8 -left-4 md:-left-10"  :class="$tab.isSelected ? 'bg-primary-100' : 'bg-gray-100'">
 
                                     <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -4520,7 +4520,7 @@
                             </li>
                         </ol>
                     </div>
-                    <div class="flex flex-col grow" x-tabs:panels>
+                    <div class="flex flex-col col-span-2 grow" x-tabs:panels>
                         <!-- Personal Details -->
                         <div class="flex flex-col items-stretch justify-between h-full gap-3" x-tabs:panel>
                             <div>
@@ -4609,7 +4609,7 @@
                                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 ">Address</label>
                                             <input type="text" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="e.g. office 346, Singapur Plaza, Saddar, Rawalpindi" required>
                                         </div>
-                                        <div>
+                                        <div class="col-span-2 md:col-span-1">
                                             <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 ">Country</label>
                                             <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                 <option>Pakistan</option>
@@ -4618,21 +4618,21 @@
                                                 <option>Germany</option>
                                             </select>
                                         </div>
-                                        <div>
+                                        <div class="col-span-2 md:col-span-1">
                                             <label for="state" class="block mb-2 text-sm font-medium text-gray-900 ">State</label>
                                             <select id="state" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                 <option>Punjab</option>
                                                 <option>Sindh</option>
                                             </select>
                                         </div>
-                                        <div>
+                                        <div class="col-span-2 md:col-span-1">
                                             <label for="city" class="block mb-2 text-sm font-medium text-gray-900 ">City</label>
                                             <select id="city" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                 <option>Rawalpindi</option>
                                                 <option>Lahore</option>
                                             </select>
                                         </div>
-                                        <div>
+                                        <div class="col-span-2 md:col-span-1">
                                             <label for="area" class="block mb-2 text-sm font-medium text-gray-900 ">Area / Location</label>
                                             <select id="area" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                                 <option>Rawalpindi</option>
@@ -4832,7 +4832,7 @@
                                     </div>
                                 </div>
                                 <div class="flex flex-col items-center justify-center gap-3 text-center">
-                                    <p class="text-xs font-medium leading-none text-center text-gray-600" style="width: 513px;">Didn’t get verification email?</p>
+                                    <p class="text-xs font-medium leading-none text-center text-gray-600">Didn’t get verification email?</p>
                                     <button class="flex flex-col items-center justify-center h-10 text-sm font-medium text-white rounded-lg w-60 bg-primary-700 hover:bg-primary-800">
                                         Resend verficition emil
                                     </button>
@@ -4905,7 +4905,7 @@
                                             </div>
                                         </div>
                                         <div class="flex flex-col items-center justify-center gap-3 text-center">
-                                            <p class="text-xs font-medium leading-none text-center text-gray-600" style="width: 513px;">Didn’t get verification OTP?</p>
+                                            <p class="text-xs font-medium leading-none text-center text-gray-600">Didn’t get verification OTP?</p>
                                             <button class="flex flex-col items-center justify-center h-10 text-sm font-medium text-white rounded-lg w-60 bg-primary-700 hover:bg-primary-800">
                                                 Resend OTP
                                             </button>
