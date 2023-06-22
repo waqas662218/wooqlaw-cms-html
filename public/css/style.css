@@ -872,6 +872,9 @@ select {
 .mt-5 {
   margin-top: 1.25rem;
 }
+.mt-3 {
+  margin-top: 0.75rem;
+}
 .line-clamp-6 {
   overflow: hidden;
   display: -webkit-box;
@@ -1220,6 +1223,9 @@ select {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
 }
 .gap-0 {
   gap: 0px;
@@ -2694,6 +2700,18 @@ select {
 
   .md\:mb-7 {
     margin-bottom: 1.75rem;
+  }
+
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
+  .md\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
   }
 
   .md\:block {
