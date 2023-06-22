@@ -1185,6 +1185,9 @@ select {
 .flex-row {
   flex-direction: row;
 }
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -2875,8 +2878,16 @@ select {
     flex-direction: column;
   }
 
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:items-end {
+    align-items: flex-end;
   }
 
   .md\:items-center {
@@ -2943,6 +2954,10 @@ select {
     gap: 2.25rem;
   }
 
+  .md\:gap-px {
+    gap: 1px;
+  }
+
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -2975,6 +2990,10 @@ select {
     overflow: visible;
   }
 
+  .md\:overflow-x-auto {
+    overflow-x: auto;
+  }
+
   .md\:overflow-x-hidden {
     overflow-x: hidden;
   }
@@ -3003,6 +3022,11 @@ select {
     border-radius: 0.75rem;
   }
 
+  .md\:rounded-t-xl {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+  }
+
   .md\:border {
     border-width: 1px;
   }
@@ -3017,6 +3041,10 @@ select {
 
   .md\:border-t {
     border-top-width: 1px;
+  }
+
+  .md\:border-b-2 {
+    border-bottom-width: 2px;
   }
 
   .md\:border-gray-200 {
