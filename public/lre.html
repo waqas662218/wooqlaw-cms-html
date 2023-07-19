@@ -235,7 +235,7 @@
                         </ol>
                     </nav>
                     <!-- LRE -->
-                    <div class="flex h-full gap-3 px-2 md:px-0" x-data="{ filter: false }" >
+                    <div class="flex flex-col h-full gap-3 px-2 md:flex-row md:px-0 md:h-[calc(100dvh-10rem)]" x-data="{ filter: false }" >
                         <aside class="md:!block p-3 bg-white rounded-xl" x-show="filter" :class="filter ? 'fixed top-0 left-0 md:!hidden d-block z-50 w-full md:w-0 overflow-y-auto h-screen md:h-full md:relative' : ''">
                             <div class="flex flex-col w-full gap-2 mb-3 md:w-60">
                                 <div class="flex items-center justify-between mb-1">
@@ -386,7 +386,7 @@
                                 </div>
                             </div>
                          </div>
-                         <aside class="w-full border border-gray-300 shrink-0 rounded-xl md:w-80">
+                         <aside class="w-full overflow-hidden border border-gray-300 shrink-0 rounded-xl md:w-80">
                             <div x-data x-tabs>
                                 <ul class="flex flex-col w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl" x-tabs:list>
                                     <li class="basis-auto shrink-0 grow-0 md:grow">
@@ -413,7 +413,7 @@
                              
                                 <div x-tabs:panels>
                                     <div x-tabs:panel class="flex flex-col gap-2 p-2">
-                                        <button onclick="createcontact.showModal()" class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
+                                        <button class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
                                             <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"></path>
                                             </svg>
@@ -422,10 +422,10 @@
                                         <div class="flex flex-col gap-2">
                                             <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
                                                 <div class="relative flex flex-col items-start grow">
-                                                    <p class="text-sm font-medium text-left text-black ">
+                                                    <p class="text-sm font-medium text-left text-black line-clamp-1">
                                                         Rashid murder case research
                                                     </p>
-                                                    <p class="text-xs font-medium text-left text-blue-600 ">
+                                                    <p class="text-xs font-medium text-left text-gray-600 line-clamp-1">
                                                         Rashid murder case
                                                     </p>
                                                 </div>
@@ -444,10 +444,90 @@
                                                     </svg>
                                                 </a>
                                             </div>
+                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <div class="relative flex flex-col items-start grow">
+                                                    <p class="text-sm font-medium text-left text-black line-clamp-1">
+                                                        Rashid murder case research
+                                                    </p>
+                                                    <a href="#" class="text-xs font-medium text-left text-blue-600 hover:text-blue-700">
+                                                        + Link Case
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="w-6 h-6 shrink-0 hover:bg-gray-50">
+                                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                        class="relative w-6 h-6" preserveAspectRatio="xMidYMid meet">
+                                                        <path
+                                                            d="M12 17.5C13.1046 17.5 14 18.3954 14 19.5C14 20.6046 13.1046 21.5 12 21.5C10.8954 21.5 10 20.6046 10 19.5C10 18.3954 10.8954 17.5 12 17.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 10.5C13.1046 10.5 14 11.3954 14 12.5C14 13.6046 13.1046 14.5 12 14.5C10.8954 14.5 10 13.6046 10 12.5C10 11.3954 10.8954 10.5 12 10.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 3.5C13.1046 3.5 14 4.39543 14 5.5C14 6.60457 13.1046 7.5 12 7.5C10.8954 7.5 10 6.60457 10 5.5C10 4.39543 10.8954 3.5 12 3.5Z"
+                                                            fill="#1C274C"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
                                         </div>
-
+                                        <div class="flex justify-end">
+                                            <a href="#" class="text-base font-medium text-center text-violet-700 hover:text-violet-800">View All</a>
+                                        </div>
                                     </div>
-                                    <div x-tabs:panel class="p-2">Tab Panel 2</div>
+                                    <div x-tabs:panel class="flex flex-col gap-2 p-2">
+                                        <button class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
+                                            <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"></path>
+                                            </svg>
+                                            New Search
+                                        </button>
+                                        <div class="flex flex-col gap-2">
+                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <div class="relative flex flex-col items-start grow">
+                                                    <p class="text-sm font-medium text-left text-black line-clamp-2">
+                                                        Murder case with accused not present at the place and with more information to lead
+                                                    </p>
+                                                </div>
+                                                <a href="#" class="w-6 h-6 shrink-0 hover:bg-gray-50">
+                                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                        class="relative w-6 h-6" preserveAspectRatio="xMidYMid meet">
+                                                        <path
+                                                            d="M12 17.5C13.1046 17.5 14 18.3954 14 19.5C14 20.6046 13.1046 21.5 12 21.5C10.8954 21.5 10 20.6046 10 19.5C10 18.3954 10.8954 17.5 12 17.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 10.5C13.1046 10.5 14 11.3954 14 12.5C14 13.6046 13.1046 14.5 12 14.5C10.8954 14.5 10 13.6046 10 12.5C10 11.3954 10.8954 10.5 12 10.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 3.5C13.1046 3.5 14 4.39543 14 5.5C14 6.60457 13.1046 7.5 12 7.5C10.8954 7.5 10 6.60457 10 5.5C10 4.39543 10.8954 3.5 12 3.5Z"
+                                                            fill="#1C274C"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <div class="relative flex flex-col items-start grow">
+                                                    <p class="text-sm font-medium text-left text-black line-clamp-2">
+                                                        Murder case with accused not present at the place and with more information to lead
+                                                    </p>
+                                                </div>
+                                                <a href="#" class="w-6 h-6 shrink-0 hover:bg-gray-50">
+                                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                        class="relative w-6 h-6" preserveAspectRatio="xMidYMid meet">
+                                                        <path
+                                                            d="M12 17.5C13.1046 17.5 14 18.3954 14 19.5C14 20.6046 13.1046 21.5 12 21.5C10.8954 21.5 10 20.6046 10 19.5C10 18.3954 10.8954 17.5 12 17.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 10.5C13.1046 10.5 14 11.3954 14 12.5C14 13.6046 13.1046 14.5 12 14.5C10.8954 14.5 10 13.6046 10 12.5C10 11.3954 10.8954 10.5 12 10.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 3.5C13.1046 3.5 14 4.39543 14 5.5C14 6.60457 13.1046 7.5 12 7.5C10.8954 7.5 10 6.60457 10 5.5C10 4.39543 10.8954 3.5 12 3.5Z"
+                                                            fill="#1C274C"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-end">
+                                            <a href="#" class="text-base font-medium text-center text-violet-700 hover:text-violet-800">View All</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                          </aside>
