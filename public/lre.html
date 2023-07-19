@@ -320,8 +320,9 @@
                             <div class="p-2 bg-white rounded-xl">
                                 <div>
                                     <div class="relative flex flex-col gap-4 p-3 bg-white border border-gray-300 rounded-lg">
-                                        <div class="relative flex flex-col items-center ">
-                                            <p class= w-full text-sm text-left text-gray-700">
+                                        <div class="relative flex flex-col items-center gap-2">
+                                            <a href="#" class="w-full text-base font-medium leading-normal text-blue-600 hover:text-blue-700 hover:underline line-clamp-2">M/s M.A. International thr. its Proprietor Lahore v. The Appellete Tribunal of Customs, Excise & Sales Tax thr. Collector of Customs Karachi & others.The Appellete Tribunal of Customs, Excise & Sales Tax thr. Collector of Customs Karachi & others Collector of Customs Karachi & others</a>
+                                            <p class="w-full text-sm text-left text-gray-700 line-clamp-3">
                                                 Qazi Muhammad Amin Ahmed, J. Jail Petition No.474 of 2017 by Mst. Robina and Criminal Petition
                                                 for Leave to Appeal No.83-P/2013 by her co-convict Izzat Ullah, bound by a common thread, are
                                                 being decided through this single judgment; they were intercepted on 27.3.2010 at 10:00 a.m.
@@ -385,6 +386,71 @@
                                 </div>
                             </div>
                          </div>
+                         <aside class="w-full border border-gray-300 shrink-0 rounded-xl md:w-80">
+                            <div x-data x-tabs>
+                                <ul class="flex flex-col w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl" x-tabs:list>
+                                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                                        <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4">
+                                            <div class="flex items-center gap-2">                             
+                                                <span>Documents</span>
+                                            </div>
+                                            <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"></path>
+                                            </svg> 
+                                        </a>
+                                    </li>
+                                    <li class="basis-auto shrink-0 grow-0 md:grow">
+                                        <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : ' '" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 text-gray-500 bg-white md:justify-center md:border-b-2 md:px-4">
+                                            <div class="flex items-center gap-2">                     
+                                                <span>Saved Searches</span>
+                                            </div>
+                                            <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"></path>
+                                            </svg> 
+                                        </a>
+                                    </li>
+                                </ul>
+                             
+                                <div x-tabs:panels>
+                                    <div x-tabs:panel class="flex flex-col gap-2 p-2">
+                                        <button onclick="createcontact.showModal()" class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
+                                            <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"></path>
+                                            </svg>
+                                            Create Document
+                                        </button>
+                                        <div class="flex flex-col gap-2">
+                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <div class="relative flex flex-col items-start grow">
+                                                    <p class="text-sm font-medium text-left text-black ">
+                                                        Rashid murder case research
+                                                    </p>
+                                                    <p class="text-xs font-medium text-left text-blue-600 ">
+                                                        Rashid murder case
+                                                    </p>
+                                                </div>
+                                                <a href="#" class="w-6 h-6 shrink-0 hover:bg-gray-50">
+                                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                        class="relative w-6 h-6" preserveAspectRatio="xMidYMid meet">
+                                                        <path
+                                                            d="M12 17.5C13.1046 17.5 14 18.3954 14 19.5C14 20.6046 13.1046 21.5 12 21.5C10.8954 21.5 10 20.6046 10 19.5C10 18.3954 10.8954 17.5 12 17.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 10.5C13.1046 10.5 14 11.3954 14 12.5C14 13.6046 13.1046 14.5 12 14.5C10.8954 14.5 10 13.6046 10 12.5C10 11.3954 10.8954 10.5 12 10.5Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12 3.5C13.1046 3.5 14 4.39543 14 5.5C14 6.60457 13.1046 7.5 12 7.5C10.8954 7.5 10 6.60457 10 5.5C10 4.39543 10.8954 3.5 12 3.5Z"
+                                                            fill="#1C274C"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div x-tabs:panel class="p-2">Tab Panel 2</div>
+                                </div>
+                            </div>
+                         </aside>
                     </div>
                 </div>
             </main>
