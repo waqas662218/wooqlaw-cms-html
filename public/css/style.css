@@ -1016,6 +1016,15 @@ select {
 .h-\[calc\(100dvh-4rem\)\] {
   height: calc(100dvh - 4rem);
 }
+.h-\[calc\(100dvh-5rem\)\] {
+  height: calc(100dvh - 5rem);
+}
+.h-\[calc\(100\%-5rem\)\] {
+  height: calc(100% - 5rem);
+}
+.h-\[calc\(100\%-4rem\)\] {
+  height: calc(100% - 4rem);
+}
 .max-h-\[100dvh\] {
   max-height: 100dvh;
 }
@@ -1024,6 +1033,16 @@ select {
 }
 .min-h-\[64px\] {
   min-height: 64px;
+}
+.min-h-max {
+  min-height: -moz-max-content;
+  min-height: max-content;
+}
+.min-h-\[100px\] {
+  min-height: 100px;
+}
+.min-h-\[102px\] {
+  min-height: 102px;
 }
 .w-0 {
   width: 0px;
@@ -2868,6 +2887,10 @@ select {
     margin-top: 0px;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3040,6 +3063,10 @@ select {
 
   .md\:max-w-6xl {
     max-width: 72rem;
+  }
+
+  .md\:max-w-sm {
+    max-width: 24rem;
   }
 
   .md\:flex-1 {
