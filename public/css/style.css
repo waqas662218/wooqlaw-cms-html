@@ -772,6 +772,30 @@ select {
 .top-1 {
   top: 0.25rem;
 }
+.right-6 {
+  right: 1.5rem;
+}
+.right-8 {
+  right: 2rem;
+}
+.right-10 {
+  right: 2.5rem;
+}
+.right-14 {
+  right: 3.5rem;
+}
+.right-16 {
+  right: 4rem;
+}
+.right-18 {
+  right: 4.5rem;
+}
+.bottom-8 {
+  bottom: 2rem;
+}
+.bottom-9 {
+  bottom: 2.25rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -1153,6 +1177,9 @@ select {
 .w-\[242px\] {
   width: 242px;
 }
+.w-\[147px\] {
+  width: 147px;
+}
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -1194,6 +1221,9 @@ select {
 }
 .max-w-xs {
   max-width: 20rem;
+}
+.max-w-2xl {
+  max-width: 42rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2126,6 +2156,10 @@ select {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-\[\#1f2a37\] {
+  --tw-text-opacity: 1;
+  color: rgb(31 42 55 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;
