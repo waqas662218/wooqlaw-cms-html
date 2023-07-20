@@ -27,7 +27,7 @@
 </head>
 
 <body class="overflow-hidden">
-    <header class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14 md:h-18">
+    <header class="relative z-30 items-center justify-between hidden w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14 md:h-18">
 
         
         <div class="flex items-center gap-3">
@@ -157,14 +157,14 @@
             </div>
         </div>
     </header>
-    <div class="flex bg-gray-200 h-[calc(100dvh-7rem)] md:h-[calc(100vh-4.5rem)] overflow-hidden" 
+    <div class="flex bg-gray-200 h-[calc(100dvh-0rem)] md:h-[calc(100vh-0rem)] overflow-hidden" 
         x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
         x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }"   
     >
     <!-- code for swipe 
         x-init="window.addEventListener('touchstart', function(e) { startX = e.touches[0].pageX; }); window.addEventListener('touchmove', function(e) { if (startX - e.touches[0].pageX > 50) { chats = true; } })" -->
         
-        <aside class="absolute bottom-0 z-30 flex w-full bg-white rounded-t drop-shadow md:h-full md:rounded-t-none md:flex-col md:relative" :class="menu ? 'md:w-20' : 'md:w-0'">
+        <aside class="absolute bottom-0 z-30 hidden w-full bg-white rounded-t drop-shadow md:h-full md:rounded-t-none md:flex-col md:relative" :class="menu ? 'md:w-20' : 'md:w-0'">
             <div class="relative flex w-full min-h-0 pt-0 border-gray-200 md:border-t md:flex-1 md:flex-col">
                 <div class="flex w-full py-2 overflow-y-auto md:py-5 md:flex-1 md:flex-col">
                     <div class="w-full px-3 space-y-1 md:flex-1">
@@ -700,7 +700,7 @@
                                         </a>
                                     </li>
                                     <li class="basis-auto shrink-0 grow-0 md:grow">
-                                        <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : ' '" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 text-gray-500 bg-white md:justify-center md:border-b-2 md:px-4">
+                                        <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white '" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 text-gray-500 bg-white md:justify-center md:border-b-2 md:px-4">
                                             <div class="flex items-center gap-2"> 
                                                 <svg class="w-5 h-5 shrink-0" viewBox="0 0 21 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M7.75 4.37484C7.40482 4.37484 7.125 4.65466 7.125 4.99984C7.125 5.34502 7.40482 5.62484 7.75 5.62484H12.75C13.0952 5.62484 13.375 5.34502 13.375 4.99984C13.375 4.65466 13.0952 4.37484 12.75 4.37484H7.75Z" />
@@ -779,7 +779,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="" x-data="{popup:false}" :class="popup?'absolute max-w-2xl w-full bottom-9 right-18 bg-white drop-shadow rounded-xl':'relative'">
+                                        <div class="" x-data="{popup:false}" :class="popup?'absolute max-w-2xl w-full bottom-0 top-0 md:bottom-9 h-[100dvh] md:h-[calc(100dvh-12rem)] right-0 md:right-18 bg-white drop-shadow rounded-xl':'relative'">
                                             <div class="flex justify-center items-center gap-2.5 p-4 rounded-lg bg-white " :class="popup? '':'border border-violet-700'">
                                                 <p class="text-sm font-medium text-left text-black grow">
                                                     Haider property case research
@@ -816,44 +816,35 @@
                                             </div>
                                             <div x-show="popup" x-cloak>
                                                 <div x-data x-tabs>
-                                                    <ul class="flex flex-col w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl" x-tabs:list>
+                                                    <ul class="flex w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl" x-tabs:list>
                                                         <li class="basis-auto shrink-0 grow-0 md:grow">
-                                                            <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4">
+                                                            <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-gray-100'" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 bg-white drop-shadow md:justify-center md:border-b-2 md:px-4">
                                                                 <div class="flex items-center gap-2">   
                                                                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.33857 3.17157C3.16699 4.34315 3.16699 6.22876 3.16699 10V14C3.16699 17.7712 3.16699 19.6569 4.33857 20.8284C5.51014 22 7.39576 22 11.167 22H13.167C16.9382 22 18.8238 22 19.9954 20.8284C21.167 19.6569 21.167 17.7712 21.167 14V10C21.167 6.22876 21.167 4.34315 19.9954 3.17157C18.8238 2 16.9382 2 13.167 2H11.167C7.39576 2 5.51014 2 4.33857 3.17157ZM7.41699 8C7.41699 7.58579 7.75278 7.25 8.16699 7.25H16.167C16.5812 7.25 16.917 7.58579 16.917 8C16.917 8.41421 16.5812 8.75 16.167 8.75H8.16699C7.75278 8.75 7.41699 8.41421 7.41699 8ZM7.41699 12C7.41699 11.5858 7.75278 11.25 8.16699 11.25H16.167C16.5812 11.25 16.917 11.5858 16.917 12C16.917 12.4142 16.5812 12.75 16.167 12.75H8.16699C7.75278 12.75 7.41699 12.4142 7.41699 12ZM8.16699 15.25C7.75278 15.25 7.41699 15.5858 7.41699 16C7.41699 16.4142 7.75278 16.75 8.16699 16.75H13.167C13.5812 16.75 13.917 16.4142 13.917 16C13.917 15.5858 13.5812 15.25 13.167 15.25H8.16699Z"/>
                                                                     </svg>                                                                                                                                                     
                                                                     <span>Documents</span>
                                                                 </div>
-                                                                <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"></path>
-                                                                </svg> 
                                                             </a>
                                                         </li>
                                                         <li class="basis-auto shrink-0 grow-0 md:grow">
-                                                            <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4">
+                                                            <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-gray-100'" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 bg-white drop-shadow md:justify-center md:border-b-2 md:px-4">
                                                                 <div class="flex items-center gap-2">   
                                                                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1288 20.4718L13.5867 21.3877C13.1035 22.204 11.8965 22.204 11.4133 21.3877L10.8712 20.4718C10.4507 19.7614 10.2405 19.4063 9.90279 19.2098C9.56509 19.0134 9.13992 19.0061 8.28958 18.9915C7.03422 18.9698 6.24689 18.8929 5.58658 18.6194C4.36144 18.1119 3.38807 17.1386 2.8806 15.9134C2.5 14.9946 2.5 13.8297 2.5 11.5V10.5C2.5 7.22657 2.5 5.58985 3.2368 4.38751C3.64908 3.71473 4.21473 3.14908 4.88751 2.7368C6.08985 2 7.72657 2 11 2H14C17.2734 2 18.9101 2 20.1125 2.7368C20.7853 3.14908 21.3509 3.71473 21.7632 4.38751C22.5 5.58985 22.5 7.22657 22.5 10.5V11.5C22.5 13.8297 22.5 14.9946 22.1194 15.9134C21.6119 17.1386 20.6386 18.1119 19.4134 18.6194C18.7531 18.8929 17.9658 18.9698 16.7104 18.9915C15.86 19.0061 15.4349 19.0134 15.0972 19.2098C14.7595 19.4062 14.5492 19.7614 14.1288 20.4718ZM8.5 11.75C8.08579 11.75 7.75 12.0858 7.75 12.5C7.75 12.9142 8.08579 13.25 8.5 13.25H14C14.4142 13.25 14.75 12.9142 14.75 12.5C14.75 12.0858 14.4142 11.75 14 11.75H8.5ZM7.75 9C7.75 8.58579 8.08579 8.25 8.5 8.25H16.5C16.9142 8.25 17.25 8.58579 17.25 9C17.25 9.41421 16.9142 9.75 16.5 9.75H8.5C8.08579 9.75 7.75 9.41421 7.75 9Z"/>
                                                                     </svg>                                                                                                                                                                                                                            
                                                                     <span>Comments</span>
                                                                 </div>
-                                                                <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"></path>
-                                                                </svg> 
                                                             </a>
                                                         </li>
                                                         <li class="basis-auto shrink-0 grow-0 md:grow">
-                                                            <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : ' '" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 text-gray-500 bg-white md:justify-center md:border-b-2 md:px-4">
+                                                            <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-gray-100 '" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 text-gray-500 bg-white drop-shadow md:justify-center md:border-b-2 md:px-4">
                                                                 <div class="flex items-center gap-2"> 
                                                                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M21.834 11.0975V16.0909C21.834 19.1875 21.834 20.7358 21.0999 21.4123C20.7498 21.735 20.3078 21.9377 19.8371 21.9915C18.85 22.1045 17.6972 21.0849 15.3918 19.0458C14.3728 18.1445 13.8632 17.6938 13.2737 17.5751C12.9834 17.5166 12.6846 17.5166 12.3943 17.5751C11.8047 17.6938 11.2952 18.1445 10.2761 19.0458C7.97072 21.0849 6.818 22.1045 5.8309 21.9915C5.36013 21.9377 4.9182 21.735 4.56809 21.4123C3.83398 20.7358 3.83398 19.1875 3.83398 16.0909V11.0975C3.83398 6.80891 3.83398 4.6646 5.152 3.3323C6.47002 2 8.59134 2 12.834 2C17.0766 2 19.1979 2 20.516 3.3323C21.834 4.6646 21.834 6.80891 21.834 11.0975ZM9.08398 6C9.08398 5.58579 9.41977 5.25 9.83398 5.25H15.834C16.2482 5.25 16.584 5.58579 16.584 6C16.584 6.41421 16.2482 6.75 15.834 6.75H9.83398C9.41977 6.75 9.08398 6.41421 9.08398 6Z" />
                                                                     </svg>                                                                                                                                             
                                                                     <span>References</span>
                                                                 </div>
-                                                                <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"></path>
-                                                                </svg> 
                                                             </a>
                                                         </li>
                                                     </ul>
