@@ -245,155 +245,163 @@
                             </svg>
                         </button>
                             
-                        <aside class="md:!block  bg-white rounded-xl overflow-hidden shrink-0 max-w-sm w-full" x-show="filter" :class="filter ? 'fixed top-0 left-0 md:!hidden d-block z-50 max-w-sm w-full overflow-y-auto h-screen md:h-full md:relative' : ''">
-                            <div class="flex flex-col w-full gap-2 h-[calc(100dvh-3.8rem)] md:h-[calc(100dvh-13.5rem)] overflow-y-auto p-3">
-                                <div class="flex items-center justify-between mb-1">
-                                    <h2 class="text-base font-medium leading-normal text-center text-black">Search Criteria</h2>
-                                    <button x-on:click="filter = false" type="button" class="z-50 flex items-center justify-center bg-white rounded-full md:hidden">
-                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                           <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29303 4.79308C4.48056 4.60561 4.73487 4.50029 5.00003 4.50029C5.26519 4.50029 5.5195 4.60561 5.70703 4.79308L10 9.08608L14.293 4.79308C14.3853 4.69757 14.4956 4.62139 14.6176 4.56898C14.7396 4.51657 14.8709 4.48898 15.0036 4.48783C15.1364 4.48668 15.2681 4.51198 15.391 4.56226C15.5139 4.61254 15.6255 4.68679 15.7194 4.78069C15.8133 4.87458 15.8876 4.98623 15.9379 5.10913C15.9881 5.23202 16.0134 5.3637 16.0123 5.49648C16.0111 5.62926 15.9835 5.76048 15.9311 5.88249C15.8787 6.00449 15.8025 6.11483 15.707 6.20708L11.414 10.5001L15.707 14.7931C15.8892 14.9817 15.99 15.2343 15.9877 15.4965C15.9854 15.7587 15.8803 16.0095 15.6948 16.1949C15.5094 16.3803 15.2586 16.4855 14.9964 16.4878C14.7342 16.49 14.4816 16.3892 14.293 16.2071L10 11.9141L5.70703 16.2071C5.51843 16.3892 5.26583 16.49 5.00363 16.4878C4.74143 16.4855 4.49062 16.3803 4.30521 16.1949C4.1198 16.0095 4.01463 15.7587 4.01236 15.4965C4.01008 15.2343 4.11087 14.9817 4.29303 14.7931L8.58603 10.5001L4.29303 6.20708C4.10556 6.01955 4.00024 5.76525 4.00024 5.50008C4.00024 5.23492 4.10556 4.98061 4.29303 4.79308Z" fill="#111928"></path>
-                                        </svg>                  
+                        <aside class="md:!block  bg-white md:rounded-xl overflow-hidden shrink-0 max-w-[360px] w-full" x-show="filter" :class="filter ? 'fixed top-0 left-0 md:!hidden d-block z-50 max-w-sm w-full overflow-y-auto h-screen md:h-full md:relative' : ''">
+                            <div class="flex flex-col w-full h-[calc(100dvh-3.8rem)] md:h-[calc(100dvh-13.5rem)] overflow-y-auto">
+                                <div class="flex items-center justify-between h-14 p-2.5 bg-gradient-to-r from-fuchsia-500 to-violet-600 md:rounded-tl-xl md:rounded-tr-xl md:justify-center gap-2.5">
+                                    <div class="flex items-center gap-1">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5002 1.99023C6.53023 1.99023 2.49023 6.03023 2.49023 11.0002C2.49023 15.9702 6.53023 20.0102 11.5002 20.0102C16.4702 20.0102 20.5102 15.9702 20.5102 11.0002C20.5102 6.03023 16.4702 1.99023 11.5002 1.99023ZM11.5002 13.2502H8.50023C8.09023 13.2502 7.75023 12.9102 7.75023 12.5002C7.75023 12.0902 8.09023 11.7502 8.50023 11.7502H11.5002C11.9102 11.7502 12.2502 12.0902 12.2502 12.5002C12.2502 12.9102 11.9102 13.2502 11.5002 13.2502ZM14.5002 10.2502H8.50023C8.09023 10.2502 7.75023 9.91023 7.75023 9.50023C7.75023 9.09023 8.09023 8.75023 8.50023 8.75023H14.5002C14.9102 8.75023 15.2502 9.09023 15.2502 9.50023C15.2502 9.91023 14.9102 10.2502 14.5002 10.2502Z" fill="white"/>
+                                            <path d="M22.4901 18.95C22.1601 18.34 21.4601 18 20.5201 18C19.8101 18 19.2001 18.29 18.8401 18.79C18.4801 19.29 18.4001 19.96 18.6201 20.63C19.0501 21.93 19.8001 22.22 20.2101 22.27C20.2701 22.28 20.3301 22.28 20.4001 22.28C20.8401 22.28 21.5201 22.09 22.1801 21.1C22.7101 20.33 22.8101 19.56 22.4901 18.95Z" fill="white"/>
+                                        </svg>                                            
+                                        <h2 class="text-base font-semibold leading-normal text-white">LRE Search</h2>
+                                    </div>
+                                    <button x-on:click="filter = false" type="button" class="z-50 flex items-center justify-center md:hidden hover:bg-gray-50">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.1661 4.7998L11.9677 11.9982M11.9677 11.9982L4.83105 19.1349M11.9677 11.9982L19.1696 19.2001M11.9677 11.9982L4.83456 4.86505" stroke="white" stroke-width="1.5"/>
+                                        </svg>                                                              
                                      </button>
                                 </div>
-                                <div >
+                                <div class="flex flex-col gap-2 px-3 py-2">
+                                    <div>
                                     <textarea id="message" rows="4" class="min-h-max block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+                                    </div>
+                                    <!-- Filters -->
+                                    <div class="rounded-lg bg-gray-50 drop-shadow">
+                                        <div x-disclosure default-open>
+                                            <h2>
+                                                <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
+                                                <span class="flex items-center gap-1">
+                                                    <span>
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_181369_171152)">
+                                                            <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
+                                                            </g>
+                                                            <defs>
+                                                            <clipPath id="clip0_181369_171152">
+                                                                <rect width="20" height="20" fill="white"></rect>
+                                                            </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </span>
+                                                    <span>
+                                                        Availability
+                                                    </span>
+                                                </span>
+                                                <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                </button>
+                                            </h2>
+                                            <div class="px-3 pb-3" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="">
+                                                <div class="flex flex-col gap-4">
+                                                    Select 2 Component
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!-- Filters -->
+                                    <div class="rounded-lg bg-gray-50 drop-shadow">
+                                        <div x-disclosure>
+                                            <h2>
+                                                <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
+                                                <span class="flex items-center gap-1">
+                                                    <span>
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_181369_171152)">
+                                                            <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
+                                                            </g>
+                                                            <defs>
+                                                            <clipPath id="clip0_181369_171152">
+                                                                <rect width="20" height="20" fill="white"></rect>
+                                                            </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </span>
+                                                    <span>
+                                                        Availability
+                                                    </span>
+                                                </span>
+                                                <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                </button>
+                                            </h2>
+                                            <div class="px-3 pb-3" x-disclosure:panel="">
+                                                <div class="flex flex-col gap-4">
+                                                    Select 2 Component
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!-- Filters -->
+                                    <div class="rounded-lg bg-gray-50 drop-shadow">
+                                        <div x-disclosure="" >
+                                            <h2>
+                                                <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
+                                                <span class="flex items-center gap-1">
+                                                    <span>
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_181369_171152)">
+                                                            <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
+                                                            </g>
+                                                            <defs>
+                                                            <clipPath id="clip0_181369_171152">
+                                                                <rect width="20" height="20" fill="white"></rect>
+                                                            </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </span>
+                                                    <span>
+                                                        Availability
+                                                    </span>
+                                                </span>
+                                                <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                </button>
+                                            </h2>
+                                            <div class="px-3 pb-3" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="">
+                                                <div class="flex flex-col gap-4">
+                                                    Select 2 Component
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!-- Filters -->
+                                    <div class="rounded-lg bg-gray-50 drop-shadow">
+                                        <div x-disclosure="">
+                                            <h2>
+                                                <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
+                                                <span class="flex items-center gap-1">
+                                                    <span>
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_181369_171152)">
+                                                            <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
+                                                            </g>
+                                                            <defs>
+                                                            <clipPath id="clip0_181369_171152">
+                                                                <rect width="20" height="20" fill="white"></rect>
+                                                            </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </span>
+                                                    <span>
+                                                        Availability
+                                                    </span>
+                                                </span>
+                                                <svg class="w-6 h-6 shrink-0" :class="$disclosure.isOpen && 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                </svg>
+                                                </button>
+                                            </h2>
+                                            <div class="px-3 pb-3" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="">
+                                                <div class="flex flex-col gap-4">
+                                                    Select 2 Component
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Filters -->
-                               <div class="rounded-lg bg-gray-50 drop-shadow">
-                                  <div x-disclosure="" default-open="">
-                                     <h2>
-                                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
-                                           <span class="flex items-center gap-1">
-                                              <span>
-                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_181369_171152)">
-                                                       <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
-                                                    </g>
-                                                    <defs>
-                                                       <clipPath id="clip0_181369_171152">
-                                                          <rect width="20" height="20" fill="white"></rect>
-                                                       </clipPath>
-                                                    </defs>
-                                                 </svg>
-                                              </span>
-                                              <span>
-                                                 Availability
-                                              </span>
-                                           </span>
-                                           <svg class="w-6 h-6 rotate-180 shrink-0" :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                           </svg>
-                                        </button>
-                                     </h2>
-                                     <div class="px-3 pb-3" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="">
-                                        <div class="flex flex-col gap-4">
-                                            Select 2 Component
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                                <!-- Filters -->
-                               <div class="rounded-lg bg-gray-50 drop-shadow">
-                                  <div x-disclosure="" default-open="">
-                                     <h2>
-                                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
-                                           <span class="flex items-center gap-1">
-                                              <span>
-                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_181369_171152)">
-                                                       <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
-                                                    </g>
-                                                    <defs>
-                                                       <clipPath id="clip0_181369_171152">
-                                                          <rect width="20" height="20" fill="white"></rect>
-                                                       </clipPath>
-                                                    </defs>
-                                                 </svg>
-                                              </span>
-                                              <span>
-                                                 Availability
-                                              </span>
-                                           </span>
-                                           <svg class="w-6 h-6 rotate-180 shrink-0" :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                           </svg>
-                                        </button>
-                                     </h2>
-                                     <div class="px-3 pb-3" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="">
-                                        <div class="flex flex-col gap-4">
-                                            Select 2 Component
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                                <!-- Filters -->
-                               <div class="rounded-lg bg-gray-50 drop-shadow">
-                                  <div x-disclosure="" default-open="">
-                                     <h2>
-                                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
-                                           <span class="flex items-center gap-1">
-                                              <span>
-                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_181369_171152)">
-                                                       <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
-                                                    </g>
-                                                    <defs>
-                                                       <clipPath id="clip0_181369_171152">
-                                                          <rect width="20" height="20" fill="white"></rect>
-                                                       </clipPath>
-                                                    </defs>
-                                                 </svg>
-                                              </span>
-                                              <span>
-                                                 Availability
-                                              </span>
-                                           </span>
-                                           <svg class="w-6 h-6 rotate-180 shrink-0" :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                           </svg>
-                                        </button>
-                                     </h2>
-                                     <div class="px-3 pb-3" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="">
-                                        <div class="flex flex-col gap-4">
-                                            Select 2 Component
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                                <!-- Filters -->
-                               <div class="rounded-lg bg-gray-50 drop-shadow">
-                                  <div x-disclosure="" default-open="">
-                                     <h2>
-                                        <button type="button" class="flex items-center justify-between w-full p-3 text-xs font-normal text-gray-600" x-disclosure:button="" aria-expanded="true" aria-controls="alpine-disclosure-panel-1">
-                                           <span class="flex items-center gap-1">
-                                              <span>
-                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_181369_171152)">
-                                                       <path d="M13.3333 8.77565C13.0917 8.53398 12.6917 8.53398 12.45 8.77565L8.825 12.4007L7.5 11.0757C7.25833 10.834 6.85833 10.834 6.61667 11.0757C6.375 11.3173 6.375 11.7173 6.61667 11.959L8.23333 13.5757C8.55833 13.9007 9.08333 13.9007 9.40833 13.5757L13.325 9.65898C13.575 9.41732 13.575 9.01732 13.3333 8.77565ZM15.8333 2.50065H15V1.66732C15 1.20898 14.625 0.833984 14.1667 0.833984C13.7083 0.833984 13.3333 1.20898 13.3333 1.66732V2.50065H6.66667V1.66732C6.66667 1.20898 6.29167 0.833984 5.83333 0.833984C5.375 0.833984 5 1.20898 5 1.66732V2.50065H4.16667C3.24167 2.50065 2.50833 3.25065 2.50833 4.16732L2.5 15.834C2.5 16.7507 3.24167 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM15 15.834H5C4.54167 15.834 4.16667 15.459 4.16667 15.0007V6.66732H15.8333V15.0007C15.8333 15.459 15.4583 15.834 15 15.834Z" fill="#4B5563"></path>
-                                                    </g>
-                                                    <defs>
-                                                       <clipPath id="clip0_181369_171152">
-                                                          <rect width="20" height="20" fill="white"></rect>
-                                                       </clipPath>
-                                                    </defs>
-                                                 </svg>
-                                              </span>
-                                              <span>
-                                                 Availability
-                                              </span>
-                                           </span>
-                                           <svg class="w-6 h-6 rotate-180 shrink-0" :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                           </svg>
-                                        </button>
-                                     </h2>
-                                     <div class="px-3 pb-3" x-disclosure:panel="" id="alpine-disclosure-panel-1" style="">
-                                        <div class="flex flex-col gap-4">
-                                            Select 2 Component
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
                             </div>
                             <div class="sticky bottom-0 flex gap-2 px-3 py-2 bg-white">
                                
@@ -413,7 +421,7 @@
                             </div>
                          </aside>
                          <div class="grow" x-data="{ empty: true }">
-                            <div x-on:click="empty = false"  class="flex items-center justify-center h-full px-2 pb-2 overflow-x-hidden overflow-y-auto bg-white rounded-xl" :class="empty? '':'hidden'">
+                            <div x-on:click="empty = false"  class="flex items-center justify-center px-2 pb-2 bg-white md:h-full h-96 rounded-xl" :class="empty? '':'hidden'">
                                 <svg width="305" height="64" viewBox="0 0 305 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g opacity="0.25">
                                     <path d="M6.78125 15.458C11.4721 11.2858 17.4401 8.86544 23.6669 8.60992C29.8937 8.35441 35.9935 10.2796 40.9254 14.0569C45.8574 17.8343 49.3158 23.2298 50.7107 29.3228C52.1056 35.4157 51.3504 41.8286 48.5741 47.4672L42.2012 44.3418C44.2429 40.1951 44.7983 35.4789 43.7724 30.9981C42.7466 26.5172 40.2032 22.5492 36.5762 19.7713C32.9491 16.9933 28.4632 15.5775 23.8839 15.7654C19.3046 15.9533 14.9156 17.7333 11.4658 20.8017L6.78125 15.458Z" fill="url(#paint0_linear_1480_61977)"/>
@@ -472,11 +480,14 @@
                                     </defs>
                                 </svg>                                    
                             </div>
-                            <div class="h-full px-2 pb-2 overflow-x-hidden overflow-y-auto bg-white rounded-xl" :class="empty? 'hidden':'block'">
-                                <p class="sticky top-0 z-10 py-2 text-base font-medium text-left text-black bg-white">
-                                    About 2046 results
-                                </p>
-                                <div class="flex flex-col gap-2">
+                            <div class="h-full overflow-hidden bg-white rounded-xl" :class="empty? 'hidden':'block'">
+                                <div class="sticky top-0 z-10 flex items-center w-full px-2 bg-white border-b border-gray-300 h-14">
+                                    <p class="text-base font-medium text-left text-black">
+                                        About 2046 results
+                                    </p>
+                                </div>
+                                
+                                <div class="flex flex-col gap-2 p-2 overflow-y-auto md:h-[calc(100dvh-14rem)]">
                                     <div class="relative flex flex-col gap-4 p-3 bg-white border border-gray-300 rounded-lg">
                                         <div class="relative flex flex-col items-center gap-2">
                                             <a href="#" class="w-full text-base font-medium leading-normal text-blue-600 hover:text-blue-700 hover:underline line-clamp-2">M/s M.A. International thr. its Proprietor Lahore v. The Appellete Tribunal of Customs, Excise & Sales Tax thr. Collector of Customs Karachi & others.The Appellete Tribunal of Customs, Excise & Sales Tax thr. Collector of Customs Karachi & others Collector of Customs Karachi & others</a>
@@ -490,8 +501,8 @@
                                         </div>
                                         <a href="#" class="text-xs font-medium text-left text-blue-600 hover:text-blue-700">View more</a>
                                         <hr class="border border-gray-200">
-                                        <div class="flex flex-wrap items-center gap-4">
-                                            <div class="relative flex flex-wrap items-center gap-3 md:gap-4">
+                                        <div class="flex flex-wrap items-center gap-2">
+                                            <div class="relative flex flex-wrap items-center gap-2">
                                                 <p class="text-sm font-medium text-center text-gray-500 ">Judges:</p>
                                                 <div class="flex   relative gap-2.5 p-2 rounded bg-gray-50">
                                                     <p class="text-sm font-medium text-center text-black ">
@@ -514,7 +525,7 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="relative flex items-center gap-3 md:gap-4">
+                                            <div class="relative flex items-center gap-2">
                                                 <p class="text-sm font-medium text-center text-gray-500 ">Court:</p>
                                                 <div class="flex   relative gap-2.5 p-2 rounded bg-gray-50">
                                                     <p class="text-sm font-medium text-center text-black ">
@@ -528,7 +539,7 @@
                                                     <p class="text-sm font-medium text-center text-black ">1988</p>
                                                 </div>
                                             </div>
-                                            <div class="relative flex items-center gap-3 md:gap-4">
+                                            <div class="relative flex items-center gap-2">
                                                 <p class="text-sm font-medium text-center text-gray-500 ">
                                                     Citation:
                                                 </p>
@@ -554,8 +565,8 @@
                                         </div>
                                         <a href="#" class="text-xs font-medium text-left text-blue-600 hover:text-blue-700">View more</a>
                                         <hr class="border border-gray-200">
-                                        <div class="flex flex-wrap items-center gap-4">
-                                            <div class="relative flex flex-wrap items-center gap-3 md:gap-4">
+                                        <div class="flex flex-wrap items-center gap-2">
+                                            <div class="relative flex flex-wrap items-center gap-2">
                                                 <p class="text-sm font-medium text-center text-gray-500 ">Judges:</p>
                                                 <div class="flex   relative gap-2.5 p-2 rounded bg-gray-50">
                                                     <p class="text-sm font-medium text-center text-black ">
@@ -578,7 +589,7 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="relative flex items-center gap-3 md:gap-4">
+                                            <div class="relative flex items-center gap-2">
                                                 <p class="text-sm font-medium text-center text-gray-500 ">Court:</p>
                                                 <div class="flex   relative gap-2.5 p-2 rounded bg-gray-50">
                                                     <p class="text-sm font-medium text-center text-black ">
@@ -592,7 +603,7 @@
                                                     <p class="text-sm font-medium text-center text-black ">1988</p>
                                                 </div>
                                             </div>
-                                            <div class="relative flex items-center gap-3 md:gap-4">
+                                            <div class="relative flex items-center gap-2">
                                                 <p class="text-sm font-medium text-center text-gray-500 ">
                                                     Citation:
                                                 </p>
@@ -672,12 +683,15 @@
                                 </div>
                             </div>
                          </div>
-                         <aside class="w-full overflow-hidden border border-gray-300 shrink-0 rounded-xl md:w-80">
+                         <aside class="w-full overflow-hidden border border-gray-300 shrink-0 rounded-xl max-w-[360px]">
                             <div x-data x-tabs>
                                 <ul class="flex flex-col w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl" x-tabs:list>
                                     <li class="basis-auto shrink-0 grow-0 md:grow">
                                         <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4">
-                                            <div class="flex items-center gap-2">                             
+                                            <div class="flex items-center gap-2">  
+                                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 21 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.36965 1.0415H11.1303C12.6618 1.04149 13.8748 1.04148 14.8242 1.16912C15.8012 1.30047 16.592 1.57724 17.2156 2.20087C17.8393 2.82451 18.116 3.6153 18.2474 4.59232C18.375 5.54166 18.375 6.75469 18.375 8.28616V11.7135C18.375 13.245 18.375 14.458 18.2474 15.4074C18.116 16.3844 17.8393 17.1752 17.2156 17.7988C16.592 18.4224 15.8012 18.6992 14.8242 18.8306C13.8748 18.9582 12.6618 18.9582 11.1303 18.9582H9.36966C7.83819 18.9582 6.62516 18.9582 5.67581 18.8306C4.6988 18.6992 3.90801 18.4224 3.28437 17.7988C2.66073 17.1752 2.38397 16.3844 2.25261 15.4074C2.12498 14.458 2.12499 13.245 2.125 11.7135V8.28616C2.12499 6.75469 2.12498 5.54166 2.25261 4.59232C2.38397 3.6153 2.66073 2.82451 3.28437 2.20087C3.90801 1.57724 4.6988 1.30047 5.67581 1.16912C6.62516 1.04148 7.83819 1.04149 9.36965 1.0415ZM5.84237 2.40797C5.00397 2.52069 4.52093 2.73208 4.16825 3.08476C3.81558 3.43743 3.60419 3.92047 3.49147 4.75888C3.37633 5.61526 3.375 6.74415 3.375 8.33317V11.6665C3.375 13.2555 3.37633 14.3844 3.49147 15.2408C3.60419 16.0792 3.81558 16.5622 4.16825 16.9149C4.52093 17.2676 5.00397 17.479 5.84237 17.5917C6.69876 17.7068 7.82765 17.7082 9.41667 17.7082H11.0833C12.6724 17.7082 13.8012 17.7068 14.6576 17.5917C15.496 17.479 15.9791 17.2676 16.3317 16.9149C16.6844 16.5622 16.8958 16.0792 17.0085 15.2408C17.1237 14.3844 17.125 13.2555 17.125 11.6665V8.33317C17.125 6.74415 17.1237 5.61527 17.0085 4.75888C16.8958 3.92047 16.6844 3.43743 16.3317 3.08476C15.9791 2.73208 15.496 2.52069 14.6576 2.40797C13.8012 2.29283 12.6724 2.2915 11.0833 2.2915H9.41667C7.82765 2.2915 6.69876 2.29283 5.84237 2.40797ZM6.29167 6.6665C6.29167 6.32133 6.57149 6.0415 6.91667 6.0415H13.5833C13.9285 6.0415 14.2083 6.32133 14.2083 6.6665C14.2083 7.01168 13.9285 7.2915 13.5833 7.2915H6.91667C6.57149 7.2915 6.29167 7.01168 6.29167 6.6665ZM6.29167 9.99984C6.29167 9.65466 6.57149 9.37484 6.91667 9.37484H13.5833C13.9285 9.37484 14.2083 9.65466 14.2083 9.99984C14.2083 10.345 13.9285 10.6248 13.5833 10.6248H6.91667C6.57149 10.6248 6.29167 10.345 6.29167 9.99984ZM6.29167 13.3332C6.29167 12.988 6.57149 12.7082 6.91667 12.7082H11.0833C11.4285 12.7082 11.7083 12.988 11.7083 13.3332C11.7083 13.6783 11.4285 13.9582 11.0833 13.9582H6.91667C6.57149 13.9582 6.29167 13.6783 6.29167 13.3332Z"/>
+                                                </svg>                                                                               
                                                 <span>Documents</span>
                                             </div>
                                             <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -687,7 +701,11 @@
                                     </li>
                                     <li class="basis-auto shrink-0 grow-0 md:grow">
                                         <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : ' '" href="javascript:;" class="flex items-center justify-between gap-1 px-2 py-4 text-gray-500 bg-white md:justify-center md:border-b-2 md:px-4">
-                                            <div class="flex items-center gap-2">                     
+                                            <div class="flex items-center gap-2"> 
+                                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 21 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.75 4.37484C7.40482 4.37484 7.125 4.65466 7.125 4.99984C7.125 5.34502 7.40482 5.62484 7.75 5.62484H12.75C13.0952 5.62484 13.375 5.34502 13.375 4.99984C13.375 4.65466 13.0952 4.37484 12.75 4.37484H7.75Z" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2021 1.0415C8.47495 1.04149 7.1143 1.04148 6.05107 1.18598C4.95935 1.33435 4.08841 1.64541 3.40403 2.3372C2.72058 3.02806 2.4141 3.90568 2.26775 5.00601C2.12498 6.07943 2.12499 7.45369 2.125 9.20073V13.449C2.12499 14.7053 2.12498 15.7 2.20501 16.4488C2.28409 17.1889 2.45373 17.8565 2.9382 18.303C3.32688 18.6612 3.81842 18.887 4.34304 18.9471C4.99927 19.0222 5.61199 18.7088 6.21557 18.2813C6.82636 17.8486 7.5673 17.1933 8.50212 16.3664L8.53254 16.3395C8.96593 15.9562 9.25935 15.6975 9.50416 15.5185C9.74076 15.3455 9.88522 15.2829 10.007 15.2584C10.1674 15.2261 10.3326 15.2261 10.493 15.2584C10.6148 15.2829 10.7592 15.3455 10.9958 15.5185C11.2406 15.6975 11.5341 15.9562 11.9675 16.3395L11.9979 16.3665C12.9327 17.1933 13.6737 17.8486 14.2844 18.2813C14.888 18.7088 15.5007 19.0222 16.157 18.9471C16.6816 18.887 17.1731 18.6612 17.5618 18.303C18.0463 17.8565 18.2159 17.1889 18.295 16.4488C18.375 15.7 18.375 14.7053 18.375 13.449V9.20071C18.375 7.45369 18.375 6.07942 18.2323 5.00601C18.0859 3.90569 17.7794 3.02806 17.096 2.3372C16.4116 1.64541 15.5407 1.33435 14.4489 1.18598C13.3857 1.04148 12.0251 1.04149 10.2979 1.0415H10.2021ZM4.29267 3.21631C4.70664 2.79785 5.26876 2.55379 6.2194 2.42459C7.18871 2.29286 8.46438 2.2915 10.25 2.2915C12.0356 2.2915 13.3113 2.29286 14.2806 2.42459C15.2312 2.55379 15.7934 2.79785 16.2073 3.21631C16.6222 3.6357 16.8649 4.20666 16.9932 5.17082C17.1237 6.15227 17.125 7.44337 17.125 9.24777V13.4089C17.125 14.7142 17.1241 15.6416 17.0521 16.316C16.9782 17.0072 16.842 17.2665 16.7147 17.3838C16.5199 17.5634 16.2748 17.6754 16.0149 17.7052C15.8485 17.7242 15.5696 17.6598 15.007 17.2612C14.4581 16.8725 13.7676 16.2629 12.7956 15.4032L12.7738 15.3839C12.3677 15.0248 12.031 14.7269 11.7337 14.5095C11.4228 14.2822 11.1094 14.1075 10.7399 14.033C10.4165 13.9679 10.0835 13.9679 9.76015 14.033C9.39064 14.1075 9.07715 14.2822 8.76633 14.5095C8.46902 14.7269 8.13226 15.0248 7.72621 15.3839L7.70439 15.4032C6.73239 16.2629 6.04189 16.8725 5.49304 17.2612C4.93038 17.6598 4.65151 17.7242 4.48515 17.7052C4.22516 17.6754 3.98014 17.5634 3.78531 17.3838C3.65803 17.2665 3.52179 17.0072 3.44793 16.316C3.37587 15.6416 3.375 14.7142 3.375 13.4089V9.24777C3.375 7.44336 3.3763 6.15227 3.50684 5.17082C3.63508 4.20666 3.87777 3.6357 4.29267 3.21631Z"/>
+                                                </svg>                                                                        
                                                 <span>Saved Searches</span>
                                             </div>
                                             <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -705,8 +723,11 @@
                                             </svg>
                                             Create Document
                                         </button>
-                                        <div class="flex flex-col gap-2">
-                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                        <div class="flex flex-col gap-2 md:h-[calc(100dvh-21.6rem)] md:overflow-y-auto">
+                                            <div class="relative flex justify-between gap-1 px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11965 1.0415H10.8803C12.4118 1.04149 13.6248 1.04148 14.5742 1.16912C15.5512 1.30047 16.342 1.57724 16.9656 2.20087C17.5893 2.82451 17.866 3.6153 17.9974 4.59232C18.125 5.54166 18.125 6.75469 18.125 8.28616V11.7135C18.125 13.245 18.125 14.458 17.9974 15.4074C17.866 16.3844 17.5893 17.1752 16.9656 17.7988C16.342 18.4224 15.5512 18.6992 14.5742 18.8306C13.6248 18.9582 12.4118 18.9582 10.8803 18.9582H9.11966C7.58819 18.9582 6.37516 18.9582 5.42581 18.8306C4.4488 18.6992 3.65801 18.4224 3.03437 17.7988C2.41073 17.1752 2.13397 16.3844 2.00261 15.4074C1.87498 14.458 1.87499 13.245 1.875 11.7135V8.28616C1.87499 6.75469 1.87498 5.54166 2.00261 4.59232C2.13397 3.6153 2.41073 2.82451 3.03437 2.20087C3.65801 1.57724 4.4488 1.30047 5.42581 1.16912C6.37516 1.04148 7.58819 1.04149 9.11965 1.0415ZM5.59237 2.40797C4.75397 2.52069 4.27093 2.73208 3.91825 3.08476C3.56558 3.43743 3.35419 3.92047 3.24147 4.75888C3.12633 5.61526 3.125 6.74415 3.125 8.33317V11.6665C3.125 13.2555 3.12633 14.3844 3.24147 15.2408C3.35419 16.0792 3.56558 16.5622 3.91825 16.9149C4.27093 17.2676 4.75397 17.479 5.59237 17.5917C6.44876 17.7068 7.57765 17.7082 9.16667 17.7082H10.8333C12.4224 17.7082 13.5512 17.7068 14.4076 17.5917C15.246 17.479 15.7291 17.2676 16.0817 16.9149C16.4344 16.5622 16.6458 16.0792 16.7585 15.2408C16.8737 14.3844 16.875 13.2555 16.875 11.6665V8.33317C16.875 6.74415 16.8737 5.61527 16.7585 4.75888C16.6458 3.92047 16.4344 3.43743 16.0817 3.08476C15.7291 2.73208 15.246 2.52069 14.4076 2.40797C13.5512 2.29283 12.4224 2.2915 10.8333 2.2915H9.16667C7.57765 2.2915 6.44876 2.29283 5.59237 2.40797ZM6.04167 6.6665C6.04167 6.32133 6.32149 6.0415 6.66667 6.0415H13.3333C13.6785 6.0415 13.9583 6.32133 13.9583 6.6665C13.9583 7.01168 13.6785 7.2915 13.3333 7.2915H6.66667C6.32149 7.2915 6.04167 7.01168 6.04167 6.6665ZM6.04167 9.99984C6.04167 9.65466 6.32149 9.37484 6.66667 9.37484H13.3333C13.6785 9.37484 13.9583 9.65466 13.9583 9.99984C13.9583 10.345 13.6785 10.6248 13.3333 10.6248H6.66667C6.32149 10.6248 6.04167 10.345 6.04167 9.99984ZM6.04167 13.3332C6.04167 12.988 6.32149 12.7082 6.66667 12.7082H10.8333C11.1785 12.7082 11.4583 12.988 11.4583 13.3332C11.4583 13.6783 11.1785 13.9582 10.8333 13.9582H6.66667C6.32149 13.9582 6.04167 13.6783 6.04167 13.3332Z" fill="#111827"/>
+                                                </svg>
                                                 <div class="relative flex flex-col items-start grow">
                                                     <p class="text-sm font-medium text-left text-black line-clamp-1">
                                                         Rashid murder case research
@@ -730,7 +751,10 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                            <div class="relative flex justify-between gap-1 px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11965 1.0415H10.8803C12.4118 1.04149 13.6248 1.04148 14.5742 1.16912C15.5512 1.30047 16.342 1.57724 16.9656 2.20087C17.5893 2.82451 17.866 3.6153 17.9974 4.59232C18.125 5.54166 18.125 6.75469 18.125 8.28616V11.7135C18.125 13.245 18.125 14.458 17.9974 15.4074C17.866 16.3844 17.5893 17.1752 16.9656 17.7988C16.342 18.4224 15.5512 18.6992 14.5742 18.8306C13.6248 18.9582 12.4118 18.9582 10.8803 18.9582H9.11966C7.58819 18.9582 6.37516 18.9582 5.42581 18.8306C4.4488 18.6992 3.65801 18.4224 3.03437 17.7988C2.41073 17.1752 2.13397 16.3844 2.00261 15.4074C1.87498 14.458 1.87499 13.245 1.875 11.7135V8.28616C1.87499 6.75469 1.87498 5.54166 2.00261 4.59232C2.13397 3.6153 2.41073 2.82451 3.03437 2.20087C3.65801 1.57724 4.4488 1.30047 5.42581 1.16912C6.37516 1.04148 7.58819 1.04149 9.11965 1.0415ZM5.59237 2.40797C4.75397 2.52069 4.27093 2.73208 3.91825 3.08476C3.56558 3.43743 3.35419 3.92047 3.24147 4.75888C3.12633 5.61526 3.125 6.74415 3.125 8.33317V11.6665C3.125 13.2555 3.12633 14.3844 3.24147 15.2408C3.35419 16.0792 3.56558 16.5622 3.91825 16.9149C4.27093 17.2676 4.75397 17.479 5.59237 17.5917C6.44876 17.7068 7.57765 17.7082 9.16667 17.7082H10.8333C12.4224 17.7082 13.5512 17.7068 14.4076 17.5917C15.246 17.479 15.7291 17.2676 16.0817 16.9149C16.4344 16.5622 16.6458 16.0792 16.7585 15.2408C16.8737 14.3844 16.875 13.2555 16.875 11.6665V8.33317C16.875 6.74415 16.8737 5.61527 16.7585 4.75888C16.6458 3.92047 16.4344 3.43743 16.0817 3.08476C15.7291 2.73208 15.246 2.52069 14.4076 2.40797C13.5512 2.29283 12.4224 2.2915 10.8333 2.2915H9.16667C7.57765 2.2915 6.44876 2.29283 5.59237 2.40797ZM6.04167 6.6665C6.04167 6.32133 6.32149 6.0415 6.66667 6.0415H13.3333C13.6785 6.0415 13.9583 6.32133 13.9583 6.6665C13.9583 7.01168 13.6785 7.2915 13.3333 7.2915H6.66667C6.32149 7.2915 6.04167 7.01168 6.04167 6.6665ZM6.04167 9.99984C6.04167 9.65466 6.32149 9.37484 6.66667 9.37484H13.3333C13.6785 9.37484 13.9583 9.65466 13.9583 9.99984C13.9583 10.345 13.6785 10.6248 13.3333 10.6248H6.66667C6.32149 10.6248 6.04167 10.345 6.04167 9.99984ZM6.04167 13.3332C6.04167 12.988 6.32149 12.7082 6.66667 12.7082H10.8333C11.1785 12.7082 11.4583 12.988 11.4583 13.3332C11.4583 13.6783 11.1785 13.9582 10.8333 13.9582H6.66667C6.32149 13.9582 6.04167 13.6783 6.04167 13.3332Z" fill="#111827"/>
+                                                </svg>
                                                 <div class="relative flex flex-col items-start grow">
                                                     <p class="text-sm font-medium text-left text-black line-clamp-1">
                                                         Rashid murder case research
@@ -755,6 +779,35 @@
                                                 </a>
                                             </div>
                                         </div>
+                                        <div class="flex justify-center items-center relative gap-2.5 p-4 rounded-lg bg-white border border-violet-700">
+                                            <p class="text-sm font-medium text-left text-black grow">
+                                                Haider property case research
+                                            </p>
+                                            <div class="relative flex items-center justify-center gap-3 shrink-0">
+                                                <button class="w-6 h-6 shrink-0 hover:bg-gray-50">
+                                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                        class="relative w-6 h-6 " preserveAspectRatio="xMidYMid meet">
+                                                        <path
+                                                            d="M11.9425 1.25H12.0573C14.3657 1.24999 16.1747 1.24998 17.5862 1.43975C19.0309 1.63399 20.171 2.03933 21.0658 2.93414C21.9606 3.82895 22.3659 4.96897 22.5602 6.41371C22.7499 7.82519 22.7499 9.63423 22.7499 11.9426V12.0574C22.7499 14.3658 22.7499 16.1748 22.5602 17.5863C22.3659 19.031 21.9606 20.1711 21.0658 21.0659C20.2374 21.8943 19.198 22.3038 17.8993 22.514C16.6225 22.7207 15.0164 22.7458 13.0013 22.7494C12.5871 22.7502 12.2507 22.415 12.2499 22.0008C12.2492 21.5866 12.5843 21.2502 12.9986 21.2494C15.0385 21.2457 16.5216 21.2175 17.6596 21.0333C18.7756 20.8526 19.4765 20.5338 20.0051 20.0052C20.5748 19.4355 20.9017 18.6648 21.0735 17.3864C21.2483 16.0864 21.2499 14.3782 21.2499 12C21.2499 9.62178 21.2483 7.91356 21.0735 6.61358C20.9017 5.33517 20.5748 4.56445 20.0051 3.9948C19.4355 3.42514 18.6647 3.09825 17.3863 2.92637C16.0864 2.75159 14.3781 2.75 11.9999 2.75C9.62169 2.75 7.91347 2.75159 6.61349 2.92637C5.33509 3.09825 4.56437 3.42514 3.99471 3.9948C3.46609 4.52341 3.1473 5.22427 2.96665 6.34031C2.78246 7.47827 2.75416 8.96143 2.75049 11.0014C2.74974 11.4156 2.41335 11.7507 1.99914 11.75C1.58493 11.7493 1.24975 11.4129 1.25049 10.9986C1.25412 8.9835 1.27926 7.37741 1.48592 6.10063C1.69614 4.80193 2.10563 3.76255 2.93405 2.93414C3.82886 2.03933 4.96888 1.63399 6.41362 1.43975C7.82511 1.24998 9.63414 1.24999 11.9425 1.25Z"
+                                                            fill="#1C274C"></path>
+                                                        <path
+                                                            d="M12.5 7C12.5 6.58579 12.8358 6.25 13.25 6.25H17C17.4142 6.25 17.75 6.58579 17.75 7V10.75C17.75 11.1642 17.4142 11.5 17 11.5C16.5858 11.5 16.25 11.1642 16.25 10.75V8.81066L12.5303 12.5303C12.2374 12.8232 11.7626 12.8232 11.4697 12.5303C11.1768 12.2374 11.1768 11.7626 11.4697 11.4697L15.1893 7.75H13.25C12.8358 7.75 12.5 7.41421 12.5 7Z"
+                                                            fill="#1C274C"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M5.948 13.25C5.04952 13.25 4.3003 13.2499 3.70552 13.3299C3.07773 13.4143 2.51093 13.6 2.05546 14.0555C1.59999 14.5109 1.41432 15.0777 1.32991 15.7055C1.24995 16.3003 1.24997 17.0495 1.25 17.948V18.052C1.24997 18.9505 1.24995 19.6997 1.32991 20.2945C1.41432 20.9223 1.59999 21.4891 2.05546 21.9445C2.51093 22.4 3.07773 22.5857 3.70552 22.6701C4.3003 22.7501 5.04951 22.75 5.94798 22.75H6.052C6.95047 22.75 7.69971 22.7501 8.29448 22.6701C8.92228 22.5857 9.48908 22.4 9.94455 21.9445C10.4 21.4891 10.5857 20.9223 10.6701 20.2945C10.7501 19.6997 10.75 18.9505 10.75 18.052V17.948C10.75 17.0495 10.7501 16.3003 10.6701 15.7055C10.5857 15.0777 10.4 14.5109 9.94455 14.0555C9.48908 13.6 8.92228 13.4143 8.29448 13.3299C7.6997 13.2499 6.95048 13.25 6.052 13.25H5.948ZM3.11612 15.1161C3.24644 14.9858 3.44393 14.8786 3.9054 14.8165C4.38843 14.7516 5.03599 14.75 6 14.75C6.96401 14.75 7.61157 14.7516 8.09461 14.8165C8.55607 14.8786 8.75357 14.9858 8.88389 15.1161C9.0142 15.2464 9.12143 15.4439 9.18347 15.9054C9.24841 16.3884 9.25 17.036 9.25 18C9.25 18.964 9.24841 19.6116 9.18347 20.0946C9.12143 20.5561 9.0142 20.7536 8.88389 20.8839C8.75357 21.0142 8.55607 21.1214 8.09461 21.1835C7.61157 21.2484 6.96401 21.25 6 21.25C5.03599 21.25 4.38843 21.2484 3.9054 21.1835C3.44393 21.1214 3.24644 21.0142 3.11612 20.8839C2.9858 20.7536 2.87858 20.5561 2.81654 20.0946C2.7516 19.6116 2.75 18.964 2.75 18C2.75 17.036 2.7516 16.3884 2.81654 15.9054C2.87858 15.4439 2.9858 15.2464 3.11612 15.1161Z"
+                                                            fill="#1C274C"></path>
+                                                    </svg>
+                                                </button>
+                                                <button class="w-6 h-6 shrink-0 hover:bg-gray-50">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                        class="" preserveAspectRatio="none">
+                                                        <path
+                                                            d="M15.1661 0.799805L7.96771 7.9982M7.96771 7.9982L0.831055 15.1349M7.96771 7.9982L15.1696 15.2001M7.96771 7.9982L0.834562 0.865055"
+                                                            stroke="black" stroke-width="1.5"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div x-tabs:panel class="flex flex-col gap-2 p-2">
                                         <button class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none">
@@ -764,7 +817,11 @@
                                             New Search
                                         </button>
                                         <div class="flex flex-col gap-2">
-                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                            <div class="relative flex justify-between gap-1 px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.5 4.37484C7.15482 4.37484 6.875 4.65466 6.875 4.99984C6.875 5.34502 7.15482 5.62484 7.5 5.62484H12.5C12.8452 5.62484 13.125 5.34502 13.125 4.99984C13.125 4.65466 12.8452 4.37484 12.5 4.37484H7.5Z" fill="#111827"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.95209 1.0415C8.22495 1.04149 6.8643 1.04148 5.80107 1.18598C4.70935 1.33435 3.83841 1.64541 3.15403 2.3372C2.47058 3.02806 2.1641 3.90568 2.01775 5.00601C1.87498 6.07943 1.87499 7.45369 1.875 9.20073V13.449C1.87499 14.7053 1.87498 15.7 1.95501 16.4488C2.03409 17.1889 2.20373 17.8565 2.6882 18.303C3.07688 18.6612 3.56842 18.887 4.09304 18.9471C4.74927 19.0222 5.36199 18.7088 5.96557 18.2813C6.57636 17.8486 7.3173 17.1933 8.25212 16.3664L8.28254 16.3395C8.71593 15.9562 9.00935 15.6975 9.25416 15.5185C9.49076 15.3455 9.63522 15.2829 9.75698 15.2584C9.91743 15.2261 10.0826 15.2261 10.243 15.2584C10.3648 15.2829 10.5092 15.3455 10.7458 15.5185C10.9906 15.6975 11.2841 15.9562 11.7175 16.3395L11.7479 16.3665C12.6827 17.1933 13.4237 17.8486 14.0344 18.2813C14.638 18.7088 15.2507 19.0222 15.907 18.9471C16.4316 18.887 16.9231 18.6612 17.3118 18.303C17.7963 17.8565 17.9659 17.1889 18.045 16.4488C18.125 15.7 18.125 14.7053 18.125 13.449V9.20071C18.125 7.45369 18.125 6.07942 17.9823 5.00601C17.8359 3.90569 17.5294 3.02806 16.846 2.3372C16.1616 1.64541 15.2907 1.33435 14.1989 1.18598C13.1357 1.04148 11.7751 1.04149 10.0479 1.0415H9.95209ZM4.04267 3.21631C4.45664 2.79785 5.01876 2.55379 5.9694 2.42459C6.93871 2.29286 8.21438 2.2915 10 2.2915C11.7856 2.2915 13.0613 2.29286 14.0306 2.42459C14.9812 2.55379 15.5434 2.79785 15.9573 3.21631C16.3722 3.6357 16.6149 4.20666 16.7432 5.17082C16.8737 6.15227 16.875 7.44337 16.875 9.24777V13.4089C16.875 14.7142 16.8741 15.6416 16.8021 16.316C16.7282 17.0072 16.592 17.2665 16.4647 17.3838C16.2699 17.5634 16.0248 17.6754 15.7649 17.7052C15.5985 17.7242 15.3196 17.6598 14.757 17.2612C14.2081 16.8725 13.5176 16.2629 12.5456 15.4032L12.5238 15.3839C12.1177 15.0248 11.781 14.7269 11.4837 14.5095C11.1728 14.2822 10.8594 14.1075 10.4899 14.033C10.1665 13.9679 9.83352 13.9679 9.51015 14.033C9.14064 14.1075 8.82715 14.2822 8.51633 14.5095C8.21902 14.7269 7.88226 15.0248 7.47621 15.3839L7.45439 15.4032C6.48239 16.2629 5.79189 16.8725 5.24304 17.2612C4.68038 17.6598 4.40151 17.7242 4.23515 17.7052C3.97516 17.6754 3.73014 17.5634 3.53531 17.3838C3.40803 17.2665 3.27179 17.0072 3.19793 16.316C3.12587 15.6416 3.125 14.7142 3.125 13.4089V9.24777C3.125 7.44336 3.1263 6.15227 3.25684 5.17082C3.38508 4.20666 3.62777 3.6357 4.04267 3.21631Z" fill="#111827"/>
+                                                </svg>
                                                 <div class="relative flex flex-col items-start grow">
                                                     <p class="text-sm font-medium text-left text-black line-clamp-2">
                                                         Murder case with accused not present at the place and with more information to lead
@@ -785,7 +842,11 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <div class="relative flex items-center justify-between px-2 py-3 bg-white rounded-lg hover:shadow">
+                                            <div class="relative flex justify-between gap-1 px-2 py-3 bg-white rounded-lg hover:shadow">
+                                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.5 4.37484C7.15482 4.37484 6.875 4.65466 6.875 4.99984C6.875 5.34502 7.15482 5.62484 7.5 5.62484H12.5C12.8452 5.62484 13.125 5.34502 13.125 4.99984C13.125 4.65466 12.8452 4.37484 12.5 4.37484H7.5Z" fill="#111827"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.95209 1.0415C8.22495 1.04149 6.8643 1.04148 5.80107 1.18598C4.70935 1.33435 3.83841 1.64541 3.15403 2.3372C2.47058 3.02806 2.1641 3.90568 2.01775 5.00601C1.87498 6.07943 1.87499 7.45369 1.875 9.20073V13.449C1.87499 14.7053 1.87498 15.7 1.95501 16.4488C2.03409 17.1889 2.20373 17.8565 2.6882 18.303C3.07688 18.6612 3.56842 18.887 4.09304 18.9471C4.74927 19.0222 5.36199 18.7088 5.96557 18.2813C6.57636 17.8486 7.3173 17.1933 8.25212 16.3664L8.28254 16.3395C8.71593 15.9562 9.00935 15.6975 9.25416 15.5185C9.49076 15.3455 9.63522 15.2829 9.75698 15.2584C9.91743 15.2261 10.0826 15.2261 10.243 15.2584C10.3648 15.2829 10.5092 15.3455 10.7458 15.5185C10.9906 15.6975 11.2841 15.9562 11.7175 16.3395L11.7479 16.3665C12.6827 17.1933 13.4237 17.8486 14.0344 18.2813C14.638 18.7088 15.2507 19.0222 15.907 18.9471C16.4316 18.887 16.9231 18.6612 17.3118 18.303C17.7963 17.8565 17.9659 17.1889 18.045 16.4488C18.125 15.7 18.125 14.7053 18.125 13.449V9.20071C18.125 7.45369 18.125 6.07942 17.9823 5.00601C17.8359 3.90569 17.5294 3.02806 16.846 2.3372C16.1616 1.64541 15.2907 1.33435 14.1989 1.18598C13.1357 1.04148 11.7751 1.04149 10.0479 1.0415H9.95209ZM4.04267 3.21631C4.45664 2.79785 5.01876 2.55379 5.9694 2.42459C6.93871 2.29286 8.21438 2.2915 10 2.2915C11.7856 2.2915 13.0613 2.29286 14.0306 2.42459C14.9812 2.55379 15.5434 2.79785 15.9573 3.21631C16.3722 3.6357 16.6149 4.20666 16.7432 5.17082C16.8737 6.15227 16.875 7.44337 16.875 9.24777V13.4089C16.875 14.7142 16.8741 15.6416 16.8021 16.316C16.7282 17.0072 16.592 17.2665 16.4647 17.3838C16.2699 17.5634 16.0248 17.6754 15.7649 17.7052C15.5985 17.7242 15.3196 17.6598 14.757 17.2612C14.2081 16.8725 13.5176 16.2629 12.5456 15.4032L12.5238 15.3839C12.1177 15.0248 11.781 14.7269 11.4837 14.5095C11.1728 14.2822 10.8594 14.1075 10.4899 14.033C10.1665 13.9679 9.83352 13.9679 9.51015 14.033C9.14064 14.1075 8.82715 14.2822 8.51633 14.5095C8.21902 14.7269 7.88226 15.0248 7.47621 15.3839L7.45439 15.4032C6.48239 16.2629 5.79189 16.8725 5.24304 17.2612C4.68038 17.6598 4.40151 17.7242 4.23515 17.7052C3.97516 17.6754 3.73014 17.5634 3.53531 17.3838C3.40803 17.2665 3.27179 17.0072 3.19793 16.316C3.12587 15.6416 3.125 14.7142 3.125 13.4089V9.24777C3.125 7.44336 3.1263 6.15227 3.25684 5.17082C3.38508 4.20666 3.62777 3.6357 4.04267 3.21631Z" fill="#111827"/>
+                                                </svg>
                                                 <div class="relative flex flex-col items-start grow">
                                                     <p class="text-sm font-medium text-left text-black line-clamp-2">
                                                         Murder case with accused not present at the place and with more information to lead
@@ -810,6 +871,7 @@
                                     </div>
                                 </div>
                             </div>
+                           
                          </aside>
                     </div>
                 </div>
