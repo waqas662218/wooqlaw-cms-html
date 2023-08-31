@@ -40,6 +40,21 @@
     height: 4px;
   }
 
+  .scroll {
+    @apply overflow-y-auto;
+  }
+  .scroll:active::-webkit-scrollbar-thumb,
+  .scroll:focus::-webkit-scrollbar-thumb,
+  .scroll:hover::-webkit-scrollbar-thumb {
+      @apply visible;
+  }
+  .scroll::-webkit-scrollbar-thumb {
+    @apply invisible rounded-full bg-violet-400;
+  }
+  .scroll::-webkit-scrollbar-thumb:hover {
+    @apply bg-violet-700;
+  }
+
 }
 /* ::-webkit-scrollbar:hover{
   width: 4px;
