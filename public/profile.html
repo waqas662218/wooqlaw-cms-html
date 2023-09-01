@@ -5465,7 +5465,7 @@
     <dialog id="createbusinesshours" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
         <form method="dialog">
             <!-- Modal header -->
-            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+            <div class="sticky top-0 z-30 flex items-start justify-between p-4 bg-white border-b rounded-t">
                 <h3 class="text-xl font-semibold text-gray-900">
                     Opening Business hours for Monday
                 </h3>
@@ -5483,15 +5483,15 @@
                                 <label for="start-time" class="block text-sm font-medium text-gray-900">Start Time
                                 </label>
                             </div>
-                            <div x-data="{open : false}">
+                            <div class="relative" x-data="{open : false}">
                                 <div class="relative">
-                                    <input type="text" x-on:click="open = true" id="start-time" name="trip-start" class="block w-full h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
-                                    <svg class="absolute top-0 bottom-0 my-auto right-4" viewBox="64 64 896 896" focusable="false" data-icon="clock-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
+                                    <input type="text" autocomplete="off" x-on:click="open = true" id="start-time" name="trip-start" class="block w-full h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
+                                    <svg x-on:click="open = true" class="absolute top-0 bottom-0 my-auto cursor-pointer right-4 " viewBox="64 64 896 896" focusable="false" data-icon="clock-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
                                 </div>
                                 <div x-show="open" x-on:click.outside="open = false" class="absolute z-20 flex flex-col w-40 mt-px overflow-hidden bg-white rounded-lg shadow">
                                     <div class="flex flex-col">
                                         <div class="grid h-56 grid-cols-3 gap-px bg-gray-300">
-                                            <ul class="h-56 pl-2 py-1 pr-1 text-center bg-white scroll flex flex-col gap-0.5">
+                                            <ul class="h-56 pl-2 py-1 pr-1 text-center bg-white scroll flex flex-col gap-0.5 overflow-x-hidden">
                                                 <li class="text-white rounded cursor-pointer bg-primary-700 hover:bg-primary-700">
                                                     12
                                                 </li>
@@ -5529,7 +5529,7 @@
                                                     11
                                                 </li>
                                             </ul>
-                                            <ul class="h-56 pl-2 py-1 pr-1 text-center bg-white scroll flex flex-col gap-0.5">
+                                            <ul class="h-56 pl-2 py-1 pr-1 text-center bg-white scroll flex flex-col gap-0.5 overflow-x-hidden">
                                                 <li class="text-white rounded cursor-pointer bg-primary-700 hover:bg-primary-700">
                                                     00
                                                 </li>
@@ -5711,7 +5711,7 @@
                                                     59
                                                 </li>
                                             </ul>
-                                            <ul class="h-56 pl-2 py-1 pr-2 text-center bg-white scroll flex flex-col gap-0.5">
+                                            <ul class="h-56 pl-2 py-1 pr-2 text-center bg-white scroll flex flex-col gap-0.5 overflow-x-hidden">
                                                 <li class="text-white rounded cursor-pointer bg-primary-700 hover:bg-primary-700">
                                                     AM
                                                 </li>
@@ -5976,7 +5976,7 @@
                     <span class="text-base font-medium text-gray-900">
                         Do you want to replicate this schedule?
                     </span>
-                    <div class="flex w-full gap-5">
+                    <div class="flex flex-wrap w-full gap-5">
                         <div class="flex flex-col items-start w-48 gap-5">
                             <span>
                                 <label class="relative inline-flex items-center cursor-pointer">
