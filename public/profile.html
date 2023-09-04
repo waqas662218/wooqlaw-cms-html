@@ -5483,49 +5483,49 @@
                                 <label for="start-time" class="block text-sm font-medium text-gray-900">Start Time
                                 </label>
                             </div>
-                            <div class="relative" x-data="{open : false}">
+                            <div class="relative" x-data="{ open: false, time: '', hour: '09', min: '00', ampm: 'AM'}" x-init="$watch('hour', (hour) => { time = hour + ':' + min + ' ' + ampm })">
                                 <div class="relative">
-                                    <input type="text" autocomplete="off" x-on:click="open = true" id="start-time" name="trip-start" class="block w-full h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" x-model="time" x- autocomplete="off" x-on:click="open = true" id="start-time" name="trip-start" class="block w-full h-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
                                     <svg x-on:click="open = true" class="absolute top-0 bottom-0 my-auto cursor-pointer right-4 " viewBox="64 64 896 896" focusable="false" data-icon="clock-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"></path></svg>
                                 </div>
                                 <div x-show="open" x-on:click.outside="open = false" class="absolute z-20 flex flex-col w-40 mt-px overflow-hidden bg-white rounded-lg shadow">
                                     <div class="flex flex-col">
                                         <div class="grid h-56 grid-cols-3 gap-px bg-gray-300">
                                             <ul class="h-56 pl-2 py-1 pr-1 text-center bg-white scroll flex flex-col gap-0.5 overflow-x-hidden">
-                                                <li class="text-white rounded cursor-pointer bg-primary-700 hover:bg-primary-700">
+                                                <li class="rounded cursor-pointer" :class="hour == 12? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 12">
                                                     12
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 01? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 01">
                                                     01
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 02? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 02">
                                                     02
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 03? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 03">
                                                     03
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 04? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 04">
                                                     04
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 05? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 05">
                                                     05
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 06? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 06">
                                                     06
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 07? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 07">
                                                     07
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 08? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 08">
                                                     08
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 09? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 09">
                                                     09
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 10? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 10">
                                                     10
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="hour == 11? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="hour = 11">
                                                     11
                                                 </li>
                                             </ul>
@@ -5712,10 +5712,10 @@
                                                 </li>
                                             </ul>
                                             <ul class="h-56 pl-2 py-1 pr-2 text-center bg-white scroll flex flex-col gap-0.5 overflow-x-hidden">
-                                                <li class="text-white rounded cursor-pointer bg-primary-700 hover:bg-primary-700">
+                                                <li class="rounded cursor-pointer" :class="ampm == 'AM'? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="ampm = 'AM'">
                                                     AM
                                                 </li>
-                                                <li class="rounded cursor-pointer hover:bg-primary-100">
+                                                <li class="rounded cursor-pointer" :class="ampm == 'PM'? 'bg-primary-700 hover:bg-primary-700 text-white':'hover:bg-primary-100' " x-on:click="ampm = 'PM'">
                                                     PM
                                                 </li>
                                             </ul>
