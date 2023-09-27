@@ -899,6 +899,9 @@ select {
 .mt-px {
   margin-top: 1px;
 }
+.mb-18 {
+  margin-bottom: 4.5rem;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1362,6 +1365,9 @@ select {
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
+}
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 .gap-y-3 {
   row-gap: 0.75rem;
@@ -1922,6 +1928,9 @@ select {
 }
 .pt-5 {
   padding-top: 1.25rem;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .text-left {
   text-align: left;
@@ -2611,14 +2620,6 @@ select {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(252 165 165 / var(--tw-ring-opacity));
 }
-.focus\:ring-red-800:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(153 27 27 / var(--tw-ring-opacity));
-}
-.focus\:ring-primary-800:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity));
-}
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2977,6 +2978,10 @@ select {
     margin-top: 0px;
   }
 
+  .md\:mb-18 {
+    margin-bottom: 4.5rem;
+  }
+
   .md\:\!block {
     display: block !important;
   }
@@ -3173,10 +3178,6 @@ select {
 
   .md\:max-w-6xl {
     max-width: 72rem;
-  }
-
-  .md\:max-w-md {
-    max-width: 28rem;
   }
 
   .md\:flex-1 {
