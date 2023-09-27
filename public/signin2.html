@@ -255,6 +255,44 @@
             </div>
         </div>
     </section>
+
+    <!-- Center Modal -->
+    <!-- loggedout -->
+    <dialog id="loggedoutmodal" class="relative flex itenm-center justify-center w-full md:max-w-md p-0 bg-white shadow-lg rounded-lg">
+        <form method="dialog">
+            <!-- loggedout-->
+            <div class="flex items-start justify-center gap-2.5 bg-white p-7 shadow">
+                <div class="w-full flex-col items-center justify-start gap-4">
+                  <div class="flex w-full flex-col items-start justify-start gap-6">
+                    <div class="flex h-36 flex-col items-center justify-start gap-1">
+                      <div class="flex flex-col items-center justify-start gap-[5px]">
+                        <div class="relative h-12 w-12">
+                          <svg class="h-12 w-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6234 21.523C16.4601 11.1743 19.3785 6 24 6C28.6215 6 31.5398 11.1743 37.3766 21.523L38.1039 22.8125C42.9542 31.4122 45.3793 35.712 43.1875 38.856C40.9957 42 35.5729 42 24.7273 42H23.2727C12.4271 42 7.00434 42 4.81251 38.856C2.62068 35.712 5.04582 31.4122 9.8961 22.8125L10.6234 21.523ZM24 14.5C24.8284 14.5 25.5 15.1716 25.5 16V26C25.5 26.8284 24.8284 27.5 24 27.5C23.1716 27.5 22.5 26.8284 22.5 26V16C22.5 15.1716 23.1716 14.5 24 14.5ZM24 34C25.1046 34 26 33.1046 26 32C26 30.8954 25.1046 30 24 30C22.8954 30 22 30.8954 22 32C22 33.1046 22.8954 34 24 34Z" fill="#CA8A04" />
+                          </svg>
+                        </div>
+                        <div class="text-base font-medium text-yellow-600">You Have been logged out!</div>
+                      </div>
+                      <div class="text-center text-sm font-medium text-zinc-600">Due to inactivity your session has expired, Don’t worry all of your work is saved, You can sign back again.</div>
+                    </div>
+                    
+                      <a class="focus:outline-none flex text-white items-center justify-center bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 w-full" href="./signin.html">Sign in</a>
+                   
+                  </div>
+                </div>
+              </div>
+        </form>
+        </dialog>
+
+        <script>
+
+            setTimeout(function() {
+        
+                loggedoutmodal.showModal();
+        
+            }, 2000)
+        
+        </script>
 </body>
 
 </html>
