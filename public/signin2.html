@@ -276,7 +276,7 @@
                       </div>
                       <div class="text-center text-sm font-medium text-zinc-600">Due to inactivity your session has expired, Don’t worry all of your work is saved, You can sign back again.</div>
                     </div>
-                      <button id="loggedoutmodal" class="focus:outline-none flex text-white items-center justify-center bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Sign in</button>
+                      <button onclick="loggedoutmodal.close()" class="focus:outline-none flex text-white items-center justify-center bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Sign in</button>
                   </div>
                 </div>
               </div>
@@ -287,7 +287,7 @@
 
             setTimeout(function() {
         
-                loggedoutmodal.closeModal();
+                loggedoutmodal.showModal();
         
             }, 2000)
         
