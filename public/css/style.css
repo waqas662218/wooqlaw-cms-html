@@ -899,6 +899,9 @@ select {
 .mt-px {
   margin-top: 1px;
 }
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -3021,6 +3024,10 @@ select {
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .md\:\!block {
