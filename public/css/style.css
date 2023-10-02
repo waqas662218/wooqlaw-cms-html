@@ -899,6 +899,9 @@ select {
 .mt-px {
   margin-top: 1px;
 }
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1350,6 +1353,9 @@ select {
 }
 .gap-px {
   gap: 1px;
+}
+.gap-16 {
+  gap: 4rem;
 }
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
