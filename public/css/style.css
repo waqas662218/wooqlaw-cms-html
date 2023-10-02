@@ -3570,6 +3570,10 @@ select {
     padding-left: 0px;
   }
 
+  .md\:text-center {
+    text-align: center;
+  }
+
   .md\:text-start {
     text-align: start;
   }
