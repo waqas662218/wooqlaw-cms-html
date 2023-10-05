@@ -802,25 +802,19 @@
                             </div>
                             <div x-tabs:panel>
                                 <section>
-                                    <div class="flex flex-col flex-wrap items-center justify-between w-full gap-6 p-4 bg-white md:flex-row">
+                                    <div class="flex flex-col flex-wrap items-center justify-between w-full gap-3 p-4 bg-white md:gap-6 md:flex-row">
                                         <span class="text-sm font-medium text-center text-gray-900 md:text-left md:text-base">
                                             Your subscription for wooqlaw® Pro expired on 
                                             <span class="text-sm font-semibold text-orange-500 md:text-base">
                                                 12-03-2023.
                                             </span>  Subscribe now?
                                         </span>
-                                        <a class="flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg shadow md:px-5 md:py-3 nd:text-base" href="">
+                                        <a onclick="paymentmethodsmodal.showModal()" class="flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg shadow md:px-5 md:py-3 nd:text-base" href="javascript:;">
                                             Subscribe Pro
                                         </a> 
                                     </div>  
-                                    <div class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 rounded-lg p-4 bg-white">
+                                    <div class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg p-4 bg-white">
                                         <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
-                                            <div class="text-xs font-bold text-center w-11">
-                                                <div class="flex items-center justify-center w-4 px-4 py-3">
-                                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
-                                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                                </div>
-                                            </div>
                                             <div class="text-xs font-bold text-gray-900">Plan Name</div>
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Start Date</div>
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">End date</div>
@@ -829,7 +823,7 @@
                                            
                                         </header>
                                         <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
-                                            <div x-on:click="open=!open" class="text-xs border-b border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
+                                            <div x-on:click="open=!open" :class="open? 'border-b':''" class="text-xs  border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
                                                 <span class="flex items-center gap-2 md:gap-5">
                                                     <span>
                                                         <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -877,7 +871,7 @@
                                         </div>
                                         <!-- 2 -->
                                         <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
-                                            <div x-on:click="open=!open" class="text-xs border-b border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
+                                            <div x-on:click="open=!open" :class="open? 'border-b':''" class="text-xs border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
                                                 <span class="flex items-center gap-2 :hidden md:gap-5">
                                                     <span>
                                                         <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
