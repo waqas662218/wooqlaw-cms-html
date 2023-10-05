@@ -54,7 +54,6 @@
   .scroll::-webkit-scrollbar-thumb:hover {
     @apply bg-violet-700;
   }
-
 }
 /* ::-webkit-scrollbar:hover{
   width: 4px;
