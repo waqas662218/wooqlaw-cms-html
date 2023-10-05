@@ -997,6 +997,12 @@ select {
 .h-18 {
   height: 4.5rem;
 }
+.h-2 {
+  height: 0.5rem;
+}
+.h-2\.5 {
+  height: 0.625rem;
+}
 .h-20 {
   height: 5rem;
 }
@@ -1597,10 +1603,6 @@ select {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
 }
-.rounded-b-lg {
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
 .rounded-bl-xl {
   border-bottom-left-radius: 0.75rem;
 }
@@ -2157,6 +2159,9 @@ select {
 }
 .leading-10 {
   line-height: 2.5rem;
+}
+.leading-3 {
+  line-height: .75rem;
 }
 .leading-none {
   line-height: 1;
@@ -3150,6 +3155,10 @@ select {
     bottom: 0px;
   }
 
+  .md\:bottom-3 {
+    bottom: 0.75rem;
+  }
+
   .md\:bottom-\[1\.4rem\] {
     bottom: 1.4rem;
   }
@@ -3657,6 +3666,11 @@ select {
     border-radius: 0.75rem;
   }
 
+  .md\:rounded-b-lg {
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
   .md\:rounded-t-none {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -3665,11 +3679,6 @@ select {
   .md\:rounded-t-xl {
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
-  }
-
-  .md\:rounded-b-lg {
-    border-bottom-right-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
   }
 
   .md\:rounded-tl-xl {
