@@ -25,7 +25,6 @@
 
 <body class="overflow-hidden">
     <header class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14 md:h-18">
-
         
         <div class="flex items-center gap-3">
             <!-- Logo -->
@@ -154,6 +153,7 @@
             </div>
         </div>
     </header>
+
     <div class="flex bg-gray-200 h-[calc(100dvh-7rem)] md:h-[calc(100vh-4.5rem)] overflow-hidden" 
         x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
         x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }"   
@@ -3929,8 +3929,6 @@
         </aside> -->
     </div>
 
-
-
     <!-- Right Modal -->
     <!-- Personal Info -->
     <dialog id="personalinfomodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
@@ -6614,7 +6612,5 @@
 
     </script>
 
-
 </body>
-
 </html>

@@ -171,6 +171,7 @@
             </div>
         </div>
     </header>
+
     <div class="flex bg-gray-200 h-[calc(100dvh-8rem)] md:h-[calc(100vh-4.5rem)] overflow-hidden" 
         x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
         x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }"
@@ -1807,7 +1808,7 @@
             document.getElementById(nextId).focus();
         }
         }
-        </script>
+   </script>
 
   <!-- Initialize Swiper -->
   <script>
@@ -1865,5 +1866,4 @@
   </script>
 
 </body>
-
 </html>
