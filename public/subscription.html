@@ -802,41 +802,29 @@
                             </div>
                             <div x-tabs:panel>
                                 <section>
-                                    <div class="flex flex-col md:flex-row flex-wrap items-center p-4 gap-6 justify-between w-full">
-                                        <span class="font-medium text-center md:text-left text-sm md:text-base text-gray-900">
+                                    <div class="flex flex-col flex-wrap items-center justify-between w-full gap-6 p-4 md:flex-row">
+                                        <span class="text-sm font-medium text-center text-gray-900 md:text-left md:text-base">
                                             Your subscription for wooqlaw® Pro expired on 
-                                            <span class="font-semibold text-sm md:text-base text-orange-500">
+                                            <span class="text-sm font-semibold text-orange-500 md:text-base">
                                                 12-03-2023.
                                             </span>  Subscribe now?
                                         </span>
-                                        <a class="flex justify-center items-center gap-2 px-3 md:px-5 py-2 md:py-3 shadow font-medium text-sm nd:text-base rounded-lg bg-orange-600 text-white" href="">
+                                        <a class="flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg shadow md:px-5 md:py-3 nd:text-base" href="">
                                             Subscribe Pro
                                         </a>
                                     </div>
-                                    <div class="grid gap-3 md:table shadow-sm overflow-hidden rounded-lg md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 rounded-lg p-4">
-                                        <header class="hidden items-center md:table-row h-12 bg-gray-100 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
-                                            <div class="text-xs font-bold text-center w-11">
-                                                <div class="flex items-center justify-center w-4 px-4 py-3">
-                                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
-                                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                                </div>
-                                            </div>
+                                    <div class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 rounded-lg p-4">
+                                        <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
                                             <div class="text-xs font-bold text-gray-900">Plan Name</div>
-                                            <div class="hidden text-center md:table-cell text-xs font-bold text-gray-900">Start Date</div>
-                                            <div class="hidden text-center md:table-cell text-xs font-bold text-gray-900">End date</div>
-                                            <div class="hidden text-center md:table-cell text-xs font-bold text-gray-900">Payment VIA</div>
-                                            <div class="hidden text-xs font-bold text-center md:table-cell text-gray-900">Attachments</div>
+                                            <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Start Date</div>
+                                            <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">End date</div>
+                                            <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Payment VIA</div>
+                                            <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Attachments</div>
                                            
                                         </header>
-                                        <div class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
-                                            <div class="hidden gap-1 items-center md:table-cell text-xs md:w-11 md:text-center after:content-[attr(data-pn)] md:after:hidden after:" data-pn="Plan Name:">
-                                                <div class="flex items-center justify-center w-4 px-4 py-3">
-                                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
-                                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                                </div>
-                                            </div>
-                                            <div class=" text-xs border-b border-gray-300 align-middle flex !border-solid md:!border-solid">
-                                                <span class="flex items-center :hidden gap-2 md:gap-5">
+                                        <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
+                                            <div x-on:click="open=!open" class="text-xs border-b border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
+                                                <span class="flex items-center gap-2 md:gap-5">
                                                     <span>
                                                         <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g clip-path="url(#clip0_1313_41390)">
@@ -863,28 +851,28 @@
                                                             </svg> 
                                                     </span>     
                                                 </span>  
+                                                <div class="flex items-center gap-2 md:hidden">
+                                                    <span class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">Aug 2023</span>
+                                                    <svg :class="open?'rotate-180':''"  width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"/>
+                                                    </svg>      
+                                                </div>                                              
                                             </div>
-                                            <div class="border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Start Date">
+                                            <div :class="open?'flex':'hidden md:flex'" class="border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Start Date">
                                                         MON 12-05-2022
                                             </div>
-                                            <div class=" border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
-                                            <div class="flex justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
-                                                 <a class="flex justify-center justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs" href="">Jazz Cash</a>
+                                            <div :class="open?'flex':'hidden md:flex'" class=" border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
+                                                 <span class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">Jazz Cash</span>
                                             </div>
-                                            <div class="border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid flex justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
-                                            <a class="flex justify-center md:mx-auto font-medium text-xs text-blue-600" href="">file.pdf</a>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+                                            <a class="flex justify-center text-xs font-medium text-blue-600 md:mx-auto" href="">file.pdf</a>
                                             </div>
                                         </div>
                                         <!-- 2 -->
-                                        <div class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
-                                            <div class="hidden gap-1 items-center md:table-cell text-xs md:w-11 md:text-center after:content-[attr(data-pn)] md:after:hidden after:" data-pn="Plan Name:">
-                                                <div class="flex items-center justify-center w-4 px-4 py-3">
-                                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
-                                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                                </div>
-                                            </div>
-                                            <div class=" text-xs border-b border-gray-300 align-middle flex !border-solid md:!border-solid">
-                                                <span class="flex items-center :hidden gap-2 md:gap-5">
+                                        <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
+                                            <div x-on:click="open=!open" class="text-xs border-b border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
+                                                <span class="flex items-center gap-2 :hidden md:gap-5">
                                                     <span>
                                                         <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g clip-path="url(#clip0_1313_41390)">
@@ -911,16 +899,22 @@
                                                             </svg> 
                                                     </span>     
                                                 </span>  
+                                                <div class="flex items-center gap-2 md:hidden">
+                                                    <span class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">Sep 2023</span>
+                                                    <svg :class="open?'rotate-180':''"  width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"/>
+                                                    </svg>      
+                                                </div>                                              
                                             </div>
-                                            <div class="border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Start Date">
+                                            <div :class="open?'flex':'hidden md:flex'" class="border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Start Date">
                                                         MON 12-05-2022
                                             </div>
-                                            <div class=" border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
-                                            <div class="flex justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
-                                                 <a class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs" href="">Easy Paisa</a>
+                                            <div :class="open?'flex':'hidden md:flex'" class=" border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
+                                                 <span class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">Jazz Cash</span>
                                             </div>
-                                            <div class="border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid flex justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
-                                            <a class="flex justify-center md:mx-auto font-medium text-xs text-blue-600" href="">file.pdf</a>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+                                            <a class="flex justify-center text-xs font-medium text-blue-600 md:mx-auto" href="">file.pdf</a>
                                             </div>
                                         </div>
                                     </div>
@@ -958,7 +952,7 @@
                     <div class="flex flex-col gap-2 md:gap-5">
                         <!-- PRO -->
                         <div class="flex justify-between">
-                            <div class="flex gap-2 items-center">
+                            <div class="flex items-center gap-2">
                                 <span class="w-4 h-6 md:w-9 md:h-11">
                                     <svg class="w-4 h-6 md:w-9 md:h-11" viewBox="0 0 35 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1171_24398)">
@@ -979,21 +973,21 @@
                                         </defs>
                                     </svg>
                                 </span>
-                                <span class="block text-sm md:text-lg font-semibold text-gray-900">
+                                <span class="block text-sm font-semibold text-gray-900 md:text-lg">
                                     PRO
                                 </span>
                             </div>
-                            <div class="block text-base md:text-2xl font-semibold text-gray-900">
+                            <div class="block text-base font-semibold text-gray-900 md:text-2xl">
                                 Rs. 2,999/Month
                             </div>
                         </div>
                         <div class="flex gap-2 md:gap-3">
                             <!-- Bank Transfer -->
-                            <div class="relative flex w-full items-center gap-4">
-                                <input id="bank" type="radio" value="" name="payment" class="peer absolute left-4 hidden h-4 w-4 border-gray-300 bg-gray-100 text-violet-700 focus:ring-2 focus:ring-violet-600 md:block" />
-                                <label for="bank" class="group flex w-full items-center gap-1 rounded-lg border border-white bg-gray-50 py-3 pl-2 pr-2 peer-checked:border-violet-600 peer-checked:bg-violet-600 md:pl-10 peer-checked:md:bg-gray-50">
-                                    <span class="h-5 w-5 md:h-10 md:w-10">
-                                        <svg class="h-5 w-5 md:h-10 md:w-10" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="relative flex items-center w-full gap-4">
+                                <input id="bank" type="radio" value="" name="payment" class="absolute hidden w-4 h-4 bg-gray-100 border-gray-300 peer left-4 text-violet-700 focus:ring-2 focus:ring-violet-600 md:block" />
+                                <label for="bank" class="flex items-center w-full gap-1 py-3 pl-2 pr-2 border border-white rounded-lg group bg-gray-50 peer-checked:border-violet-600 peer-checked:bg-violet-600 md:pl-10 peer-checked:md:bg-gray-50">
+                                    <span class="w-5 h-5 md:h-10 md:w-10">
+                                        <svg class="w-5 h-5 md:h-10 md:w-10" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="20" cy="20.4785" r="17.5" fill="#6366F1"></circle>
                                             <rect x="7.5" y="12.9785" width="25" height="15" rx="1" fill="white"></rect>
                                             <path d="M22.5 25.4785L23.3762 24.836C23.6759 24.6162 24.0728 24.5808 24.4067 24.744L25.4164 25.2376C25.7233 25.3877 26.0856 25.3707 26.3771 25.1925L27.4331 24.5472C27.7532 24.3516 28.1559 24.3516 28.476 24.5472L30 25.4785" stroke="#4B5563" stroke-linecap="round"></path>
@@ -1007,11 +1001,11 @@
                                 </label>
                             </div>
                             <!-- Easy Paisa -->
-                            <div class="relative flex w-full items-center gap-4">
-                                <input id="easypaisa" type="radio" value="" name="payment" class="peer absolute left-4 hidden h-4 w-4 border-gray-300 bg-gray-100 text-violet-700 focus:ring-2 focus:ring-violet-600 md:block" />
-                                <label for="easypaisa" class="group flex w-full items-center gap-1 rounded-lg border border-white bg-gray-50 py-3 pl-2 pr-2 peer-checked:border-violet-600 peer-checked:bg-violet-600 md:pl-10 peer-checked:md:bg-gray-50">
-                                    <span class="h-5 w-5 md:h-10 md:w-10">
-                                        <svg class="h-5 w-5 md:h-10 md:w-10" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="relative flex items-center w-full gap-4">
+                                <input id="easypaisa" type="radio" value="" name="payment" class="absolute hidden w-4 h-4 bg-gray-100 border-gray-300 peer left-4 text-violet-700 focus:ring-2 focus:ring-violet-600 md:block" />
+                                <label for="easypaisa" class="flex items-center w-full gap-1 py-3 pl-2 pr-2 border border-white rounded-lg group bg-gray-50 peer-checked:border-violet-600 peer-checked:bg-violet-600 md:pl-10 peer-checked:md:bg-gray-50">
+                                    <span class="w-5 h-5 md:h-10 md:w-10">
+                                        <svg class="w-5 h-5 md:h-10 md:w-10" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M17.1873 31.0986C8.74859 29.942 4.60419 23.87 3.58683 20.9785C3.32981 23.977 4.26507 27.6181 4.76482 29.0638C6.03206 32.2766 11.0617 38.6377 21.0426 38.3807C31.0234 38.1237 35.9103 32.0624 37.1061 29.0638L30.6807 25.3157C29.6991 27.7252 25.626 32.2551 17.1873 31.0986Z" fill="#2DB45F"></path>
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.24089 16.7927C4.58326 14.9065 5.44498 10.1589 10.1199 6.15179C14.6177 2.29654 21.0967 2.29654 23.774 2.77844C27.2366 3.22462 34.3759 6.01249 35.2327 13.5945C36.0894 21.1765 28.8786 24.1786 25.1662 24.7319C20.2222 25.7493 9.08117 25.7387 4.06934 17.5569C4.12347 17.4396 4.17152 17.1749 4.24089 16.7927ZM11.8894 16.1495C12.2464 14.3825 14.1169 10.6344 18.7432 9.77764C23.3695 8.92092 25.3293 10.4198 26.4002 11.3842C27.3104 12.4544 28.8097 15.2387 25.3293 17.2742C19.8676 19.3617 13.7635 17.5951 11.8894 16.1495Z" fill="#312D3C"></path>
                                         </svg>
@@ -1022,11 +1016,11 @@
                                 </label>
                             </div>
                             <!-- Jazz Cash -->
-                            <div class="relative flex w-full items-center gap-4">
-                                <input id="jazzcash" type="radio" value="" name="payment" class="peer absolute left-4 hidden h-4 w-4 border-gray-300 bg-gray-100 text-violet-700 focus:ring-2 focus:ring-violet-600 md:block" />
-                                <label for="jazzcash" class="group flex w-full items-center gap-1 rounded-lg border border-white bg-gray-50 py-3 pl-2 pr-2 peer-checked:border-violet-600 peer-checked:bg-violet-600 md:pl-10 peer-checked:md:bg-gray-50">
-                                    <span class="h-6 w-10 md:h-9 md:w-16">
-                                        <svg class="h-6 w-10 md:h-9 md:w-16" viewBox="0 0 69 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="relative flex items-center w-full gap-4">
+                                <input id="jazzcash" type="radio" value="" name="payment" class="absolute hidden w-4 h-4 bg-gray-100 border-gray-300 peer left-4 text-violet-700 focus:ring-2 focus:ring-violet-600 md:block" />
+                                <label for="jazzcash" class="flex items-center w-full gap-1 py-3 pl-2 pr-2 border border-white rounded-lg group bg-gray-50 peer-checked:border-violet-600 peer-checked:bg-violet-600 md:pl-10 peer-checked:md:bg-gray-50">
+                                    <span class="w-10 h-6 md:h-9 md:w-16">
+                                        <svg class="w-10 h-6 md:h-9 md:w-16" viewBox="0 0 69 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M38.4522 21.0305C37.3614 21.0277 36.2901 20.7414 35.3433 20.1996C33.7702 19.3271 32.7225 17.9419 32.2365 16.0857C31.7175 14.1228 31.9001 12.3371 32.778 10.7789C33.6559 9.2207 35.0806 8.15377 37.0147 7.64434C37.5249 7.50309 38.0511 7.42808 38.5804 7.42113C39.0012 7.41644 39.4199 7.48177 39.8193 7.61444C40.6736 7.9092 41.2173 8.50835 41.4511 9.39584L41.7577 10.5546L41.3678 10.6614L41.2856 10.5984C40.8488 10.2588 40.2561 10.0644 39.5256 10.0121C39.4081 10.0046 39.2895 10.0003 39.1699 10.0003C38.6745 10.0014 38.1813 10.0663 37.7025 10.1936C36.6345 10.4734 35.8517 11.0555 35.3636 11.9248C34.8499 12.8049 34.741 13.8248 35.0432 14.9579C35.4031 16.3218 36.0354 17.284 36.9207 17.818C37.4527 18.1502 38.0686 18.3232 38.6957 18.3168C39.1032 18.3126 39.5084 18.2562 39.9015 18.1491C41.2653 17.7902 42.2201 17.1313 42.7413 16.1893L42.7829 16.1124L43.161 16.012L43.4579 17.1366C43.6843 17.9964 43.4259 18.7909 42.6911 19.5001C42.0813 20.0907 41.2589 20.5243 40.2486 20.7902C39.6627 20.9476 39.0589 21.0284 38.4522 21.0305Z" fill="#FDB201"></path>
                                             <path d="M38.5764 7.62586C38.9756 7.62103 39.3727 7.68349 39.7512 7.81062C40.5343 8.08189 41.0327 8.62764 41.2463 9.44785L41.5005 10.409L41.4087 10.4325C40.938 10.0659 40.3136 9.85618 39.5354 9.80349C39.4126 9.79601 39.2898 9.79174 39.1659 9.79174C38.6525 9.79227 38.1412 9.8594 37.6451 9.99146C36.5194 10.2869 35.6974 10.8971 35.1791 11.822C34.6351 12.7519 34.5209 13.8141 34.8363 15.0089C35.2122 16.4329 35.869 17.4279 36.8067 17.9939C37.37 18.3468 38.0228 18.5303 38.6874 18.5226C39.1129 18.519 39.5361 18.4605 39.9466 18.3485C41.3706 17.9725 42.3602 17.2862 42.9156 16.2894L43.0064 16.2648L43.2499 17.1886C43.4564 17.9718 43.2196 18.6924 42.5397 19.3502C41.9516 19.9198 41.1684 20.3328 40.1901 20.5891C39.6223 20.7415 39.0372 20.8201 38.4493 20.823C37.3936 20.8212 36.3566 20.544 35.4407 20.0188C33.91 19.1694 32.9061 17.8398 32.429 16.0299C31.9228 14.1075 32.0969 12.3902 32.9513 10.8779C33.8057 9.35066 35.1752 8.33821 37.0598 7.84052C37.5527 7.70512 38.061 7.63333 38.5721 7.62693M38.5721 7.21148C38.0252 7.21842 37.4814 7.29559 36.9541 7.4411C34.9623 7.96548 33.4938 9.05376 32.5892 10.6771C31.6846 12.2791 31.4945 14.1182 32.0275 16.1367C32.5326 18.0526 33.6134 19.4805 35.24 20.3819C36.2159 20.9394 37.32 21.2338 38.4439 21.2363C39.0676 21.2333 39.6883 21.1496 40.2905 20.9875C41.335 20.713 42.1883 20.2612 42.8248 19.6461C43.6183 18.8814 43.8928 18.0174 43.6472 17.0829L43.4047 16.1602L43.2979 15.7586L42.8964 15.8654L42.8056 15.8889L42.6347 15.9348L42.5493 16.0886C42.0569 16.9782 41.1449 17.6041 39.8377 17.948C39.4617 18.0509 39.074 18.1051 38.6842 18.1092C38.0976 18.1179 37.5211 17.9562 37.0246 17.6436C36.1798 17.1342 35.5796 16.2146 35.2336 14.9042C34.9452 13.8106 35.0435 12.875 35.5337 12.0324C36.0036 11.1961 36.7266 10.6622 37.7476 10.3941C38.2093 10.2711 38.6849 10.2083 39.1627 10.2072C39.277 10.2072 39.3923 10.2072 39.5066 10.2189C40.1933 10.2659 40.7476 10.4486 41.1513 10.7615L41.3136 10.8875L41.5123 10.8352L41.603 10.8106L42.0035 10.7038L41.8967 10.3033L41.6436 9.34212C41.3905 8.38093 40.7967 7.74013 39.8793 7.41974C39.4569 7.27544 39.0132 7.20323 38.5668 7.20614L38.5721 7.21148Z" fill="#C80001"></path>
                                             <g style="mix-blend-mode:screen">
@@ -1643,20 +1637,20 @@
                         <div class="flex flex-col gap-2 md:gap-5">
                             <!-- Payment Instructions -->
                             <div class="flex flex-col gap-2">
-                                <span class="block text-base md:text-lg font-medium text-gray-900">
+                                <span class="block text-base font-medium text-gray-900 md:text-lg">
                                     Payment Instructions
                                 </span>
-                                <span class="block text-xs md:text-sm font-medium text-gray-900">
+                                <span class="block text-xs font-medium text-gray-900 md:text-sm">
                                     Payments can be made via Easy Paisa in favor of Wooqlaw PAKISTAN (PRIVATE) LIMITED
                                 </span>
                             </div>
                             <!-- Account Details -->
-                            <div class="flex flex-col w-full p-3 gap-2 bg-gray-50 border border-gray-100 rounded-lg">
-                                <span class="block text-base md:text-lg font-medium text-gray-900">
+                            <div class="flex flex-col w-full gap-2 p-3 border border-gray-100 rounded-lg bg-gray-50">
+                                <span class="block text-base font-medium text-gray-900 md:text-lg">
                                     Account Details
                                 </span>
                                 <!-- Account Title -->
-                                <div class="flex flex-col md:grid md:grid-cols-4 gap-2">
+                                <div class="flex flex-col gap-2 md:grid md:grid-cols-4">
                                     <span class="col-span-1 text-sm font-medium text-gray-500">
                                         Account Title:
                                     </span>
@@ -1665,7 +1659,7 @@
                                     </span>
                                 </div>
                                 <!-- Account Number -->
-                                <div class="flex flex-col md:grid md:grid-cols-4 gap-2">
+                                <div class="flex flex-col gap-2 md:grid md:grid-cols-4">
                                     <span class="col-span-1 text-sm font-medium text-gray-500">
                                         Account Number:
                                     </span>
@@ -1675,7 +1669,7 @@
                                 </div>
                             </div>
                             <!-- Email, Whatsapp -->
-                            <div class="flex flex-col md:flex-row gap-1 md:gap-5">
+                            <div class="flex flex-col gap-1 md:flex-row md:gap-5">
                                 <span class="flex gap-1 text-sm font-medium text-gray-500">
                                     Email: <span class="block text-sm font-semibold text-gray-900">accounts@kartoa.com</span>
                                 </span>
@@ -1684,28 +1678,28 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
+                        <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-5">
                             <div class="flex flex-col gap-2 md:gap-5">
                                 <!-- Payment Amount -->
                                 <div class="flex flex-col gap-2">
                                     <label for="payment-amount" class="block text-sm font-medium text-gray-900">
                                         Payment Amount <span class="text-red-600">*</span>
                                     </label>
-                                    <input type="number" id="payment-amount" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="e.g. 50">
+                                    <input type="number" id="payment-amount" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 border border-gray-300 rounded-lg bg-gray-50 focus:ring-violet-500 focus:border-violet-500" placeholder="e.g. 50">
                                 </div>
                                 <!-- Payment Date -->
                                 <div class="flex flex-col gap-2">
                                     <label for="payment-date" class="block text-sm font-medium text-gray-900">
                                         Payment Date <span class="text-red-600">*</span>
                                     </label>
-                                    <input type="date" id="payment-date" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="Please Select">
+                                    <input type="date" id="payment-date" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 border border-gray-300 rounded-lg bg-gray-50 focus:ring-violet-500 focus:border-violet-500" placeholder="Please Select">
                                 </div>
                                 <!-- Transaction Reference Number -->
                                 <div class="flex flex-col gap-2">
                                     <label for="transaction-reference-number" class="block text-sm font-medium text-gray-900">
                                         Transaction Reference Number <span class="text-red-600">*</span>
                                     </label>
-                                    <input type="number" id="transaction-reference-number" class="block w-full px-4 py-3 bg-gray-50 border border-gray-300 text-sm font-normal text-gray-500 rounded-lg focus:ring-violet-500 focus:border-violet-500" placeholder="e.g. 123456">
+                                    <input type="number" id="transaction-reference-number" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 border border-gray-300 rounded-lg bg-gray-50 focus:ring-violet-500 focus:border-violet-500" placeholder="e.g. 123456">
                                 </div>
                             </div>
                             <div class="">
@@ -1713,17 +1707,17 @@
                             </div>
                         </div>
                         <!-- Proof of Payment -->
-                        <div class="flex flex-col gap-2 items-start justify-center w-full">
-                            <div for="proof-of-payment" class="block text-base md:text-lg font-medium text-gray-900">
+                        <div class="flex flex-col items-start justify-center w-full gap-2">
+                            <div for="proof-of-payment" class="block text-base font-medium text-gray-900 md:text-lg">
                                 Proof of Payment <span class="text-red-600">*</span>
                             </div>
-                            <label for="proof-of-payment" class="flex flex-col items-center justify-center w-full h-36 p-2 md:p-6 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                            <label for="proof-of-payment" class="flex flex-col items-center justify-center w-full p-2 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer h-36 md:p-6 bg-gray-50 hover:bg-gray-100">
                                 <div class="flex flex-col items-center justify-center">
                                     <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7419 2.87891C21.1069 2.87891 21.4535 3.03836 21.691 3.31542L26.691 9.14875C27.1403 9.67291 27.0796 10.462 26.5554 10.9113C26.0313 11.3606 25.2422 11.2999 24.7929 10.7757L21.9919 7.50798L21.9919 25.7956C21.9919 26.4859 21.4323 27.0456 20.7419 27.0456C20.0516 27.0456 19.4919 26.4859 19.4919 25.7956L19.4919 7.50798L16.691 10.7757C16.2417 11.2999 15.4526 11.3606 14.9285 10.9113C14.4043 10.462 14.3436 9.67291 14.7929 9.14875L19.7929 3.31542C20.0304 3.03836 20.377 2.87891 20.7419 2.87891ZM12.4017 14.5488C13.092 14.545 13.6548 15.1015 13.6586 15.7919C13.6624 16.4822 13.1059 17.045 12.4156 17.0488C10.5931 17.059 9.30127 17.1063 8.32086 17.2864C7.37617 17.4599 6.82938 17.7385 6.42363 18.1443C5.96236 18.6056 5.66161 19.2532 5.49719 20.4761C5.32793 21.735 5.32528 23.4036 5.32528 25.7959V27.4626C5.32528 29.855 5.32793 31.5235 5.49719 32.7824C5.66161 34.0054 5.96236 34.653 6.42363 35.1143C6.8849 35.5755 7.53252 35.8763 8.75548 36.0407C10.0144 36.2099 11.6829 36.2126 14.0753 36.2126H27.4086C29.801 36.2126 31.4695 36.2099 32.7284 36.0407C33.9514 35.8763 34.599 35.5755 35.0603 35.1143C35.5215 34.653 35.8223 34.0054 35.9867 32.7824C36.156 31.5235 36.1586 29.855 36.1586 27.4626V25.7959C36.1586 23.4036 36.156 21.7351 35.9867 20.4761C35.8223 19.2532 35.5215 18.6056 35.0603 18.1443C34.6545 17.7385 34.1077 17.4599 33.163 17.2864C32.1826 17.1063 30.8908 17.059 29.0683 17.0488C28.378 17.045 27.8215 16.4822 27.8253 15.7919C27.8291 15.1015 28.3919 14.545 29.0822 14.5488C30.8848 14.5589 32.3871 14.602 33.6147 14.8275C34.878 15.0596 35.9532 15.5016 36.828 16.3765C37.8312 17.3797 38.2627 18.6428 38.4644 20.143C38.6587 21.588 38.6587 23.4252 38.6586 25.7045V27.554C38.6587 29.8334 38.6587 31.6706 38.4644 33.1155C38.2627 34.6157 37.8312 35.8788 36.828 36.882C35.8248 37.8852 34.5617 38.3167 33.0615 38.5184C31.6166 38.7127 29.7794 38.7126 27.5001 38.7126H13.9838C11.7045 38.7126 9.86731 38.7127 8.42236 38.5184C6.92218 38.3167 5.65905 37.8852 4.65586 36.882C3.65267 35.8788 3.22118 34.6157 3.01948 33.1155C2.82522 31.6706 2.82524 29.8334 2.82528 27.5541V25.7045C2.82524 23.4252 2.82522 21.588 3.01948 20.143C3.22118 18.6428 3.65267 17.3797 4.65586 16.3765C5.53074 15.5016 6.60587 15.0596 7.8692 14.8275C9.0968 14.602 10.5991 14.5589 12.4017 14.5488Z" fill="#71717A"/>
                                     </svg>
-                                    <p class="mb-2 text-sm text-gray-500"><span class="text-violet-700 font-semibold">Click to upload</span> or drag and drop</p>
-                                    <p class="text-sm text-gray-500 font-normal">PNG,JPG,PDF,JPEG (MAX. 5MB)</p>
+                                    <p class="mb-2 text-sm text-gray-500"><span class="font-semibold text-violet-700">Click to upload</span> or drag and drop</p>
+                                    <p class="text-sm font-normal text-gray-500">PNG,JPG,PDF,JPEG (MAX. 5MB)</p>
                                 </div>
                                 <input id="proof-of-payment" type="file" class="hidden" />
                             </label>
