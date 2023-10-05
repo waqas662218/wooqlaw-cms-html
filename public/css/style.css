@@ -3079,6 +3079,10 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
   .sm\:items-end {
     align-items: flex-end;
   }
@@ -3811,6 +3815,10 @@ select {
 
   .md\:pl-0 {
     padding-left: 0px;
+  }
+
+  .md\:text-left {
+    text-align: left;
   }
 
   .md\:text-center {
