@@ -751,6 +751,9 @@ select {
 .left-0 {
   left: 0px;
 }
+.left-4 {
+  left: 1rem;
+}
 .left-6 {
   left: 1.5rem;
 }
@@ -778,8 +781,8 @@ select {
 .top-1 {
   top: 0.25rem;
 }
-.left-4 {
-  left: 1rem;
+.bottom-3 {
+  bottom: 0.75rem;
 }
 .z-10 {
   z-index: 10;
@@ -895,6 +898,9 @@ select {
 .ml-1\.5 {
   margin-left: 0.375rem;
 }
+.ml-16 {
+  margin-left: 4rem;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -927,9 +933,6 @@ select {
 }
 .mt-px {
   margin-top: 1px;
-}
-.ml-16 {
-  margin-left: 4rem;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -996,6 +999,12 @@ select {
 }
 .h-18 {
   height: 4.5rem;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-2\.5 {
+  height: 0.625rem;
 }
 .h-20 {
   height: 5rem;
@@ -1260,6 +1269,9 @@ select {
 }
 .shrink-0 {
   flex-shrink: 0;
+}
+.shrink {
+  flex-shrink: 1;
 }
 .flex-grow-0 {
   flex-grow: 0;
@@ -1943,6 +1955,10 @@ select {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
 }
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -2165,6 +2181,9 @@ select {
 }
 .leading-tight {
   line-height: 1.25;
+}
+.leading-3 {
+  line-height: .75rem;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -2714,6 +2733,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(91 33 182 / var(--tw-text-opacity));
 }
+.hover\:text-gray-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -3154,6 +3177,10 @@ select {
     right: 4rem;
   }
 
+  .md\:bottom-3 {
+    bottom: 0.75rem;
+  }
+
   .md\:z-0 {
     z-index: 0;
   }
@@ -3366,6 +3393,10 @@ select {
     width: 2.5rem;
   }
 
+  .md\:w-11 {
+    width: 2.75rem;
+  }
+
   .md\:w-12 {
     width: 3rem;
   }
@@ -3429,10 +3460,6 @@ select {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-11 {
-    width: 2.75rem;
   }
 
   .md\:max-w-2xl {
@@ -3675,6 +3702,10 @@ select {
     border-width: 1px;
   }
 
+  .md\:border-b {
+    border-bottom-width: 1px;
+  }
+
   .md\:border-b-2 {
     border-bottom-width: 2px;
   }
@@ -3689,10 +3720,6 @@ select {
 
   .md\:border-t {
     border-top-width: 1px;
-  }
-
-  .md\:border-b {
-    border-bottom-width: 1px;
   }
 
   .md\:border-t-0 {
@@ -3822,6 +3849,16 @@ select {
   .md\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:pl-0 {
