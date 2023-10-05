@@ -778,6 +778,9 @@ select {
 .top-1 {
   top: 0.25rem;
 }
+.left-4 {
+  left: 1rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -2820,6 +2823,10 @@ select {
 .peer:checked ~ .peer-checked\:flex {
   display: flex;
 }
+.peer:checked ~ .peer-checked\:border-violet-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(124 58 237 / var(--tw-border-opacity));
+}
 .peer:checked ~ .peer-checked\:bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
@@ -2832,6 +2839,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
+.peer:checked ~ .peer-checked\:bg-violet-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 58 237 / var(--tw-bg-opacity));
+}
 .peer:checked ~ .peer-checked\:after\:translate-x-full::after {
   content: var(--tw-content);
   --tw-translate-x: 100%;
@@ -2841,6 +2852,10 @@ select {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.peer:checked ~ .group .peer-checked\:group-\[\]\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .peer:focus ~ .peer-focus\:outline-none {
   outline: 2px solid transparent;
@@ -3738,6 +3753,10 @@ select {
     padding-left: 0px;
   }
 
+  .md\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
   .md\:text-start {
     text-align: start;
   }
@@ -3806,6 +3825,16 @@ select {
 
   .md\:hover\:overflow-y-auto:hover {
     overflow-y: auto;
+  }
+
+  .peer:checked ~ .peer-checked\:md\:bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  }
+
+  .peer:checked ~ .group .peer-checked\:group-\[\]\:md\:text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 1024px) {
