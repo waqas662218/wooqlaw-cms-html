@@ -892,6 +892,9 @@ select {
 .ml-1\.5 {
   margin-left: 0.375rem;
 }
+.ml-16 {
+  margin-left: 4rem;
+}
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1318,6 +1321,9 @@ select {
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
+.grid-rows-\[9\] {
+  grid-template-rows: 9;
+}
 .flex-row {
   flex-direction: row;
 }
@@ -1620,6 +1626,9 @@ select {
 }
 .border-t {
   border-top-width: 1px;
+}
+.\!border-solid {
+  border-style: solid !important;
 }
 .border-dashed {
   border-style: dashed;
@@ -2482,6 +2491,22 @@ select {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
+.before\:content-\[attr\(data-attachment\)\]::before {
+  --tw-content: attr(data-attachment);
+  content: var(--tw-content);
+}
+.before\:content-\[attr\(data-end-date\)\]::before {
+  --tw-content: attr(data-end-date);
+  content: var(--tw-content);
+}
+.before\:content-\[attr\(data-payment\)\]::before {
+  --tw-content: attr(data-payment);
+  content: var(--tw-content);
+}
+.before\:content-\[attr\(data-start-date\)\]::before {
+  --tw-content: attr(data-start-date);
+  content: var(--tw-content);
+}
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -2548,6 +2573,10 @@ select {
 }
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
+  content: var(--tw-content);
+}
+.after\:content-\[attr\(data-pn\)\]::after {
+  --tw-content: attr(data-pn);
   content: var(--tw-content);
 }
 .odd\:bg-white:nth-child(odd) {
@@ -3050,6 +3079,10 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
   .sm\:items-end {
     align-items: flex-end;
   }
@@ -3185,6 +3218,18 @@ select {
     display: flex;
   }
 
+  .md\:table {
+    display: table;
+  }
+
+  .md\:table-cell {
+    display: table-cell;
+  }
+
+  .md\:table-row {
+    display: table-row;
+  }
+
   .md\:grid {
     display: grid;
   }
@@ -3310,6 +3355,10 @@ select {
     width: 2.5rem;
   }
 
+  .md\:w-11 {
+    width: 2.75rem;
+  }
+
   .md\:w-12 {
     width: 3rem;
   }
@@ -3397,6 +3446,10 @@ select {
 
   .md\:grow {
     flex-grow: 1;
+  }
+
+  .md\:border-collapse {
+    border-collapse: collapse;
   }
 
   .md\:grid-cols-12 {
@@ -3611,6 +3664,10 @@ select {
     border-width: 1px;
   }
 
+  .md\:border-b {
+    border-bottom-width: 1px;
+  }
+
   .md\:border-b-2 {
     border-bottom-width: 2px;
   }
@@ -3627,9 +3684,26 @@ select {
     border-top-width: 1px;
   }
 
+  .md\:border-t-0 {
+    border-top-width: 0px;
+  }
+
+  .md\:\!border-solid {
+    border-style: solid !important;
+  }
+
+  .md\:border-solid {
+    border-style: solid;
+  }
+
   .md\:border-gray-200 {
     --tw-border-opacity: 1;
     border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  }
+
+  .md\:border-gray-300 {
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
   }
 
   .md\:bg-gray-50 {
@@ -3639,6 +3713,11 @@ select {
 
   .md\:bg-transparent {
     background-color: transparent;
+  }
+
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
   .md\:p-0 {
@@ -3738,6 +3817,14 @@ select {
     padding-left: 0px;
   }
 
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
   .md\:text-start {
     text-align: start;
   }
@@ -3802,6 +3889,16 @@ select {
   .md\:drop-shadow-none {
     --tw-drop-shadow: drop-shadow(0 0 #0000);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+
+  .md\:before\:hidden::before {
+    content: var(--tw-content);
+    display: none;
+  }
+
+  .md\:after\:hidden::after {
+    content: var(--tw-content);
+    display: none;
   }
 
   .md\:hover\:overflow-y-auto:hover {
@@ -3943,5 +4040,35 @@ select {
   .\32xl\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+}
+.\[\&\>\*\>div\]\:p-3>*>div {
+  padding: 0.75rem;
+}
+@media (min-width: 768px) {
+
+  .md\:\[\&\>\*\>div\]\:table-cell>*>div {
+    display: table-cell;
+  }
+}
+.\[\&\>\*\]\:border-solid>* {
+  border-style: solid;
+}
+.\[\&\>\*\]\:border-gray-300>* {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+.\[\&\>\*\]\:align-middle>* {
+  vertical-align: middle;
+}
+@media (min-width: 768px) {
+
+  .md\:\[\&\>\*\]\:table-row>* {
+    display: table-row;
+  }
+
+  .md\:\[\&\>\*\]\:border-gray-300>* {
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
   }
 }
