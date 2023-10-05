@@ -802,7 +802,7 @@
                             </div>
                             <div x-tabs:panel>
                                 <section>
-                                    <div class="flex flex-col flex-wrap items-center justify-between w-full gap-6 p-4 md:flex-row">
+                                    <div class="flex flex-col flex-wrap items-center justify-between w-full gap-6 p-4 bg-white md:flex-row">
                                         <span class="text-sm font-medium text-center text-gray-900 md:text-left md:text-base">
                                             Your subscription for wooqlaw® Pro expired on 
                                             <span class="text-sm font-semibold text-orange-500 md:text-base">
@@ -811,10 +811,16 @@
                                         </span>
                                         <a class="flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg shadow md:px-5 md:py-3 nd:text-base" href="">
                                             Subscribe Pro
-                                        </a>
-                                    </div>
-                                    <div class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 rounded-lg p-4">
+                                        </a> 
+                                    </div>  
+                                    <div class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 rounded-lg p-4 bg-white">
                                         <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
+                                            <div class="text-xs font-bold text-center w-11">
+                                                <div class="flex items-center justify-center w-4 px-4 py-3">
+                                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                                </div>
+                                            </div>
                                             <div class="text-xs font-bold text-gray-900">Plan Name</div>
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Start Date</div>
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">End date</div>
