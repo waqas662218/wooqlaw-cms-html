@@ -781,6 +781,9 @@ select {
 .top-1 {
   top: 0.25rem;
 }
+.bottom-6 {
+  bottom: 1.5rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -930,9 +933,6 @@ select {
 }
 .mt-px {
   margin-top: 1px;
-}
-.mb-12 {
-  margin-bottom: 3rem;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -1260,12 +1260,6 @@ select {
 }
 .max-w-xs {
   max-width: 20rem;
-}
-.max-w-\[sm\] {
-  max-width: sm;
-}
-.max-w-\[200pxl\] {
-  max-width: 200pxl;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -3156,6 +3150,10 @@ select {
     position: relative;
   }
 
+  .md\:sticky {
+    position: sticky;
+  }
+
   .md\:-left-10 {
     left: -2.5rem;
   }
@@ -3174,6 +3172,10 @@ select {
 
   .md\:right-16 {
     right: 4rem;
+  }
+
+  .md\:bottom-40 {
+    bottom: 10rem;
   }
 
   .md\:z-0 {
@@ -3465,20 +3467,16 @@ select {
     max-width: 72rem;
   }
 
+  .md\:max-w-\[200px\] {
+    max-width: 200px;
+  }
+
   .md\:max-w-md {
     max-width: 28rem;
   }
 
   .md\:max-w-xl {
     max-width: 36rem;
-  }
-
-  .md\:max-w-\[200pxl\] {
-    max-width: 200pxl;
-  }
-
-  .md\:max-w-\[200px\] {
-    max-width: 200px;
   }
 
   .md\:flex-1 {
