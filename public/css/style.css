@@ -781,6 +781,9 @@ select {
 .top-1 {
   top: 0.25rem;
 }
+.bottom-6 {
+  bottom: 1.5rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -3170,6 +3173,10 @@ select {
     position: relative;
   }
 
+  .md\:sticky {
+    position: sticky;
+  }
+
   .md\:-left-10 {
     left: -2.5rem;
   }
@@ -3188,6 +3195,10 @@ select {
 
   .md\:right-16 {
     right: 4rem;
+  }
+
+  .md\:bottom-40 {
+    bottom: 10rem;
   }
 
   .md\:z-0 {
