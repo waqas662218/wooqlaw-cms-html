@@ -754,6 +754,9 @@ select {
 .left-4 {
   left: 1rem;
 }
+.left-4 {
+  left: 1rem;
+}
 .left-6 {
   left: 1.5rem;
 }
@@ -780,6 +783,9 @@ select {
 }
 .top-1 {
   top: 0.25rem;
+}
+.left-4 {
+  left: 1rem;
 }
 .z-10 {
   z-index: 10;
@@ -996,6 +1002,12 @@ select {
 }
 .h-18 {
   height: 4.5rem;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-2\.5 {
+  height: 0.625rem;
 }
 .h-20 {
   height: 5rem;
@@ -2015,6 +2027,14 @@ select {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+.py-9 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
 .\!pl-10 {
   padding-left: 2.5rem !important;
 }
@@ -2169,6 +2189,12 @@ select {
 }
 .leading-10 {
   line-height: 2.5rem;
+}
+.leading-3 {
+  line-height: .75rem;
+}
+.leading-loose {
+  line-height: 2;
 }
 .leading-none {
   line-height: 1;
@@ -2694,6 +2720,14 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(91 33 182 / var(--tw-bg-opacity));
 }
+.hover\:bg-orange-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 65 12 / var(--tw-bg-opacity));
+}
+.hover\:bg-violet-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
+}
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -3158,6 +3192,10 @@ select {
     position: relative;
   }
 
+  .md\:sticky {
+    position: sticky;
+  }
+
   .md\:-left-10 {
     left: -2.5rem;
   }
@@ -3166,12 +3204,20 @@ select {
     bottom: 0px;
   }
 
+  .md\:bottom-3 {
+    bottom: 0.75rem;
+  }
+
   .md\:bottom-\[1\.4rem\] {
     bottom: 1.4rem;
   }
 
   .md\:right-16 {
     right: 4rem;
+  }
+
+  .md\:bottom-40 {
+    bottom: 10rem;
   }
 
   .md\:z-0 {
@@ -3471,6 +3517,10 @@ select {
     max-width: 72rem;
   }
 
+  .md\:max-w-\[200px\] {
+    max-width: 200px;
+  }
+
   .md\:max-w-md {
     max-width: 28rem;
   }
@@ -3679,6 +3729,11 @@ select {
 
   .md\:rounded-xl {
     border-radius: 0.75rem;
+  }
+
+  .md\:rounded-b-lg {
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
 
   .md\:rounded-t-none {
