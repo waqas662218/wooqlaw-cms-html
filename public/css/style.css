@@ -1453,9 +1453,6 @@ select {
 .gap-px {
   gap: 1px;
 }
-.gap-36 {
-  gap: 9rem;
-}
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
@@ -1899,17 +1896,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-violet-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 243 255 / var(--tw-bg-opacity));
-}
-.bg-indigo-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
-}
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+}
+.bg-violet-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 243 255 / var(--tw-bg-opacity));
 }
 .bg-zinc-400 {
   --tw-bg-opacity: 1;
@@ -2154,9 +2147,6 @@ select {
 }
 .align-middle {
   vertical-align: middle;
-}
-.font-\[\'Inter\'\] {
-  font-family: 'Inter';
 }
 .text-2xl {
   font-size: 1.5rem;
