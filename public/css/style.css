@@ -727,11 +727,17 @@ select {
 .-right-2 {
   right: -0.5rem;
 }
+.-right-3 {
+  right: -0.75rem;
+}
 .-right-4 {
   right: -1rem;
 }
 .-top-1 {
   top: -0.25rem;
+}
+.-top-3 {
+  top: -0.75rem;
 }
 .bottom-0 {
   bottom: 0px;
@@ -783,36 +789,6 @@ select {
 }
 .top-1 {
   top: 0.25rem;
-}
-.-top-0 {
-  top: -0px;
-}
-.-right-0 {
-  right: -0px;
-}
-.right-10 {
-  right: 2.5rem;
-}
-.top-14 {
-  top: 3.5rem;
-}
-.-right-10 {
-  right: -2.5rem;
-}
-.-top-14 {
-  top: -3.5rem;
-}
-.-right-5 {
-  right: -1.25rem;
-}
-.-top-2 {
-  top: -0.5rem;
-}
-.-right-3 {
-  right: -0.75rem;
-}
-.-top-3 {
-  top: -0.75rem;
 }
 .z-10 {
   z-index: 10;
@@ -1009,6 +985,12 @@ select {
 .hidden {
   display: none;
 }
+.h-1 {
+  height: 0.25rem;
+}
+.h-1\.5 {
+  height: 0.375rem;
+}
 .h-10 {
   height: 2.5rem;
 }
@@ -1053,6 +1035,9 @@ select {
 }
 .h-40 {
   height: 10rem;
+}
+.h-44 {
+  height: 11rem;
 }
 .h-5 {
   height: 1.25rem;
@@ -1107,18 +1092,6 @@ select {
 }
 .h-screen {
   height: 100vh;
-}
-.h-auto {
-  height: auto;
-}
-.h-44 {
-  height: 11rem;
-}
-.h-1 {
-  height: 0.25rem;
-}
-.h-1\.5 {
-  height: 0.375rem;
 }
 .max-h-\[100dvh\] {
   max-height: 100dvh;
@@ -4006,6 +3979,11 @@ select {
   .md\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:pl-0 {
