@@ -745,6 +745,9 @@ select {
 .bottom-2\.5 {
   bottom: 0.625rem;
 }
+.bottom-6 {
+  bottom: 1.5rem;
+}
 .end-auto {
   inset-inline-end: auto;
 }
@@ -780,9 +783,6 @@ select {
 }
 .top-1 {
   top: 0.25rem;
-}
-.bottom-6 {
-  bottom: 1.5rem;
 }
 .z-10 {
   z-index: 10;
@@ -1432,6 +1432,9 @@ select {
 .gap-px {
   gap: 1px;
 }
+.gap-36 {
+  gap: 9rem;
+}
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
@@ -1859,6 +1862,22 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-violet-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 243 255 / var(--tw-bg-opacity));
+}
+.bg-indigo-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
+}
+.bg-indigo-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+}
+.bg-zinc-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1952,6 +1971,10 @@ select {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
 }
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -2007,14 +2030,6 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-.py-9 {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
 }
 .\!pl-10 {
   padding-left: 2.5rem !important;
@@ -2099,6 +2114,9 @@ select {
 }
 .align-middle {
   vertical-align: middle;
+}
+.font-\[\'Inter\'\] {
+  font-family: 'Inter';
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -2697,17 +2715,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
 }
-.hover\:bg-violet-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(91 33 182 / var(--tw-bg-opacity));
-}
-.hover\:bg-orange-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(194 65 12 / var(--tw-bg-opacity));
-}
 .hover\:bg-violet-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(109 40 217 / var(--tw-bg-opacity));
+}
+.hover\:bg-violet-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(91 33 182 / var(--tw-bg-opacity));
 }
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
@@ -3173,10 +3187,6 @@ select {
     position: relative;
   }
 
-  .md\:sticky {
-    position: sticky;
-  }
-
   .md\:-left-10 {
     left: -2.5rem;
   }
@@ -3197,12 +3207,24 @@ select {
     right: 4rem;
   }
 
-  .md\:bottom-40 {
-    bottom: 10rem;
-  }
-
   .md\:z-0 {
     z-index: 0;
+  }
+
+  .md\:order-1 {
+    order: 1;
+  }
+
+  .md\:order-2 {
+    order: 2;
+  }
+
+  .md\:order-3 {
+    order: 3;
+  }
+
+  .md\:order-4 {
+    order: 4;
   }
 
   .md\:col-span-1 {
