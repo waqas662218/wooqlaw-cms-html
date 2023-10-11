@@ -2380,6 +2380,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity));
 }
+.text-violet-900 {
+  --tw-text-opacity: 1;
+  color: rgb(76 29 149 / var(--tw-text-opacity));
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -3596,6 +3600,14 @@ select {
 
   .md\:max-w-xl {
     max-width: 36rem;
+  }
+
+  .md\:max-w-4xl {
+    max-width: 56rem;
+  }
+
+  .md\:max-w-lg {
+    max-width: 32rem;
   }
 
   .md\:flex-1 {
