@@ -2380,10 +2380,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity));
 }
-.text-violet-900 {
-  --tw-text-opacity: 1;
-  color: rgb(76 29 149 / var(--tw-text-opacity));
-}
 .underline {
   text-decoration-line: underline;
 }
@@ -3586,6 +3582,10 @@ select {
     max-width: 42rem;
   }
 
+  .md\:max-w-4xl {
+    max-width: 56rem;
+  }
+
   .md\:max-w-6xl {
     max-width: 72rem;
   }
@@ -3602,12 +3602,8 @@ select {
     max-width: 36rem;
   }
 
-  .md\:max-w-4xl {
-    max-width: 56rem;
-  }
-
-  .md\:max-w-lg {
-    max-width: 32rem;
+  .md\:max-w-sm {
+    max-width: 24rem;
   }
 
   .md\:flex-1 {
@@ -3991,11 +3987,6 @@ select {
   .md\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .md\:pl-0 {
