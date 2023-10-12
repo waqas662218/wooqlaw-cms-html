@@ -781,9 +781,6 @@ select {
 .right-4 {
   right: 1rem;
 }
-.right-9 {
-  right: 2.25rem;
-}
 .start-auto {
   inset-inline-start: auto;
 }
@@ -1260,9 +1257,6 @@ select {
 }
 .max-w-5xl {
   max-width: 64rem;
-}
-.max-w-6xl {
-  max-width: 72rem;
 }
 .max-w-7xl {
   max-width: 80rem;
