@@ -754,9 +754,6 @@ select {
 .bottom-6 {
   bottom: 1.5rem;
 }
-.bottom-6 {
-  bottom: 1.5rem;
-}
 .end-auto {
   inset-inline-end: auto;
 }
@@ -783,6 +780,9 @@ select {
 }
 .right-4 {
   right: 1rem;
+}
+.right-9 {
+  right: 2.25rem;
 }
 .start-auto {
   inset-inline-start: auto;
@@ -955,12 +955,6 @@ select {
 .mt-px {
   margin-top: 1px;
 }
-.mr-0 {
-  margin-right: 0px;
-}
-.ml-4 {
-  margin-left: 1rem;
-}
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -1056,6 +1050,9 @@ select {
 }
 .h-4 {
   height: 1rem;
+}
+.h-40 {
+  height: 10rem;
 }
 .h-44 {
   height: 11rem;
@@ -1263,6 +1260,9 @@ select {
 }
 .max-w-5xl {
   max-width: 64rem;
+}
+.max-w-6xl {
+  max-width: 72rem;
 }
 .max-w-7xl {
   max-width: 80rem;
@@ -1837,6 +1837,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
+.bg-indigo-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+}
 .bg-orange-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 237 213 / var(--tw-bg-opacity));
@@ -1908,6 +1912,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(237 233 254 / var(--tw-bg-opacity));
 }
+.bg-violet-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 243 255 / var(--tw-bg-opacity));
+}
 .bg-violet-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(139 92 246 / var(--tw-bg-opacity));
@@ -1923,14 +1931,6 @@ select {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-indigo-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(238 242 255 / var(--tw-bg-opacity));
-}
-.bg-violet-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 243 255 / var(--tw-bg-opacity));
 }
 .bg-zinc-400 {
   --tw-bg-opacity: 1;
@@ -3577,6 +3577,10 @@ select {
     width: 9rem;
   }
 
+  .md\:w-40 {
+    width: 10rem;
+  }
+
   .md\:w-48 {
     width: 12rem;
   }
@@ -3652,10 +3656,6 @@ select {
 
   .md\:max-w-xl {
     max-width: 36rem;
-  }
-
-  .md\:max-w-sm {
-    max-width: 24rem;
   }
 
   .md\:flex-1 {
