@@ -17,7 +17,57 @@
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
-    <title>Verification Documents Pending</title>
+
+    <style>
+        /* CSS comes here */
+        /* #video {
+            border: 1px solid black;
+            width: 320px;
+            height: 240px;
+        } */
+    
+        /* #photo {
+            border: 1px solid black;
+            width: 320px;
+            height: 240px;
+        } */
+    
+        #canvas {
+            display: none;
+        }
+    
+        .camera {
+            /* width: 340px; */
+            display: inline-block;
+        }
+    
+        .output {
+            /* width: 340px; */
+            display: inline-block;
+        }
+    
+        #takephoto {
+            display: block;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            /* bottom: 12px;
+            padding: 4px;
+            background-color: #6a67ce;
+            border: 1px solid rgba(255, 255, 255, 0.7); */
+            font-size: 14px;
+            color: rgba(255, 255, 255, 1.0);
+            cursor: pointer;
+        }
+    
+        .contentarea {
+            font-size: 16px;
+            font-family: Arial;
+            text-align: center;
+        }
+    </style>
+
+    <title>Verification Take Picture</title>
 </head>
 
 <body class="overflow-hidden">
@@ -294,14 +344,14 @@
                         </li>
                     </ol>
                     <div class="flex flex-col p-2 md:p-6 gap-4 md:gap-6 bg-white rounded-b-md">
-                        <!-- Upload / Scan Your CNIC -->
+                        <!-- Upload your Picture or take a Selfie! -->
                         <div class="flex flex-col">
                             <h2 class="mb-2 text-sm md:text-lg font-bold text-gray-900">
-                                Upload / Scan Your CNIC
+                                Upload your Picture or take a Selfie!
                             </h2>
                             <ul class="max-w-md text-xs md:text-sm text-gray-600 list-disc list-inside">
                                 <li class="font-medium">
-                                    Provide clear images of the front and back sides
+                                    Please make sure the image is clear
                                 </li>
                                 <li class="font-bold">
                                     Format Supported: <span class="font-normal">JPG,JPEG,PNG,TIFF,GIF,PDF. (Max 5MB)</span>
@@ -333,34 +383,105 @@
                                 </div>
                             </button>
                         </div>
-                        <!-- Upload Files -->
+                        <!-- Take Picture -->
                         <div class="flex flex-col gap-2 items-start justify-center w-full">
-                            <div for="upload-files" class="block text-sm md:text-lg font-medium text-gray-900">
-                                Upload Files
+                            <div class="block text-sm md:text-lg font-medium text-gray-900 mb-7 md:mb-0">
+                                Take Picture
                             </div>
-                            <label for="upload-files" class="flex flex-col items-center justify-center w-full h-40 md:h-80 p-2 md:p-6 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
-                                <div class="flex flex-col items-center justify-center">
-                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7419 2.87891C21.1069 2.87891 21.4535 3.03836 21.691 3.31542L26.691 9.14875C27.1403 9.67291 27.0796 10.462 26.5554 10.9113C26.0313 11.3606 25.2422 11.2999 24.7929 10.7757L21.9919 7.50798L21.9919 25.7956C21.9919 26.4859 21.4323 27.0456 20.7419 27.0456C20.0516 27.0456 19.4919 26.4859 19.4919 25.7956L19.4919 7.50798L16.691 10.7757C16.2417 11.2999 15.4526 11.3606 14.9285 10.9113C14.4043 10.462 14.3436 9.67291 14.7929 9.14875L19.7929 3.31542C20.0304 3.03836 20.377 2.87891 20.7419 2.87891ZM12.4017 14.5488C13.092 14.545 13.6548 15.1015 13.6586 15.7919C13.6624 16.4822 13.1059 17.045 12.4156 17.0488C10.5931 17.059 9.30127 17.1063 8.32086 17.2864C7.37617 17.4599 6.82938 17.7385 6.42363 18.1443C5.96236 18.6056 5.66161 19.2532 5.49719 20.4761C5.32793 21.735 5.32528 23.4036 5.32528 25.7959V27.4626C5.32528 29.855 5.32793 31.5235 5.49719 32.7824C5.66161 34.0054 5.96236 34.653 6.42363 35.1143C6.8849 35.5755 7.53252 35.8763 8.75548 36.0407C10.0144 36.2099 11.6829 36.2126 14.0753 36.2126H27.4086C29.801 36.2126 31.4695 36.2099 32.7284 36.0407C33.9514 35.8763 34.599 35.5755 35.0603 35.1143C35.5215 34.653 35.8223 34.0054 35.9867 32.7824C36.156 31.5235 36.1586 29.855 36.1586 27.4626V25.7959C36.1586 23.4036 36.156 21.7351 35.9867 20.4761C35.8223 19.2532 35.5215 18.6056 35.0603 18.1443C34.6545 17.7385 34.1077 17.4599 33.163 17.2864C32.1826 17.1063 30.8908 17.059 29.0683 17.0488C28.378 17.045 27.8215 16.4822 27.8253 15.7919C27.8291 15.1015 28.3919 14.545 29.0822 14.5488C30.8848 14.5589 32.3871 14.602 33.6147 14.8275C34.878 15.0596 35.9532 15.5016 36.828 16.3765C37.8312 17.3797 38.2627 18.6428 38.4644 20.143C38.6587 21.588 38.6587 23.4252 38.6586 25.7045V27.554C38.6587 29.8334 38.6587 31.6706 38.4644 33.1155C38.2627 34.6157 37.8312 35.8788 36.828 36.882C35.8248 37.8852 34.5617 38.3167 33.0615 38.5184C31.6166 38.7127 29.7794 38.7126 27.5001 38.7126H13.9838C11.7045 38.7126 9.86731 38.7127 8.42236 38.5184C6.92218 38.3167 5.65905 37.8852 4.65586 36.882C3.65267 35.8788 3.22118 34.6157 3.01948 33.1155C2.82522 31.6706 2.82524 29.8334 2.82528 27.5541V25.7045C2.82524 23.4252 2.82522 21.588 3.01948 20.143C3.22118 18.6428 3.65267 17.3797 4.65586 16.3765C5.53074 15.5016 6.60587 15.0596 7.8692 14.8275C9.0968 14.602 10.5991 14.5589 12.4017 14.5488Z" fill="#71717A"/>
-                                    </svg>
-                                    <p class="mb-2 text-sm text-gray-500"><span class="text-violet-700 font-semibold">Click to upload</span> or drag and drop</p>
-                                    <p class="text-sm text-gray-500 font-normal">PNG,JPG,PDF,JPEG (MAX. 5MB)</p>
+                            <div class="relative flex flex-col items-center justify-center w-full h-40 md:h-80 p-2 md:p-6 rounded-lg bg-gray-100">
+                                <div class="camera absolute">
+                                    <video id="video">Video stream not available.</video>
                                 </div>
-                                <input id="upload-files" type="file" class="hidden" />
-                            </label>
+                                <div class="contentarea">
+                                    <!-- Import -->
+                                    <!-- <a href="#" class="flex flex-col px-3 gap-2.5 items-center">
+                                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_169_1823)">
+                                            <path d="M0 26.9727C0 12.6133 11.6406 0.972656 26 0.972656C40.3594 0.972656 52 12.6133 52 26.9727C52 41.3321 40.3594 52.9727 26 52.9727C11.6406 52.9727 0 41.3321 0 26.9727Z" fill="#E9E9EB"/>
+                                            <path d="M30 21.6367H30.0133" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M32.6693 16.3086H19.3359C17.1268 16.3086 15.3359 18.0995 15.3359 20.3086V33.6419C15.3359 35.8511 17.1268 37.6419 19.3359 37.6419H32.6693C34.8784 37.6419 36.6693 35.8511 36.6693 33.6419V20.3086C36.6693 18.0995 34.8784 16.3086 32.6693 16.3086Z" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M15.3359 30.9726L20.6693 25.6393C21.2773 25.0541 21.9671 24.7461 22.6693 24.7461C23.3714 24.7461 24.0612 25.0541 24.6693 25.6393L31.3359 32.3059" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M28.6641 29.6367L29.9974 28.3033C30.6055 27.7182 31.2952 27.4102 31.9974 27.4102C32.6995 27.4102 33.3893 27.7182 33.9974 28.3033L36.6641 30.97" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_169_1823">
+                                            <rect width="52" height="52" fill="white" transform="translate(0 0.972656)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="block text-sm font-normal text-white">
+                                            Import
+                                        </span>
+                                    </a> -->
+                                    <!-- Flip -->
+                                    <!-- <a href="#" class="flex flex-col px-3 gap-2.5 items-center">
+                                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_169_1831)">
+                                            <path d="M0.5 26.9727C0.5 12.8894 11.9167 1.47266 26 1.47266C40.0833 1.47266 51.5 12.8894 51.5 26.9727C51.5 41.0559 40.0833 52.4727 26 52.4727C11.9167 52.4727 0.5 41.0559 0.5 26.9727Z" fill="#E9E9EB" stroke="black"/>
+                                            <path d="M16 33.0863V20.859C16 19.1569 16 18.3058 16.5424 18.0267C17.0848 17.7475 17.7774 18.2422 19.1625 19.2316L20.7437 20.361C21.3596 20.8009 21.6675 21.0209 21.8338 21.3439C22 21.667 22 22.0454 22 22.8022V31.1431C22 31.8999 22 32.2783 21.8338 32.6014C21.6675 32.9244 21.3596 33.1444 20.7437 33.5843L19.1625 34.7137C17.7774 35.7031 17.0848 36.1978 16.5424 35.9186C16 35.6395 16 34.7884 16 33.0863Z" fill="#27272A"/>
+                                            <path d="M36 33.0863V20.859C36 19.1569 36 18.3058 35.4576 18.0267C34.9152 17.7475 34.2226 18.2422 32.8375 19.2316L31.2563 20.361C30.6404 20.8009 30.3325 21.0209 30.1662 21.3439C30 21.667 30 22.0454 30 22.8022V31.1431C30 31.8999 30 32.2783 30.1662 32.6014C30.3325 32.9244 30.6404 33.1444 31.2563 33.5843L32.8375 34.7137C34.2226 35.7031 34.9152 36.1978 35.4576 35.9186C36 35.6395 36 34.7884 36 33.0863Z" fill="#27272A"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26 16.2227C26.4142 16.2227 26.75 16.5584 26.75 16.9727V20.9727C26.75 21.3869 26.4142 21.7227 26 21.7227C25.5858 21.7227 25.25 21.3869 25.25 20.9727V16.9727C25.25 16.5584 25.5858 16.2227 26 16.2227ZM26 24.2227C26.4142 24.2227 26.75 24.5584 26.75 24.9727V28.9727C26.75 29.3869 26.4142 29.7227 26 29.7227C25.5858 29.7227 25.25 29.3869 25.25 28.9727V24.9727C25.25 24.5584 25.5858 24.2227 26 24.2227ZM26 32.2227C26.4142 32.2227 26.75 32.5584 26.75 32.9727V36.9727C26.75 37.3869 26.4142 37.7227 26 37.7227C25.5858 37.7227 25.25 37.3869 25.25 36.9727V32.9727C25.25 32.5584 25.5858 32.2227 26 32.2227Z" fill="#27272A"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_169_1831">
+                                            <rect width="52" height="52" fill="white" transform="translate(0 0.972656)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="block text-sm font-normal text-white">
+                                            Flip
+                                        </span>
+                                    </a> -->
+                                    <!-- Take Photo -->
+                                    <button id="takephoto" type="submit" class="absolute -bottom-20 flex w-40 py-2.5 rounded-lg text-xs md:text-sm font-medium text-center text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 items-center justify-center">
+                                        <div class="flex items-center justify-center gap-2" href="#">
+                                            <span class="w-6 h-5">
+                                                <svg class="w-6 h-5" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.66667 5.30859H6C6.70724 5.30859 7.38552 5.02764 7.88562 4.52755C8.38572 4.02745 8.66667 3.34917 8.66667 2.64193C8.66667 2.28831 8.80714 1.94917 9.05719 1.69912C9.30724 1.44907 9.64638 1.30859 10 1.30859H18C18.3536 1.30859 18.6928 1.44907 18.9428 1.69912C19.1929 1.94917 19.3333 2.28831 19.3333 2.64193C19.3333 3.34917 19.6143 4.02745 20.1144 4.52755C20.6145 5.02764 21.2928 5.30859 22 5.30859H23.3333C24.0406 5.30859 24.7189 5.58955 25.219 6.08964C25.719 6.58974 26 7.26802 26 7.97526V19.9753C26 20.6825 25.719 21.3608 25.219 21.8609C24.7189 22.361 24.0406 22.6419 23.3333 22.6419H4.66667C3.95942 22.6419 3.28115 22.361 2.78105 21.8609C2.28095 21.3608 2 20.6825 2 19.9753V7.97526C2 7.26802 2.28095 6.58974 2.78105 6.08964C3.28115 5.58955 3.95942 5.30859 4.66667 5.30859" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M14 17.3086C16.2091 17.3086 18 15.5177 18 13.3086C18 11.0995 16.2091 9.30859 14 9.30859C11.7909 9.30859 10 11.0995 10 13.3086C10 15.5177 11.7909 17.3086 14 17.3086Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </span>
+                                            Take Photo
+                                        </div>
+                                    </button>
+                                    <canvas id="canvas"></canvas>
+                                    <!-- Scan -->
+                                    <!-- <a href="#" class="flex flex-col px-3 gap-2.5 items-center">
+                                        <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_169_1843)">
+                                            <path d="M0.5 0.972656H52.5V52.9727H0.5V0.972656Z" fill="#0D5F9A"/>
+                                            <path d="M15.8359 20.3086V18.9753C15.8359 18.268 16.1169 17.5897 16.617 17.0896C17.1171 16.5895 17.7954 16.3086 18.5026 16.3086H21.1693" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M15.8359 33.6367V34.9701C15.8359 35.6773 16.1169 36.3556 16.617 36.8557C17.1171 37.3558 17.7954 37.6367 18.5026 37.6367H21.1693" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M31.8359 16.3086H34.5026C35.2098 16.3086 35.8881 16.5895 36.3882 17.0896C36.8883 17.5897 37.1693 18.268 37.1693 18.9753V20.3086" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M31.8359 37.6367H34.5026C35.2098 37.6367 35.8881 37.3558 36.3882 36.8557C36.8883 36.3556 37.1693 35.6773 37.1693 34.9701V33.6367" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.1641 26.9727H35.8307" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_169_1843">
+                                            <rect x="0.5" y="0.972656" width="52" height="52" rx="26" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="block text-sm font-normal text-white">
+                                            Scan
+                                        </span>
+                                    </a> -->
+                                </div>
+                            </div>
                         </div>
                         <!-- Image_CNIC.png -->
-                        <div class="relative flex w-32 h-44 border-2 border-violet-700 bg-white rounded-lg">
+                        <div class="relative flex w-32 h-44 mt-7 md:mt-0 border-2 border-violet-700 bg-white rounded-lg">
                             <button type="button" class="absolute -right-3 -top-3 bg-gray-300 hover:bg-gray-400 rounded-lg p-1.5 ml-auto inline-flex items-center">
                                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.47038 5.93775L12.9222 0.485897C13.2151 0.193003 13.69 0.193003 13.9829 0.485896C14.2758 0.77879 14.2758 1.25366 13.9829 1.54656L8.53104 6.99841L13.9861 12.4534C14.279 12.7463 14.279 13.2212 13.9861 13.5141C13.6932 13.807 13.2183 13.807 12.9254 13.5141L7.47038 8.05907L2.07439 13.4551C1.7815 13.748 1.30662 13.748 1.01373 13.4551C0.720835 13.1622 0.720835 12.6873 1.01373 12.3944L6.40972 6.99841L1.0169 1.60559C0.724009 1.3127 0.724009 0.837823 1.0169 0.544929C1.3098 0.252036 1.78467 0.252037 2.07756 0.54493L7.47038 5.93775Z" fill="#DC2626"/>
                                 </svg>
                             </button>
                             <div class="flex flex-col w-full items-center justify-center">
-                                <div class="flex w-full p-6 bg-gray-100 rounded-lg">
-                                    <svg width="73" height="62" viewBox="0 0 73 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div class="output flex w-full p-6 bg-gray-100 rounded-lg">
+                                    <!-- <svg width="73" height="62" viewBox="0 0 73 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M67.393 0.0195312H5.60892C4.11927 0.0195313 2.69063 0.611293 1.63729 1.66464C0.583949 2.71798 -0.0078125 4.14662 -0.0078125 5.63627V56.1869C-0.0078125 57.6766 0.583949 59.1052 1.63729 60.1585C2.69063 61.2119 4.11927 61.8036 5.60892 61.8036H67.393C68.8827 61.8036 70.3113 61.2119 71.3647 60.1585C72.418 59.1052 73.0098 57.6766 73.0098 56.1869V5.63627C73.0098 4.14662 72.418 2.71798 71.3647 1.66464C70.3113 0.611293 68.8827 0.0195313 67.393 0.0195312ZM46.3303 16.8697C47.1634 16.8697 47.9779 17.1168 48.6706 17.5797C49.3634 18.0426 49.9033 18.7005 50.2222 19.4702C50.541 20.24 50.6244 21.087 50.4619 21.9041C50.2993 22.7213 49.8981 23.4719 49.309 24.061C48.7199 24.6502 47.9692 25.0514 47.1521 25.2139C46.3349 25.3764 45.4879 25.293 44.7182 24.9742C43.9485 24.6553 43.2905 24.1154 42.8277 23.4227C42.3648 22.7299 42.1177 21.9155 42.1177 21.0823C42.1177 19.9651 42.5615 18.8936 43.3515 18.1036C44.1416 17.3136 45.213 16.8697 46.3303 16.8697ZM5.60892 56.1869V46.3576L23.8633 28.1032L51.947 56.1869H5.60892ZM67.393 56.1869H59.8912L47.2535 43.5492L54.2744 36.5283L67.393 49.6504V56.1869Z" fill="#9CA3AF"/>
-                                    </svg>
+                                    </svg> -->
+                                    <img class="w-16 h-16 object-cover" id="photo" src="./images/placeholder1.png" alt="The screen capture will appear in this box.">
                                 </div>
                                 <!-- Image_CNIC.png -->
                                 <div class="flex flex-col p-2 gap-1 items-center">
@@ -385,8 +506,8 @@
                             </button>
                             <div class="flex w-full flex-col md:flex-row justify-end gap-2 md:gap-5">
                                 <!-- Skip For Now -->
-                                <button onclick="verificationincompletemodal.showModal()" type="submit" class="flex w-full md:w-40 py-2.5 border rounded-lg text-xs md:text-sm font-medium text-center text-gray-900 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 items-center justify-center">
-                                    <div class="flex items-center gap-2">
+                                <button type="submit" class="flex w-full md:w-40 py-2.5 border rounded-lg text-xs md:text-sm font-medium text-center text-gray-900 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 items-center justify-center">
+                                    <div class="flex items-center gap-2" href="#">
                                         Skip For Now
                                     </div>
                                 </button>
@@ -409,46 +530,88 @@
         </div>
     </div>
 
-    <!-- Center Modal -->
-    <!-- Verification Documents Pending -->
-    <dialog id="verificationdocumentspendingmodal" class="md:relative sticky bottom-6 w-full md:max-w-xl p-0 bg-white rounded-lg shadow">
-        <form method="dialog">
-            <!-- Verification Documents Pending Modal -->
-            <section class="verificationdocumentspending-modal">
-                <div class="flex flex-col px-6 py-5">
-                    <div class="flex flex-col items-center gap-6">
-                        <div class="flex flex-col gap-1 items-center">
-                            <span class="">
-                                <svg width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M66.75 36.1948C66.75 52.7634 53.3185 66.1948 36.75 66.1948C20.1815 66.1948 6.75 52.7634 6.75 36.1948C6.75 19.6263 20.1815 6.19482 36.75 6.19482C53.3185 6.19482 66.75 19.6263 66.75 36.1948ZM36.75 53.4448C37.9926 53.4448 39 52.4375 39 51.1948V33.1948C39 31.9522 37.9926 30.9448 36.75 30.9448C35.5074 30.9448 34.5 31.9522 34.5 33.1948V51.1948C34.5 52.4375 35.5074 53.4448 36.75 53.4448ZM36.75 21.1948C38.4069 21.1948 39.75 22.538 39.75 24.1948C39.75 25.8517 38.4069 27.1948 36.75 27.1948C35.0931 27.1948 33.75 25.8517 33.75 24.1948C33.75 22.538 35.0931 21.1948 36.75 21.1948Z" fill="#7C3AED"/>
-                                </svg>
-                            </span>
-                            <span class="text-center text-base md:text-2xl font-medium text-violet-700">
-                                Documents Pending Approval
-                            </span>
-                        </div>
-                        <p class="text-center text-xs md:text-sm font-medium md:max-w-md leading-normal text-gray-500">
-                            Your documents are pending approval for profile verification. If you wish to change or amend anything, feel free to contact us!
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <!-- Modal footer -->
-            <div class="flex flex-col items-center justify-center p-4 bg-white rounded-b">
-                <button type="submit" class="flex w-full md:w-40 py-2 rounded-lg text-xs md:text-sm font-medium text-center text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 items-center justify-center">
-                    <div class="flex items-center gap-2" href="#">
-                        Okay
-                    </div>
-                </button>
-            </div>
-        </form>
-    </dialog>
-
     <script>
-        setTimeout(function() {
-            verificationdocumentspendingmodal.showModal();
-        }, 2000)
+        /* JS comes here */
+        (function() {
     
+            var width = 320; // We will scale the photo width to this
+            var height = 0; // This will be computed based on the input stream
+    
+            var streaming = false;
+    
+            var video = null;
+            var canvas = null;
+            var photo = null;
+            var takephoto = null;
+    
+            function startup() {
+                video = document.getElementById('video');
+                canvas = document.getElementById('canvas');
+                photo = document.getElementById('photo');
+                takephoto = document.getElementById('takephoto');
+    
+                navigator.mediaDevices.getUserMedia({
+                        video: true,
+                        audio: false
+                    })
+                    .then(function(stream) {
+                        video.srcObject = stream;
+                        video.play();
+                    })
+                    .catch(function(err) {
+                        console.log("An error occurred: " + err);
+                    });
+    
+                video.addEventListener('canplay', function(ev) {
+                    if (!streaming) {
+                        height = video.videoHeight / (video.videoWidth / width);
+    
+                        if (isNaN(height)) {
+                            height = width / (4 / 3);
+                        }
+    
+                        video.setAttribute('width', width);
+                        video.setAttribute('height', height);
+                        canvas.setAttribute('width', width);
+                        canvas.setAttribute('height', height);
+                        streaming = true;
+                    }
+                }, false);
+    
+                takephoto.addEventListener('click', function(ev) {
+                    takepicture();
+                    ev.preventDefault();
+                }, false);
+    
+                clearphoto();
+            }
+    
+    
+            function clearphoto() {
+                var context = './images/placeholder1.png'
+                context.fillStyle = "#AAA";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+    
+                var data = canvas.toDataURL('image/png');
+                photo.setAttribute('src', 'data');
+            }
+    
+            function takepicture() {
+                var context = canvas.getContext('2d');
+                if (width && height) {
+                    canvas.width = width;
+                    canvas.height = height;
+                    context.drawImage(video, 0, 0, width, height);
+    
+                    var data = canvas.toDataURL('image/png');
+                    photo.setAttribute('src', data);
+                } else {
+                    clearphoto();
+                }
+            }
+    
+            window.addEventListener('load', startup, false);
+        })();
     </script>
 
 </body>
