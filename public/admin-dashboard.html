@@ -11,6 +11,7 @@
     <!-- spotlight -->
     <link href="./css/spotlight.min.css" rel="stylesheet">
 
+    
     <link href="./css/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Googel Fonts -->
@@ -21,6 +22,8 @@
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+    <script defer="" src="./js/alpine.min.js"></script>
     <title>Document</title>
 </head>
 <body class="bg-gray-100 mt-5">
@@ -574,7 +577,7 @@
             <!-- Modal body -->
             <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
                 <!-- ID Documents Verification-->
-                <section class="iddocumentsverification-modal">
+                <section class="iddocumentsverification-modal ">
                     <!-- CNIC Documents -->
                     <div class="text-sm md:text-lg font-semibold text-gray-900 mb-10">
                         CNIC Documents
@@ -582,7 +585,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
                         <!-- Front Side -->
                         <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full group spotlight" data-title="Image Description 1" data-description="Last monday our team worked on Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.">
+                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 1" data-description="">
                                 <div class="relative overflow-hidden cursor-pointer">
                                     <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 1">
                                 </div>
@@ -607,9 +610,9 @@
                         </div>
                         <!-- Back Side -->
                         <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full group spotlight" data-title="Image Description 1" data-description="Last monday our team worked on Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.">
+                            <figure x-show="tab === '2023' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 2" data-description="">
                                 <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 1">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 2">
                                 </div>
                             </figure>
                             <div class="flex items-center justify-between">
@@ -632,9 +635,9 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
                         <!-- Front Side -->
                         <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full group spotlight" data-title="Image Description 1" data-description="Last monday our team worked on Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.">
+                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 3" data-description="">
                                 <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 1">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 3">
                                 </div>
                             </figure>
                             <div class="flex items-center justify-between">
@@ -651,9 +654,9 @@
                         </div>
                         <!-- Back Side -->
                         <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full group spotlight" data-title="Image Description 1" data-description="Last monday our team worked on Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.">
+                            <figure x-show="tab === '2023' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full px-4 group spotlight" data-title="Image Description 4" data-description="">
                                 <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 1">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 4">
                                 </div>
                             </figure>
                             <div class="flex items-center justify-between">
@@ -672,9 +675,9 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10 -mx-4">
                         <!-- Front Side -->
                         <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full group spotlight" data-title="Image Description 1" data-description="Last monday our team worked on Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.">
+                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Rectangle 4512.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 5" data-description="">
                                 <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 1">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Rectangle 4512.png" alt="Image Description 5">
                                 </div>
                             </figure>
                             <div class="flex items-center justify-between">
@@ -704,7 +707,6 @@
             </div>
         </form>
     </dialog>
-
 
     <!-- Center Modal -->
     <!-- ID Verified -->
@@ -744,7 +746,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/spotlight.min.js"></script>
 
-
+    
 
 </body>
 </html>
