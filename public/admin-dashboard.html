@@ -11,6 +11,7 @@
     <!-- spotlight -->
     <link href="./css/spotlight.min.css" rel="stylesheet">
 
+    
     <link href="./css/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Googel Fonts -->
@@ -21,6 +22,8 @@
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+    <script defer="" src="./js/alpine.min.js"></script>
     <title>Document</title>
 </head>
 <body class="bg-gray-100 mt-5">
@@ -574,7 +577,7 @@
             <!-- Modal body -->
             <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
                 <!-- ID Documents Verification-->
-                <section class="iddocumentsverification-modal flex-wrap -mx-4">
+                <section class="iddocumentsverification-modal ">
                     <!-- CNIC Documents -->
                     <div class="text-sm md:text-lg font-semibold text-gray-900 mb-10">
                         CNIC Documents
@@ -705,7 +708,6 @@
         </form>
     </dialog>
 
-
     <!-- Center Modal -->
     <!-- ID Verified -->
     <dialog id="idverifiedmodal" class="md:relative sticky bottom-6 w-full md:max-w-4xl p-0 bg-white rounded-lg shadow">
@@ -744,117 +746,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/spotlight.min.js"></script>
 
-    <script type="text/javascript">
-        const services = new Swiper(".services", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-            },
-        });
-
-        const products = new Swiper(".products", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-            },
-        });
-
-        const posts = new Swiper(".posts", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-            },
-        });
-
-        const testimonials = new Swiper(".testimonials", {
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
-
-<script>
-    document.addEventListener("click", handle);
-
-    function handle(evt) {
-        if (evt.target.type === "button") {
-            return handleBtn(evt.target);
-        }
-    }
-
-    function handleBtn(btn) {
-        const elem = document.querySelector(`#${btn.dataset.for}`);
-        const nwValue = +elem.value + (btn.value === "-" ? -1 : 1);
-        elem.value = nwValue >= +elem.min ? nwValue : elem.min;
-    }
-</script>
+    
 
 </body>
 </html>
