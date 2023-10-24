@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- spotlight -->
+    <link href="./css/spotlight.min.css" rel="stylesheet">
+
+    
+    <link href="./css/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+    <script defer="" src="./js/alpine.min.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-100 mt-5">
+    <div class="flex flex-col mx-auto max-w-screen-4xl px-4 lg:px-12">
+        <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden"> 
+            <div class="flex items-center justify-between p-4 gap-10 bg-white w-full">
+            <span class="font-medium text-base">
+                Users
+            </span>
+            <!-- <button class="flex gap-2 px-3 py-2 font-medium  text-xs text-white bg-violet-700 rounded-lg">
+                <span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 8.05078H4H8Z" fill="white"/>
+                        <path d="M8 4.05078V8.05078M8 8.05078V12.0508M8 8.05078H12M8 8.05078H4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                </span>
+                <span>
+                    Create new
+                </span>
+            </button> -->
+        </div> 
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="font-semibold text-xs text-gray-500 uppercase bg-gray-50">
+                        <tr> 
+                            <th scope="col" class="px-4 py-3">NAME</th>
+                            <th scope="col" class="px-4 py-3">PHONE</th>
+                            <th scope="col" class="px-4 py-3">EMAIL</th>
+                            <th scope="col" class="px-4 py-3">ACTIVE</th>
+                            <th scope="col" class="px-4 py-3">EMAIL CONFIRMED</th>
+                            <th scope="col" class="px-4 py-3">PHONE CONFIRMED</th>
+                            <th scope="col" class="px-4 py-3">ASSIGN ROLE</th>
+                            <th scope="col" class="px-4 py-3">ID VERIFICATION</th>
+                            <th scope="col" class="px-4 py-3">
+                                <span class="sr-only">Actions</span>
+                            </th>
+                            <th scope="col" class="px-4 py-3">
+                                <span class="sr-only">Actions</span>
+                            </th>
+                        </tr>
+                        <tr> 
+                            <!-- search -->
+                            <th scope="col" class="px-4 pb-3">         
+                            <label for="table-search" class="sr-only">Search</label>
+                            <div class="relative">
+                                <input type="text" id="table-search-users" class="block p-1 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg w-40 bg-gray-50 focus:ring-primary-700 focus:border-primary-600" placeholder="">
+                            </div>
+                            </th>
+                            <th scope="col" class="px-4 pb-3">         
+                                <label for="table-search" class="sr-only">Search</label>
+                                <div class="relative">
+                                    <input type="text" id="table-search-users" class="block p-1 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg w-40 bg-gray-50 focus:ring-primary-700 focus:border-primary-600" placeholder="">
+                                </div>
+                                </th>
+                                <th scope="col" class="px-4 pb-3">         
+                                    <label for="table-search" class="sr-only">Search</label>
+                                    <div class="relative">
+                                        <input type="text" id="table-search-users" class="block p-1 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg w-40 bg-gray-50 focus:ring-primary-700 focus:border-primary-600" placeholder="">
+                                    </div>
+                                    </th>                            
+                            <th scope="col" class="px-4 py-3"></th>
+                            <th scope="col" class="px-4 pb-3"></th>
+                            <th scope="col" class="px-4 pb-3"></th>
+                            <th scope="col" class="px-4 pb-3"></th>
+                            <th scope="col" class="px-4 pb-3"></th>
+                            <th scope="col" class="px-4 pb-3">
+                                <span class="sr-only">Actions</span>
+                            </th>
+                            <th scope="col" class="px-4 py-3">
+                                <span class="sr-only">Actions</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-100">
+                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
+                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                TN
+                               </span>
+                               <div class="flex items-center font-medium text-sm text-gray-900">
+                                    Tehmina Naz
+                               </div>
+                            </th>
+                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    (406) 555-0120
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                kenzi.lawson@example.com                                     
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    President of Sales
+                            </div>
+                            </td>   
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    LRE,Admin
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center justify-center gap-2 w-32 h-5 rounded-md bg-orange-100">
+                                    <span>
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00033 12.8844C10.222 12.8844 12.8337 10.2728 12.8337 7.05111C12.8337 3.82945 10.222 1.21777 7.00033 1.21777C3.77866 1.21777 1.16699 3.82945 1.16699 7.05111C1.16699 10.2728 3.77866 12.8844 7.00033 12.8844ZM7.43783 4.71777C7.43783 4.47615 7.24195 4.28027 7.00033 4.28027C6.7587 4.28027 6.56283 4.47615 6.56283 4.71777V7.23233L8.1493 8.8188C8.32015 8.98965 8.59716 8.98965 8.76802 8.8188C8.93887 8.64794 8.93887 8.37093 8.76802 8.20008L7.43783 6.86989V4.71777Z" fill="#18181B"/>
+                                            </svg>
+                                            
+                                    </span>
+                                    <span class="font-medium text-xs text-gray-900">
+                                        Verify Document
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <button onclick="iddocumentsverificationmodal.showModal()" class="flex items-center font-semibold text-sm text-violet-700">
+                                    Take Action                                
+                                </button>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
+                                    <span>
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </td>
+                        </tr> 
+                        <tr class="border-b hover:bg-gray-100">
+                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
+                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                SK
+                               </span>
+                               <div class="flex items-center font-medium text-sm text-gray-900">
+                                Salman Khan Yousafzai                           
+                            </div>
+                            </th>
+                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    077 6764 8570 
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Dog Trainer
+                            </div>
+                            </td>   
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    LRE,Admin
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center justify-center gap-2 w-32 h-5 rounded-md bg-orange-100">
+                                    <span>
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00033 12.8844C10.222 12.8844 12.8337 10.2728 12.8337 7.05111C12.8337 3.82945 10.222 1.21777 7.00033 1.21777C3.77866 1.21777 1.16699 3.82945 1.16699 7.05111C1.16699 10.2728 3.77866 12.8844 7.00033 12.8844ZM7.43783 4.71777C7.43783 4.47615 7.24195 4.28027 7.00033 4.28027C6.7587 4.28027 6.56283 4.47615 6.56283 4.71777V7.23233L8.1493 8.8188C8.32015 8.98965 8.59716 8.98965 8.76802 8.8188C8.93887 8.64794 8.93887 8.37093 8.76802 8.20008L7.43783 6.86989V4.71777Z" fill="#18181B"/>
+                                            </svg>
+                                            
+                                    </span>
+                                    <span class="font-medium text-xs text-gray-900">
+                                        Verify Document
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-semibold text-sm text-violet-700">
+                                    Take Action                                
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
+                                    <span>
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                               
+                            </td>
+                        </tr> 
+                        <tr class="border-b hover:bg-gray-100">
+                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
+                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                TN
+                               </span>
+                               <div class="flex items-center font-medium text-sm text-gray-900">
+                                    Tehmina Naz
+                               </div>
+                            </th>
+                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    +449933761994
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    nevaeh.simmons@example.com                                     
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    
+                            </div>
+                            </td>   
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    --
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center justify-center gap-2 w-32 h-5 rounded-md bg-orange-100">
+                                    <span>
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00033 12.8844C10.222 12.8844 12.8337 10.2728 12.8337 7.05111C12.8337 3.82945 10.222 1.21777 7.00033 1.21777C3.77866 1.21777 1.16699 3.82945 1.16699 7.05111C1.16699 10.2728 3.77866 12.8844 7.00033 12.8844ZM7.43783 4.71777C7.43783 4.47615 7.24195 4.28027 7.00033 4.28027C6.7587 4.28027 6.56283 4.47615 6.56283 4.71777V7.23233L8.1493 8.8188C8.32015 8.98965 8.59716 8.98965 8.76802 8.8188C8.93887 8.64794 8.93887 8.37093 8.76802 8.20008L7.43783 6.86989V4.71777Z" fill="#18181B"/>
+                                            </svg>
+                                            
+                                    </span>
+                                    <span class="font-medium text-xs text-gray-900">
+                                        Verify Document
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-semibold text-sm text-violet-700">
+                                    Take Action                                
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
+                                    <span>
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </td>
+                        </tr> 
+                        <tr class="border-b hover:bg-gray-100">
+                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
+                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                NS
+                               </span>
+                               <div class="flex items-center font-medium text-sm text-gray-900">
+                                Noor Saif                               
+                            </div>
+                            </th>
+                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    +447742461066 
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    jackson.graham@example.com
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Marketing Coordinator
+                            </div>
+                            </td>   
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-medium text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-medium text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-medium text-sm">
+                                    --
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center justify-center gap-1 w-20 h-5 rounded-md bg-green-600">
+                                    <span>
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.33967 3.20599C6.07855 1.88051 6.44799 1.21777 7.00033 1.21777C7.55266 1.21777 7.9221 1.88051 8.66098 3.20599L8.85214 3.54891C9.0621 3.92557 9.16709 4.1139 9.33078 4.23816C9.49446 4.36242 9.69833 4.40855 10.1061 4.5008L10.4773 4.58479C11.9121 4.90943 12.6295 5.07175 12.8002 5.62062C12.9708 6.16948 12.4818 6.7414 11.5036 7.88523L11.2505 8.18115C10.9726 8.50619 10.8336 8.66871 10.7711 8.86977C10.7085 9.07083 10.7296 9.28767 10.7716 9.72135L10.8098 10.1162C10.9577 11.6423 11.0317 12.4053 10.5848 12.7446C10.138 13.0838 9.46626 12.7745 8.12285 12.156L7.77529 11.9959C7.39354 11.8202 7.20266 11.7323 7.00033 11.7323C6.79799 11.7323 6.60712 11.8202 6.22536 11.9959L5.8778 12.156C4.53439 12.7745 3.86268 13.0838 3.41583 12.7446C2.96898 12.4053 3.04292 11.6423 3.19081 10.1162L3.22907 9.72135C3.27109 9.28767 3.2921 9.07083 3.22958 8.86977C3.16705 8.66871 3.02807 8.50619 2.75011 8.18115L2.49705 7.88523C1.51889 6.7414 1.02981 6.16948 1.20049 5.62062C1.37117 5.07175 2.08858 4.90943 3.52339 4.58479L3.89459 4.5008C4.30232 4.40855 4.50619 4.36242 4.66988 4.23816C4.83357 4.1139 4.93855 3.92557 5.14851 3.54891L5.33967 3.20599Z" fill="white"/>
+                                            </svg>                                            
+                                    </span>
+                                    <span class="font-medium text-xs text-white">
+                                        Verified
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-semibold text-sm text-violet-700">
+                                    Take Action                                
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
+                                    <span>
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                               
+                            </td>
+                        </tr> 
+                        <tr class="border-b hover:bg-gray-100">
+                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
+                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                QM
+                               </span>
+                               <div class="flex items-center font-medium text-sm text-gray-900">
+                                Qasim Muneer
+                               </div>
+                            </th>
+                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    +447559896902
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    sara.cruz@example.com                                     
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    
+                            </div>
+                            </td>   
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    No
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    No
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    --
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center justify-center gap-1 w-20 h-5 rounded-md bg-green-600">
+                                    <span>
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.33967 3.20599C6.07855 1.88051 6.44799 1.21777 7.00033 1.21777C7.55266 1.21777 7.9221 1.88051 8.66098 3.20599L8.85214 3.54891C9.0621 3.92557 9.16709 4.1139 9.33078 4.23816C9.49446 4.36242 9.69833 4.40855 10.1061 4.5008L10.4773 4.58479C11.9121 4.90943 12.6295 5.07175 12.8002 5.62062C12.9708 6.16948 12.4818 6.7414 11.5036 7.88523L11.2505 8.18115C10.9726 8.50619 10.8336 8.66871 10.7711 8.86977C10.7085 9.07083 10.7296 9.28767 10.7716 9.72135L10.8098 10.1162C10.9577 11.6423 11.0317 12.4053 10.5848 12.7446C10.138 13.0838 9.46626 12.7745 8.12285 12.156L7.77529 11.9959C7.39354 11.8202 7.20266 11.7323 7.00033 11.7323C6.79799 11.7323 6.60712 11.8202 6.22536 11.9959L5.8778 12.156C4.53439 12.7745 3.86268 13.0838 3.41583 12.7446C2.96898 12.4053 3.04292 11.6423 3.19081 10.1162L3.22907 9.72135C3.27109 9.28767 3.2921 9.07083 3.22958 8.86977C3.16705 8.66871 3.02807 8.50619 2.75011 8.18115L2.49705 7.88523C1.51889 6.7414 1.02981 6.16948 1.20049 5.62062C1.37117 5.07175 2.08858 4.90943 3.52339 4.58479L3.89459 4.5008C4.30232 4.40855 4.50619 4.36242 4.66988 4.23816C4.83357 4.1139 4.93855 3.92557 5.14851 3.54891L5.33967 3.20599Z" fill="white"/>
+                                            </svg>                                            
+                                    </span>
+                                    <span class="font-medium text-xs text-white">
+                                        Verified
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-semibold text-sm text-violet-700">
+                                    Take Action                                
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
+                                    <span>
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </td>
+                        </tr> 
+                        <tr class="border-b hover:bg-gray-100">
+                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
+                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                LH
+                               </span>
+                               <div class="flex items-center font-medium text-sm text-gray-900">
+                                Laiba Hameed                               
+                            </div>
+                            </th>
+                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    +449684977003
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    tanya.hill@example.com
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Nursing Assistant
+                            </div>
+                            </td>   
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm">
+                                    --
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center justify-center gap-2 w-32 h-5 rounded-md bg-orange-100">
+                                    <span>
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00033 12.8844C10.222 12.8844 12.8337 10.2728 12.8337 7.05111C12.8337 3.82945 10.222 1.21777 7.00033 1.21777C3.77866 1.21777 1.16699 3.82945 1.16699 7.05111C1.16699 10.2728 3.77866 12.8844 7.00033 12.8844ZM7.43783 4.71777C7.43783 4.47615 7.24195 4.28027 7.00033 4.28027C6.7587 4.28027 6.56283 4.47615 6.56283 4.71777V7.23233L8.1493 8.8188C8.32015 8.98965 8.59716 8.98965 8.76802 8.8188C8.93887 8.64794 8.93887 8.37093 8.76802 8.20008L7.43783 6.86989V4.71777Z" fill="#18181B"/>
+                                            </svg>
+                                            
+                                    </span>
+                                    <span class="font-medium text-xs text-gray-900">
+                                        Verify Document
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-semibold text-sm text-violet-700">
+                                    Take Action                                
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
+                                    <span>
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                               
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div> 
+            <nav class="flex flex-col items-start justify-center gap-8 p-4 space-y-3 md:flex-row md:items-center md:space-y-0" aria-label="Table navigation">
+                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                    Showing
+                    <span class="font-semibold text-gray-900">1-10</span>
+                    of
+                    <span class="font-semibold text-gray-900">1000</span>
+                </span>
+                <ul class="inline-flex items-stretch -space-x-px">
+                    <li>
+                        <a href="#" class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Previous</span>
+                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-current="page" class="z-10 flex items-center justify-center px-3 py-2 text-sm leading-tight border text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700">3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center px-3 py-2 text-sm leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Next</span>
+                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>  
+        </div>
+    </div>
+
+
+    <!-- Right Modal -->
+    <!-- ID Documents Verification -->
+    <dialog id="iddocumentsverificationmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
+                <h3 class="text-sm font-medium text-gray-900 md:text-lg">
+                    Documents of Salman Khan Yousafzai 
+                </h3>
+                <button onclick="iddocumentsverificationmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="flex p-2 bg-green-50 items-center justify-between">
+                <div class="">
+
+                </div>
+                <button class="flex items-center justify-center px-3 py-2 text-sm font-medium text-white rounded-lg bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 focus:outline-none">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.27808 7.12496L8.05036 7.35139C8.05036 7.35139 7.50906 7.88961 6.03156 6.42049C4.55406 4.95138 5.09535 4.41316 5.09535 4.41316L5.23876 4.27057C5.59204 3.9193 5.62534 3.35533 5.31712 2.94362L4.68663 2.10142C4.30514 1.59183 3.56798 1.52452 3.13073 1.95929L2.34592 2.73963C2.12911 2.95521 1.98383 3.23467 2.00144 3.54468C2.04652 4.33778 2.40536 6.0442 4.40768 8.03516C6.53107 10.1465 8.52342 10.2304 9.33814 10.1544C9.59584 10.1304 9.81996 9.99917 10.0006 9.8196L10.7108 9.11336C11.1903 8.63664 11.0551 7.81934 10.4417 7.48587L9.48641 6.96658C9.08362 6.74762 8.59289 6.81194 8.27808 7.12496Z" fill="white"/>
+                    </svg>
+                    +9235446262
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+                <!-- ID Documents Verification-->
+                <section class="iddocumentsverification-modal ">
+                    <!-- CNIC Documents -->
+                    <div class="text-sm md:text-lg font-semibold text-gray-900 mb-10">
+                        CNIC Documents
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+                        <!-- Front Side -->
+                        <div class="flex flex-col gap-3">
+                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 1" data-description="">
+                                <div class="relative overflow-hidden cursor-pointer">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 1">
+                                </div>
+                            </figure>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-medium text-gray-500">
+                                    Image_CNIC.png
+                                </span>
+                                <span class="">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
+                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
+                                    </svg>
+                                </span>
+                            </div>
+                            <!-- <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-primary-300 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
+                                <span class="ml-3 text-sm font-medium text-gray-900">Front Side</span>
+                            </label> -->
+                        </div>
+                        <!-- Back Side -->
+                        <div class="flex flex-col gap-3">
+                            <figure x-show="tab === '2023' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 2" data-description="">
+                                <div class="relative overflow-hidden cursor-pointer">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 2">
+                                </div>
+                            </figure>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-medium text-gray-500">
+                                    Image_CNIC.png
+                                </span>
+                                <span class="">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
+                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- License Documents -->
+                    <div class="text-sm md:text-lg font-semibold text-gray-900 mb-10">
+                        License Documents
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+                        <!-- Front Side -->
+                        <div class="flex flex-col gap-3">
+                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 3" data-description="">
+                                <div class="relative overflow-hidden cursor-pointer">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 3">
+                                </div>
+                            </figure>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-medium text-gray-500">
+                                    Image_CNIC.png
+                                </span>
+                                <span class="">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
+                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="flex flex-col gap-3">
+                            <figure x-show="tab === '2023' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full px-4 group spotlight" data-title="Image Description 4" data-description="">
+                                <div class="relative overflow-hidden cursor-pointer">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 4">
+                                </div>
+                            </figure>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-medium text-gray-500">
+                                    Image_CNIC.png
+                                </span>
+                                <span class="">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
+                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10 -mx-4">
+                        <!-- Front Side -->
+                        <div class="flex flex-col gap-3">
+                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Rectangle 4512.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 5" data-description="">
+                                <div class="relative overflow-hidden cursor-pointer">
+                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Rectangle 4512.png" alt="Image Description 5">
+                                </div>
+                            </figure>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-medium text-gray-500">
+                                    Image_CNIC.png
+                                </span>
+                                <span class="">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
+                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Back Side -->
+                        <div class="flex flex-col gap-3">
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button onclick="idverifiedmodal.showModal()" type="submit" class="md:w-fit w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                    Approve
+                </button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Center Modal -->
+    <!-- ID Verified -->
+    <dialog id="idverifiedmodal" class="md:relative sticky bottom-6 w-full md:max-w-4xl p-0 bg-white rounded-lg shadow">
+        <form method="dialog">
+            <!-- ID Verified Modal -->
+            <section class="idverified-modal">
+                <div class="flex flex-col px-6 py-5">
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="flex flex-col gap-1 items-center">
+                            <span class="">
+                                <svg width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.2772 9.60081C28.5466 10.2234 28.1813 10.5347 27.7912 10.7962C26.8969 11.3956 25.8925 11.8116 24.8363 12.0202C24.3755 12.1111 23.8971 12.1493 22.9402 12.2257C20.5361 12.4175 19.334 12.5135 18.3311 12.8677C16.0115 13.687 14.187 15.5115 13.3677 17.8311C13.0135 18.834 12.9175 20.0361 12.7257 22.4402C12.6493 23.3971 12.6111 23.8755 12.5202 24.3363C12.3116 25.3925 11.8956 26.3969 11.2962 27.2912C11.0347 27.6813 10.7234 28.0466 10.1008 28.7772C8.5365 30.6128 7.75431 31.5307 7.29565 32.4903C6.23478 34.7099 6.23478 37.2901 7.29565 39.5097C7.75432 40.4693 8.53648 41.3871 10.1008 43.2228C10.7234 43.9533 11.0347 44.3187 11.2962 44.7088C11.8956 45.6031 12.3116 46.6075 12.5202 47.6637C12.6111 48.1245 12.6493 48.6029 12.7257 49.5598C12.9175 51.9639 13.0135 53.166 13.3677 54.1689C14.187 56.4885 16.0115 58.313 18.3311 59.1323C19.334 59.4865 20.5361 59.5825 22.9402 59.7743C23.8971 59.8507 24.3755 59.8889 24.8363 59.9798C25.8925 60.1884 26.8969 60.6044 27.7912 61.2038C28.1813 61.4653 28.5466 61.7766 29.2772 62.3992C31.1129 63.9635 32.0307 64.7457 32.9903 65.2044C35.2099 66.2652 37.7901 66.2652 40.0097 65.2044C40.9693 64.7457 41.8871 63.9635 43.7228 62.3992C44.4534 61.7766 44.8187 61.4653 45.2088 61.2038C46.1031 60.6044 47.1075 60.1884 48.1637 59.9798C48.6245 59.8889 49.1029 59.8507 50.0598 59.7743C52.4639 59.5825 53.666 59.4865 54.6689 59.1323C56.9885 58.313 58.813 56.4885 59.6323 54.1689C59.9865 53.166 60.0825 51.9639 60.2743 49.5598C60.3507 48.6029 60.3889 48.1245 60.4798 47.6637C60.6884 46.6075 61.1044 45.6031 61.7038 44.7088C61.9653 44.3187 62.2766 43.9534 62.8992 43.2228C64.4635 41.3871 65.2457 40.4693 65.7044 39.5097C66.7652 37.2901 66.7652 34.7099 65.7044 32.4903C65.2457 31.5307 64.4635 30.6129 62.8992 28.7772C62.2766 28.0466 61.9653 27.6813 61.7038 27.2912C61.1044 26.3969 60.6884 25.3925 60.4798 24.3363C60.3889 23.8755 60.3507 23.3971 60.2743 22.4402C60.0825 20.0361 59.9865 18.834 59.6323 17.8311C58.813 15.5115 56.9885 13.687 54.6689 12.8677C53.666 12.5135 52.4639 12.4175 50.0598 12.2257C49.1029 12.1493 48.6245 12.1111 48.1637 12.0202C47.1075 11.8116 46.1031 11.3956 45.2088 10.7962C44.8187 10.5347 44.4534 10.2234 43.7228 9.60082C41.8871 8.03648 40.9693 7.25432 40.0097 6.79565C37.7901 5.73478 35.2099 5.73478 32.9903 6.79565C32.0307 7.25431 31.1128 8.0365 29.2772 9.60081ZM49.6205 29.5894C50.574 28.6359 50.574 27.09 49.6205 26.1365C48.667 25.183 47.121 25.183 46.1675 26.1365L31.6168 40.6872L26.8324 35.9028C25.8789 34.9493 24.333 34.9493 23.3795 35.9028C22.426 36.8563 22.426 38.4022 23.3795 39.3557L29.8903 45.8666C30.8438 46.8201 32.3898 46.8201 33.3433 45.8666L49.6205 29.5894Z" fill="#6D28D9"/>
+                                </svg>
+                            </span>
+                            <span class="text-center text-base md:text-2xl font-medium text-violet-700">
+                                ID Verified!
+                            </span>
+                        </div>
+                        <p class="text-center text-xs md:text-sm font-medium md:max-w-md leading-normal text-gray-500">
+                            ID is checked and verified from admin side.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Modal footer -->
+            <div class="flex flex-col items-center justify-center p-4 bg-white rounded-b">
+                <button type="submit" class="flex w-full md:w-72 py-2 rounded-lg text-xs md:text-sm font-medium text-center text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 items-center justify-center">
+                    <div class="flex items-center gap-2" href="#">
+                        Okay
+                    </div>
+                </button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/spotlight.min.js"></script>
+
+    
+
+</body>
+</html>
