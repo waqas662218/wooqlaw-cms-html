@@ -823,6 +823,15 @@ select {
 .order-4 {
   order: 4;
 }
+.order-5 {
+  order: 5;
+}
+.order-6 {
+  order: 6;
+}
+.order-7 {
+  order: 7;
+}
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -831,6 +840,12 @@ select {
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+.col-span-5 {
+  grid-column: span 5 / span 5;
 }
 .m-auto {
   margin: auto;
@@ -1388,6 +1403,12 @@ select {
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
 .grid-rows-\[9\] {
   grid-template-rows: 9;
 }
@@ -1453,6 +1474,9 @@ select {
 }
 .gap-10 {
   gap: 2.5rem;
+}
+.gap-14 {
+  gap: 3.5rem;
 }
 .gap-2 {
   gap: 0.5rem;
@@ -1953,9 +1977,17 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-yellow-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+}
 .bg-zinc-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(161 161 170 / var(--tw-bg-opacity));
+}
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -2377,6 +2409,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
+.text-primary-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
 .text-primary-900 {
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity));
@@ -2400,6 +2436,10 @@ select {
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 .text-red-800 {
   --tw-text-opacity: 1;
@@ -2436,6 +2476,10 @@ select {
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+.text-yellow-800 {
+  --tw-text-opacity: 1;
+  color: rgb(133 77 14 / var(--tw-text-opacity));
 }
 .text-zinc-600 {
   --tw-text-opacity: 1;
@@ -2621,8 +2665,16 @@ select {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
+.before\:content-\[attr\(data-active\)\]::before {
+  --tw-content: attr(data-active);
+  content: var(--tw-content);
+}
 .before\:content-\[attr\(data-attachment\)\]::before {
   --tw-content: attr(data-attachment);
+  content: var(--tw-content);
+}
+.before\:content-\[attr\(data-edit\)\]::before {
+  --tw-content: attr(data-edit);
   content: var(--tw-content);
 }
 .before\:content-\[attr\(data-end-date\)\]::before {
@@ -2635,6 +2687,10 @@ select {
 }
 .before\:content-\[attr\(data-start-date\)\]::before {
   --tw-content: attr(data-start-date);
+  content: var(--tw-content);
+}
+.before\:content-\[attr\(data-subject\)\]::before {
+  --tw-content: attr(data-subject);
   content: var(--tw-content);
 }
 .after\:absolute::after {
@@ -3153,6 +3209,11 @@ select {
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -3384,6 +3445,18 @@ select {
 
   .md\:order-4 {
     order: 4;
+  }
+
+  .md\:order-5 {
+    order: 5;
+  }
+
+  .md\:order-6 {
+    order: 6;
+  }
+
+  .md\:order-7 {
+    order: 7;
   }
 
   .md\:col-span-1 {
@@ -3741,6 +3814,10 @@ select {
 
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -4239,10 +4316,6 @@ select {
     grid-column: span 3 / span 3;
   }
 
-  .lg\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
   .lg\:mb-12 {
     margin-bottom: 3rem;
   }
@@ -4361,6 +4434,9 @@ select {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+}
+.\[\&\>\*\>div\]\:p-2>*>div {
+  padding: 0.5rem;
 }
 .\[\&\>\*\>div\]\:p-3>*>div {
   padding: 0.75rem;
