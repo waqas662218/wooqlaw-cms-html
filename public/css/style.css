@@ -748,6 +748,9 @@ select {
 .bottom-12 {
   bottom: 3rem;
 }
+.bottom-16 {
+  bottom: 4rem;
+}
 .bottom-2 {
   bottom: 0.5rem;
 }
@@ -810,18 +813,6 @@ select {
 }
 .z-\[100\] {
   z-index: 100;
-}
-.-z-50 {
-  z-index: -50;
-}
-.-z-30 {
-  z-index: -30;
-}
-.-z-10 {
-  z-index: -10;
-}
-.-z-20 {
-  z-index: -20;
 }
 .order-1 {
   order: 1;
@@ -988,6 +979,9 @@ select {
 }
 .mt-px {
   margin-top: 1px;
+}
+.mb-32 {
+  margin-bottom: 8rem;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -1420,6 +1414,9 @@ select {
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 .grid-rows-3 {
   grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -3489,6 +3486,110 @@ select {
     right: 4rem;
   }
 
+  .md\:left-2 {
+    left: 0.5rem;
+  }
+
+  .md\:-right-2 {
+    right: -0.5rem;
+  }
+
+  .md\:-right-20 {
+    right: -5rem;
+  }
+
+  .md\:right-20 {
+    right: 5rem;
+  }
+
+  .md\:-right-full {
+    right: -100%;
+  }
+
+  .md\:right-full {
+    right: 100%;
+  }
+
+  .md\:right-3\/4 {
+    right: 75%;
+  }
+
+  .md\:right-2\/4 {
+    right: 50%;
+  }
+
+  .md\:right-96 {
+    right: 24rem;
+  }
+
+  .md\:-right-96 {
+    right: -24rem;
+  }
+
+  .md\:-right-40 {
+    right: -10rem;
+  }
+
+  .md\:right-40 {
+    right: 10rem;
+  }
+
+  .md\:left-40 {
+    left: 10rem;
+  }
+
+  .md\:left-10 {
+    left: 2.5rem;
+  }
+
+  .md\:-right-10 {
+    right: -2.5rem;
+  }
+
+  .md\:right-10 {
+    right: 2.5rem;
+  }
+
+  .md\:right-auto {
+    right: auto;
+  }
+
+  .md\:bottom-auto {
+    bottom: auto;
+  }
+
+  .md\:bottom-2\/3 {
+    bottom: 66.666667%;
+  }
+
+  .md\:bottom-3\/4 {
+    bottom: 75%;
+  }
+
+  .md\:bottom-1\/3 {
+    bottom: 33.333333%;
+  }
+
+  .md\:bottom-1 {
+    bottom: 0.25rem;
+  }
+
+  .md\:bottom-2\/4 {
+    bottom: 50%;
+  }
+
+  .md\:bottom-1\/4 {
+    bottom: 25%;
+  }
+
+  .md\:bottom-full {
+    bottom: 100%;
+  }
+
+  .md\:top-0 {
+    top: 0px;
+  }
+
   .md\:z-0 {
     z-index: 0;
   }
@@ -3856,6 +3957,10 @@ select {
 
   .md\:border-collapse {
     border-collapse: collapse;
+  }
+
+  .md\:origin-right {
+    transform-origin: right;
   }
 
   .md\:grid-cols-12 {
