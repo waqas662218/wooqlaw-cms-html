@@ -2127,7 +2127,7 @@
                         Items
                     </span>
                 </div>
-                <div class="grid gap-2 md:table rounded-lg overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-1 shadow md:rounded-b-lg bg-white">
+                <div class="grid gap-2 md:table rounded-lg divide-y divide-gray-300 md:divide-y-0 overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-1 shadow md:rounded-b-lg bg-white">
                     <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
                         <div class="hidden text-xs font-semibold text-gray-500 md:table-cell">ITEM DETAILS</div>
                         <div class="hidden text-xs font-semibold text-gray-500 md:table-cell">AMOUNT</div>
@@ -2136,100 +2136,19 @@
                         <div class="hidden text-xs font-semibold text-gray-500 md:table-cell">PAYABLE AMOUNT</div>
                         <div class="hidden text-xs font-semibold text-gray-500 md:table-cell"></div>
                     </header>
-                    <div class="hidden grid rounded-md:border drop-shadow md:rounded-none md:drop-shadow-none grid-rows-2 grid-cols-6 bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-solid md:border-gray-300">            
-                        <div :class="open?'flex':'hidden md:flex'" class="border-gray-300 !border-solid md:!border-solid align-middle items-center md:table-cell font-medium text-xs md:text-sm before:content-[attr(data-itemdetail)] md:before:hidden" data-end-itemdetail="itemdetail">
-                           <div class="flex items-center text-sm font-normal text-gray-900">
-                            Initial Payment
-                                </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="align-middle border-gray-300 !border-solid md:!border-solid  justify-center gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-attachment)] md:before" data-end-amount="amount">
-                            <div class="flex items-center">
-                                <div class="px-1 py-1 md:col-span-2">
+                    <div class="grid md:border !border-t-0 grid-rows-2 grid-cols-8 bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-solid md:border-gray-300">            
+                        <div class="order-1 col-span-7 flex border-gray-300 !border-solid md:!border-solid align-middle items-center md:table-cell font-medium text-xs md:text-sm before:content-[attr(data-itemdetail)] md:before:hidden" data-end-itemdetail="ITEM DETAIL">
+                            <div class="flex w-full">
+                                <div class="items-center justify-center w-full md:col-span-2">
                                     <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                        <label for="price" class="px-2 py-2 text-xs font-normal text-gray-600 md:text-sm">PKR</label>
-                                        <input type="text" id="price" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" placeholder=" ">
+                                        <label for="item" class="px-2 py-2 text-xs font-normal text-gray-600 md:text-sm">Item</label>
+                                        <input type="text" id="item" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" placeholder=" ">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before: before:content-[attr(data-active)] md:before:hidden" data-end-discount="discount">
-                            <td class="px-1 py-1 md:col-span-2">
-                                <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                    <select id="countries" class="px-2 py-2 text-sm font-normal text-gray-600 border-none rounded-lg outline-none focus:ring-0 focus:border-none">
-                                        <option selected="">%</option>
-                                        <option selected="">PKR</option>
-                                    </select>
-                                    <input type="number" id="phone" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" required="">
-                                </div>
-                            </td>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="align-middle border-gray-300 !border-solid md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden" data-end-tax="tax">
-                            <div class="flex items-center">
-                                <div class="px-1 py-1 md:col-span-2">
-                                    <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                        <label for="price" class="flex px-2 py-2 text-xs font-normal text-gray-600 item-start md:text-sm">%</label>
-                                        <input type="text" id="price" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" placeholder=" ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="align-middle border-gray-300 !border-solid md:!border-solid   gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden" data-end-payableamount="payableamount">
-                            <div class="flex items-center">
-                                <div class="px-1 py-1 md:col-span-2">
-                                    <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                        <label for="price" class="px-2 py-2 text-xs font-normal text-gray-600 md:text-sm">PKR</label>
-                                        <input type="text" id="price" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" placeholder=" ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="align-middle border-gray-300 !border-solid md:!border-solid  justify-between  gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-edit)] md:before:hidden" data-end-edit="edit">
-                            <div x-data class="flex items-center justify-center w-8 h-8 mx-auto bg-gray-100 rounded-md">
-                                <div x-menu>
-                                    <button x-menu:button>
-                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.83333 10.3932C5.83333 11.3137 5.08714 12.0599 4.16667 12.0599C3.24619 12.0599 2.5 11.3137 2.5 10.3932C2.5 9.47275 3.24619 8.72656 4.16667 8.72656C5.08714 8.72656 5.83333 9.47275 5.83333 10.3932Z" fill="#7E3AF2" />
-                                            <path d="M11.6667 10.3932C11.6667 11.3137 10.9205 12.0599 10 12.0599C9.07953 12.0599 8.33333 11.3137 8.33333 10.3932C8.33333 9.47275 9.07953 8.72656 10 8.72656C10.9205 8.72656 11.6667 9.47275 11.6667 10.3932Z" fill="#7E3AF2" />
-                                            <path d="M17.5 10.3932C17.5 11.3137 16.7538 12.0599 15.8333 12.0599C14.9129 12.0599 14.1667 11.3137 14.1667 10.3932C14.1667 9.47275 14.9129 8.72656 15.8333 8.72656C16.7538 8.72656 17.5 9.47275 17.5 10.3932Z" fill="#7E3AF2" />
-                                        </svg>
-                                    </button>
-                                    <div x-cloak class="absolute right-0 z-10 w-40 bg-white rounded-md shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-00'" class="flex items-center w-full gap-2 p-2 text-sm font-normal text-left first-of-type:rounded-t-md last-of-type:rounded-b-md hover:bg-gray-100 disabled:text-gray-500">
-                                            <span>
-                                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7999 15.192C10.467 15.5249 10.1677 15.8242 9.8922 16.082H16.7378C17.0485 16.082 17.3003 16.3339 17.3003 16.6445C17.3003 16.9552 17.0485 17.207 16.7378 17.207H7.73779C7.72404 17.207 7.7104 17.2065 7.69689 17.2056C7.16897 17.1853 6.72108 16.9572 6.28176 16.622C5.84122 16.2859 5.34934 15.794 4.74731 15.1919L4.69035 15.135C4.08831 14.533 3.59641 14.0411 3.26029 13.6006C2.90898 13.1401 2.67529 12.6703 2.67529 12.1087C2.67529 11.5472 2.90898 11.0773 3.26029 10.6169C3.59641 10.1763 4.0883 9.68446 4.69035 9.08244L9.1757 4.59709C9.77771 3.99505 10.2696 3.50315 10.7101 3.16703C11.1706 2.81572 11.6404 2.58203 12.202 2.58203C12.7635 2.58203 13.2334 2.81572 13.6938 3.16703C14.1344 3.50315 14.6262 3.99504 15.2283 4.59709L15.2852 4.65405C15.8873 5.25608 16.3792 5.74796 16.7153 6.1885C17.0666 6.64895 17.3003 7.1188 17.3003 7.68035C17.3003 8.2419 17.0666 8.71175 16.7153 9.17219C16.3792 9.61272 15.8873 10.1046 15.2853 10.7066L10.7999 15.192ZM9.9427 5.42108C10.5802 4.78357 11.0192 4.34629 11.3925 4.06143C11.7529 3.78647 11.9853 3.70703 12.202 3.70703C12.4186 3.70703 12.651 3.78647 13.0114 4.06143C13.3848 4.34629 13.8237 4.78357 14.4612 5.42108C15.0988 6.05859 15.536 6.49755 15.8209 6.87091C16.0959 7.23128 16.1753 7.46368 16.1753 7.68035C16.1753 7.89702 16.0959 8.12942 15.8209 8.48979C15.536 8.86315 15.0988 9.30211 14.4612 9.93962L11.3163 13.0846L6.79776 8.56602L9.9427 5.42108ZM7.77361 16.082C7.99028 16.082 8.22268 16.0026 8.58305 15.7276C8.95641 15.4428 9.39537 15.0055 10.0329 14.368L10.5208 13.8801L6.00226 9.36152L5.51434 9.84944C4.87683 10.487 4.43955 10.9259 4.15469 11.2993C3.87973 11.6596 3.80029 11.892 3.80029 12.1087C3.80029 12.3254 3.87973 12.5578 4.15469 12.9182C4.43955 13.2915 4.87683 13.7305 5.51434 14.368C6.15185 15.0055 6.59081 15.4428 6.96417 15.7276C7.32454 16.0026 7.55694 16.082 7.77361 16.082Z" fill="#1C274C"/>
-                                                    </svg>
-                                            </span>                                                                                                                                             
-                                            Clear fields
-                                        </a>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-700'" class="flex items-center w-full gap-2 p-2 text-sm font-normal text-left text-red-500 first-of-type:rounded-t-md last-of-type:rounded-b-md hover:bg-gray-100 disabled:text-gray-500">
-                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.73202 2.18748H10.2681C10.4304 2.18738 10.5718 2.18729 10.7053 2.20861C11.2328 2.29284 11.6892 2.62183 11.9359 3.0956C11.9984 3.21552 12.043 3.34968 12.0942 3.50368L12.1779 3.75485C12.1921 3.79737 12.1962 3.8094 12.1996 3.81888C12.3309 4.18197 12.6715 4.42742 13.0575 4.4372C13.0676 4.43745 13.08 4.4375 13.1251 4.4375H15.3751C15.6857 4.4375 15.9376 4.68934 15.9376 5C15.9376 5.31066 15.6857 5.5625 15.3751 5.5625H2.625C2.31434 5.5625 2.0625 5.31066 2.0625 5C2.0625 4.68934 2.31434 4.4375 2.625 4.4375H4.87506C4.9201 4.4375 4.93253 4.43745 4.94267 4.4372C5.32866 4.42741 5.66918 4.18199 5.80052 3.8189C5.80397 3.80935 5.80794 3.79758 5.82218 3.75485L5.90589 3.50369C5.95711 3.3497 6.00174 3.21552 6.06419 3.0956C6.3109 2.62183 6.76735 2.29284 7.29482 2.20861C7.42834 2.18729 7.56973 2.18738 7.73202 2.18748ZM6.75611 4.4375C6.79475 4.36173 6.82898 4.283 6.85843 4.20158C6.86737 4.17686 6.87615 4.15054 6.88742 4.11672L6.96227 3.89216C7.03065 3.68703 7.04639 3.64519 7.06201 3.6152C7.14424 3.45728 7.29639 3.34761 7.47222 3.31954C7.50561 3.3142 7.55027 3.3125 7.76651 3.3125H10.2336C10.4499 3.3125 10.4945 3.3142 10.5279 3.31954C10.7037 3.34761 10.8559 3.45728 10.9381 3.6152C10.9537 3.64519 10.9695 3.68702 11.0379 3.89216L11.1127 4.11659L11.1417 4.20159C11.1712 4.28301 11.2054 4.36174 11.244 4.4375H6.75611Z" fill="#EF4444"/>
-                                                <path d="M4.43632 6.83758C4.41565 6.52761 4.14762 6.29308 3.83765 6.31374C3.52767 6.33441 3.29314 6.60244 3.31381 6.91242L3.6614 12.1262C3.72552 13.0883 3.77731 13.8654 3.89879 14.4752C4.02509 15.1092 4.23991 15.6387 4.6836 16.0538C5.1273 16.4689 5.66996 16.648 6.31095 16.7319C6.92747 16.8125 7.70628 16.8125 8.67045 16.8125H9.32963C10.2938 16.8125 11.0727 16.8125 11.6892 16.7319C12.3302 16.648 12.8728 16.4689 13.3165 16.0538C13.7602 15.6387 13.975 15.1092 14.1013 14.4752C14.2228 13.8654 14.2746 13.0883 14.3387 12.1262L14.6863 6.91242C14.707 6.60244 14.4725 6.33441 14.1625 6.31374C13.8525 6.29308 13.5845 6.52761 13.5638 6.83758L13.2189 12.0119C13.1515 13.0228 13.1034 13.7262 12.998 14.2554C12.8958 14.7687 12.753 15.0404 12.5479 15.2323C12.3429 15.4241 12.0623 15.5485 11.5433 15.6164C11.0082 15.6864 10.3032 15.6875 9.29007 15.6875H8.71005C7.69692 15.6875 6.99192 15.6864 6.45686 15.6164C5.93786 15.5485 5.65724 15.4241 5.45218 15.2323C5.24712 15.0404 5.10437 14.7687 5.00211 14.2554C4.89669 13.7262 4.84867 13.0228 4.78127 12.0119L4.43632 6.83758Z" fill="#EF4444"/>
-                                                <path d="M7.0691 8.19029C7.37822 8.15938 7.65386 8.38491 7.68478 8.69403L8.05978 12.444C8.09069 12.7531 7.86516 13.0288 7.55604 13.0597C7.24692 13.0906 6.97127 12.8651 6.94036 12.556L6.56536 8.80597C6.53445 8.49685 6.75998 8.2212 7.0691 8.19029Z" fill="#EF4444"/>
-                                                <path d="M10.931 8.19029C11.2402 8.2212 11.4657 8.49685 11.4348 8.80597L11.0598 12.556C11.0289 12.8651 10.7532 13.0906 10.4441 13.0597C10.135 13.0288 9.90945 12.7531 9.94036 12.444L10.3154 8.69403C10.3463 8.38491 10.6219 8.15938 10.931 8.19029Z" fill="#EF4444"/>
-                                                </svg>                                                                        
-                                                Delete
-                                            </a>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>      
-                    </div>
-                    <!-- 2 -->
-                    <div class="grid md:rounded-md md:border md:drop-shadow md:rounded-none md:drop-shadow-none grid-rows-2 grid-cols-8 bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-solid md:border-gray-300">            
-                        <div :class="open?'flex':'hidden md:flex'" class="order-1 col-span-7 border-gray-300 !border-solid md:!border-solid align-middle items-center md:table-cell font-medium text-xs md:text-sm before:content-[attr(data-itemdetail)] md:before:hidden" data-end-itemdetail="ITEM DETAIL">
-                            <div class="text-base font-medium text-gray-900 md:text-sm md:font-normal">
-                                <span>
-                                    Payment from 
-                                </span>
-                                <span class="text-sm font-semibold text-gray-900">
-                                    Bonnie Green
-                                </span>
-                                    </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-3 md:order-2 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid  justify-center gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-amount)] md:before:hidden " data-end-amount="AMOUNT">
-                            <div class="flex ">
+                        <div class="order-3 md:order-2 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid  justify-center gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-amount)] md:before:hidden" data-end-amount="AMOUNT">
+                            <div class="flex pt-1 md:pt-0">
                                 <div class="items-center justify-center md:col-span-2">
                                     <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
                                         <label for="price" class="px-2 py-2 text-xs font-normal text-gray-600 md:text-sm">PKR</label>
@@ -2238,8 +2157,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-4 md:order-3 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-discount)] md:before:hidden" data-end-discount="DISCOUNT">
-                            <td class="md:col-span-2">
+                        <div class="order-4 md:order-3 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-discount)] md:before:hidden" data-end-discount="DISCOUNT">
+                            <div class="pt-1 md:col-span-2 md:pt-0">
                                 <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
                                     <select id="countries" class="px-2 py-2 text-sm font-normal text-gray-600 border-none rounded-lg outline-none focus:ring-0 focus:border-none">
                                         <option selected="">%</option>
@@ -2247,10 +2166,10 @@
                                     </select>
                                     <input type="number" id="phone" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" required="">
                                 </div>
-                            </td>
+                            </div>
                         </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-5 md:order-4 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid  justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-tax)] md:before:hidden" data-end-tax="TAX">
-                            <div class="flex items-center">
+                        <div class="order-5 md:order-4 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid  justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-tax)] md:before:hidden" data-end-tax="TAX">
+                            <div class="flex items-center pt-1 md:pt-0">
                                 <div class="md:col-span-2">
                                     <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
                                         <label for="price" class="flex px-2 py-2 text-xs font-normal text-gray-600 item-start md:text-sm">%</label>
@@ -2259,8 +2178,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-6 md:order-5  col-span-2 align-middle border-gray-300 !border-solid md:!border-solid justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-payableamount)] md:before:hidden" data-end-payableamount="PAYABLE">
-                            <div class="flex items-center">
+                        <div class="order-6 md:order-5  col-span-2 align-middle border-gray-300 !border-solid md:!border-solid justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-payableamount)] md:before:hidden" data-end-payableamount="PAYABLE">
+                            <div class="flex items-center pt-1 md:pt-0">
                                 <div class="md:col-span-2">
                                     <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
                                         <label for="price" class="px-2 py-2 text-xs font-normal text-gray-600 md:text-sm">PKR</label>
@@ -2269,126 +2188,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-2 :order-6 align-middle border-gray-300 !border-solid md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-edit)] md:before:hidden" data-end-edit="EDIT">
+                        <div class="order-2 :order-6 flex align-middle border-gray-300 !border-solid md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-edit)] md:before:hidden" data-end-edit="EDIT">
                             <div x-data class="flex items-center justify-center w-8 h-8 mx-auto bg-gray-100 rounded-md te">
-                                <div x-menu>
-                                    <button x-menu:button>
-                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.83333 10.3932C5.83333 11.3137 5.08714 12.0599 4.16667 12.0599C3.24619 12.0599 2.5 11.3137 2.5 10.3932C2.5 9.47275 3.24619 8.72656 4.16667 8.72656C5.08714 8.72656 5.83333 9.47275 5.83333 10.3932Z" fill="#7E3AF2" />
-                                            <path d="M11.6667 10.3932C11.6667 11.3137 10.9205 12.0599 10 12.0599C9.07953 12.0599 8.33333 11.3137 8.33333 10.3932C8.33333 9.47275 9.07953 8.72656 10 8.72656C10.9205 8.72656 11.6667 9.47275 11.6667 10.3932Z" fill="#7E3AF2" />
-                                            <path d="M17.5 10.3932C17.5 11.3137 16.7538 12.0599 15.8333 12.0599C14.9129 12.0599 14.1667 11.3137 14.1667 10.3932C14.1667 9.47275 14.9129 8.72656 15.8333 8.72656C16.7538 8.72656 17.5 9.47275 17.5 10.3932Z" fill="#7E3AF2" />
-                                        </svg>
-                                    </button>
-                                    <div x-cloak class="absolute right-0 z-10 w-40 bg-white rounded-md shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-00'" class="flex items-center w-full gap-2 p-2 text-sm font-normal text-left first-of-type:rounded-t-md last-of-type:rounded-b-md hover:bg-gray-100 disabled:text-gray-500">
-                                            <span>
-                                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7999 15.192C10.467 15.5249 10.1677 15.8242 9.8922 16.082H16.7378C17.0485 16.082 17.3003 16.3339 17.3003 16.6445C17.3003 16.9552 17.0485 17.207 16.7378 17.207H7.73779C7.72404 17.207 7.7104 17.2065 7.69689 17.2056C7.16897 17.1853 6.72108 16.9572 6.28176 16.622C5.84122 16.2859 5.34934 15.794 4.74731 15.1919L4.69035 15.135C4.08831 14.533 3.59641 14.0411 3.26029 13.6006C2.90898 13.1401 2.67529 12.6703 2.67529 12.1087C2.67529 11.5472 2.90898 11.0773 3.26029 10.6169C3.59641 10.1763 4.0883 9.68446 4.69035 9.08244L9.1757 4.59709C9.77771 3.99505 10.2696 3.50315 10.7101 3.16703C11.1706 2.81572 11.6404 2.58203 12.202 2.58203C12.7635 2.58203 13.2334 2.81572 13.6938 3.16703C14.1344 3.50315 14.6262 3.99504 15.2283 4.59709L15.2852 4.65405C15.8873 5.25608 16.3792 5.74796 16.7153 6.1885C17.0666 6.64895 17.3003 7.1188 17.3003 7.68035C17.3003 8.2419 17.0666 8.71175 16.7153 9.17219C16.3792 9.61272 15.8873 10.1046 15.2853 10.7066L10.7999 15.192ZM9.9427 5.42108C10.5802 4.78357 11.0192 4.34629 11.3925 4.06143C11.7529 3.78647 11.9853 3.70703 12.202 3.70703C12.4186 3.70703 12.651 3.78647 13.0114 4.06143C13.3848 4.34629 13.8237 4.78357 14.4612 5.42108C15.0988 6.05859 15.536 6.49755 15.8209 6.87091C16.0959 7.23128 16.1753 7.46368 16.1753 7.68035C16.1753 7.89702 16.0959 8.12942 15.8209 8.48979C15.536 8.86315 15.0988 9.30211 14.4612 9.93962L11.3163 13.0846L6.79776 8.56602L9.9427 5.42108ZM7.77361 16.082C7.99028 16.082 8.22268 16.0026 8.58305 15.7276C8.95641 15.4428 9.39537 15.0055 10.0329 14.368L10.5208 13.8801L6.00226 9.36152L5.51434 9.84944C4.87683 10.487 4.43955 10.9259 4.15469 11.2993C3.87973 11.6596 3.80029 11.892 3.80029 12.1087C3.80029 12.3254 3.87973 12.5578 4.15469 12.9182C4.43955 13.2915 4.87683 13.7305 5.51434 14.368C6.15185 15.0055 6.59081 15.4428 6.96417 15.7276C7.32454 16.0026 7.55694 16.082 7.77361 16.082Z" fill="#1C274C"/>
-                                                    </svg>
-                                            </span>                                                                                                                                             
-                                            Clear fields
-                                        </a>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-700'" class="flex items-center w-full gap-2 p-2 text-sm font-normal text-left text-red-500 first-of-type:rounded-t-md last-of-type:rounded-b-md hover:bg-gray-100 disabled:text-gray-500">
-                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.73202 2.18748H10.2681C10.4304 2.18738 10.5718 2.18729 10.7053 2.20861C11.2328 2.29284 11.6892 2.62183 11.9359 3.0956C11.9984 3.21552 12.043 3.34968 12.0942 3.50368L12.1779 3.75485C12.1921 3.79737 12.1962 3.8094 12.1996 3.81888C12.3309 4.18197 12.6715 4.42742 13.0575 4.4372C13.0676 4.43745 13.08 4.4375 13.1251 4.4375H15.3751C15.6857 4.4375 15.9376 4.68934 15.9376 5C15.9376 5.31066 15.6857 5.5625 15.3751 5.5625H2.625C2.31434 5.5625 2.0625 5.31066 2.0625 5C2.0625 4.68934 2.31434 4.4375 2.625 4.4375H4.87506C4.9201 4.4375 4.93253 4.43745 4.94267 4.4372C5.32866 4.42741 5.66918 4.18199 5.80052 3.8189C5.80397 3.80935 5.80794 3.79758 5.82218 3.75485L5.90589 3.50369C5.95711 3.3497 6.00174 3.21552 6.06419 3.0956C6.3109 2.62183 6.76735 2.29284 7.29482 2.20861C7.42834 2.18729 7.56973 2.18738 7.73202 2.18748ZM6.75611 4.4375C6.79475 4.36173 6.82898 4.283 6.85843 4.20158C6.86737 4.17686 6.87615 4.15054 6.88742 4.11672L6.96227 3.89216C7.03065 3.68703 7.04639 3.64519 7.06201 3.6152C7.14424 3.45728 7.29639 3.34761 7.47222 3.31954C7.50561 3.3142 7.55027 3.3125 7.76651 3.3125H10.2336C10.4499 3.3125 10.4945 3.3142 10.5279 3.31954C10.7037 3.34761 10.8559 3.45728 10.9381 3.6152C10.9537 3.64519 10.9695 3.68702 11.0379 3.89216L11.1127 4.11659L11.1417 4.20159C11.1712 4.28301 11.2054 4.36174 11.244 4.4375H6.75611Z" fill="#EF4444"/>
-                                                <path d="M4.43632 6.83758C4.41565 6.52761 4.14762 6.29308 3.83765 6.31374C3.52767 6.33441 3.29314 6.60244 3.31381 6.91242L3.6614 12.1262C3.72552 13.0883 3.77731 13.8654 3.89879 14.4752C4.02509 15.1092 4.23991 15.6387 4.6836 16.0538C5.1273 16.4689 5.66996 16.648 6.31095 16.7319C6.92747 16.8125 7.70628 16.8125 8.67045 16.8125H9.32963C10.2938 16.8125 11.0727 16.8125 11.6892 16.7319C12.3302 16.648 12.8728 16.4689 13.3165 16.0538C13.7602 15.6387 13.975 15.1092 14.1013 14.4752C14.2228 13.8654 14.2746 13.0883 14.3387 12.1262L14.6863 6.91242C14.707 6.60244 14.4725 6.33441 14.1625 6.31374C13.8525 6.29308 13.5845 6.52761 13.5638 6.83758L13.2189 12.0119C13.1515 13.0228 13.1034 13.7262 12.998 14.2554C12.8958 14.7687 12.753 15.0404 12.5479 15.2323C12.3429 15.4241 12.0623 15.5485 11.5433 15.6164C11.0082 15.6864 10.3032 15.6875 9.29007 15.6875H8.71005C7.69692 15.6875 6.99192 15.6864 6.45686 15.6164C5.93786 15.5485 5.65724 15.4241 5.45218 15.2323C5.24712 15.0404 5.10437 14.7687 5.00211 14.2554C4.89669 13.7262 4.84867 13.0228 4.78127 12.0119L4.43632 6.83758Z" fill="#EF4444"/>
-                                                <path d="M7.0691 8.19029C7.37822 8.15938 7.65386 8.38491 7.68478 8.69403L8.05978 12.444C8.09069 12.7531 7.86516 13.0288 7.55604 13.0597C7.24692 13.0906 6.97127 12.8651 6.94036 12.556L6.56536 8.80597C6.53445 8.49685 6.75998 8.2212 7.0691 8.19029Z" fill="#EF4444"/>
-                                                <path d="M10.931 8.19029C11.2402 8.2212 11.4657 8.49685 11.4348 8.80597L11.0598 12.556C11.0289 12.8651 10.7532 13.0906 10.4441 13.0597C10.135 13.0288 9.90945 12.7531 9.94036 12.444L10.3154 8.69403C10.3463 8.38491 10.6219 8.15938 10.931 8.19029Z" fill="#EF4444"/>
-                                                </svg>                                                                        
-                                                Delete
-                                            </a>
-                                    </div>
-                                </div>
+                                <button type="button" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-center text-gray-900 bg-gray-100 rounded-lg hover:bg-red-200 focus:ring-red-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                    <svg class="w-4 h-4 shrink-0" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.73195 0.687514H8.26803C8.43033 0.687411 8.57172 0.687321 8.70524 0.708641C9.23271 0.79287 9.68916 1.12186 9.93587 1.59563C9.99831 1.71555 10.0429 1.84971 10.0942 2.00371L10.1779 2.25488C10.192 2.2974 10.1961 2.30943 10.1995 2.31891C10.3309 2.682 10.6714 2.92745 11.0574 2.93723C11.0675 2.93748 11.08 2.93753 11.125 2.93753H13.375C13.6857 2.93753 13.9375 3.18937 13.9375 3.50003C13.9375 3.81069 13.6857 4.06253 13.375 4.06253H0.624931C0.314271 4.06253 0.0624313 3.81069 0.0624313 3.50003C0.0624313 3.18937 0.314271 2.93753 0.624931 2.93753H2.87499C2.92003 2.93753 2.93246 2.93749 2.94261 2.93723C3.32859 2.92745 3.66911 2.68202 3.80045 2.31893C3.8039 2.30938 3.80787 2.29761 3.82212 2.25488L3.90582 2.00372C3.95704 1.84973 4.00168 1.71555 4.06412 1.59563C4.31083 1.12186 4.76728 0.79287 5.29475 0.708641C5.42827 0.687321 5.56966 0.687411 5.73195 0.687514ZM4.75604 2.93753C4.79468 2.86176 4.82891 2.78303 4.85836 2.70161C4.86731 2.67689 4.87608 2.65057 4.88735 2.61675L4.9622 2.39219C5.03058 2.18706 5.04632 2.14522 5.06194 2.11523C5.14418 1.95731 5.29633 1.84764 5.47215 1.81957C5.50554 1.81423 5.5502 1.81253 5.76644 1.81253H8.23355C8.44978 1.81253 8.49444 1.81423 8.52784 1.81957C8.70366 1.84764 8.85581 1.95731 8.93805 2.11523C8.95367 2.14522 8.96941 2.18705 9.03779 2.39219L9.1126 2.61662L9.14163 2.70163C9.17108 2.78304 9.20531 2.86177 9.24394 2.93753H4.75604Z" fill="#E02424"></path>
+                                        <path d="M2.43625 5.33761C2.41558 5.02764 2.14755 4.79311 1.83758 4.81377C1.52761 4.83444 1.29308 5.10247 1.31374 5.41245L1.66133 10.6262C1.72545 11.5883 1.77724 12.3654 1.89872 12.9752C2.02502 13.6092 2.23984 14.1387 2.68353 14.5538C3.12723 14.9689 3.66989 15.1481 4.31088 15.2319C4.9274 15.3126 5.70621 15.3125 6.67038 15.3125H7.32956C8.29373 15.3125 9.07259 15.3126 9.68911 15.2319C10.3301 15.1481 10.8728 14.9689 11.3165 14.5538C11.7602 14.1387 11.975 13.6092 12.1013 12.9752C12.2227 12.3654 12.2745 11.5883 12.3387 10.6263L12.6862 5.41245C12.7069 5.10247 12.4724 4.83444 12.1624 4.81377C11.8524 4.79311 11.5844 5.02764 11.5637 5.33761L11.2188 10.5119C11.1514 11.5228 11.1034 12.2262 10.9979 12.7554C10.8957 13.2688 10.7529 13.5405 10.5479 13.7323C10.3428 13.9242 10.0622 14.0485 9.54319 14.1164C9.00814 14.1864 8.30314 14.1875 7.29 14.1875H6.70998C5.69685 14.1875 4.99185 14.1864 4.4568 14.1164C3.93779 14.0485 3.65718 13.9242 3.45212 13.7323C3.24706 13.5405 3.10431 13.2687 3.00204 12.7554C2.89662 12.2262 2.8486 11.5228 2.7812 10.5119L2.43625 5.33761Z" fill="#E02424"></path>
+                                        <path d="M5.06903 6.69032C5.37815 6.65941 5.6538 6.88494 5.68471 7.19406L6.05971 10.9441C6.09062 11.2532 5.86509 11.5288 5.55597 11.5597C5.24685 11.5906 4.9712 11.3651 4.94029 11.056L4.56529 7.306C4.53438 6.99688 4.75991 6.72123 5.06903 6.69032Z" fill="#E02424"></path>
+                                        <path d="M8.93097 6.69032C9.24009 6.72123 9.46562 6.99688 9.43471 7.306L9.05971 11.056C9.0288 11.3651 8.75315 11.5906 8.44403 11.5597C8.13491 11.5288 7.90938 11.2532 7.94029 10.9441L8.31529 7.19406C8.3462 6.88494 8.62185 6.65941 8.93097 6.69032Z" fill="#E02424"></path>
+                                    </svg>
+                                </button>
                             </div>
-                    </div>      
+                        </div>      
                     </div>
-                    <!-- 3 -->
-                    <div class="grid md:rounded-md md:border border-t md:drop-shadow md:rounded-none md:drop-shadow-none grid-rows-2 grid-cols-8 bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-solid md:border-gray-300">            
-                        <div :class="open?'flex':'hidden md:flex'" class="order-1 col-span-7 flex items-center align-middle border-gray-300 !border-solid md:!border-solid align-middle items-center md:table-cell font-medium text-xs md:text-sm before:content-[attr(data-itemdetail)] md:before:hidden" data-end-itemdetail="ITEM DETAIL">
-                           <div class="text-base font-medium text-gray-900 md:text-sm md:font-normal">
-                            <span>
-                                Payment from 
-                            </span>
-                            <span class="text-sm font-semibold text-gray-900">
-                                Bonnie Green
-                            </span>
-                                </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-3 md:order-2 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid  justify-center gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-amount)] md:before:hidden" data-end-amount="AMOUNT">
-                            <div class="flex ">
-                                <div class="items-center justify-center md:col-span-2">
-                                    <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                        <label for="price" class="px-2 py-2 text-xs font-normal text-gray-600 md:text-sm">PKR</label>
-                                        <input type="text" id="price" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" placeholder=" ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-4 md:order-3 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-discount)] md:before:hidden" data-end-discount="DISCOUNT">
-                            <td class="md:col-span-2">
-                                <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                    <select id="countries" class="px-2 py-2 text-sm font-normal text-gray-600 border-none rounded-lg outline-none focus:ring-0 focus:border-none">
-                                        <option selected="">%</option>
-                                        <option selected="">PKR</option>
-                                    </select>
-                                    <input type="number" id="phone" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" required="">
-                                </div>
-                            </td>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-5 md:order-4 col-span-2 align-middle border-gray-300 !border-solid md:!border-solid  justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-tax)] md:before:hidden" data-end-tax="TAX">
-                            <div class="flex items-center">
-                                <div class="md:col-span-2">
-                                    <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                        <label for="price" class="flex px-2 py-2 text-xs font-normal text-gray-600 item-start md:text-sm">%</label>
-                                        <input type="text" id="price" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" placeholder=" ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-6 md:order-5  col-span-2 align-middle border-gray-300 !border-solid md:!border-solid justify-between gap-1 text-gray-500 items-center md:table-cell font-medium text-xs  before:content-[attr(data-end-payableamount)] md:before:hidden" data-end-payableamount="PAYABLE">
-                            <div class="flex items-center">
-                                <div class="md:col-span-2">
-                                    <div class="flex flex-col h-16 overflow-hidden font-medium border rounded-lg shrink-0 md:w-full border-g whitespace-nowrap focus:ring-blue-500 focus:border-blue-500">
-                                        <label for="price" class="px-2 py-2 text-xs font-normal text-gray-600 md:text-sm">PKR</label>
-                                        <input type="text" id="price" class="block w-full px-2 pt-0 pb-2 text-sm text-gray-900 border-none focus:ring-0 focus:border-none" placeholder=" ">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div :class="open?'flex':'hidden md:flex'" class="order-2 :order-6 flex items-center align-middle border-gray-300 !border-solid md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-edit)] md:before:hidden" data-end-edit="EDIT">
-                            <div x-data class="flex items-center justify-center w-8 h-8 mx-auto bg-gray-100 rounded-md te">
-                                <div x-menu>
-                                    <button x-menu:button>
-                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.83333 10.3932C5.83333 11.3137 5.08714 12.0599 4.16667 12.0599C3.24619 12.0599 2.5 11.3137 2.5 10.3932C2.5 9.47275 3.24619 8.72656 4.16667 8.72656C5.08714 8.72656 5.83333 9.47275 5.83333 10.3932Z" fill="#7E3AF2" />
-                                            <path d="M11.6667 10.3932C11.6667 11.3137 10.9205 12.0599 10 12.0599C9.07953 12.0599 8.33333 11.3137 8.33333 10.3932C8.33333 9.47275 9.07953 8.72656 10 8.72656C10.9205 8.72656 11.6667 9.47275 11.6667 10.3932Z" fill="#7E3AF2" />
-                                            <path d="M17.5 10.3932C17.5 11.3137 16.7538 12.0599 15.8333 12.0599C14.9129 12.0599 14.1667 11.3137 14.1667 10.3932C14.1667 9.47275 14.9129 8.72656 15.8333 8.72656C16.7538 8.72656 17.5 9.47275 17.5 10.3932Z" fill="#7E3AF2" />
-                                        </svg>
-                                    </button>
-                                    <div x-cloak class="absolute right-0 z-10 w-40 bg-white rounded-md shadow-md focus-visible:outline-none"  x-ref="popover" x-menu:items x-transition.origin.top.right>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-gray-00'" class="flex items-center w-full gap-2 p-2 text-sm font-normal text-left first-of-type:rounded-t-md last-of-type:rounded-b-md hover:bg-gray-100 disabled:text-gray-500">
-                                            <span>
-                                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7999 15.192C10.467 15.5249 10.1677 15.8242 9.8922 16.082H16.7378C17.0485 16.082 17.3003 16.3339 17.3003 16.6445C17.3003 16.9552 17.0485 17.207 16.7378 17.207H7.73779C7.72404 17.207 7.7104 17.2065 7.69689 17.2056C7.16897 17.1853 6.72108 16.9572 6.28176 16.622C5.84122 16.2859 5.34934 15.794 4.74731 15.1919L4.69035 15.135C4.08831 14.533 3.59641 14.0411 3.26029 13.6006C2.90898 13.1401 2.67529 12.6703 2.67529 12.1087C2.67529 11.5472 2.90898 11.0773 3.26029 10.6169C3.59641 10.1763 4.0883 9.68446 4.69035 9.08244L9.1757 4.59709C9.77771 3.99505 10.2696 3.50315 10.7101 3.16703C11.1706 2.81572 11.6404 2.58203 12.202 2.58203C12.7635 2.58203 13.2334 2.81572 13.6938 3.16703C14.1344 3.50315 14.6262 3.99504 15.2283 4.59709L15.2852 4.65405C15.8873 5.25608 16.3792 5.74796 16.7153 6.1885C17.0666 6.64895 17.3003 7.1188 17.3003 7.68035C17.3003 8.2419 17.0666 8.71175 16.7153 9.17219C16.3792 9.61272 15.8873 10.1046 15.2853 10.7066L10.7999 15.192ZM9.9427 5.42108C10.5802 4.78357 11.0192 4.34629 11.3925 4.06143C11.7529 3.78647 11.9853 3.70703 12.202 3.70703C12.4186 3.70703 12.651 3.78647 13.0114 4.06143C13.3848 4.34629 13.8237 4.78357 14.4612 5.42108C15.0988 6.05859 15.536 6.49755 15.8209 6.87091C16.0959 7.23128 16.1753 7.46368 16.1753 7.68035C16.1753 7.89702 16.0959 8.12942 15.8209 8.48979C15.536 8.86315 15.0988 9.30211 14.4612 9.93962L11.3163 13.0846L6.79776 8.56602L9.9427 5.42108ZM7.77361 16.082C7.99028 16.082 8.22268 16.0026 8.58305 15.7276C8.95641 15.4428 9.39537 15.0055 10.0329 14.368L10.5208 13.8801L6.00226 9.36152L5.51434 9.84944C4.87683 10.487 4.43955 10.9259 4.15469 11.2993C3.87973 11.6596 3.80029 11.892 3.80029 12.1087C3.80029 12.3254 3.87973 12.5578 4.15469 12.9182C4.43955 13.2915 4.87683 13.7305 5.51434 14.368C6.15185 15.0055 6.59081 15.4428 6.96417 15.7276C7.32454 16.0026 7.55694 16.082 7.77361 16.082Z" fill="#1C274C"/>
-                                                    </svg>
-                                            </span>                                                                                                                                             
-                                            Clear fields
-                                        </a>
-                                        <a x-menu:item href="#" :class="$menuItem.isActive && 'bg-gray-100 text-red-700'" class="flex items-center w-full gap-2 p-2 text-sm font-normal text-left text-red-500 first-of-type:rounded-t-md last-of-type:rounded-b-md hover:bg-gray-100 disabled:text-gray-500">
-                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.73202 2.18748H10.2681C10.4304 2.18738 10.5718 2.18729 10.7053 2.20861C11.2328 2.29284 11.6892 2.62183 11.9359 3.0956C11.9984 3.21552 12.043 3.34968 12.0942 3.50368L12.1779 3.75485C12.1921 3.79737 12.1962 3.8094 12.1996 3.81888C12.3309 4.18197 12.6715 4.42742 13.0575 4.4372C13.0676 4.43745 13.08 4.4375 13.1251 4.4375H15.3751C15.6857 4.4375 15.9376 4.68934 15.9376 5C15.9376 5.31066 15.6857 5.5625 15.3751 5.5625H2.625C2.31434 5.5625 2.0625 5.31066 2.0625 5C2.0625 4.68934 2.31434 4.4375 2.625 4.4375H4.87506C4.9201 4.4375 4.93253 4.43745 4.94267 4.4372C5.32866 4.42741 5.66918 4.18199 5.80052 3.8189C5.80397 3.80935 5.80794 3.79758 5.82218 3.75485L5.90589 3.50369C5.95711 3.3497 6.00174 3.21552 6.06419 3.0956C6.3109 2.62183 6.76735 2.29284 7.29482 2.20861C7.42834 2.18729 7.56973 2.18738 7.73202 2.18748ZM6.75611 4.4375C6.79475 4.36173 6.82898 4.283 6.85843 4.20158C6.86737 4.17686 6.87615 4.15054 6.88742 4.11672L6.96227 3.89216C7.03065 3.68703 7.04639 3.64519 7.06201 3.6152C7.14424 3.45728 7.29639 3.34761 7.47222 3.31954C7.50561 3.3142 7.55027 3.3125 7.76651 3.3125H10.2336C10.4499 3.3125 10.4945 3.3142 10.5279 3.31954C10.7037 3.34761 10.8559 3.45728 10.9381 3.6152C10.9537 3.64519 10.9695 3.68702 11.0379 3.89216L11.1127 4.11659L11.1417 4.20159C11.1712 4.28301 11.2054 4.36174 11.244 4.4375H6.75611Z" fill="#EF4444"/>
-                                                <path d="M4.43632 6.83758C4.41565 6.52761 4.14762 6.29308 3.83765 6.31374C3.52767 6.33441 3.29314 6.60244 3.31381 6.91242L3.6614 12.1262C3.72552 13.0883 3.77731 13.8654 3.89879 14.4752C4.02509 15.1092 4.23991 15.6387 4.6836 16.0538C5.1273 16.4689 5.66996 16.648 6.31095 16.7319C6.92747 16.8125 7.70628 16.8125 8.67045 16.8125H9.32963C10.2938 16.8125 11.0727 16.8125 11.6892 16.7319C12.3302 16.648 12.8728 16.4689 13.3165 16.0538C13.7602 15.6387 13.975 15.1092 14.1013 14.4752C14.2228 13.8654 14.2746 13.0883 14.3387 12.1262L14.6863 6.91242C14.707 6.60244 14.4725 6.33441 14.1625 6.31374C13.8525 6.29308 13.5845 6.52761 13.5638 6.83758L13.2189 12.0119C13.1515 13.0228 13.1034 13.7262 12.998 14.2554C12.8958 14.7687 12.753 15.0404 12.5479 15.2323C12.3429 15.4241 12.0623 15.5485 11.5433 15.6164C11.0082 15.6864 10.3032 15.6875 9.29007 15.6875H8.71005C7.69692 15.6875 6.99192 15.6864 6.45686 15.6164C5.93786 15.5485 5.65724 15.4241 5.45218 15.2323C5.24712 15.0404 5.10437 14.7687 5.00211 14.2554C4.89669 13.7262 4.84867 13.0228 4.78127 12.0119L4.43632 6.83758Z" fill="#EF4444"/>
-                                                <path d="M7.0691 8.19029C7.37822 8.15938 7.65386 8.38491 7.68478 8.69403L8.05978 12.444C8.09069 12.7531 7.86516 13.0288 7.55604 13.0597C7.24692 13.0906 6.97127 12.8651 6.94036 12.556L6.56536 8.80597C6.53445 8.49685 6.75998 8.2212 7.0691 8.19029Z" fill="#EF4444"/>
-                                                <path d="M10.931 8.19029C11.2402 8.2212 11.4657 8.49685 11.4348 8.80597L11.0598 12.556C11.0289 12.8651 10.7532 13.0906 10.4441 13.0597C10.135 13.0288 9.90945 12.7531 9.94036 12.444L10.3154 8.69403C10.3463 8.38491 10.6219 8.15938 10.931 8.19029Z" fill="#EF4444"/>
-                                                </svg>                                                                        
-                                                Delete
-                                            </a>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>      
-                    </div>
-                  
                 </div>
                 <!-- button -->
                 <div class="flex items-center justify-center mx-auto">
