@@ -1,40 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet">
     <!-- Tailwind CSS-->
     <link href="./css/style.css" rel="stylesheet">
 
     <!-- Googel Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
-    <title>subscription remainder</title>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                initialDate: '2023-09-07',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: '2023-09-01'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2023-09-07',
+                        end: '2023-09-10'
+                    },
+                    {
+                        groupId: '999',
+                        title: 'Repeating Event',
+                        start: '2023-09-09T16:00:00'
+                    },
+                    {
+                        groupId: '999',
+                        title: 'Repeating Event',
+                        start: '2023-09-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: '2023-09-11',
+                        end: '2023-09-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2023-09-12T10:30:00',
+                        end: '2023-09-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2023-09-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2023-09-12T14:30:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2023-09-13T07:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'https://google.com/',
+                        start: '2023-09-28'
+                    }
+                ]
+            });
+            calendar.render();
+        });
+
+    </script>
+   
+   
+<style>
+   
+.calendar td.fc-daygrid-day.fc-day.fc-day-past .fc-daygrid-day-number {
+color: #040305;
+}
+
+
+@media only screen and (max-width: 1920px){
+    .calendar.fc .fc-toolbar-title {
+color: var(--color-white);
+font-weight: 500;
+font-size: 14px;
+}
+}
+@media only screen and (max-width: 767px) {
+    .calendar.fc .fc-toolbar-title {
+color: var(--color-white);
+font-weight: 500;
+font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1920px){ 
+    .calendar .fc-header-toolbar .fc-toolbar-chunk button {
+color: var(--color-primary);
+background: var(--color-white);
+font-size: 14px;
+font-weight:500;
+text-transform: capitalize;
+border: 0;
+}
+}
+@media only screen and (max-width: 767px) {
+    .calendar .fc-header-toolbar .fc-toolbar-chunk button {
+color: var(--color-primary);
+background: var(--color-white);
+font-size: 12px;
+font-weight:500;
+border: 0;
+  }
+}
+
+</style>
+    <title>wooqlaw New Calendar</title>
 </head>
-<body class="bg-gray-200">
+
+<body class="overflow-hidden">
    
-    <button type="submit" class="flex flex-col font-bold text-sm text-gray-500 justify-between px-2.5 py-2 border border-gray-300 rounded-lg bg-gray-50 ">
-        Pakistan Bar Council
-    </button>
-    
+    <div class="flex bg-gray-200 h-[calc(100dvh-7rem)] md:h-[calc(100vh-4.5rem)] overflow-hidden"
+        x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
+        x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }">
+        <!-- code for swipe 
+        x-init="window.addEventListener('touchstart', function(e) { startX = e.touches[0].pageX; }); window.addEventListener('touchmove', function(e) { if (startX - e.touches[0].pageX > 50) { chats = true; } })" -->
 
-    <button type="submit" class="flex  px-2.5 py-2 border border-gray-300 bg-gray-50 items-center text-gray-500 hover:text-gray-600 focus:ring-2 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm shrink-0 md:w-56">
-        Pakistan Bar Council
-    </button>
-
-
-
+        
+        <div class="relative w-full max-h-screen overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
+            <main class="overflow-hidden">
+                <div class="py-1 md:py-5">
+                    
+                    <div id='calendar' class="calendar flex max-w-full max-h-screen mx-auto"></div>
+                </div>
+            </main>
+        </div>
+        
+    </div>
+   
+   
 </body>
+
 </html>
-   
