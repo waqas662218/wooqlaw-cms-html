@@ -1439,6 +1439,9 @@ select {
 .grid-cols-8 {
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
@@ -2735,10 +2738,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
-.before\:hidden::before {
-  content: var(--tw-content);
-  display: none;
-}
 .before\:content-\[attr\(data-active\)\]::before {
   --tw-content: attr(data-active);
   content: var(--tw-content);
@@ -2805,10 +2804,6 @@ select {
 }
 .before\:content-\[attr\(data-subject\)\]::before {
   --tw-content: attr(data-subject);
-  content: var(--tw-content);
-}
-.before\:content-\[attr\(data-end-location\)\]::before {
-  --tw-content: attr(data-end-location);
   content: var(--tw-content);
 }
 .after\:absolute::after {
@@ -3528,6 +3523,11 @@ select {
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .sm\:after\:inline-block::after {
@@ -4404,6 +4404,11 @@ select {
     line-height: 1rem;
   }
 
+  .md\:text-2xs {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+  }
+
   .md\:font-medium {
     font-weight: 500;
   }
@@ -4573,6 +4578,11 @@ select {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 @media (min-width: 1280px) {

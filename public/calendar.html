@@ -382,14 +382,14 @@
                         </label>
                       </button> 
                     </div>
-                    <div id='calendar' class="flex w-full max-h-screen mx-auto"></div>
+                    <div id='calendar' class="flex max-w- max-h-screen mx-auto font-medium text-3xs md:text-base p-2 md:p-0"></div>
                 </div>
                 <div class="flex flex-col p-4 gap-1 rounded-lg bg-gray-50">
                     <div class="flex items-center px-6 py-4 text-gray-900 font-semibold text-xl">
                         Events on 13/06/2024  
                     </div>
                     <button onclick="appointmentmodal.showModal()" class="flex p-5 justify-between items-center border border-gray-200 rounded-lg bg-white">
-                        <div class="flex font-medium text-base text-gray-900 gap-2">
+                        <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
                             <span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 2.5C7.75 2.08579 7.41421 1.75 7 1.75C6.58579 1.75 6.25 2.08579 6.25 2.5V4.07926C4.81067 4.19451 3.86577 4.47737 3.17157 5.17157C2.47737 5.86577 2.19451 6.81067 2.07926 8.25H21.9207C21.8055 6.81067 21.5226 5.86577 20.8284 5.17157C20.1342 4.47737 19.1893 4.19451 17.75 4.07926V2.5C17.75 2.08579 17.4142 1.75 17 1.75C16.5858 1.75 16.25 2.08579 16.25 2.5V4.0129C15.5847 4 14.839 4 14 4H10C9.16097 4 8.41527 4 7.75 4.0129V2.5ZM22 14V12C22 11.161 22 10.4153 21.9871 9.75H2.0129C2 10.4153 2 11.161 2 12V14C2 17.7712 2 19.6569 3.17157 20.8284C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14ZM17.9008 14.3C17.9008 15.018 17.3188 15.6 16.6008 15.6C15.8828 15.6 15.3008 15.018 15.3008 14.3C15.3008 13.582 15.8828 13 16.6008 13C17.3188 13 17.9008 13.582 17.9008 14.3ZM16.6 19.4992C19.2 19.4992 19.2 18.8444 19.2 18.0367C19.2 17.229 18.0359 16.5742 16.6 16.5742C15.1641 16.5742 14 17.229 14 18.0367C14 18.8444 14 19.4992 16.6 19.4992Z" fill="#18181B"/>
@@ -399,7 +399,7 @@
                                 Iqbal Khan
                             </span>
                         </div>
-                        <div class="flex items-center text-base font-semibold text-gray-900 gap-2">
+                        <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
                         <span>
                             09:00 AM
                         </span>
@@ -410,8 +410,8 @@
                         </span>
                     </div>
                     </button>
-                    <button onclick="reminder1modal.showModal()" class="flex p-5 justify-between items-center border border-gray-200 rounded-lg bg-white">
-                        <div class="flex font-medium text-base text-gray-900 gap-2">
+                    <button onclick="reminder1modal.showModal()" class="flex p-5 justify-between items-center text-left border border-gray-200 rounded-lg bg-white">
+                        <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
                         <span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C16.8362 22 20.7567 18.1162 20.7567 13.3253C20.7567 8.53446 16.8362 4.65069 12 4.65069C7.16383 4.65069 3.24334 8.53446 3.24334 13.3253C3.24334 18.1162 7.16383 22 12 22ZM12 8.74705C12.403 8.74705 12.7297 9.0707 12.7297 9.46994V13.0259L14.9484 15.2238C15.2334 15.5061 15.2334 15.9638 14.9484 16.2461C14.6634 16.5284 14.2014 16.5284 13.9164 16.2461L11.484 13.8365C11.3472 13.7009 11.2703 13.5171 11.2703 13.3253V9.46994C11.2703 9.0707 11.597 8.74705 12 8.74705Z" fill="#1C274C"/>
@@ -423,7 +423,7 @@
                             Call Iqbal for documents details
                         </span>
                     </div>
-                        <div class="flex items-center text-base font-semibold text-gray-900 gap-2">
+                        <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
                         <span>
                             11:00 AM
                         </span>
@@ -435,7 +435,7 @@
                     </div>
                     </button>
                     <button onclick="courthearing1modal.showModal()" class="flex p-5 justify-between items-center border border-gray-200 rounded-lg bg-white">
-                        <div class="flex font-medium text-base text-gray-900 gap-2">
+                        <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
                             <span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10Z" fill="#1F2937"/>
@@ -446,7 +446,7 @@
                                 Iqbal Khan
                             </span>
                         </div>
-                        <div class="flex items-center text-base font-semibold text-gray-900 gap-2">
+                        <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
                         <span>
                             11:30 AM
                         </span>
