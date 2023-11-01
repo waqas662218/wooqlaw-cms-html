@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+    
     
     <!-- AlpineJs Scripts -->
     <!-- alpine/tooltip v1.0 --> 
@@ -25,6 +25,115 @@
     <script defer src="./js/alpinefocus.min.js"></script>
     <!-- alpinejs v3.12 -->
     <script defer src="./js/alpine.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                initialDate: '2023-09-07',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: '2023-09-01'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2023-09-07',
+                        end: '2023-09-10'
+                    },
+                    {
+                        groupId: '999',
+                        title: 'Repeating Event',
+                        start: '2023-09-09T16:00:00'
+                    },
+                    {
+                        groupId: '999',
+                        title: 'Repeating Event',
+                        start: '2023-09-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: '2023-09-11',
+                        end: '2023-09-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2023-09-12T10:30:00',
+                        end: '2023-09-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2023-09-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2023-09-12T14:30:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2023-09-13T07:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'https://google.com/',
+                        start: '2023-09-28'
+                    }
+                ]
+            });
+            calendar.render();
+        });
+
+    </script>
+    <style>
+   
+        .calendar td.fc-daygrid-day.fc-day.fc-day-past .fc-daygrid-day-number {
+        color: #040305;
+        }
+        
+        
+        @media only screen and (max-width: 1920px){
+            .calendar.fc .fc-toolbar-title {
+        color: var(--color-white);
+        font-weight: 500;
+        font-size: 18px;
+        }
+        }
+        @media only screen and (max-width: 767px) {
+            .calendar.fc .fc-toolbar-title {
+        color: var(--color-white);
+        font-weight: 500;
+        font-size: 12px;
+          }
+        }
+        
+        @media only screen and (max-width: 1920px){ 
+            .calendar .fc-header-toolbar .fc-toolbar-chunk button {
+        color: var(--color-primary);
+        background: var(--color-white);
+        font-size: 14px;
+        font-weight:500;
+        text-transform: capitalize;
+        border: 0;
+        }
+        }
+        @media only screen and (max-width: 767px) {
+            .calendar .fc-header-toolbar .fc-toolbar-chunk button {
+        color: var(--color-primary);
+        background: var(--color-white);
+        font-size: 12px;
+        font-weight:500;
+        border: 0;
+          }
+        }
+        
+        </style>
     <title>Cases - wooqlaw New Dashboard</title>
 </head>
 
@@ -332,6 +441,16 @@
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.06935 5.25839C2 5.62595 2 6.06722 2 6.94975V9.25H21.9531C21.8809 8.20117 21.6973 7.51276 21.2305 6.99383C21.1598 6.91514 21.0849 6.84024 21.0062 6.76946C20.1506 6 18.8345 6 16.2021 6H15.8284C14.6747 6 14.0979 6 13.5604 5.84678C13.2651 5.7626 12.9804 5.64471 12.7121 5.49543C12.2237 5.22367 11.8158 4.81578 11 4L10.4497 3.44975C10.1763 3.17633 10.0396 3.03961 9.89594 2.92051C9.27652 2.40704 8.51665 2.09229 7.71557 2.01738C7.52976 2 7.33642 2 6.94975 2C6.06722 2 5.62595 2 5.25839 2.06935C3.64031 2.37464 2.37464 3.64031 2.06935 5.25839ZM21.9978 10.75H2V14C2 17.7712 2 19.6569 3.17157 20.8284C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14V11.7979C22 11.4227 21.9978 10.75 21.9978 10.75Z" fill="#"/>
                                         </svg>                                                                                        
                                         <span>Documents</span>
+                                    </a>
+                                </li>
+                                <!-- Calendar -->
+                                <li class="basis-auto shrink-0 grow-0 md:grow">
+                                    <a x-tabs:tab="" :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'" href="javascript:;" class="flex items-center gap-1 px-2 py-4 bg-white border-b-2 md:justify-center md:px-4" >
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.75 2.5C7.75 2.08579 7.41421 1.75 7 1.75C6.58579 1.75 6.25 2.08579 6.25 2.5V4.07926C4.81067 4.19451 3.86577 4.47737 3.17157 5.17157C2.47737 5.86577 2.19451 6.81067 2.07926 8.25H21.9207C21.8055 6.81067 21.5226 5.86577 20.8284 5.17157C20.1342 4.47737 19.1893 4.19451 17.75 4.07926V2.5C17.75 2.08579 17.4142 1.75 17 1.75C16.5858 1.75 16.25 2.08579 16.25 2.5V4.0129C15.5847 4 14.839 4 14 4H10C9.16097 4 8.41527 4 7.75 4.0129V2.5Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.161 2 10.4153 2.0129 9.75H21.9871C22 10.4153 22 11.161 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12ZM17 14C17.5523 14 18 13.5523 18 13C18 12.4477 17.5523 12 17 12C16.4477 12 16 12.4477 16 13C16 13.5523 16.4477 14 17 14ZM17 18C17.5523 18 18 17.5523 18 17C18 16.4477 17.5523 16 17 16C16.4477 16 16 16.4477 16 17C16 17.5523 16.4477 18 17 18ZM13 13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13C11 12.4477 11.4477 12 12 12C12.5523 12 13 12.4477 13 13ZM13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17ZM7 14C7.55228 14 8 13.5523 8 13C8 12.4477 7.55228 12 7 12C6.44772 12 6 12.4477 6 13C6 13.5523 6.44772 14 7 14ZM7 18C7.55228 18 8 17.5523 8 17C8 16.4477 7.55228 16 7 16C6.44772 16 6 16.4477 6 17C6 17.5523 6.44772 18 7 18Z"/>
+                                            </svg>                                                                                                                                    
+                                        <span>Calendar</span>
                                     </a>
                                 </li>
                                 <!-- Court Hearings -->
@@ -861,6 +980,202 @@
                                         </div>
                                     </section>
                                 </div>   
+                               <!-- Calendar -->
+                               <div x-tabs:panel>
+                                <section>
+                                    <div>
+                                    <div class="relative w-full max-h-screen overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
+                                        <main class="overflow-hidden">
+                                            <div class="py-1 md:py-5">
+                                                <div id='calendar' class="calendar flex max-w-full max-h-screen mx-auto"></div>
+                                            </div>
+                                            <div class="flex flex-col p-4 gap-1 rounded-lg bg-gray-50">
+                                                <div class="flex items-center px-3 md:px-6 py-2 md:py-4 text-gray-900 font-semibold text-base md:text-xl">
+                                                    Events on 13/06/2024  
+                                                </div>
+                                                <button onclick="appointmentmodal.showModal()" class="flex p-5 justify-between items-center border border-gray-200 rounded-lg bg-white">
+                                                    <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
+                                                        <span>
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 2.5C7.75 2.08579 7.41421 1.75 7 1.75C6.58579 1.75 6.25 2.08579 6.25 2.5V4.07926C4.81067 4.19451 3.86577 4.47737 3.17157 5.17157C2.47737 5.86577 2.19451 6.81067 2.07926 8.25H21.9207C21.8055 6.81067 21.5226 5.86577 20.8284 5.17157C20.1342 4.47737 19.1893 4.19451 17.75 4.07926V2.5C17.75 2.08579 17.4142 1.75 17 1.75C16.5858 1.75 16.25 2.08579 16.25 2.5V4.0129C15.5847 4 14.839 4 14 4H10C9.16097 4 8.41527 4 7.75 4.0129V2.5ZM22 14V12C22 11.161 22 10.4153 21.9871 9.75H2.0129C2 10.4153 2 11.161 2 12V14C2 17.7712 2 19.6569 3.17157 20.8284C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14ZM17.9008 14.3C17.9008 15.018 17.3188 15.6 16.6008 15.6C15.8828 15.6 15.3008 15.018 15.3008 14.3C15.3008 13.582 15.8828 13 16.6008 13C17.3188 13 17.9008 13.582 17.9008 14.3ZM16.6 19.4992C19.2 19.4992 19.2 18.8444 19.2 18.0367C19.2 17.229 18.0359 16.5742 16.6 16.5742C15.1641 16.5742 14 17.229 14 18.0367C14 18.8444 14 19.4992 16.6 19.4992Z" fill="#18181B"/>
+                                                                </svg>                                                                                                    
+                                                        </span>
+                                                        <span>
+                                                            Iqbal Khan
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
+                                                    <span>
+                                                        09:00 AM
+                                                    </span>
+                                                    <span>
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.00008 3.33337L10.6667 8.00004L6.00008 12.6667" stroke="#18181B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>                                
+                                                    </span>
+                                                </div>
+                                                </button>
+                                                <button onclick="reminder1modal.showModal()" class="flex p-5 justify-between items-center text-left border border-gray-200 rounded-lg bg-white">
+                                                    <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
+                                                    <span>
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C16.8362 22 20.7567 18.1162 20.7567 13.3253C20.7567 8.53446 16.8362 4.65069 12 4.65069C7.16383 4.65069 3.24334 8.53446 3.24334 13.3253C3.24334 18.1162 7.16383 22 12 22ZM12 8.74705C12.403 8.74705 12.7297 9.0707 12.7297 9.46994V13.0259L14.9484 15.2238C15.2334 15.5061 15.2334 15.9638 14.9484 16.2461C14.6634 16.5284 14.2014 16.5284 13.9164 16.2461L11.484 13.8365C11.3472 13.7009 11.2703 13.5171 11.2703 13.3253V9.46994C11.2703 9.0707 11.597 8.74705 12 8.74705Z" fill="#1C274C"/>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.2405 2.33986C8.45409 2.67841 8.3502 3.1244 8.00844 3.33599L4.11657 5.74562C3.77481 5.95722 3.32461 5.8543 3.11102 5.51574C2.89742 5.17718 3.00131 4.7312 3.34307 4.5196L7.23494 2.10998C7.5767 1.89838 8.0269 2.0013 8.2405 2.33986Z" fill="#1C274C"/>
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7595 2.33985C15.9731 2.0013 16.4233 1.89838 16.7651 2.10998L20.6569 4.5196C20.9987 4.7312 21.1026 5.17719 20.889 5.51574C20.6754 5.8543 20.2252 5.95722 19.8834 5.74562L15.9916 3.33599C15.6498 3.1244 15.5459 2.67841 15.7595 2.33985Z" fill="#1C274C"/>
+                                                            </svg>                                                                
+                                                    </span>
+                                                    <span>
+                                                        Call Iqbal for documents details
+                                                    </span>
+                                                </div>
+                                                    <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
+                                                    <span>
+                                                        11:00 AM
+                                                    </span>
+                                                    <span>
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.00008 3.33337L10.6667 8.00004L6.00008 12.6667" stroke="#18181B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>                                
+                                                    </span>
+                                                </div>
+                                                </button>
+                                                <button onclick="courthearing1modal.showModal()" class="flex p-5 justify-between items-center border border-gray-200 rounded-lg bg-white">
+                                                    <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
+                                                        <span>
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10Z" fill="#1F2937"/>
+                                                                <path d="M2.72778 5.81803C2.62732 5.41619 2.22012 5.17186 1.81828 5.27233C1.41643 5.37279 1.17211 5.77999 1.27257 6.18184L1.65454 7.7097C2.3593 10.5287 4.49604 12.7495 7.25018 13.5787L7.25018 18.0519C7.25015 18.9504 7.25012 19.6996 7.33009 20.2944C7.41449 20.9222 7.60016 21.489 8.05563 21.9445C8.5111 22.3999 9.0779 22.5856 9.7057 22.67C10.3005 22.75 11.0497 22.75 11.9482 22.7499H12.0522C12.9507 22.75 13.6999 22.75 14.2947 22.67C14.9225 22.5856 15.4892 22.3999 15.9447 21.9445C16.4002 21.489 16.5859 20.9222 16.6703 20.2944C16.7502 19.6996 16.7502 18.9504 16.7502 18.052L16.7502 13.859C17.7313 14.1514 18.4808 15.0039 18.6058 16.067L19.2553 21.5876C19.3037 21.9989 19.6764 22.2932 20.0878 22.2448C20.4992 22.1964 20.7934 21.8237 20.745 21.4123L20.0956 15.8918C19.8512 13.815 18.0912 12.2499 16.0002 12.2499H8.0847C5.64125 11.6764 3.71957 9.78517 3.10975 7.3459L2.72778 5.81803Z" fill="#1F2937"/>
+                                                                </svg>                                                                                                                               
+                                                        </span>
+                                                        <span>
+                                                            Iqbal Khan
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
+                                                    <span>
+                                                        11:30 AM
+                                                    </span>
+                                                    <span>
+                                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.00008 3.33337L10.6667 8.00004L6.00008 12.6667" stroke="#18181B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>                                
+                                                    </span>
+                                                </div>
+                                                </button>
+                                            </div>
+                                        </main>
+                                    </div>
+                                    <!-- <aside class="z-20 flex flex-col flex-shrink-0 h-full lg:flex" :class="chats ? 'w-20' : 'w-0'">
+                                        <div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-t border-l border-gray-200">
+                                            <div class="flex flex-col pt-5 pb-4 overflow-y-auto md:overflow-y-hidden md:hover:overflow-y-auto">
+                                                <div class="px-3 mb-5 space-y-1">
+                                                    <h3 class="mb-5 text-xs font-medium text-center text-gray-500 underline underline-offset-8">Cases</h3>
+                                                    <ul class="pb-5 space-y-3">
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <img class="w-8 h-8 rounded" src="./images/profile-picture.jpg" alt="">
+                                                                    <span class="absolute top-0 left-6 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                                                </div>
+                                                                <span>Ali</span>             
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <span class="flex items-center justify-center w-8 h-8 font-medium text-gray-600 dark:text-gray-300">AR</span>
+                                                                    <span class="absolute top-0 left-6 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                                                </div>
+                                                                <span>Abdur</span>             
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <span class="flex items-center justify-center w-8 h-8 font-medium text-gray-600 dark:text-gray-300">MA</span>
+                                                                </div>
+                                                                <span>Muhammad</span>             
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <svg class="absolute w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                                                                </div>
+                                                                <span>Ali</span>             
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-gray-500 text-2xs hover:text-violet-700">
+                                                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect x="1" y="0.5" width="31" height="31" rx="3.5" stroke="#6B7280" stroke-dasharray="2 2"/>
+                                                            <path d="M16.4974 16.5026C14.3841 16.5026 12.6641 14.7826 12.6641 12.6693C12.6641 10.5559 14.3841 8.83594 16.4974 8.83594C18.6107 8.83594 20.3307 10.5559 20.3307 12.6693C20.3307 14.7826 18.6107 16.5026 16.4974 16.5026ZM16.4974 9.83594C14.9374 9.83594 13.6641 11.1093 13.6641 12.6693C13.6641 14.2293 14.9374 15.5026 16.4974 15.5026C18.0574 15.5026 19.3307 14.2293 19.3307 12.6693C19.3307 11.1093 18.0574 9.83594 16.4974 9.83594Z" fill="#6B7280"/>
+                                                            <path d="M19.049 23.1624C18.7957 23.1624 18.5557 23.069 18.3823 22.8957C18.1757 22.689 18.0823 22.389 18.129 22.0757L18.2556 21.1757C18.289 20.9424 18.429 20.669 18.5957 20.4957L20.9556 18.1357C21.9023 17.189 22.7357 17.729 23.1423 18.1357C23.489 18.4824 23.669 18.8557 23.669 19.229C23.669 19.609 23.4957 19.9623 23.1423 20.3157L20.7823 22.6757C20.6156 22.8424 20.3357 22.9824 20.1023 23.0157L19.2023 23.1423C19.149 23.1557 19.1023 23.1624 19.049 23.1624ZM22.0423 18.609C21.9223 18.609 21.8156 18.689 21.6623 18.8424L19.3023 21.2024C19.2823 21.2224 19.249 21.289 19.249 21.3157L19.129 22.149L19.9623 22.029C19.989 22.0223 20.0556 21.989 20.0756 21.969L22.4357 19.609C22.5423 19.5023 22.669 19.349 22.669 19.229C22.669 19.129 22.589 18.989 22.4357 18.8424C22.2757 18.6824 22.1556 18.609 22.0423 18.609Z" fill="#6B7280"/>
+                                                            <path d="M22.4471 20.8142C22.4004 20.8142 22.3537 20.8076 22.3137 20.7942C21.4337 20.5476 20.7337 19.8476 20.4871 18.9676C20.4137 18.7009 20.5671 18.4276 20.8337 18.3542C21.1004 18.2809 21.3737 18.4342 21.4471 18.7009C21.6004 19.2476 22.0337 19.6809 22.5804 19.8342C22.8471 19.9076 23.0004 20.1875 22.9271 20.4475C22.8671 20.6675 22.6671 20.8142 22.4471 20.8142Z" fill="#6B7280"/>
+                                                            <path d="M10.7734 23.1667C10.5001 23.1667 10.2734 22.94 10.2734 22.6667C10.2734 19.82 13.0668 17.5 16.5001 17.5C17.2268 17.5 17.9468 17.6067 18.6201 17.8067C18.8868 17.8867 19.0335 18.1667 18.9535 18.4267C18.8735 18.6933 18.5935 18.84 18.3335 18.76C17.7468 18.5867 17.1335 18.4933 16.5001 18.4933C13.6201 18.4933 11.2734 20.36 11.2734 22.66C11.2734 22.94 11.0468 23.1667 10.7734 23.1667Z" fill="#6B7280"/>
+                                                        </svg>                                                                                        
+                                                    </a>
+                                                </div>
+                                                <div class="px-3 space-y-1">
+                                                    <h3 class="mb-5 text-xs font-medium text-center text-gray-500 underline underline-offset-8">Team</h3>
+                                                    <ul class="pb-5 space-y-3">
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <img class="w-8 h-8 rounded" src="./images/profile-picture.jpg" alt="">
+                                                                    <span class="absolute top-0 left-6 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                                                </div>
+                                                                <span>Ali</span>             
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <span class="flex items-center justify-center w-8 h-8 font-medium text-gray-600 dark:text-gray-300">AR</span>
+                                                                    <span class="absolute top-0 left-6 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                                                </div>
+                                                                <span>Abdur</span>             
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <span class="flex items-center justify-center w-8 h-8 font-medium text-gray-600 dark:text-gray-300">MA</span>
+                                                                </div>
+                                                                <span>Muhammad</span>             
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-2xs">
+                                                                <div class="relative flex items-center justify-center w-8 h-8 bg-gray-100 rounded shrink-0">
+                                                                    <svg class="absolute w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                                                                </div>
+                                                                <span>Ali</span>             
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-gray-500 text-2xs hover:text-violet-700">
+                                                        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect x="1" y="0.5" width="31" height="31" rx="3.5" stroke="#6B7280" stroke-dasharray="2 2"/>
+                                                            <path d="M16.4974 16.5026C14.3841 16.5026 12.6641 14.7826 12.6641 12.6693C12.6641 10.5559 14.3841 8.83594 16.4974 8.83594C18.6107 8.83594 20.3307 10.5559 20.3307 12.6693C20.3307 14.7826 18.6107 16.5026 16.4974 16.5026ZM16.4974 9.83594C14.9374 9.83594 13.6641 11.1093 13.6641 12.6693C13.6641 14.2293 14.9374 15.5026 16.4974 15.5026C18.0574 15.5026 19.3307 14.2293 19.3307 12.6693C19.3307 11.1093 18.0574 9.83594 16.4974 9.83594Z" fill="#6B7280"/>
+                                                            <path d="M19.049 23.1624C18.7957 23.1624 18.5557 23.069 18.3823 22.8957C18.1757 22.689 18.0823 22.389 18.129 22.0757L18.2556 21.1757C18.289 20.9424 18.429 20.669 18.5957 20.4957L20.9556 18.1357C21.9023 17.189 22.7357 17.729 23.1423 18.1357C23.489 18.4824 23.669 18.8557 23.669 19.229C23.669 19.609 23.4957 19.9623 23.1423 20.3157L20.7823 22.6757C20.6156 22.8424 20.3357 22.9824 20.1023 23.0157L19.2023 23.1423C19.149 23.1557 19.1023 23.1624 19.049 23.1624ZM22.0423 18.609C21.9223 18.609 21.8156 18.689 21.6623 18.8424L19.3023 21.2024C19.2823 21.2224 19.249 21.289 19.249 21.3157L19.129 22.149L19.9623 22.029C19.989 22.0223 20.0556 21.989 20.0756 21.969L22.4357 19.609C22.5423 19.5023 22.669 19.349 22.669 19.229C22.669 19.129 22.589 18.989 22.4357 18.8424C22.2757 18.6824 22.1556 18.609 22.0423 18.609Z" fill="#6B7280"/>
+                                                            <path d="M22.4471 20.8142C22.4004 20.8142 22.3537 20.8076 22.3137 20.7942C21.4337 20.5476 20.7337 19.8476 20.4871 18.9676C20.4137 18.7009 20.5671 18.4276 20.8337 18.3542C21.1004 18.2809 21.3737 18.4342 21.4471 18.7009C21.6004 19.2476 22.0337 19.6809 22.5804 19.8342C22.8471 19.9076 23.0004 20.1875 22.9271 20.4475C22.8671 20.6675 22.6671 20.8142 22.4471 20.8142Z" fill="#6B7280"/>
+                                                            <path d="M10.7734 23.1667C10.5001 23.1667 10.2734 22.94 10.2734 22.6667C10.2734 19.82 13.0668 17.5 16.5001 17.5C17.2268 17.5 17.9468 17.6067 18.6201 17.8067C18.8868 17.8867 19.0335 18.1667 18.9535 18.4267C18.8735 18.6933 18.5935 18.84 18.3335 18.76C17.7468 18.5867 17.1335 18.4933 16.5001 18.4933C13.6201 18.4933 11.2734 20.36 11.2734 22.66C11.2734 22.94 11.0468 23.1667 10.7734 23.1667Z" fill="#6B7280"/>
+                                                        </svg>                                                                                        
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <a href="javascript:;" x-on:click="chats = !chats" class="absolute top-0 bottom-0 flex items-center justify-center w-4 h-24 my-auto bg-white arrow-shape -left-4 hover:bg-gray-50" style="clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);">
+                                                <svg :class="chats ? 'rotate-180':'rotate-0'" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.51562 12L0.515625 6L6.51563 -8.58843e-07L7.92188 1.40625L3.32812 6L7.92187 10.5937L6.51562 12Z" fill="#9CA3AF"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </aside> -->
+                                </div>
+                               
+                                   </section>
+                               </div>
                                 <!-- Court Hearings -->
                                 <div x-tabs:panel>
                                     <div class="bg-white">
@@ -2313,9 +2628,327 @@
             </form>
     </dialog>
    
-
-
-
+    <!-- calendar tab dialog -->
+<!-- appointment -->
+<dialog id="appointmentmodal"
+        class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-center justify-between p-6 bg-white border-b rounded-t md:p-4">
+                <h3 class="text-lg font-medium text-gray-900 md:text-base">
+                    Appointment
+                </h3>
+                <button onclick="appointmentmodal.close()" type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col p-2 md:p-6 gap-5 bg-white">
+                <div class="flex flex-col item-start p-4 gap-7 border bg-gray-50">
+                    <div class="flex flex-col gap-2">
+                            <label for="title" class="block text-sm font-medium">Title</label>
+                            <input type="text" id="title" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-700 focus:border-primary-600 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                        </div>
+                    <div class="flex flex-col gap-2">
+                            <label for="clientname" class="block text-sm font-medium">Client’s Name</label>
+                            <input type="text" id="clientname" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                    </div>
+                    <div class="flex flex-col items-start gap-2 w-full">
+                        <label for="location" class="text-sm font-medium">Location</label>
+                        <select id="location"
+                          class="flex flex-col items-start p-2.5 border border-gray-300 rounded-lg w-full">
+                          
+                          <option selected class="flex items-center font-normal text-sm text-gray-500">At Office</option>
+                          <option value="1"></option>
+                          <option value="2"></option>   
+                        </select>
+                      </div>
+                      <div class="flex flex-col md:flex-row gap-3">
+                            <div class="date flex flex-col items-start gap-2 md:w-48">
+                              <label for="date" class="flex items-center font-medium text-sm">Date</label>
+                              <div class="relative w-full">
+                               
+                                <input id="date" type="date"
+                                  class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                  placeholder="Select date">
+                              </div>
+                            </div>
+                            <div class="start-time flex flex-col items-start gap-2 md:w-48">
+                                <label for="time" class="flex items-center font-medium text-sm">Start time</label>
+                                <div class="relative w-full">
+                                 
+                                  <input id="time"  type="time"
+                                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    placeholder="Select date">
+                                </div>
+                              </div>
+                              <div class="flex flex-col items-start gap-2  md:w-48">
+                                <label for="duration" class="text-sm font-medium">Duration</label>
+                                <select id="duration"
+                                  class="flex flex-col items-start p-2 border border-gray-300 rounded-lg w-full">
+                                  
+                                  <option selected class="flex items-center font-normal text-sm text-gray-500">e.g. 30 mins</option>
+                                  <option value="1">30 mins</option>
+                                  <option value="2">45 mins</option>   
+                                </select>
+                              </div>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <label for="message" class="block text-sm font-medium text-gray-900">Note</label>
+                        <textarea id="message" rows="2" class="block px-4 py-3 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex justify-end items-center gap-2 p-6 bg-white border-t rounded-b gap-x-2"> 
+                <button type="submit"
+                    class="flex px-3 py-2 bg-red-700 hover:bg-red-800 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+                    Delete
+                </button>
+                <button type="submit"
+                    class="flex px-3 py-2 bg-primary-700 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+                    Save
+                </button>
+            </div>
+        </form>
+    </dialog>
+<!-- reminder -->
+    <dialog id="reminder1modal"
+    class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-6 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-lg font-medium text-gray-900 md:text-base">
+                Reminder  
+            </h3>
+            <button onclick="reminder1modal.close()" type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col p-2 md:p-6 gap-5 bg-white">
+            <div class="flex flex-col item-start p-4 gap-7 border bg-gray-50">
+                <div class="flex flex-col gap-2">
+                        <label for="Title" class="block text-sm font-medium">Title</label>
+                        <input type="text" id="Title" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                </div>
+                
+                  <div class="flex flex-col md:flex-row gap-7 w-full">
+                    <div class="date flex flex-col items-start gap-2 w-full">
+                        <label for="date-2" class="flex items-center font-medium text-sm">Date</label>
+                        <div class="relative w-full">
+                         
+                          <input id="date-2" type="date"
+                            class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                            placeholder="Select date">
+                        </div>
+                      </div>
+                      <div class="start-time flex flex-col items-start gap-2 w-full">
+                          <label for="time-1" class="flex items-center font-medium text-sm">Start time</label>
+                          <div class="relative w-full">
+                           
+                            <input id="time-1"  type="time"
+                              class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                              placeholder="Select date">
+                          </div>
+                        </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="message1" class="block text-sm font-medium text-gray-900">Note</label>
+                    <textarea id="message1" rows="2" class="block px-4 py-3 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+                </div>
+            </div> 
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex justify-end items-center p-6 bg-white border-t rounded-b gap-x-2"> 
+            <button type="submit"
+                class="flex px-3 py-2 bg-primary-700 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+                Save
+            </button>
+        </div>
+    </form>
+</dialog>
+<!-- court hearing -->
+<dialog id="courthearing1modal"
+class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+<form method="dialog">
+    <!-- Modal header -->
+    <div class="sticky top-0 flex items-center justify-between p-6 bg-white border-b rounded-t md:p-4">
+        <h3 class="text-lg font-medium text-gray-900 md:text-base">
+            Court Hearing
+        </h3>
+        <button onclick="courthearing1modal.close()" type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+        </button>
+    </div>
+    <!-- Modal body -->
+    <div class="flex flex-col p-2 md:p-6 gap-5 bg-white">
+        
+        <div class="flex flex-col item-start p-4 gap-7 border bg-gray-50">
+            <div class="flex flex-col gap-2">
+                    <label for="casehearing" class="block text-sm font-medium">Case Hearing No</label>
+                    <input type="text" id="casehearing" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+            </div>
+            
+              <div class="flex flex-col md:flex-row gap-7 w-full">
+                    <div class="date flex flex-col items-start gap-2 w-full">
+                      <label for="date-1" class="flex items-center font-medium text-sm">Date</label>
+                      <div class="relative w-full">
+                       
+                        <input id="date-1" type="date"
+                          class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                          placeholder="Select date">
+                      </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2 w-full">
+                        <label for="Case-1" class="block text-sm font-medium">Case</label>
+                        <input type="text" id="Case-1" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-7 w-full">
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="clientname-1" class="block text-sm font-medium">Court/Judge</label>
+                    <input type="text" id="clientname-1" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Special court" required>
+            </div> 
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="location/station" class="block text-sm font-medium">Location/Station</label>
+                    <input type="text" id="location/station" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Special court" required>
+            </div>
+          </div>
+          <div class="flex flex-col items-start gap-2 w-full">
+            <label for="Agenda" class="text-sm font-medium">Agenda on next hearing</label>
+            <select id="Agenda"
+              class="flex flex-col items-start p-2.5 border border-gray-300 rounded-lg w-full">
+              
+              <option selected class="flex items-center font-normal text-sm text-gray-500">Select agenda</option>
+              <option value="1"></option>
+              <option value="2"></option>   
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">      
+            <label for="courtsummary" class="flex text-sm font-medium text-gray-900">Court Hearing Summary</label>
+            <textarea id="courtsummary" rows="3" class="block px-5 py-3 w-full text-sm text-gray-900  rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+            <div class="flex items-center w-full gap-2.5">
+            <span class="flex items-center gap-2.5 text-gray-500 text-xs font-normal w-full">
+                Max 4000 characters
+            </span>
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 9C4.41421 9 4.75 9.33579 4.75 9.75V10.75C4.75 14.7541 7.99594 18 12 18C16.0041 18 19.25 14.7541 19.25 10.75V9.75C19.25 9.33579 19.5858 9 20 9C20.4142 9 20.75 9.33579 20.75 9.75V10.75C20.75 15.3298 17.2314 19.0879 12.75 19.4683V21.75C12.75 22.1642 12.4142 22.5 12 22.5C11.5858 22.5 11.25 22.1642 11.25 21.75V19.4683C6.7686 19.0879 3.25 15.3298 3.25 10.75V9.75C3.25 9.33579 3.58579 9 4 9Z" fill="#1C274C"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C8.82436 2 6.25 4.57436 6.25 7.75V10.75C6.25 13.9256 8.82436 16.5 12 16.5C15.1756 16.5 17.75 13.9256 17.75 10.75V7.75C17.75 4.57436 15.1756 2 12 2ZM14 11.5C14.4142 11.5 14.75 11.1642 14.75 10.75C14.75 10.3358 14.4142 10 14 10H10C9.58579 10 9.25 10.3358 9.25 10.75C9.25 11.1642 9.58579 11.5 10 11.5H14ZM13.75 7.75C13.75 8.16421 13.4142 8.5 13 8.5H11C10.5858 8.5 10.25 8.16421 10.25 7.75C10.25 7.33579 10.5858 7 11 7H13C13.4142 7 13.75 7.33579 13.75 7.75Z" fill="#1C274C"/>
+                    </svg>
+                    
+            </button>
+        </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="block text-sm font-medium text-gray-900" for="file_input">
+                Upload supporting documents
+            </label>
+            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+            <span class="block text-xs md:text-xs font-normal text-gray-500">
+                A note for extra info
+            </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
+            <div class="flex p-3 gap-2 rounded-lg items-center justify-between">
+                <!-- pdf -->
+                <div class="relative shrink-0 w-7 md:w-9">
+                    <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                      <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                      <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                    </svg>
+                    <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                        pdf
+                    </p>
+                </div>
+                <!-- Property details documents.doc -->
+                <div class="flex flex-col w-full grow-0 justify-between">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-900 truncate w-28 md:w-32">
+                            Property details documents.doc
+                        </span>
+                        <span class="text-sm font-medium text-gray-900">
+                            100%
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 100%"></div>
+                    </div>
+                </div>
+                <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="flex p-3 gap-2 bg-gray-50 rounded-lg items-center justify-between">
+                <!-- pdf -->
+                <div class="relative shrink-0 w-7 md:w-9">
+                    <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                      <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                      <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                    </svg>
+                    <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                        pdf
+                    </p>
+                </div>
+                <!-- Property details documents.doc -->
+                <div class="flex flex-col w-full grow-0 justify-between">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-900 truncate w-32 md:w-36">
+                            Property details documents.doc
+                        </span>
+                        <span class="text-sm font-medium text-gray-900">
+                            60%
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-violet-700 h-2.5 rounded-full" style="width: 60%"></div>
+                    </div>
+                </div>
+                <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </div>
+        </div> 
+    </div>
+    <!-- Modal footer -->
+    <div class="sticky bottom-0 flex justify-end items-center p-6 bg-white border-t rounded-b gap-x-2"> 
+        <button type="submit"
+                class="flex px-3 py-2 bg-red-700 hover:bg-red-800 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-700 font-medium rounded-lg text-sm w-full md:w-fit">
+                Delete
+            </button>
+        <button type="submit"
+            class="flex px-3 py-2 bg-primary-700 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+            Save
+        </button>
+    </div>
+</form>
+</dialog>
 
 </body>
 </html>
