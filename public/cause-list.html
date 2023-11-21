@@ -241,7 +241,7 @@
                 </a>
             </div>
         </aside>
-        <div class="relative w-full h-full px-5 overflow-x-hidden overflow-y-auto bg-gray-100 2xl:px-16 scrollbar-hide">
+        <div class="relative w-full h-full px-0 overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
                 <div class="py-5">
                     <nav class="hidden mb-4 md:flex" aria-label="Breadcrumb">
@@ -317,7 +317,7 @@
                                     </div>
                                     <div class="flex flex-col items-start justify-start overflow-hidden border border-gray-300 bg-gray-50 rounded-xl">
                                         <div class="w-full" x-data="{open: true}">
-                                            <div class="justify-between items-center gap-2.5 flex p-3 md:p-4  md:mb-0 bg-white" :class="open?'mb-2':''">
+                                            <div class="drop-shadow md:drop-shadow-none justify-between items-center gap-2.5 flex p-3 md:p-4  md:mb-0 bg-white" :class="open?'mb-2':''">
                                                 <div class="flex items-center gap-2.5">
                                                     <h2 class="text-base font-medium leading-normal text-gray-900">15/10/2023</h2>
                                                     <div class="text-base font-medium leading-normal text-gray-900">Today</div>
@@ -329,7 +329,7 @@
                                                 </button> 
                                             </div>
                                             <div class="overflow-x-auto">
-                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 px-2 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
                                                     <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
                                                         <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
                                                         <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
@@ -339,7 +339,7 @@
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
                                                     </header>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
@@ -394,7 +394,7 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
@@ -440,7 +440,7 @@
                                     </div>
                                     <div class="flex flex-col items-start justify-start overflow-hidden border border-gray-300 bg-gray-50 rounded-xl">
                                         <div class="w-full" x-data="{open: true}">
-                                            <div class="justify-between items-center gap-2.5 flex p-3 md:p-4  md:mb-0 bg-white" :class="open?'mb-2':''">
+                                            <div class="drop-shadow md:drop-shadow-none justify-between items-center gap-2.5 flex p-3 md:p-4  md:mb-0 bg-white" :class="open?'mb-2':''">
                                                 <div class="flex items-center gap-2.5">
                                                     <h2 class="text-base font-medium leading-normal text-gray-900">16/10/2023</h2>
                                                     <div class="text-base font-medium leading-normal text-gray-900">Monday</div>
@@ -452,7 +452,7 @@
                                                 </button> 
                                             </div>
                                             <div class="overflow-x-auto">
-                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 px-2 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
                                                     <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
                                                         <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
                                                         <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
@@ -462,7 +462,7 @@
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
                                                     </header>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
@@ -514,7 +514,7 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
@@ -587,7 +587,7 @@
                                                 </button> 
                                             </div>
                                             <div class="overflow-x-auto">
-                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 px-2 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
                                                     <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
                                                         <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
                                                         <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
@@ -597,7 +597,7 @@
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
                                                     </header>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
@@ -652,7 +652,7 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
@@ -728,7 +728,7 @@
                                                 </button> 
                                             </div>
                                             <div class="overflow-x-auto">
-                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 px-2 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
                                                     <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
                                                         <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
                                                         <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
@@ -738,7 +738,7 @@
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
                                                         <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
                                                     </header>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
@@ -793,7 +793,7 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white drop-shadow px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
                                                         <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
                                                             <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">

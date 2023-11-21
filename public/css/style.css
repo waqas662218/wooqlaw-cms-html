@@ -2228,6 +2228,10 @@ select {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .\!pl-10 {
   padding-left: 2.5rem !important;
 }
