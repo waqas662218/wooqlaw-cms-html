@@ -315,57 +315,64 @@
                                           <p class="text-sm font-medium text-left text-white ">Create hearing</p>
                                         </button>
                                     </div>
-                                    <div class="flex flex-col items-start justify-start overflow-hidden bg-white border border-gray-300 rounded-xl">
+                                    <div class="flex flex-col items-start justify-start overflow-hidden border border-gray-300 bg-gray-50 rounded-xl">
                                         <div class="w-full" x-data="{open: true}">
-                                            <div class="justify-between items-center gap-2.5 flex p-3 md:p-4" x-on:click="open=!open">
+                                            <div class="justify-between items-center gap-2.5 flex p-3 md:p-4  md:mb-0 bg-white" :class="open?'mb-2':''">
                                                 <div class="flex items-center gap-2.5">
-                                                    <div class="text-base font-medium leading-normal text-gray-900">15/10/2023</div>
+                                                    <h2 class="text-base font-medium leading-normal text-gray-900">15/10/2023</h2>
                                                     <div class="text-base font-medium leading-normal text-gray-900">Today</div>
                                                 </div>
-                                                <svg :class="open?'rotate-180':''" class="md:hidden" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"></path>
-                                                </svg>  
+                                                <button x-on:click="open=!open" class="flex items-center justify-center w-6 h-6 text-gray-900 rounded-lg md:hidden hover:bg-gray-200 focus:ring-gray-300 focus:ring-4 focus:outline-none">
+                                                    <svg :class="open?'rotate-0':'rotate-180'" width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0694 7.48808C15.7999 7.80257 15.3264 7.839 15.0119 7.56943L8.49999 1.9878L1.98808 7.56943C1.67359 7.839 1.20011 7.80257 0.930544 7.48808C0.660977 7.17359 0.697399 6.70011 1.01189 6.43054L8.01189 0.430545C8.29276 0.189801 8.70721 0.189801 8.98808 0.430545L15.9881 6.43054C16.3026 6.70011 16.339 7.17359 16.0694 7.48808Z" fill="#1C274C"/>
+                                                    </svg>                                                        
+                                                </button> 
                                             </div>
                                             <div class="overflow-x-auto">
-                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg px-2 mb-3 md:mb-0 md:px-4 bg-white">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
                                                     <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
-                                                        <div class="text-xs font-bold text-gray-900 md:w-[260px]">Client/Title</div>
-                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell">Court/Judge</div>
-                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell">Agenda</div>
-                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell">Last Hearing</div>
+                                                        <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Agenda</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Last Hearing</div>
                                                         <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[30vw]">Summary</div>
-                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell">Next Hearing</div>
-                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell">Edit</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
                                                     </header>
-                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
-                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[260px] col-span-5 order-1 mb-2 md:mb-0">
-                                                            <div class="flex items-center flex-wrap gap-2.5">
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
                                                                 <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
-                                                                <div class="max-w-[160px] font-medium grow">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
                                                                     <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
                                                                     <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
                                                                 </div>
                                                             </div>                                     
                                                         </div>
-                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
-                                                            Khalid Hayat
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
                                                         </div>
-                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
-                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
-                                                            05/09/2023
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
                                                         </div>
-                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 md:w-[30vw] items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs before: before:content-[attr(data-summary)] md:before:hidden" data-summary="Summary">
-                                                            <div class="flex relative items-end md:items-center w-full gap-2 md:w-[30vw] flex-col md:flex-row">
-                                                                <p class="order-2 -left-14 -bottom-3 md:bottom-auto md:left-auto absolute md:relative w-[290px] truncate grow md:order-1">Board policy is to not allow court reporting, taping or videotaping of proceedings, except in exceptional circumstances. If a Board panel approves the recording of a proceeding,</p>
-                                                                <button class="flex items-center justify-center order-1 gap-2 px-2 py-2 mb-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 md:order-2 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
-                                                                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
-                                                                    </svg>                                                                                                                               
-                                                                </button>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                                <div class="order-2 md:order-1 grow">
+                                                                    <p class="relative grow line-clamp-2 md:line-clamp-1">Board policy is to not allow court reporting, taping or videotaping of proceedings, except in exceptional circumstances. If a Board panel approves the recording of a proceeding,</p>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
-                                                            <button class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
                                                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <g clip-path="url(#clip0_1959_2570)">
                                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.683594 7.07802C0.683594 6.59477 1.07534 6.20302 1.55859 6.20302H12.8177C13.3009 6.20302 13.6927 6.59477 13.6927 7.07802C13.6927 7.56127 13.3009 7.95302 12.8177 7.95302H1.55859C1.07534 7.95302 0.683594 7.56127 0.683594 7.07802Z" fill="white"/>
@@ -379,8 +386,447 @@
                                                                 </svg>                                                                                                                                                                                              
                                                             </button>
                                                         </div>
-                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
-                                                            <button class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
+                                                                </svg>                                                                                                                                                                                               
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
+                                                                <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
+                                                                    <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
+                                                                    <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
+                                                                </div>
+                                                            </div>                                     
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <p class="text-center line-clamp-1">06/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
+                                                                </svg>                                                                                                                                                                                               
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    <div class="flex flex-col items-start justify-start overflow-hidden border border-gray-300 bg-gray-50 rounded-xl">
+                                        <div class="w-full" x-data="{open: true}">
+                                            <div class="justify-between items-center gap-2.5 flex p-3 md:p-4  md:mb-0 bg-white" :class="open?'mb-2':''">
+                                                <div class="flex items-center gap-2.5">
+                                                    <h2 class="text-base font-medium leading-normal text-gray-900">16/10/2023</h2>
+                                                    <div class="text-base font-medium leading-normal text-gray-900">Monday</div>
+                                                </div>
+                                                <button x-on:click="open=!open" class="flex items-center justify-center w-6 h-6 text-gray-900 rounded-lg md:hidden hover:bg-gray-200 focus:ring-gray-300 focus:ring-4 focus:outline-none">
+                                                    <svg :class="open?'rotate-0':'rotate-180'" width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0694 7.48808C15.7999 7.80257 15.3264 7.839 15.0119 7.56943L8.49999 1.9878L1.98808 7.56943C1.67359 7.839 1.20011 7.80257 0.930544 7.48808C0.660977 7.17359 0.697399 6.70011 1.01189 6.43054L8.01189 0.430545C8.29276 0.189801 8.70721 0.189801 8.98808 0.430545L15.9881 6.43054C16.3026 6.70011 16.339 7.17359 16.0694 7.48808Z" fill="#1C274C"/>
+                                                    </svg>                                                        
+                                                </button> 
+                                            </div>
+                                            <div class="overflow-x-auto">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
+                                                    <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
+                                                        <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Agenda</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Last Hearing</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[30vw]">Summary</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
+                                                    </header>
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
+                                                                <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
+                                                                    <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
+                                                                    <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
+                                                                </div>
+                                                            </div>                                     
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_1959_2570)">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.683594 7.07802C0.683594 6.59477 1.07534 6.20302 1.55859 6.20302H12.8177C13.3009 6.20302 13.6927 6.59477 13.6927 7.07802C13.6927 7.56127 13.3009 7.95302 12.8177 7.95302H1.55859C1.07534 7.95302 0.683594 7.56127 0.683594 7.07802Z" fill="white"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18813 0.573486C7.67138 0.573486 8.06313 0.965237 8.06313 1.44849L8.06313 12.7076C8.06313 13.1908 7.67138 13.5826 7.18813 13.5826C6.70488 13.5826 6.31313 13.1908 6.31313 12.7076L6.31313 1.44849C6.31313 0.965237 6.70488 0.573486 7.18813 0.573486Z" fill="white"/>
+                                                                    </g>
+                                                                    <defs>
+                                                                    <clipPath id="clip0_1959_2570">
+                                                                    <rect width="14" height="14" fill="white"/>
+                                                                    </clipPath>
+                                                                    </defs>
+                                                                </svg>                                                                                                                                                                                              
+                                                            </button>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
+                                                                </svg>                                                                                                                                                                                               
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
+                                                                <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
+                                                                    <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
+                                                                    <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
+                                                                </div>
+                                                            </div>                                     
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_1959_2570)">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.683594 7.07802C0.683594 6.59477 1.07534 6.20302 1.55859 6.20302H12.8177C13.3009 6.20302 13.6927 6.59477 13.6927 7.07802C13.6927 7.56127 13.3009 7.95302 12.8177 7.95302H1.55859C1.07534 7.95302 0.683594 7.56127 0.683594 7.07802Z" fill="white"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18813 0.573486C7.67138 0.573486 8.06313 0.965237 8.06313 1.44849L8.06313 12.7076C8.06313 13.1908 7.67138 13.5826 7.18813 13.5826C6.70488 13.5826 6.31313 13.1908 6.31313 12.7076L6.31313 1.44849C6.31313 0.965237 6.70488 0.573486 7.18813 0.573486Z" fill="white"/>
+                                                                    </g>
+                                                                    <defs>
+                                                                    <clipPath id="clip0_1959_2570">
+                                                                    <rect width="14" height="14" fill="white"/>
+                                                                    </clipPath>
+                                                                    </defs>
+                                                                </svg>                                                                                                                                                                                              
+                                                            </button>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
+                                                                </svg>                                                                                                                                                                                               
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>          
+                                    </div>
+                                </div>
+                            </div>
+                            <div x-tabs:panel>
+                                <div class="flex flex-col w-full gap-3 p-2 bg-white md:p-5">
+                                    <div class="flex flex-col items-start justify-start overflow-hidden border border-gray-300 bg-gray-50 rounded-xl">
+                                        <div class="w-full" x-data="{open: true}">
+                                            <div class="justify-between items-center gap-2.5 flex p-3 md:p-4 md:mb-0 bg-white" :class="open?'mb-2':''">
+                                                <div class="flex items-center justify-between w-full gap-2.5">
+                                                    <h2 class="text-base font-medium leading-normal text-gray-900">Pending Update</h2>
+                                                </div>
+                                                <button x-on:click="open=!open" class="flex items-center justify-center w-6 h-6 text-gray-900 rounded-lg md:hidden hover:bg-gray-200 focus:ring-gray-300 focus:ring-4 focus:outline-none">
+                                                    <svg :class="open?'rotate-0':'rotate-180'" width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0694 7.48808C15.7999 7.80257 15.3264 7.839 15.0119 7.56943L8.49999 1.9878L1.98808 7.56943C1.67359 7.839 1.20011 7.80257 0.930544 7.48808C0.660977 7.17359 0.697399 6.70011 1.01189 6.43054L8.01189 0.430545C8.29276 0.189801 8.70721 0.189801 8.98808 0.430545L15.9881 6.43054C16.3026 6.70011 16.339 7.17359 16.0694 7.48808Z" fill="#1C274C"/>
+                                                    </svg>                                                        
+                                                </button> 
+                                            </div>
+                                            <div class="overflow-x-auto">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
+                                                    <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
+                                                        <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Agenda</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Last Hearing</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[30vw]">Summary</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
+                                                    </header>
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
+                                                                <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
+                                                                    <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
+                                                                    <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
+                                                                </div>
+                                                            </div>                                     
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                                <div class="order-2 md:order-1 grow">
+                                                                    <p class="relative grow line-clamp-2 md:line-clamp-1">Board policy is to not allow court reporting, taping or videotaping of proceedings, except in exceptional circumstances. If a Board panel approves the recording of a proceeding,</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_1959_2570)">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.683594 7.07802C0.683594 6.59477 1.07534 6.20302 1.55859 6.20302H12.8177C13.3009 6.20302 13.6927 6.59477 13.6927 7.07802C13.6927 7.56127 13.3009 7.95302 12.8177 7.95302H1.55859C1.07534 7.95302 0.683594 7.56127 0.683594 7.07802Z" fill="white"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18813 0.573486C7.67138 0.573486 8.06313 0.965237 8.06313 1.44849L8.06313 12.7076C8.06313 13.1908 7.67138 13.5826 7.18813 13.5826C6.70488 13.5826 6.31313 13.1908 6.31313 12.7076L6.31313 1.44849C6.31313 0.965237 6.70488 0.573486 7.18813 0.573486Z" fill="white"/>
+                                                                    </g>
+                                                                    <defs>
+                                                                    <clipPath id="clip0_1959_2570">
+                                                                    <rect width="14" height="14" fill="white"/>
+                                                                    </clipPath>
+                                                                    </defs>
+                                                                </svg>                                                                                                                                                                                              
+                                                            </button>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
+                                                                </svg>                                                                                                                                                                                               
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
+                                                                <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
+                                                                    <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
+                                                                    <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
+                                                                </div>
+                                                            </div>                                     
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <p class="text-center line-clamp-1">06/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
+                                                                </svg>                                                                                                                                                                                               
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    <div class="flex flex-col items-start justify-start overflow-hidden border border-gray-300 bg-gray-50 rounded-xl">
+                                        <div class="w-full" x-data="{open: true}">
+                                            <div class="justify-between items-center gap-2.5 flex p-3 md:p-4 md:mb-0 bg-white" :class="open?'mb-2':''">
+                                                <div class="flex items-center justify-between w-full gap-2.5">
+                                                    <h2 class="text-base font-medium leading-normal text-gray-900">Hearing History</h2>
+                                                    <div class="relative" x-data="" x-menu="">
+                                                        <button class="hidden md:flex items-center justify-center w-full px-3 md:px-5 py-2.5 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg md:w-auto focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200" x-menu:button="" aria-haspopup="true" aria-labelledby="alpine-menu-label-3" id="alpine-menu-button-3" aria-expanded="false" type="button">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-4 h-4 mr-2 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                            Filter
+                                                            <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                                <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="absolute right-0 z-10 w-40 mt-2 bg-white rounded-md shadow-md focus-visible:outline-none" x-ref="popover" x-menu:items="" x-transition.origin.top.right="" aria-orientation="vertical" role="menu" id="alpine-menu-items-3" aria-labelledby="alpine-menu-button-3" tabindex="0" style="display: none;">
+                                                            <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-7" tabindex="-1" role="menuitem">                                                                      
+                                                                Invoice
+                                                            </a>
+                                                            <a x-menu:item="" href="#" :class="$menuItem.isActive &amp;&amp; 'bg-gray-100 text-gray-900'" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left font-normal text-sm hover:bg-gray-100 disabled:text-gray-500" id="alpine-menu-item-8" tabindex="-1" role="menuitem">                                                                      
+                                                                Payment Receipt
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button x-on:click="open=!open" class="flex items-center justify-center w-6 h-6 text-gray-900 rounded-lg md:hidden hover:bg-gray-200 focus:ring-gray-300 focus:ring-4 focus:outline-none">
+                                                    <svg :class="open?'rotate-0':'rotate-180'" width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0694 7.48808C15.7999 7.80257 15.3264 7.839 15.0119 7.56943L8.49999 1.9878L1.98808 7.56943C1.67359 7.839 1.20011 7.80257 0.930544 7.48808C0.660977 7.17359 0.697399 6.70011 1.01189 6.43054L8.01189 0.430545C8.29276 0.189801 8.70721 0.189801 8.98808 0.430545L15.9881 6.43054C16.3026 6.70011 16.339 7.17359 16.0694 7.48808Z" fill="#1C274C"/>
+                                                    </svg>                                                        
+                                                </button> 
+                                            </div>
+                                            <div class="overflow-x-auto">
+                                                <div x-show="open" class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell md:divide-y divide-gray-200 w-full md:[&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg md:mb-0 md:px-4 bg-gray-50">
+                                                    <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
+                                                        <div class="text-xs font-bold text-gray-900 md:w-[12vw]">Client/Title</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Court/Judge</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Agenda</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[6vw]">Last Hearing</div>
+                                                        <div class="hidden text-xs font-bold text-gray-900 md:table-cell md:w-[30vw]">Summary</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[6vw]">Next Hearing</div>
+                                                        <div class="hidden text-xs text-center font-bold text-gray-900 md:table-cell md:w-[3vw]">Edit</div>
+                                                    </header>
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
+                                                                <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
+                                                                    <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
+                                                                    <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
+                                                                </div>
+                                                            </div>                                     
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                                <div class="order-2 md:order-1 grow">
+                                                                    <p class="relative grow line-clamp-2 md:line-clamp-1">Board policy is to not allow court reporting, taping or videotaping of proceedings, except in exceptional circumstances. If a Board panel approves the recording of a proceeding,</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g clip-path="url(#clip0_1959_2570)">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.683594 7.07802C0.683594 6.59477 1.07534 6.20302 1.55859 6.20302H12.8177C13.3009 6.20302 13.6927 6.59477 13.6927 7.07802C13.6927 7.56127 13.3009 7.95302 12.8177 7.95302H1.55859C1.07534 7.95302 0.683594 7.56127 0.683594 7.07802Z" fill="white"/>
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.18813 0.573486C7.67138 0.573486 8.06313 0.965237 8.06313 1.44849L8.06313 12.7076C8.06313 13.1908 7.67138 13.5826 7.18813 13.5826C6.70488 13.5826 6.31313 13.1908 6.31313 12.7076L6.31313 1.44849C6.31313 0.965237 6.70488 0.573486 7.18813 0.573486Z" fill="white"/>
+                                                                    </g>
+                                                                    <defs>
+                                                                    <clipPath id="clip0_1959_2570">
+                                                                    <rect width="14" height="14" fill="white"/>
+                                                                    </clipPath>
+                                                                    </defs>
+                                                                </svg>                                                                                                                                                                                              
+                                                            </button>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
+                                                                </svg>                                                                                                                                                                                               
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid rounded-md md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-6 bg-white px-2 md:px-0 py-2 md:py-0 md:bg-white md:[&>*:not(:last-child)]">
+                                                        <div class="flex items-center justify-between text-xs align-middle md:w-[12vw] col-span-5 order-1 mb-2 md:mb-0">
+                                                            <div class="flex items-center flex-wrap gap-2.5 w-full">
+                                                                <img class="w-8 h-8 rounded-lg shrink-0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png" alt="">
+                                                                <div class="w-[160px] md:max-w-[10vw] font-medium grow">
+                                                                    <h3 class="mb-0 text-sm font-medium text-gray-900 truncate">Immigration Case for UK Immigration Case for UK</h3>
+                                                                    <p class="mb-0 text-xs text-gray-500 truncate">Tehmina Naz</p>
+                                                                </div>
+                                                            </div>                                     
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle  md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-2 pb-1 col-span-6 order-3 font-medium text-xs before:content-[attr(data-court)] md:before:hidden" data-court="Court/Judge">
+                                                            <p class="line-clamp-1">Khalid Hayat</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 py-1 col-span-6 order-4 font-medium text-xs before:content-[attr(data-agenda)] md:before:hidden" data-agenda="Agenda">Document</div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell bg-gray-100 md:bg-white px-2 pt-1 pb-2 mb-2 md:mb-0 col-span-6 order-5 font-medium text-xs before: before:content-[attr(data-last-hearing)] md:before:hidden" data-last-hearing="Last Hearing">
+                                                            <p class="line-clamp-1">05/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[30vw] justify-between gap-1 items-center md:table-cell mb-2 md:mb-0 col-span-6 order-7 font-medium text-xs" data-summary="Summary">
+                                                            <div class="flex flex-col w-full gap-2 md:items-center md:flex-row">
+                                                                <div class="flex items-center justify-between order-1 md:order-2 shrink-0">
+                                                                    <span class="md:hidden grow">Summary</span>
+                                                                    <button onclick="hearingsummary.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white bg-green-700 rounded-lg md:mb-0 shrink-0 hover:bg-green-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                                                        <svg width="14" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38376 0.729248H6.61624C7.68827 0.729239 8.53739 0.729232 9.20193 0.818577C9.88584 0.910527 10.4394 1.10426 10.8759 1.54081C11.3125 1.97735 11.5062 2.53091 11.5982 3.21482C11.6875 3.87936 11.6875 4.72848 11.6875 5.80051V8.19965C11.6875 9.27168 11.6875 10.1208 11.5982 10.7853C11.5062 11.4693 11.3125 12.0228 10.8759 12.4594C10.4394 12.8959 9.88584 13.0896 9.20193 13.1816C8.53739 13.2709 7.68827 13.2709 6.61624 13.2709H5.38376C4.31173 13.2709 3.46261 13.2709 2.79807 13.1816C2.11416 13.0896 1.5606 12.8959 1.12406 12.4594C0.687514 12.0228 0.493779 11.4693 0.401829 10.7853C0.312484 10.1208 0.312491 9.27168 0.3125 8.19966V5.8005C0.312491 4.72848 0.312484 3.87936 0.401829 3.21482C0.493779 2.53091 0.687514 1.97735 1.12406 1.54081C1.5606 1.10426 2.11416 0.910527 2.79807 0.818577C3.46261 0.729232 4.31173 0.729239 5.38376 0.729248ZM2.91466 1.68577C2.32778 1.76468 1.98965 1.91265 1.74278 2.15953C1.4959 2.4064 1.34793 2.74452 1.26903 3.33141C1.18843 3.93088 1.1875 4.7211 1.1875 5.83341V8.16675C1.1875 9.27906 1.18843 10.0693 1.26903 10.6688C1.34793 11.2556 1.4959 11.5938 1.74278 11.8406C1.98965 12.0875 2.32778 12.2355 2.91466 12.3144C3.51413 12.395 4.30435 12.3959 5.41667 12.3959H6.58333C7.69565 12.3959 8.48587 12.395 9.08534 12.3144C9.67222 12.2355 10.0104 12.0875 10.2572 11.8406C10.5041 11.5938 10.6521 11.2556 10.731 10.6688C10.8116 10.0693 10.8125 9.27906 10.8125 8.16675V5.83342C10.8125 4.7211 10.8116 3.93088 10.731 3.33141C10.6521 2.74452 10.5041 2.4064 10.2572 2.15953C10.0104 1.91265 9.67222 1.76468 9.08534 1.68577C8.48587 1.60518 7.69565 1.60425 6.58333 1.60425H5.41667C4.30436 1.60425 3.51413 1.60518 2.91466 1.68577ZM3.22917 5.83342C3.22917 5.59179 3.42504 5.39592 3.66667 5.39592H8.33333C8.57496 5.39592 8.77083 5.59179 8.77083 5.83342C8.77083 6.07504 8.57496 6.27092 8.33333 6.27092H3.66667C3.42504 6.27092 3.22917 6.07504 3.22917 5.83342ZM3.22917 8.16675C3.22917 7.92512 3.42504 7.72925 3.66667 7.72925H6.58333C6.82496 7.72925 7.02083 7.92512 7.02083 8.16675C7.02083 8.40837 6.82496 8.60425 6.58333 8.60425H3.66667C3.42504 8.60425 3.22917 8.40837 3.22917 8.16675Z" fill="white"/>
+                                                                        </svg>                                                                                                                               
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="align-middle md:w-[6vw] justify-between gap-1 items-center md:table-cell col-span-6 order-6 mb-2 md:mb-0 font-medium text-xs before: before:content-[attr(data-next-hearing)] md:before:hidden" data-next-hearing="Next Hearing">
+                                                            <p class="text-center line-clamp-1">06/09/2023</p>
+                                                        </div>
+                                                        <div :class="open?'flex':'hidden md:flex'" class="items-center md:w-[3vw] justify-end order-2 col-span-1 gap-1 mb-2 text-xs font-medium align-middle md:table-cell">
+                                                            <button onclick="createhearing.showModal()" class="flex items-center justify-center gap-2 px-2 py-2 text-xs font-medium text-white rounded-lg md:mx-auto bg-primary-700 hover:bg-primary-800 focus:ring-gray-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
                                                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.22423 1.39489C9.11175 0.507369 10.5507 0.507369 11.4382 1.39489C12.3257 2.2824 12.3257 3.72135 11.4382 4.60887L7.00837 9.03871C6.75871 9.2884 6.60624 9.44089 6.4363 9.57344C6.23608 9.7296 6.01945 9.86349 5.79023 9.97273C5.59568 10.0654 5.3911 10.1336 5.05611 10.2453L3.49707 10.765L3.12276 10.8897C2.78772 11.0014 2.41834 10.9142 2.16862 10.6645C1.9189 10.4148 1.8317 10.0454 1.94338 9.71034L2.58783 7.77699C2.69947 7.442 2.76765 7.23742 2.86037 7.04287C2.96961 6.81365 3.1035 6.59702 3.25967 6.3968C3.39221 6.22686 3.5447 6.07439 3.7944 5.82472L8.22423 1.39489ZM3.47688 9.84935L2.98375 9.35622L3.40866 8.08148C3.53238 7.71034 3.58348 7.55943 3.65025 7.41931C3.73215 7.24746 3.83253 7.08505 3.94961 6.93494C4.04508 6.81255 4.1572 6.69936 4.43383 6.42273L7.87023 2.98632C8.01208 3.34215 8.25207 3.77161 8.65678 4.17632C9.06149 4.58103 9.49095 4.82102 9.84678 4.96287L6.41037 8.39927C6.13374 8.6759 6.02055 8.78803 5.89816 8.88349C5.74805 9.00057 5.58564 9.10095 5.41379 9.18285C5.27367 9.24962 5.12276 9.30072 4.75162 9.42444L3.47688 9.84935ZM10.544 4.26565C10.4718 4.24979 10.3814 4.22593 10.2788 4.19031C9.99641 4.09235 9.62502 3.90712 9.2755 3.5576C8.92598 3.20809 8.74075 2.83669 8.64279 2.55434C8.60717 2.45166 8.58331 2.36134 8.56745 2.28911L8.84295 2.0136C9.38876 1.4678 10.2737 1.4678 10.8195 2.0136C11.3653 2.55941 11.3653 3.44434 10.8195 3.99015L10.544 4.26565ZM1.89552 12.8334C1.89552 12.5918 2.0914 12.3959 2.33302 12.3959H11.6664V13.2709H2.33302C2.0914 13.2709 1.89552 13.075 1.89552 12.8334Z" fill="white"/>
                                                                 </svg>                                                                                                                                                                                               
@@ -507,6 +953,211 @@
         </aside>
     </div>
 
+    <dialog id="hearingsummary" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Hearing summary
+                </h3>
+                <button onclick="hearingsummary.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 px-3 pt-3 md:pt-6 md:px-6 md:gap-10">
+                <div class="flex flex-col gap-3 p-2 rounded-lg md:p-4 md:gap-7 bg-gray-50">
+                    <div class="flex flex-col gap-2">
+                        <label for="your-message" class="block text-sm font-medium text-gray-900">Hearing summary<span class="text-red-600">*</span>
+                        </label>
+                        <textarea id="your-message" rows="3" class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-violet-500 focus:border-violet-500" placeholder="Write text here ..."></textarea>
+                        <!-- Voice Typing -->
+                        <div class="flex flex-col justify-between gap-2 md:flex-row">
+                            <span class="block text-xs font-normal text-gray-500 md:text-xs">
+                                Max 4000 characters 
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <button type="submit" class="flex items-center justify-center w-full px-6 py-2 bg-white border rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-300">
+                                    <div class="flex items-center gap-2 text-xs font-medium text-center text-gray-900 md:text-sm" href="#">
+                                        Voice Typing
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 5.99967C2.94216 5.99967 3.16602 6.22353 3.16602 6.49967V7.16634C3.16602 9.83572 5.32997 11.9997 7.99935 11.9997C10.6687 11.9997 12.8327 9.83572 12.8327 7.16634V6.49967C12.8327 6.22353 13.0565 5.99967 13.3327 5.99967C13.6088 5.99967 13.8327 6.22353 13.8327 6.49967V7.16634C13.8327 10.2196 11.4869 12.7249 8.49935 12.9785V14.4997C8.49935 14.7758 8.27549 14.9997 7.99935 14.9997C7.72321 14.9997 7.49935 14.7758 7.49935 14.4997V12.9785C4.51175 12.7249 2.16602 10.2196 2.16602 7.16634V6.49967C2.16602 6.22353 2.38987 5.99967 2.66602 5.99967Z" fill="#27272A"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99935 1.33301C5.88226 1.33301 4.16602 3.04925 4.16602 5.16634V7.16634C4.16602 9.28343 5.88226 10.9997 7.99935 10.9997C10.1164 10.9997 11.8327 9.28343 11.8327 7.16634V5.16634C11.8327 3.04925 10.1164 1.33301 7.99935 1.33301ZM9.33268 7.66634C9.60882 7.66634 9.83268 7.44248 9.83268 7.16634C9.83268 6.8902 9.60882 6.66634 9.33268 6.66634H6.66602C6.38987 6.66634 6.16602 6.8902 6.16602 7.16634C6.16602 7.44248 6.38987 7.66634 6.66602 7.66634H9.33268ZM9.16602 5.16634C9.16602 5.44248 8.94216 5.66634 8.66602 5.66634H7.33268C7.05654 5.66634 6.83268 5.44248 6.83268 5.16634C6.83268 4.8902 7.05654 4.66634 7.33268 4.66634H8.66602C8.94216 4.66634 9.16602 4.8902 9.16602 5.16634Z" fill="#27272A"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </button>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.00065 4.16634C8.27679 4.16634 8.50065 4.3902 8.50065 4.66634V8.66634C8.50065 8.94248 8.27679 9.16634 8.00065 9.16634C7.72451 9.16634 7.50065 8.94248 7.50065 8.66634V4.66634C7.50065 4.3902 7.72451 4.16634 8.00065 4.16634Z" fill="#71717A"></path>
+                                        <path d="M8.00065 11.333C8.36884 11.333 8.66732 11.0345 8.66732 10.6663C8.66732 10.2982 8.36884 9.99967 8.00065 9.99967C7.63246 9.99967 7.33398 10.2982 7.33398 10.6663C7.33398 11.0345 7.63246 11.333 8.00065 11.333Z" fill="#71717A"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833984 7.99967C0.833984 4.04163 4.04261 0.833008 8.00065 0.833008C11.9587 0.833008 15.1673 4.04163 15.1673 7.99967C15.1673 11.9577 11.9587 15.1663 8.00065 15.1663C4.04261 15.1663 0.833984 11.9577 0.833984 7.99967ZM8.00065 1.83301C4.5949 1.83301 1.83398 4.59392 1.83398 7.99967C1.83398 11.4054 4.5949 14.1663 8.00065 14.1663C11.4064 14.1663 14.1673 11.4054 14.1673 7.99967C14.1673 4.59392 11.4064 1.83301 8.00065 1.83301Z" fill="#71717A"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Upload supporting documents -->
+                    <div class="flex flex-col gap-2">
+                        <label class="block text-sm font-medium text-gray-900" for="file_input">
+                            Upload supporting documents
+                        </label>
+                        <input class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100" id="file_input" type="file">
+                        <span class="block text-xs font-normal text-gray-500 md:text-xs">
+                            Max size 5 MB
+                        </span>
+                    </div>
+                    <!-- Property details documents.doc -->
+                    <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-5">
+                        <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg md:p-3 md:gap-3">
+                            <!-- pdf -->
+                            <div class="relative shrink-0 w-7 md:w-9">
+                                <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                                    <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                                    <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                                </svg>
+                                <p class="absolute left-0 right-0 z-20 mx-auto font-medium leading-3 text-center text-white bottom-2 md:bottom-3 text-2xs md:text-xs">
+                                    pdf
+                                </p>
+                            </div>
+                            <!-- Property details documents.doc -->
+                            <div class="flex flex-col justify-between w-full grow-0">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-900 truncate w-28 md:w-24">
+                                        Property details documents.doc
+                                    </span>
+                                    <span class="text-sm font-medium text-gray-900">
+                                        100%
+                                    </span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg md:p-3 md:gap-3">
+                            <!-- pdf -->
+                            <div class="relative shrink-0 w-7 md:w-9">
+                                <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                                    <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                                    <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                                </svg>
+                                <p class="absolute left-0 right-0 z-20 mx-auto font-medium leading-3 text-center text-white bottom-2 md:bottom-3 text-2xs md:text-xs">
+                                    pdf
+                                </p>
+                            </div>
+                            <!-- Property details documents.doc -->
+                            <div class="flex flex-col justify-between w-full grow-0">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-900 truncate w-28 md:w-24">
+                                        Property details documents.doc
+                                    </span>
+                                    <span class="text-sm font-medium text-gray-900">
+                                        60%
+                                    </span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-violet-700 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="createhearing" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Create Hearing
+                </h3>
+                <button onclick="createhearing.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 px-3 pt-3 md:pt-6 md:px-6 md:gap-10">
+                <div class="flex flex-col gap-3 p-2 rounded-lg md:p-4 md:gap-7 bg-gray-50">
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="client" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Client
+                            </label>
+                            <input type="tel" id="client" value="Ahmed Khan" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Ahmed Khan">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="case" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Case*
+                            </label>
+                            <input type="tel" id="case" value="State Vs Ahmed Khan" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. State Vs Ahmed Khan">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="hearingno" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Case hearing no
+                            </label>
+                            <input type="tel" id="hearingno" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. 1235">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="agenda" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Hearing Agenda
+                            </label>
+                            <input type="tel" id="agenda" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Evidences">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="flex flex-col w-full gap-2">
+                            <label for="date" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Date*
+                            </label>
+                            <div class="relative">
+                                <input datepicker="" type="date" id="date" class="block w-full px-4 py-3 pl-3 text-sm font-normal text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Select date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="court" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Court/Judge
+                            </label>
+                            <input type="tel" id="court" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Special court">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="location" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Location/Station
+                            </label>
+                            <input type="tel" id="location" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Location/Station">
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
 
 </body>
 
