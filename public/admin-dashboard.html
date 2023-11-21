@@ -56,10 +56,9 @@
                             <th scope="col" class="px-4 py-3">EMAIL CONFIRMED</th>
                             <th scope="col" class="px-4 py-3">PHONE CONFIRMED</th>
                             <th scope="col" class="px-4 py-3">ASSIGN ROLE</th>
+                            <th scope="col" class="px-4 py-3">ACCESS</th>
                             <th scope="col" class="px-4 py-3">ID VERIFICATION</th>
-                            <th scope="col" class="px-4 py-3">
-                                <span class="sr-only">Actions</span>
-                            </th>
+                           
                             <th scope="col" class="px-4 py-3">
                                 <span class="sr-only">Actions</span>
                             </th>
@@ -108,34 +107,39 @@
                                </div>
                             </th>
                             <td class="px-2 py-4 gap-1 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     (406) 555-0120
                             </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                 kenzi.lawson@example.com                                     
                             </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     President of Sales
                             </div>
                             </td>   
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     LRE,Admin
                                 </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                            <a onclick="accountaccessmodal.showModal()" class="flex items-center px-3 py-2 rounded-md bg-red-100 max-w-fit font-medium text-sm text-red-800" href="#">
+                               Deactivated
+                            </a>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
                                 <div class="flex items-center justify-center gap-2 w-32 h-5 rounded-md bg-orange-100">
@@ -149,11 +153,6 @@
                                         Verify Document
                                     </span>
                                 </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <button onclick="iddocumentsverificationmodal.showModal()" class="flex items-center font-semibold text-sm text-violet-700">
-                                    Take Action                                
-                                </button>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
                                 <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
@@ -175,34 +174,39 @@
                             </div>
                             </th>
                             <td class="px-2 py-4 gap-1 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     077 6764 8570 
                             </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
 
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Dog Trainer
                             </div>
                             </td>   
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     LRE,Admin
                                 </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <a class="flex items-center px-3 py-2 rounded-md bg-green-100 max-w-fit font-medium text-sm text-green-800" href="">
+                                    Active
+                                </a>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
                                 <div class="flex items-center justify-center gap-2 w-32 h-5 rounded-md bg-orange-100">
@@ -215,11 +219,6 @@
                                     <span class="font-medium text-xs text-gray-900">
                                         Verify Document
                                     </span>
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-semibold text-sm text-violet-700">
-                                    Take Action                                
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
@@ -243,34 +242,38 @@
                                </div>
                             </th>
                             <td class="px-2 py-4 gap-1 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     +449933761994
                             </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     nevaeh.simmons@example.com                                     
                             </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
-                                    
+                                <div class="flex items-center font-normal text-sm text-black">          
                             </div>
                             </td>   
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     --
                                 </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <a class="flex items-center px-3 py-2 rounded-md bg-green-100 max-w-fit font-medium text-sm text-green-800" href="">
+                                    Active
+                                </a>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
                                 <div class="flex items-center justify-center gap-2 w-32 h-5 rounded-md bg-orange-100">
@@ -283,11 +286,6 @@
                                     <span class="font-medium text-xs text-gray-900">
                                         Verify Document
                                     </span>
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-semibold text-sm text-violet-700">
-                                    Take Action                                
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
@@ -310,34 +308,39 @@
                             </div>
                             </th>
                             <td class="px-2 py-4 gap-1 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     +447742461066 
                             </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     jackson.graham@example.com
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Marketing Coordinator
                             </div>
                             </td>   
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-medium text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-medium text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-medium text-sm">
+                                <div class="flex items-center font-medium text-sm text-black">
                                     --
                                 </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <a class="flex items-center px-3 py-2 rounded-md bg-green-100 max-w-fit font-medium text-sm text-green-800" href="">
+                                    Active
+                                </a>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
                                 <div class="flex items-center justify-center gap-1 w-20 h-5 rounded-md bg-green-600">
@@ -352,8 +355,70 @@
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-semibold text-sm text-violet-700">
-                                    Take Action                                
+                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
+                                    <span>
+                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                               
+                            </td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-100">
+                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
+                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
+                                NS
+                               </span>
+                               <div class="flex items-center font-medium text-sm text-gray-900">
+                                Noor Saif                               
+                            </div>
+                            </th>
+                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm text-black">
+                                    +447742461066 
+                            </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm text-black">
+                                    jackson.graham@example.com
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm text-black">
+                                    Marketing Coordinator
+                            </div>
+                            </td>   
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm text-black">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-normal text-sm text-black">
+                                    Yes
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center font-medium text-sm text-black">
+                                    --
+                                </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <a class="flex items-center px-3 py-2 rounded-md bg-green-100 max-w-fit font-medium text-sm text-green-800" href="">
+                                    Active
+                                </a>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center justify-center gap-1 w-20 h-5 rounded-md bg-green-600">
+                                    <span>
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.33967 3.20599C6.07855 1.88051 6.44799 1.21777 7.00033 1.21777C7.55266 1.21777 7.9221 1.88051 8.66098 3.20599L8.85214 3.54891C9.0621 3.92557 9.16709 4.1139 9.33078 4.23816C9.49446 4.36242 9.69833 4.40855 10.1061 4.5008L10.4773 4.58479C11.9121 4.90943 12.6295 5.07175 12.8002 5.62062C12.9708 6.16948 12.4818 6.7414 11.5036 7.88523L11.2505 8.18115C10.9726 8.50619 10.8336 8.66871 10.7711 8.86977C10.7085 9.07083 10.7296 9.28767 10.7716 9.72135L10.8098 10.1162C10.9577 11.6423 11.0317 12.4053 10.5848 12.7446C10.138 13.0838 9.46626 12.7745 8.12285 12.156L7.77529 11.9959C7.39354 11.8202 7.20266 11.7323 7.00033 11.7323C6.79799 11.7323 6.60712 11.8202 6.22536 11.9959L5.8778 12.156C4.53439 12.7745 3.86268 13.0838 3.41583 12.7446C2.96898 12.4053 3.04292 11.6423 3.19081 10.1162L3.22907 9.72135C3.27109 9.28767 3.2921 9.07083 3.22958 8.86977C3.16705 8.66871 3.02807 8.50619 2.75011 8.18115L2.49705 7.88523C1.51889 6.7414 1.02981 6.16948 1.20049 5.62062C1.37117 5.07175 2.08858 4.90943 3.52339 4.58479L3.89459 4.5008C4.30232 4.40855 4.50619 4.36242 4.66988 4.23816C4.83357 4.1139 4.93855 3.92557 5.14851 3.54891L5.33967 3.20599Z" fill="white"/>
+                                            </svg>                                            
+                                    </span>
+                                    <span class="font-medium text-xs text-white">
+                                        Verified
+                                    </span>
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
@@ -370,72 +435,6 @@
                         <tr class="border-b hover:bg-gray-100">
                             <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
                                <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
-                                QM
-                               </span>
-                               <div class="flex items-center font-medium text-sm text-gray-900">
-                                Qasim Muneer
-                               </div>
-                            </th>
-                            <td class="px-2 py-4 gap-1 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
-                                    +447559896902
-                            </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
-                                    sara.cruz@example.com                                     
-                            </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
-                                    
-                            </div>
-                            </td>   
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
-                                    No
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
-                                    No
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
-                                    --
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center justify-center gap-1 w-20 h-5 rounded-md bg-green-600">
-                                    <span>
-                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.33967 3.20599C6.07855 1.88051 6.44799 1.21777 7.00033 1.21777C7.55266 1.21777 7.9221 1.88051 8.66098 3.20599L8.85214 3.54891C9.0621 3.92557 9.16709 4.1139 9.33078 4.23816C9.49446 4.36242 9.69833 4.40855 10.1061 4.5008L10.4773 4.58479C11.9121 4.90943 12.6295 5.07175 12.8002 5.62062C12.9708 6.16948 12.4818 6.7414 11.5036 7.88523L11.2505 8.18115C10.9726 8.50619 10.8336 8.66871 10.7711 8.86977C10.7085 9.07083 10.7296 9.28767 10.7716 9.72135L10.8098 10.1162C10.9577 11.6423 11.0317 12.4053 10.5848 12.7446C10.138 13.0838 9.46626 12.7745 8.12285 12.156L7.77529 11.9959C7.39354 11.8202 7.20266 11.7323 7.00033 11.7323C6.79799 11.7323 6.60712 11.8202 6.22536 11.9959L5.8778 12.156C4.53439 12.7745 3.86268 13.0838 3.41583 12.7446C2.96898 12.4053 3.04292 11.6423 3.19081 10.1162L3.22907 9.72135C3.27109 9.28767 3.2921 9.07083 3.22958 8.86977C3.16705 8.66871 3.02807 8.50619 2.75011 8.18115L2.49705 7.88523C1.51889 6.7414 1.02981 6.16948 1.20049 5.62062C1.37117 5.07175 2.08858 4.90943 3.52339 4.58479L3.89459 4.5008C4.30232 4.40855 4.50619 4.36242 4.66988 4.23816C4.83357 4.1139 4.93855 3.92557 5.14851 3.54891L5.33967 3.20599Z" fill="white"/>
-                                            </svg>                                            
-                                    </span>
-                                    <span class="font-medium text-xs text-white">
-                                        Verified
-                                    </span>
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-semibold text-sm text-violet-700">
-                                    Take Action                                
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <button id="-dropdown-button" type="button" data-dropdown-toggle="-dropdown" class="inline-flex w-6 h-6 rounded-lg bg-gray-100 items-center p-4 items-center justify-center text-sm font-medium text-center text-gray-500 hover:text-gray-800 hover:bg-gray-200 rounded-lg focus:outline-none">
-                                    <span>
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </span>
-                                </button>
-                            </td>
-                        </tr> 
-                        <tr class="border-b hover:bg-gray-100">
-                            <th scope="row" class="flex px-2 py-4 gap-2 whitespace-nowrap">
-                               <span class="flex w-8 h-8 rounded-lg bg-gray-100 items-center justify-center font-medium text-xs text-gray-900">
                                 LH
                                </span>
                                <div class="flex items-center font-medium text-sm text-gray-900">
@@ -443,34 +442,39 @@
                             </div>
                             </th>
                             <td class="px-2 py-4 gap-1 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     +449684977003
                             </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     tanya.hill@example.com
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Nursing Assistant
                             </div>
                             </td>   
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     Yes
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-normal text-sm">
+                                <div class="flex items-center font-normal text-sm text-black">
                                     --
                                 </div>
+                            </td>
+                            <td class="px-2 py-4 whitespace-nowrap">
+                                <a class="flex items-center px-3 py-2 rounded-md bg-green-100 max-w-fit font-medium text-sm text-green-800" href="">
+                                    Active
+                                </a>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
                                 <div class="flex items-center justify-center px-2 py-0.5 gap-2 w-32 h-5 rounded-md bg-red-500">
@@ -482,11 +486,6 @@
                                     <span class="font-medium text-xs text-white">
                                         Not Verified yet
                                     </span>
-                                </div>
-                            </td>
-                            <td class="px-2 py-4 whitespace-nowrap">
-                                <div class="flex items-center font-semibold text-sm text-violet-700">
-                                    Take Action                                
                                 </div>
                             </td>
                             <td class="px-2 py-4 whitespace-nowrap">
@@ -549,159 +548,177 @@
 
 
     <!-- Right Modal -->
-    <!-- ID Documents Verification -->
-    <dialog id="iddocumentsverificationmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <!-- Account Access Modal -->
+    <dialog id="accountaccessmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
         <form method="dialog">
             <!-- Modal header -->
             <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
                 <h3 class="text-sm font-medium text-gray-900 md:text-lg">
-                    Documents of Salman Khan Yousafzai 
+                    Account Access 
                 </h3>
-                <button onclick="iddocumentsverificationmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <button onclick="accountaccessmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
                     <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     <span class="sr-only">Close modal</span>
                 </button>
             </div>
-            <div class="flex p-2 bg-green-50 items-center justify-between">
-                <div class="">
-
-                </div>
-                <button class="flex items-center justify-center px-3 py-2 text-sm font-medium text-white rounded-lg bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 focus:outline-none">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.27808 7.12496L8.05036 7.35139C8.05036 7.35139 7.50906 7.88961 6.03156 6.42049C4.55406 4.95138 5.09535 4.41316 5.09535 4.41316L5.23876 4.27057C5.59204 3.9193 5.62534 3.35533 5.31712 2.94362L4.68663 2.10142C4.30514 1.59183 3.56798 1.52452 3.13073 1.95929L2.34592 2.73963C2.12911 2.95521 1.98383 3.23467 2.00144 3.54468C2.04652 4.33778 2.40536 6.0442 4.40768 8.03516C6.53107 10.1465 8.52342 10.2304 9.33814 10.1544C9.59584 10.1304 9.81996 9.99917 10.0006 9.8196L10.7108 9.11336C11.1903 8.63664 11.0551 7.81934 10.4417 7.48587L9.48641 6.96658C9.08362 6.74762 8.59289 6.81194 8.27808 7.12496Z" fill="white"/>
-                    </svg>
-                    +9235446262
-                </button>
-            </div>
+            
             <!-- Modal body -->
-            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
-                <!-- ID Documents Verification-->
-                <section class="iddocumentsverification-modal ">
-                    <!-- CNIC Documents -->
-                    <div class="text-sm md:text-lg font-semibold text-gray-900 mb-10">
-                        CNIC Documents
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                        <!-- Front Side -->
-                        <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 1" data-description="">
-                                <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 1">
-                                </div>
-                            </figure>
-
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-gray-500">
-                                    Image_CNIC.png
-                                </span>
-                                <span class="">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
-                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
-                                    </svg>
-                                </span>
-                            </div>
-                            <!-- <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" value="" class="sr-only peer" checked>
-                                <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-primary-300 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
-                                <span class="ml-3 text-sm font-medium text-gray-900">Front Side</span>
-                            </label> -->
+            <div class="flex flex-col items-start gap-5 p-6 w-full">
+                <div class="flex flex-col items-start  gap-3 p-4 rounded-lg bg-gray-50 w-full">
+                    <div class="flex justify-between items-start w-full">
+                        <div class="flex flex-col items-start gap-1">
+                            <span class="font-medium text-xs text-gray-500">
+                                Account Title
+                            </span>
+                            <span class="font-medium text-base text-gray-900">
+                                Jamal Kiyani
+                            </span>
                         </div>
-                        <!-- Back Side -->
-                        <div class="flex flex-col gap-3">
-                            <figure x-show="tab === '2023' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 2" data-description="">
-                                <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 2">
-                                </div>
-                            </figure>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-gray-500">
-                                    Image_CNIC.png
-                                </span>
-                                <span class="">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
-                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
-                                    </svg>
-                                </span>
-                            </div>
+                        <div class="flex flex-col items-start gap-2">
+                            <span class="font-medium text-xs text-gray-900">
+                                Account Status
+                            </span>
+                            <span class="flex px-3 py-2 items-center rounded-md bg-red-100 text-red-800 font-medium text-sm">
+                                Deactivated
+                            </span>
                         </div>
                     </div>
-                    <!-- License Documents -->
-                    <div class="text-sm md:text-lg font-semibold text-gray-900 mb-10">
-                        License Documents
+                    <div class="flex flex-col gap-3 w-full">
+                        <label for="message" class="font-medium text-sm text-gray-900">Reason*</label>
+                        <textarea id="message" rows="4" class="block p-2 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-600 focus:border-primary-600" placeholder="Write a note..."></textarea>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-                        <!-- Front Side -->
-                        <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 3" data-description="">
-                                <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 3">
-                                </div>
-                            </figure>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-gray-500">
-                                    Image_CNIC.png
-                                </span>
-                                <span class="">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
-                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
-                                    </svg>
-                                </span>
-                            </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-start gap-2.5 px-6">
+                <span class="font-semibold text-base text-gray-900">
+                    History
+                </span>
+                <div class="flex flex-col items-start gap-3 p-4 rounded-lg bg-gray-100 w-full">
+                    <div class="flex justify-between items-start w-full">
+                        <div class="flex flex-col items-start gap-2">
+                            <span class="font-medium text-sm text-gray-900">
+                                Action
+                            </span>
+                            <span class="flex px-3 py-2 items-center rounded-md bg-red-100 text-red-800 font-medium text-sm">
+                                Deactivated
+                            </span>
                         </div>
-                        <!-- Back Side -->
-                        <div class="flex flex-col gap-3">
-                            <figure x-show="tab === '2023' || tab === 'all'" data-src="./images/Image-CNIC.png" class="flex-shrink w-full max-w-full px-4 group spotlight" data-title="Image Description 4" data-description="">
-                                <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Image-CNIC.png" alt="Image Description 4">
-                                </div>
-                            </figure>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-gray-500">
-                                    Image_CNIC.png
-                                </span>
-                                <span class="">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
-                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
-                                    </svg>
-                                </span>
-                            </div>
+                        <div class="flex flex-col items-start gap-1">
+                            <span class="font-medium text-sm text-gray-900">
+                                Modified by
+                            </span>
+                            <span class="font-medium text-sm text-gray-600">
+                                Haseeb Riaz
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-start gap-1">
+                            <span class="font-medium text-sm text-gray-900">
+                                Date                            
+                            </span>
+                            <span class="font-medium text-sm text-gray-600">
+                                10/04/2023
+                            </span>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10 -mx-4">
-                        <!-- Front Side -->
-                        <div class="flex flex-col gap-3">
-                            <figure x-show="tab === 'thisweek' || tab === 'thismonth' || tab === 'currentyear' || tab === 'all'" data-src="./images/Rectangle 4512.png" class="flex-shrink w-full px-4 max-w-full group spotlight" data-title="Image Description 5" data-description="">
-                                <div class="relative overflow-hidden cursor-pointer">
-                                    <img class="block w-full h-auto duration-500 transform hover:scale-125 rounded-xl" src="./images/Rectangle 4512.png" alt="Image Description 5">
-                                </div>
-                            </figure>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-gray-500">
-                                    Image_CNIC.png
-                                </span>
-                                <span class="">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.752 2.00879C12.3377 2.00879 12.002 2.34458 12.002 2.75879V13.7313L10.3214 11.7707C10.0518 11.4562 9.57835 11.4198 9.26386 11.6893C8.94937 11.9589 8.91294 12.4324 9.18251 12.7469L12.1825 16.2469C12.325 16.4131 12.533 16.5088 12.752 16.5088C12.9709 16.5088 13.1789 16.4131 13.3214 16.2469L16.3214 12.7469C16.591 12.4324 16.5545 11.9589 16.24 11.6893C15.9256 11.4198 15.4521 11.4562 15.1825 11.7707L13.502 13.7313L13.502 2.75879C13.502 2.34458 13.1662 2.00879 12.752 2.00879Z" fill="#7C3AED"/>
-                                        <path d="M15.0019 9.75879V10.1371C15.7355 9.87852 16.5832 10.0079 17.2162 10.5505C18.1597 11.3592 18.2689 12.7796 17.4602 13.7231L14.4602 17.2231C14.0328 17.7218 13.4087 18.0088 12.7519 18.0088C12.0951 18.0088 11.471 17.7218 11.0436 17.2231L8.04359 13.7231C7.23488 12.7796 7.34415 11.3592 8.28763 10.5505C8.92063 10.0079 9.76832 9.87852 10.5019 10.1371V9.75879H8.75195C5.92353 9.75879 4.50931 9.75879 3.63063 10.6375C2.75195 11.5161 2.75195 12.9304 2.75195 15.7588V16.7588C2.75195 19.5872 2.75195 21.0014 3.63063 21.8801C4.50931 22.7588 5.92352 22.7588 8.75194 22.7588H16.752C19.5804 22.7588 20.9946 22.7588 21.8733 21.8801C22.752 21.0014 22.752 19.5872 22.752 16.7588V15.7588C22.752 12.9304 22.752 11.5161 21.8733 10.6375C20.9946 9.75879 19.5804 9.75879 16.752 9.75879H15.0019Z" fill="#7C3AED"/>
-                                    </svg>
-                                </span>
-                            </div>
+                    <div class="flex flex-col items-start gap-1">
+                        <span class="font-medium text-sm text-gray-900">
+                            Reason
+                        </span>
+                        <span class="font-medium text-sm text-gray-600">
+                            Lawyer misbehaved with client on phone call.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-start gap-2.5 px-6">
+                <span class="font-semibold text-base text-gray-900">
+                   
+                </span>
+                <div class="flex flex-col items-start gap-3 p-4 rounded-lg bg-gray-100 w-full">
+                    <div class="flex justify-between items-start w-full">
+                        <div class="flex flex-col items-start gap-2">
+                            <span class="font-medium text-sm text-gray-900">
+                                Action
+                            </span>
+                            <span class="flex px-3 py-2 items-center rounded-md bg-red-100 text-red-800 font-medium text-sm">
+                                Deactivated
+                            </span>
                         </div>
-                        <!-- Back Side -->
-                        <div class="flex flex-col gap-3">
-                            
+                        <div class="flex flex-col items-start gap-1">
+                            <span class="font-medium text-sm text-gray-900">
+                                Modified by
+                            </span>
+                            <span class="font-medium text-sm text-gray-600">
+                                Haseeb Riaz
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-start gap-1">
+                            <span class="font-medium text-sm text-gray-900">
+                                Date                            
+                            </span>
+                            <span class="font-medium text-sm text-gray-600">
+                                10/04/2023
+                            </span>
                         </div>
                     </div>
-                </section>
+                    <div class="flex flex-col items-start gap-1">
+                        <span class="font-medium text-sm text-gray-900">
+                            Reason
+                        </span>
+                        <span class="font-medium text-sm text-gray-600">
+                            Lawyer misbehaved with client on phone call.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-start gap-2.5 px-6">
+                <span class="font-semibold text-base text-gray-900">
+                   
+                </span>
+                <div class="flex flex-col items-start gap-3 p-4 rounded-lg bg-gray-100 w-full">
+                    <div class="flex justify-between items-start w-full">
+                        <div class="flex flex-col items-start gap-2">
+                            <span class="font-medium text-sm text-gray-900">
+                                Action
+                            </span>
+                            <span class="flex px-3 py-2 items-center rounded-md bg-red-100 text-red-800 font-medium text-sm">
+                                Deactivated
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-start gap-1">
+                            <span class="font-medium text-sm text-gray-900">
+                                Modified by
+                            </span>
+                            <span class="font-medium text-sm text-gray-600">
+                                Haseeb Riaz
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-start gap-1">
+                            <span class="font-medium text-sm text-gray-900">
+                                Date                            
+                            </span>
+                            <span class="font-medium text-sm text-gray-600">
+                                10/04/2023
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start gap-1">
+                        <span class="font-medium text-sm text-gray-900">
+                            Reason
+                        </span>
+                        <span class="font-medium text-sm text-gray-600">
+                            Lawyer misbehaved with client on phone call.
+                        </span>
+                    </div>
+                </div>
             </div>
             <!-- Modal footer -->
-            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
-                <button onclick="idverifiedmodal.showModal()" type="submit" class="md:w-fit w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                    Approve
+            <div class="sticky bottom-0 flex items-center justify-between p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="md:w-fit w-full px-5 py-2.5 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:ring-primary-300 focus:outline-none font-medium rounded-lg text-sm text-center">
+                    Cancel
+                </button>
+                <button onclick="idverifiedmodal.showModal()" type="submit" class="md:w-fit w-full text-white px-5 py-2.5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-primary-300 focus:outline-none font-medium rounded-lg text-sm text-center">
+                    Activate
                 </button>
             </div>
         </form>

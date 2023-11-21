@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet">
     <!-- Tailwind CSS-->
     <link href="./css/style.css" rel="stylesheet">
 
@@ -86,6 +87,54 @@
         });
 
     </script>
+   <style>
+    .calendar.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+min-height: auto;
+}
+
+.calendar.fc-theme-standard .fc-scrollgrid {
+border: none;
+}
+
+.calendar.fc-theme-standard td, .fc-theme-standard th {
+border: none;
+}
+
+.calendar a.fc-col-header-cell-cushion {
+color: var(--color-white);
+}
+
+.calendar.fc .fc-daygrid-day-top {
+justify-content: center;
+}
+
+.calendar td.fc-daygrid-day.fc-day.fc-day-past .fc-daygrid-day-number {
+color: #A78BFA;
+}
+
+.calendar td.fc-daygrid-day.fc-day:not(.fc-day-past) .fc-daygrid-day-number {
+color: var(--color-white);
+}
+
+.calendar.fc .fc-toolbar-title {
+color: var(--color-white);
+font-weight: 500;
+font-size: 14px;
+}
+
+.calendar .fc-header-toolbar .fc-toolbar-chunk button {
+color: var(--color-primary);
+background: var(--color-white);
+font-size: 14px;    
+font-weight:500;
+text-transform: capitalize;
+border: 0;
+}
+
+.calendar.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+margin-left: 0.3em;
+}
+</style>
     <title>wooqlaw New Calendar</title>
 </head>
 
@@ -382,7 +431,7 @@
                         </label>
                       </button> 
                     </div>
-                    <div id='calendar' class="flex max-w- max-h-screen mx-auto font-medium text-3xs md:text-base p-2 md:p-0"></div>
+                    <div id='calendar' class="calendar flex max-w-full max-h-screen mx-auto"></div>
                 </div>
                 <div class="flex flex-col p-4 gap-1 rounded-lg bg-gray-50">
                     <div class="flex items-center px-6 py-4 text-gray-900 font-semibold text-xl">
@@ -1249,12 +1298,109 @@ class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full m
                     <input type="text" id="location/station" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Special court" required>
             </div>
           </div>
+          <div class="flex flex-col items-start gap-2 w-full">
+            <label for="Agenda" class="text-sm font-medium">Agenda on next hearing</label>
+            <select id="Agenda"
+              class="flex flex-col items-start p-2.5 border border-gray-300 rounded-lg w-full">
+              
+              <option selected class="flex items-center font-normal text-sm text-gray-500">Select agenda</option>
+              <option value="1"></option>
+              <option value="2"></option>   
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">      
+            <label for="courtsummary" class="flex text-sm font-medium text-gray-900">Court Hearing Summary</label>
+            <textarea id="courtsummary" rows="3" class="block px-5 py-3 w-full text-sm text-gray-900  rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+            <div class="flex items-center w-full gap-2.5">
+            <span class="flex items-center gap-2.5 text-gray-500 text-xs font-normal w-full">
+                Max 4000 characters
+            </span>
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 9C4.41421 9 4.75 9.33579 4.75 9.75V10.75C4.75 14.7541 7.99594 18 12 18C16.0041 18 19.25 14.7541 19.25 10.75V9.75C19.25 9.33579 19.5858 9 20 9C20.4142 9 20.75 9.33579 20.75 9.75V10.75C20.75 15.3298 17.2314 19.0879 12.75 19.4683V21.75C12.75 22.1642 12.4142 22.5 12 22.5C11.5858 22.5 11.25 22.1642 11.25 21.75V19.4683C6.7686 19.0879 3.25 15.3298 3.25 10.75V9.75C3.25 9.33579 3.58579 9 4 9Z" fill="#1C274C"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C8.82436 2 6.25 4.57436 6.25 7.75V10.75C6.25 13.9256 8.82436 16.5 12 16.5C15.1756 16.5 17.75 13.9256 17.75 10.75V7.75C17.75 4.57436 15.1756 2 12 2ZM14 11.5C14.4142 11.5 14.75 11.1642 14.75 10.75C14.75 10.3358 14.4142 10 14 10H10C9.58579 10 9.25 10.3358 9.25 10.75C9.25 11.1642 9.58579 11.5 10 11.5H14ZM13.75 7.75C13.75 8.16421 13.4142 8.5 13 8.5H11C10.5858 8.5 10.25 8.16421 10.25 7.75C10.25 7.33579 10.5858 7 11 7H13C13.4142 7 13.75 7.33579 13.75 7.75Z" fill="#1C274C"/>
+                    </svg>
+                    
+            </button>
+        </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="block text-sm font-medium text-gray-900" for="file_input">
+                Upload supporting documents
+            </label>
+            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+            <span class="block text-xs md:text-xs font-normal text-gray-500">
+                A note for extra info
+            </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
+            <div class="flex p-3 gap-2 rounded-lg items-center justify-between">
+                <!-- pdf -->
+                <div class="relative shrink-0 w-7 md:w-9">
+                    <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                      <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                      <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                    </svg>
+                    <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                        pdf
+                    </p>
+                </div>
+                <!-- Property details documents.doc -->
+                <div class="flex flex-col w-full grow-0 justify-between">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-900 truncate w-28 md:w-32">
+                            Property details documents.doc
+                        </span>
+                        <span class="text-sm font-medium text-gray-900">
+                            100%
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 100%"></div>
+                    </div>
+                </div>
+                <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="flex p-3 gap-2 bg-gray-50 rounded-lg items-center justify-between">
+                <!-- pdf -->
+                <div class="relative shrink-0 w-7 md:w-9">
+                    <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                      <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                      <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                    </svg>
+                    <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                        pdf
+                    </p>
+                </div>
+                <!-- Property details documents.doc -->
+                <div class="flex flex-col w-full grow-0 justify-between">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-900 truncate w-32 md:w-36">
+                            Property details documents.doc
+                        </span>
+                        <span class="text-sm font-medium text-gray-900">
+                            60%
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-violet-700 h-2.5 rounded-full" style="width: 60%"></div>
+                    </div>
+                </div>
+                <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </div>
         </div> 
     </div>
     <!-- Modal footer -->
     <div class="sticky bottom-0 flex justify-end items-center p-6 bg-white border-t rounded-b gap-x-2"> 
         <button type="submit"
-                class="flex px-3 py-2 bg-red-700 hover:bg-red-800 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+                class="flex px-3 py-2 bg-red-700 hover:bg-red-800 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-700 font-medium rounded-lg text-sm w-full md:w-fit">
                 Delete
             </button>
         <button type="submit"

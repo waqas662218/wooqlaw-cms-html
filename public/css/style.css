@@ -1358,6 +1358,10 @@ select {
 .max-w-\[400px\] {
   max-width: 400px;
 }
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
 .max-w-full {
   max-width: 100%;
 }
@@ -2389,6 +2393,9 @@ select {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
 }
 .italic {
   font-style: italic;
@@ -4367,6 +4374,11 @@ select {
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:px-9 {
