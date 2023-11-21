@@ -1358,10 +1358,6 @@ select {
 .max-w-\[400px\] {
   max-width: 400px;
 }
-.max-w-fit {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
 .max-w-full {
   max-width: 100%;
 }
@@ -1391,6 +1387,10 @@ select {
 }
 .max-w-\[160px\] {
   max-width: 160px;
+}
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -4376,11 +4376,6 @@ select {
     padding-right: 1.25rem;
   }
 
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .md\:px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -4424,6 +4419,11 @@ select {
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:pl-0 {
