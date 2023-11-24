@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+    <title>wooqlaw New Dashboard</title>
+</head>
+
+<body class="overflow-hidden">
+    <header class="relative z-30 flex items-center justify-between w-full h-12 px-3 py-1 bg-white md:py-3 md:px-5 drop-shadow">
+
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <a href="/" class="text-lg font-bold">
+                <svg width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7374_81287)">
+                    <path d="M13.9886 37.0618H13.9285C10.5003 37.0618 7.71406 34.2654 7.71406 30.8309V17.3011C7.71406 16.474 7.04208 15.8003 6.21714 15.8003C5.39219 15.8003 4.72022 16.474 4.72022 17.3011V25.6354H0V17.3011C0 13.8639 2.78897 11.0703 6.21441 11.0703C9.63984 11.0703 12.4315 13.8667 12.4315 17.3011V30.8309C12.4315 31.6581 13.1035 32.3318 13.9285 32.3318H13.9886C14.8135 32.3318 15.4855 31.6581 15.4855 30.8309V17.3011C15.4855 13.8639 18.2745 11.0703 21.6999 11.0703H21.8201C25.2482 11.0703 28.0345 13.8667 28.0345 17.3011V30.4092H23.3143V17.3011C23.3143 16.474 22.6423 15.8003 21.8173 15.8003H21.6972C20.8722 15.8003 20.2002 16.474 20.2002 17.3011V30.8309C20.2002 34.2682 17.4113 37.0618 13.9858 37.0618H13.9886Z" fill="url(#paint0_linear_7374_81287)"/>
+                    <path d="M21.6588 8.98732C23.878 8.98732 25.677 7.18355 25.677 4.9585C25.677 2.73345 23.878 0.929688 21.6588 0.929688C19.4396 0.929688 17.6406 2.73345 17.6406 4.9585C17.6406 7.18355 19.4396 8.98732 21.6588 8.98732Z" fill="#7413FF"/>
+                    <path d="M6.09066 8.98448C7.56458 8.98448 8.75944 7.78647 8.75944 6.30865C8.75944 4.83082 7.56458 3.63281 6.09066 3.63281C4.61673 3.63281 3.42188 4.83082 3.42188 6.30865C3.42188 7.78647 4.61673 8.98448 6.09066 8.98448Z" fill="#FF7244"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_7374_81287" x1="-0.0600954" y1="24.9562" x2="28.5109" y2="22.4632" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FDD62C"/>
+                    <stop offset="0.27" stop-color="#FF7244"/>
+                    <stop offset="0.63" stop-color="#CC38FF"/>
+                    <stop offset="1" stop-color="#7413FF"/>
+                    </linearGradient>
+                    <clipPath id="clip0_7374_81287">
+                    <rect width="28.0345" height="36.1333" fill="white" transform="translate(0 0.929688)"/>
+                    </clipPath>
+                    </defs>
+                </svg>            
+            </a>
+            <div class="items-center hidden h-5 divide-x md:flex">
+                <h2 class="pr-3 text-base text-gray-500">
+                    <span class="font-semibold">Welcome</span>
+                    <span>Komal Riaz</span>
+                </h2>
+                <div class="px-3 text-sm text-gray-500">
+                    <span>Sun, 12 Dec</span>
+                    <span class="font-bold">08:35 PM</span>
+                </div>
+                <div class="flex items-center h-full gap-3 pl-3">
+                    <svg width="49" height="36" viewBox="0 0 49 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_7419_83985)">
+                        <path d="M10.0859 7.13434L7.41015 4.54219L5.31412 6.58405L7.97503 9.1762L10.0859 7.13434ZM5.98306 15.3307H1.52344V18.227H5.98306V15.3307ZM19.3619 0.921875H16.3889V5.19385H19.3619V0.921875ZM30.4367 6.58405L28.3407 4.54219L25.6798 7.13434L27.7758 9.1762L30.4367 6.58405ZM25.6649 26.4234L28.3258 29.03L30.4218 26.9882L27.746 24.396L25.6649 26.4234ZM29.7677 15.3307V18.227H34.2274V15.3307H29.7677ZM17.8754 8.0901C12.9549 8.0901 8.95615 11.9856 8.95615 16.7789C8.95615 21.5722 12.9549 25.4676 17.8754 25.4676C22.7959 25.4676 26.7947 21.5722 26.7947 16.7789C26.7947 11.9856 22.7959 8.0901 17.8754 8.0901ZM16.3889 32.6359H19.3619V28.3639H16.3889V32.6359ZM5.31412 26.9737L7.41015 29.0155L10.0711 26.4089L7.97503 24.3671L5.31412 26.9737Z" fill="#FBAB0F"/>
+                        </g>
+                        <g clip-path="url(#clip1_7419_83985)">
+                        <path d="M42.2197 18.8344C41.3559 14.6272 37.5629 11.4688 33.0063 11.4688C29.3885 11.4688 26.2464 13.4687 24.6816 16.3954C20.9136 16.7857 17.9844 19.8953 17.9844 23.6635C17.9844 27.7 21.3518 30.9804 25.4953 30.9804H41.769C45.2241 30.9804 48.0282 28.2487 48.0282 24.883C48.0282 21.6636 45.4619 19.0539 42.2197 18.8344Z" fill="url(#paint0_linear_7419_83985)"/>
+                        </g>
+                        <defs>
+                        <linearGradient id="paint0_linear_7419_83985" x1="33.0063" y1="11.4687" x2="33.0063" y2="30.9804" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white"/>
+                        <stop offset="1" stop-color="#DBDBDB"/>
+                        </linearGradient>
+                        <clipPath id="clip0_7419_83985">
+                        <rect width="35.677" height="34.7551" fill="white" transform="translate(0.03125 0.125)"/>
+                        </clipPath>
+                        <clipPath id="clip1_7419_83985">
+                        <rect width="30.0438" height="29.2674" fill="white" transform="translate(17.9844 6.59375)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="text-sm text-gray-500">
+                        <span class="font-bold">26</span>                        
+                        <span class="font-medium">°C</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- profile Menu Toggle -->
+        <div class="flex items-center divide-x divide-gray-100">
+            <div class="relative px-3" x-data x-menu>
+                <button type="button" class="relative flex items-center" x-menu:button type="button">
+                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3028 14.49L19.3028 12.83C19.0928 12.46 18.9028 11.76 18.9028 11.35V8.82C18.9028 6.47 17.5228 4.44 15.5328 3.49C15.0128 2.57 14.0528 2 12.9528 2C11.8628 2 10.8828 2.59 10.3628 3.52C8.41283 4.49 7.06283 6.5 7.06283 8.82V11.35C7.06283 11.76 6.87283 12.46 6.66283 12.82L5.65283 14.49C5.25283 15.16 5.16283 15.9 5.41283 16.58C5.65283 17.25 6.22283 17.77 6.96283 18.02C8.90283 18.68 10.9428 19 12.9828 19C15.0228 19 17.0628 18.68 19.0028 18.03C19.7028 17.8 20.2428 17.27 20.5028 16.58C20.7628 15.89 20.6928 15.13 20.3028 14.49Z" fill="#111827"/>
+                        <path d="M15.7906 20.01C15.3706 21.17 14.2606 22 12.9606 22C12.1706 22 11.3906 21.68 10.8406 21.11C10.5206 20.81 10.2806 20.41 10.1406 20C10.2706 20.02 10.4006 20.03 10.5406 20.05C10.7706 20.08 11.0106 20.11 11.2506 20.13C11.8206 20.18 12.4006 20.21 12.9806 20.21C13.5506 20.21 14.1206 20.18 14.6806 20.13C14.8906 20.11 15.1006 20.1 15.3006 20.07C15.4606 20.05 15.6206 20.03 15.7906 20.01Z" fill="#111827"/>
+                    </svg>      
+                    <div class="absolute inline-flex items-center justify-center w-4 h-4 font-semibold text-white bg-green-600 rounded-full -top-1 -right-1 text-3xs">8</div>
+                </button>
+                <div x-menu:items class="absolute -right-14 top-10 md:right-0 z-50 min-w-[320px] w-full text-base bg-white divide-y divide-gray-100 rounded shadow-lg md:w-96">
+                    <div class="block px-4 py-2 text-base font-medium text-center text-gray-700 bg-gray-50">
+                        Notifications
+                    </div>
+                    <div>
+                    <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                        <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Bonnie Green avatar">
+                        <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 border border-white rounded-full bg-primary-700 dark:border-gray-700">
+                            <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18"><path d="M15.977.783A1 1 0 0 0 15 0H3a1 1 0 0 0-.977.783L.2 9h4.239a2.99 2.99 0 0 1 2.742 1.8 1.977 1.977 0 0 0 3.638 0A2.99 2.99 0 0 1 13.561 9H17.8L15.977.783ZM6 2h6a1 1 0 1 1 0 2H6a1 1 0 0 1 0-2Zm7 5H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Z"/><path d="M1 18h16a1 1 0 0 0 1-1v-6h-4.439a.99.99 0 0 0-.908.6 3.978 3.978 0 0 1-7.306 0 .99.99 0 0 0-.908-.6H0v6a1 1 0 0 0 1 1Z"/></svg>
+                        </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 font-normal text-sm mb-1.5">New message from <span class="font-semibold text-gray-900">Bonnie Green</span>: "Hey, what's up? All set for the presentation?"</div>
+                            <div class="text-xs font-medium text-primary-700">a few moments ago</div>
+                        </div>
+                    </a>
+                    <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                        <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar">
+                        <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-gray-900 border border-white rounded-full dark:border-gray-700">
+                            <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/></svg>
+                        </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Jese leos</span> and <span class="font-medium text-gray-900">5 others</span> started following you.</div>
+                            <div class="text-xs font-medium text-primary-700">10 minutes ago</div>
+                        </div>
+                    </a>
+                    <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                        <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="Joseph McFall avatar">
+                        <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-red-600 border border-white rounded-full dark:border-gray-700">
+                          <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"> <path d="M17.947 2.053a5.209 5.209 0 0 0-3.793-1.53A6.414 6.414 0 0 0 10 2.311 6.482 6.482 0 0 0 5.824.5a5.2 5.2 0 0 0-3.8 1.521c-1.915 1.916-2.315 5.392.625 8.333l7 7a.5.5 0 0 0 .708 0l7-7a6.6 6.6 0 0 0 2.123-4.508 5.179 5.179 0 0 0-1.533-3.793Z"/> </svg>                      
+                        </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Joseph Mcfall</span> and <span class="font-medium text-gray-900">141 others</span> love your story. See it and view more stories.</div>
+                            <div class="text-xs font-medium text-primary-700">44 minutes ago</div>
+                        </div>
+                    </a>
+                    <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                        <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Roberta Casas image">
+                        <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-green-400 border border-white rounded-full dark:border-gray-700">
+                            <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/></svg>
+                        </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-primary-700 dark:text-primary-500">@bonnie.green</span> what do you say?</div>
+                            <div class="text-xs font-medium text-primary-700">1 hour ago</div>
+                        </div>
+                    </a>
+                    <a x-menu:item href="#" class="flex px-4 py-3 hover:bg-gray-100">
+                        <div class="flex-shrink-0">
+                        <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Robert image">
+                        <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-purple-500 border border-white rounded-full dark:border-gray-700">
+                            <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14"><path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z"/></svg>
+                        </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
+                            <div class="text-xs font-medium text-primary-700">3 hours ago</div>
+                        </div>
+                    </a>
+                    </div>
+                    <a x-menu:item href="#" class="block py-2 text-base font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:hover:underline">
+                        <div class="inline-flex items-center ">
+                        <svg aria-hidden="true" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                        View all
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="relative pl-3" x-data x-menu>
+                <button class="flex flex-col items-center align-middle" x-menu:button type="button">
+                    <div class="relative flex items-center justify-center w-8 h-8 text-xs bg-gray-100 rounded-md shrink-0 ">
+                        <span class="font-medium text-gray-600">T</span>
+                    </div>
+                </button>
+                <div x-menu:items class="absolute right-0 z-50 bg-white divide-y divide-gray-100 rounded shadow-lg top-11 w-60" >
+                    <div class="px-4 py-3 text-gray-900 bg-gray-50">
+                        <p class="text-sm font-medium truncate">Test</p>
+                        <h2 class="text-xs font-normal truncate">bedejaf125@bixolabs.com</h2>
+                    </div>
+                    <ul class="py-2 text-sm text-gray-700">
+                        <li>
+                            <a x-menu:item href="/en-pk/profile/overview" class="block px-4 py-2 hover:bg-gray-100"
+                                :class="$menuItem.isActive && 'bg-gray-100'" id="alpine-menu-item-1" tabindex="-1"
+                                role="menuitem">Profile</a></li>
+                    </ul>
+                    <div class="py-2">
+                        <a x-menu:item href="javascript:;"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            :class="$menuItem.isActive && 'bg-gray-100'" id="alpine-menu-item-2" tabindex="-1"
+                            role="menuitem">Sign out</a>
+                    </div>
+                    <div class="inline-flex flex-col items-start justify-start w-full gap-2 px-4 py-4 bg-gray-50 rounded-bl-xl rounded-br-xl">
+                        <div class="inline-flex items-start self-stretch justify-between">
+                            <div class="text-gray-600 text-xs font-medium leading-[18px]">© 2023 wooqlaw® </div>
+                            <span class="text-gray-600 text-xs font-medium leading-[18px]">v-2.1.7.0</span>
+                        </div>
+                        <div class="inline-flex items-start self-stretch justify-start gap-3">
+                            <div class="grow shrink basis-0 text-gray-600 text-xs font-medium leading-[18px]">
+                                <a target="_blank"
+                                    href="/en-pk/term-of-lawyers" class="hover:text-blue-600 hover:underline"> Terms of Use</a> | <a
+                                    target="_blank" href="/en-pk/cookie-policy" class="hover:text-blue-600 hover:underline"> Cookies
+                                    Policy </a> | 
+                                    <a target="_blank" href="/en-pk/privacy-policy"
+                                    class="hover:text-blue-600 hover:underline"> Privacy Policy </a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="flex bg-gray-200 md:h-[calc(100vh-3rem)] h-[calc(100dvh-6rem)] overflow-hidden" 
+        x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
+        x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }"
+        
+    >
+    <!-- code for swipe 
+        x-init="window.addEventListener('touchstart', function(e) { startX = e.touches[0].pageX; }); window.addEventListener('touchmove', function(e) { if (startX - e.touches[0].pageX > 50) { chats = true; } })" -->
+        
+        <aside class="absolute bottom-0 z-30 w-full shrink-0 md:h-full md:flex-col md:relative md:w-16" :class="menu ? 'md:w-16' : 'md:w-0'">
+            <div class="relative flex w-full h-full min-h-0 pt-0 bg-white border-gray-200 rounded-t-lg md:rounded-t-none drop-shadow-top md:drop-shadow md:border-t md:flex-1 md:flex-col">
+                <div class="flex w-full py-1 overflow-y-auto md:py-5 md:flex-1 md:flex-col">
+                    <div class="w-full px-1 space-y-1 md:flex-1">
+                        <ul class="flex justify-between w-full gap-2 md:gap-5 md:flex-col">
+                            <li>
+                                <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-gray-500 text-2xs hover:text-violet-700">
+                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1061 22H10.8939C7.44737 22 5.72409 22 4.54903 20.9882C3.37396 19.9764 3.13025 18.2827 2.64284 14.8952L2.36407 12.9579C1.98463 10.3208 1.79491 9.00229 2.33537 7.87495C2.87583 6.7476 4.02619 6.06234 6.32691 4.69181L7.71175 3.86687C9.80104 2.62229 10.8457 2 12 2C13.1543 2 14.199 2.62229 16.2882 3.86687L17.6731 4.69181C19.9738 6.06234 21.1242 6.7476 21.6646 7.87495C22.2051 9.00229 22.0154 10.3208 21.6359 12.9579L21.3572 14.8952C20.8697 18.2827 20.626 19.9764 19.451 20.9882C18.2759 22 16.5526 22 13.1061 22ZM8.39757 15.5532C8.64423 15.2204 9.11395 15.1506 9.44671 15.3973C10.1751 15.9371 11.0542 16.2498 12.0001 16.2498C12.946 16.2498 13.8251 15.9371 14.5535 15.3973C14.8863 15.1506 15.356 15.2204 15.6026 15.5532C15.8493 15.8859 15.7795 16.3557 15.4467 16.6023C14.4743 17.3231 13.2851 17.7498 12.0001 17.7498C10.7151 17.7498 9.5259 17.3231 8.55349 16.6023C8.22072 16.3557 8.15092 15.8859 8.39757 15.5532Z"/>
+                                    </svg>
+                                    <span>Dashboard</span>             
+                                </a>
+                            </li>
+                            <li>
+                                <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-gray-500 text-2xs hover:text-violet-700">
+                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 2.0127V22L15 22C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V8C21 5.17157 21 3.75736 20.1213 2.87868C19.2426 2 17.8284 2 15 2H9L8.75 2.0127ZM10.75 6.5C10.75 6.08579 11.0858 5.75 11.5 5.75H16.5C16.9142 5.75 17.25 6.08579 17.25 6.5C17.25 6.91421 16.9142 7.25 16.5 7.25H11.5C11.0858 7.25 10.75 6.91421 10.75 6.5ZM10.75 10C10.75 9.58579 11.0858 9.25 11.5 9.25H16.5C16.9142 9.25 17.25 9.58579 17.25 10C17.25 10.4142 16.9142 10.75 16.5 10.75H11.5C11.0858 10.75 10.75 10.4142 10.75 10ZM3.0007 7.25C3.00753 4.91427 3.08136 3.676 3.87868 2.87868C4.55366 2.2037 5.54467 2.04722 7.25 2.01095V21.9891C5.54467 21.9528 4.55366 21.7963 3.87868 21.1213C3.08136 20.324 3.00753 19.0857 3.0007 16.75H4C4.41421 16.75 4.75 16.4142 4.75 16C4.75 15.5858 4.41421 15.25 4 15.25H3V12.75H4C4.41421 12.75 4.75 12.4142 4.75 12C4.75 11.5858 4.41421 11.25 4 11.25H3V8.75H4C4.41421 8.75 4.75 8.41421 4.75 8C4.75 7.58579 4.41421 7.25 4 7.25H3.0007ZM3.0007 7.25H2C1.58579 7.25 1.25 7.58579 1.25 8C1.25 8.41421 1.58579 8.75 2 8.75H3V8C3 7.73811 3 7.48834 3.0007 7.25ZM3 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H3V12.75ZM3 15.25H2C1.58579 15.25 1.25 15.5858 1.25 16C1.25 16.4142 1.58579 16.75 2 16.75H3.0007C3 16.5117 3 16.2619 3 16V15.25Z"/>
+                                    </svg>                                        
+                                    <span>Contacts</span>             
+                                </a>
+                            </li>
+                            <li>
+                                <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-gray-500 text-2xs hover:text-violet-700">
+                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12ZM5 8.49982V7.5C5 6.67157 5.67157 6 6.5 6H17.5C18.3284 6 19 6.67157 19 7.5V8.49982C18.5822 8.18597 18.0628 8 17.5 8H6.5C5.9372 8 5.41783 8.18597 5 8.49982ZM5 10.5V11.4998C5.41783 11.186 5.9372 11 6.5 11H17.5C18.0628 11 18.5822 11.186 19 11.4998V10.5C19 9.67157 18.3284 9 17.5 9H6.5C5.67157 9 5 9.67157 5 10.5ZM20 14.2502C20.4142 14.2502 20.75 14.5859 20.75 15.0002C20.75 15.4144 20.4142 15.7502 20 15.7502H17.6569C16.7782 15.7502 16.5477 15.7634 16.3501 15.8453C16.1524 15.9272 15.9801 16.0807 15.3588 16.7021L15.0543 17.0066C14.6223 17.4393 14.2811 17.7811 13.8467 17.9864C13.7658 18.0247 13.683 18.059 13.5987 18.0892C13.1464 18.2511 12.6634 18.2507 12.052 18.2502L11.9462 18.2502L11.834 18.2502C11.1877 18.2508 10.6771 18.2512 10.2035 18.0718C10.1153 18.0384 10.0289 18.0005 9.94463 17.9582C9.49191 17.7311 9.14654 17.3551 8.70937 16.879L8.59805 16.7579C8.00971 16.1184 7.84554 15.9591 7.65508 15.8694C7.63492 15.8599 7.6145 15.8509 7.59386 15.8425C7.39887 15.7631 7.17044 15.7502 6.30147 15.7502H4C3.58579 15.7502 3.25 15.4144 3.25 15.0002C3.25 14.5859 3.58579 14.2502 4 14.2502L5.02051 14.2501V13.2503C5.13939 12.5407 5.75646 12 6.49983 12H17.4998C18.2432 12 18.8603 12.5407 18.9791 13.2503V14.2501L20 14.2502Z"/>
+                                    </svg>                                        
+                                    <span>Cases</span>             
+                                </a>
+                            </li>
+                            <li>
+                                <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-gray-500 text-2xs hover:text-violet-700">
+                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.06935 5.25839C2 5.62595 2 6.06722 2 6.94975V14C2 17.7712 2 19.6569 3.17157 20.8284C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14V11.7979C22 9.16554 22 7.84935 21.2305 6.99383C21.1598 6.91514 21.0849 6.84024 21.0062 6.76946C20.1506 6 18.8345 6 16.2021 6H15.8284C14.6747 6 14.0979 6 13.5604 5.84678C13.2651 5.7626 12.9804 5.64471 12.7121 5.49543C12.2237 5.22367 11.8158 4.81578 11 4L10.4497 3.44975C10.1763 3.17633 10.0396 3.03961 9.89594 2.92051C9.27652 2.40704 8.51665 2.09229 7.71557 2.01738C7.52976 2 7.33642 2 6.94975 2C6.06722 2 5.62595 2 5.25839 2.06935C3.64031 2.37464 2.37464 3.64031 2.06935 5.25839ZM12.25 10C12.25 9.58579 12.5858 9.25 13 9.25H18C18.4142 9.25 18.75 9.58579 18.75 10C18.75 10.4142 18.4142 10.75 18 10.75H13C12.5858 10.75 12.25 10.4142 12.25 10Z"/>
+                                    </svg>                                        
+                                    <span>Documents</span>             
+                                </a>
+                            </li>
+                            <li>
+                                <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-gray-500 text-2xs hover:text-violet-700">
+                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.0022 1.99219C6.03219 1.99219 1.99219 6.03219 1.99219 11.0022C1.99219 15.9722 6.03219 20.0122 11.0022 20.0122C15.9722 20.0122 20.0122 15.9722 20.0122 11.0022C20.0122 6.03219 15.9722 1.99219 11.0022 1.99219ZM11.0022 13.2522H8.00219C7.59219 13.2522 7.25219 12.9122 7.25219 12.5022C7.25219 12.0922 7.59219 11.7522 8.00219 11.7522H11.0022C11.4122 11.7522 11.7522 12.0922 11.7522 12.5022C11.7522 12.9122 11.4122 13.2522 11.0022 13.2522ZM14.0022 10.2522H8.00219C7.59219 10.2522 7.25219 9.91219 7.25219 9.50219C7.25219 9.09219 7.59219 8.75219 8.00219 8.75219H14.0022C14.4122 8.75219 14.7522 9.09219 14.7522 9.50219C14.7522 9.91219 14.4122 10.2522 14.0022 10.2522Z"/>
+                                        <path d="M21.992 18.95C21.662 18.34 20.962 18 20.022 18C19.312 18 18.702 18.29 18.342 18.79C17.982 19.29 17.902 19.96 18.122 20.63C18.552 21.93 19.302 22.22 19.712 22.27C19.772 22.28 19.832 22.28 19.902 22.28C20.342 22.28 21.022 22.09 21.682 21.1C22.212 20.33 22.312 19.56 21.992 18.95Z"/>
+                                    </svg>                                        
+                                    <span>LRE</span>             
+                                </a>
+                            </li>
+                            <li>
+                                <a href="href="#" class="flex flex-col items-center justify-center gap-1 font-medium text-violet-700 text-2xs hover:text-violet-700">  
+                                    <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10Z"/>
+                                        <path d="M2.72778 5.81803C2.62732 5.41619 2.22012 5.17186 1.81828 5.27233C1.41643 5.37279 1.17211 5.77999 1.27257 6.18184L1.65454 7.7097C2.3593 10.5287 4.49604 12.7495 7.25018 13.5787L7.25018 18.0519C7.25015 18.9504 7.25012 19.6996 7.33009 20.2944C7.41449 20.9222 7.60016 21.489 8.05563 21.9445C8.5111 22.3999 9.0779 22.5856 9.7057 22.67C10.3005 22.75 11.0497 22.75 11.9482 22.7499H12.0522C12.9507 22.75 13.6999 22.75 14.2947 22.67C14.9225 22.5856 15.4892 22.3999 15.9447 21.9445C16.4002 21.489 16.5859 20.9222 16.6703 20.2944C16.7502 19.6996 16.7502 18.9504 16.7502 18.052L16.7502 13.859C17.7313 14.1514 18.4808 15.0039 18.6058 16.067L19.2553 21.5876C19.3037 21.9989 19.6764 22.2932 20.0878 22.2448C20.4992 22.1964 20.7934 21.8237 20.745 21.4123L20.0956 15.8918C19.8512 13.815 18.0912 12.2499 16.0002 12.2499H8.0847C5.64125 11.6764 3.71957 9.78517 3.10975 7.3459L2.72778 5.81803Z"/>
+                                    </svg>                                                                            
+                                    <span>Cause List</span>             
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="javascript:;" x-on:click="menu = !menu" class="absolute top-0 bottom-0 items-center justify-center hidden w-4 h-24 my-auto bg-white md:flex arrow-shape -right-4 hover:bg-gray-50" style="clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);">
+                    <svg :class="menu ? '':'rotate-180'" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.51562 12L0.515625 6L6.51563 -8.58843e-07L7.92188 1.40625L3.32812 6L7.92187 10.5937L6.51562 12Z" fill="#9CA3AF"/>
+                    </svg>
+                </a>
+            </div>
+        </aside>
+        <div class="relative w-full h-full px-0 overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
+            <main class="overflow-hidden">
+                <div class="md:py-4">
+                    <nav class="hidden mb-4 md:flex" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center"><a href="en-pk/profile" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                                    <svg aria-hidden="true" class="w-5 h-5 mr-2" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.75002 3C2.60093 3 1.66669 3.96094 1.66669 5.14286V15.8571C1.66669 17.0391 2.60093 18 3.75002 18H16.25C17.3991 18 18.3334 17.0391 18.3334 15.8571V5.14286C18.3334 3.96094 17.3991 3 16.25 3H3.75002ZM16.25 5.14286V7.28571H3.75002V5.14286H16.25ZM3.75002 9.42857H5.83335V15.8571H3.75002V9.42857ZM16.25 9.42857V15.8571H7.91669V9.42857H16.25Z" fill="#374151"></path>
+                                    </svg>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li aria-current="page">
+                                <div class="flex items-center"><svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Notifications</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <div class="w-full max-w-lg mx-auto my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow-lg zblock">
+                        <div class="block px-4 py-2 text-base font-medium text-center text-gray-700 bg-gray-50">
+                            Notifications
+                        </div>
+                        <div>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Bonnie Green avatar">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 border border-white rounded-full bg-primary-700 dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18"><path d="M15.977.783A1 1 0 0 0 15 0H3a1 1 0 0 0-.977.783L.2 9h4.239a2.99 2.99 0 0 1 2.742 1.8 1.977 1.977 0 0 0 3.638 0A2.99 2.99 0 0 1 13.561 9H17.8L15.977.783ZM6 2h6a1 1 0 1 1 0 2H6a1 1 0 0 1 0-2Zm7 5H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Z"/><path d="M1 18h16a1 1 0 0 0 1-1v-6h-4.439a.99.99 0 0 0-.908.6 3.978 3.978 0 0 1-7.306 0 .99.99 0 0 0-.908-.6H0v6a1 1 0 0 0 1 1Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5">New message from <span class="font-semibold text-gray-900">Bonnie Green</span>: "Hey, what's up? All set for the presentation?"</div>
+                                    <div class="text-xs font-medium text-primary-700">a few moments ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-gray-900 border border-white rounded-full dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Jese leos</span> and <span class="font-medium text-gray-900">5 others</span> started following you.</div>
+                                    <div class="text-xs font-medium text-primary-700">10 minutes ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="Joseph McFall avatar">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-red-600 border border-white rounded-full dark:border-gray-700">
+                                <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"> <path d="M17.947 2.053a5.209 5.209 0 0 0-3.793-1.53A6.414 6.414 0 0 0 10 2.311 6.482 6.482 0 0 0 5.824.5a5.2 5.2 0 0 0-3.8 1.521c-1.915 1.916-2.315 5.392.625 8.333l7 7a.5.5 0 0 0 .708 0l7-7a6.6 6.6 0 0 0 2.123-4.508 5.179 5.179 0 0 0-1.533-3.793Z"/> </svg>                      
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Joseph Mcfall</span> and <span class="font-medium text-gray-900">141 others</span> love your story. See it and view more stories.</div>
+                                    <div class="text-xs font-medium text-primary-700">44 minutes ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Roberta Casas image">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-green-400 border border-white rounded-full dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-primary-700 dark:text-primary-500">@bonnie.green</span> what do you say?</div>
+                                    <div class="text-xs font-medium text-primary-700">1 hour ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Robert image">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-purple-500 border border-white rounded-full dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14"><path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
+                                    <div class="text-xs font-medium text-primary-700">3 hours ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Bonnie Green avatar">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 border border-white rounded-full bg-primary-700 dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18"><path d="M15.977.783A1 1 0 0 0 15 0H3a1 1 0 0 0-.977.783L.2 9h4.239a2.99 2.99 0 0 1 2.742 1.8 1.977 1.977 0 0 0 3.638 0A2.99 2.99 0 0 1 13.561 9H17.8L15.977.783ZM6 2h6a1 1 0 1 1 0 2H6a1 1 0 0 1 0-2Zm7 5H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Z"/><path d="M1 18h16a1 1 0 0 0 1-1v-6h-4.439a.99.99 0 0 0-.908.6 3.978 3.978 0 0 1-7.306 0 .99.99 0 0 0-.908-.6H0v6a1 1 0 0 0 1 1Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5">New message from <span class="font-semibold text-gray-900">Bonnie Green</span>: "Hey, what's up? All set for the presentation?"</div>
+                                    <div class="text-xs font-medium text-primary-700">a few moments ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-gray-900 border border-white rounded-full dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-2V5a1 1 0 0 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 0 0 2 0V9h2a1 1 0 1 0 0-2Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Jese leos</span> and <span class="font-medium text-gray-900">5 others</span> started following you.</div>
+                                    <div class="text-xs font-medium text-primary-700">10 minutes ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="Joseph McFall avatar">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-red-600 border border-white rounded-full dark:border-gray-700">
+                                <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"> <path d="M17.947 2.053a5.209 5.209 0 0 0-3.793-1.53A6.414 6.414 0 0 0 10 2.311 6.482 6.482 0 0 0 5.824.5a5.2 5.2 0 0 0-3.8 1.521c-1.915 1.916-2.315 5.392.625 8.333l7 7a.5.5 0 0 0 .708 0l7-7a6.6 6.6 0 0 0 2.123-4.508 5.179 5.179 0 0 0-1.533-3.793Z"/> </svg>                      
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Joseph Mcfall</span> and <span class="font-medium text-gray-900">141 others</span> love your story. See it and view more stories.</div>
+                                    <div class="text-xs font-medium text-primary-700">44 minutes ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Roberta Casas image">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-green-400 border border-white rounded-full dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18"><path d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Leslie Livingston</span> mentioned you in a comment: <span class="font-medium text-primary-700 dark:text-primary-500">@bonnie.green</span> what do you say?</div>
+                                    <div class="text-xs font-medium text-primary-700">1 hour ago</div>
+                                </div>
+                            </a>
+                            <a x-menu:item href="#" class="flex px-4 py-3 hover:bg-gray-100">
+                                <div class="flex-shrink-0">
+                                <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Robert image">
+                                <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-purple-500 border border-white rounded-full dark:border-gray-700">
+                                    <svg class="w-2 h-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14"><path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z"/></svg>
+                                </div>
+                                </div>
+                                <div class="w-full pl-3">
+                                    <div class="text-gray-500 font-normal text-sm mb-1.5"><span class="font-semibold text-gray-900">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
+                                    <div class="text-xs font-medium text-primary-700">3 hours ago</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <dialog id="hearingsummary" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Hearing summary
+                </h3>
+                <button onclick="hearingsummary.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 px-3 pt-3 md:pt-6 md:px-6 md:gap-10">
+                <div class="flex flex-col gap-3 p-2 rounded-lg md:p-4 md:gap-7 bg-gray-50">
+                    <div class="flex flex-col gap-2">
+                        <label for="your-message" class="block text-sm font-medium text-gray-900">Hearing summary<span class="text-red-600">*</span>
+                        </label>
+                        <textarea id="your-message" rows="3" class="block w-full p-3 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-violet-500 focus:border-violet-500" placeholder="Write text here ..."></textarea>
+                        <!-- Voice Typing -->
+                        <div class="flex flex-col justify-between gap-2 md:flex-row">
+                            <span class="block text-xs font-normal text-gray-500 md:text-xs">
+                                Max 4000 characters 
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <button type="submit" class="flex items-center justify-center w-full px-6 py-2 bg-white border rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-300">
+                                    <div class="flex items-center gap-2 text-xs font-medium text-center text-gray-900 md:text-sm" href="#">
+                                        Voice Typing
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 5.99967C2.94216 5.99967 3.16602 6.22353 3.16602 6.49967V7.16634C3.16602 9.83572 5.32997 11.9997 7.99935 11.9997C10.6687 11.9997 12.8327 9.83572 12.8327 7.16634V6.49967C12.8327 6.22353 13.0565 5.99967 13.3327 5.99967C13.6088 5.99967 13.8327 6.22353 13.8327 6.49967V7.16634C13.8327 10.2196 11.4869 12.7249 8.49935 12.9785V14.4997C8.49935 14.7758 8.27549 14.9997 7.99935 14.9997C7.72321 14.9997 7.49935 14.7758 7.49935 14.4997V12.9785C4.51175 12.7249 2.16602 10.2196 2.16602 7.16634V6.49967C2.16602 6.22353 2.38987 5.99967 2.66602 5.99967Z" fill="#27272A"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99935 1.33301C5.88226 1.33301 4.16602 3.04925 4.16602 5.16634V7.16634C4.16602 9.28343 5.88226 10.9997 7.99935 10.9997C10.1164 10.9997 11.8327 9.28343 11.8327 7.16634V5.16634C11.8327 3.04925 10.1164 1.33301 7.99935 1.33301ZM9.33268 7.66634C9.60882 7.66634 9.83268 7.44248 9.83268 7.16634C9.83268 6.8902 9.60882 6.66634 9.33268 6.66634H6.66602C6.38987 6.66634 6.16602 6.8902 6.16602 7.16634C6.16602 7.44248 6.38987 7.66634 6.66602 7.66634H9.33268ZM9.16602 5.16634C9.16602 5.44248 8.94216 5.66634 8.66602 5.66634H7.33268C7.05654 5.66634 6.83268 5.44248 6.83268 5.16634C6.83268 4.8902 7.05654 4.66634 7.33268 4.66634H8.66602C8.94216 4.66634 9.16602 4.8902 9.16602 5.16634Z" fill="#27272A"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </button>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.00065 4.16634C8.27679 4.16634 8.50065 4.3902 8.50065 4.66634V8.66634C8.50065 8.94248 8.27679 9.16634 8.00065 9.16634C7.72451 9.16634 7.50065 8.94248 7.50065 8.66634V4.66634C7.50065 4.3902 7.72451 4.16634 8.00065 4.16634Z" fill="#71717A"></path>
+                                        <path d="M8.00065 11.333C8.36884 11.333 8.66732 11.0345 8.66732 10.6663C8.66732 10.2982 8.36884 9.99967 8.00065 9.99967C7.63246 9.99967 7.33398 10.2982 7.33398 10.6663C7.33398 11.0345 7.63246 11.333 8.00065 11.333Z" fill="#71717A"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833984 7.99967C0.833984 4.04163 4.04261 0.833008 8.00065 0.833008C11.9587 0.833008 15.1673 4.04163 15.1673 7.99967C15.1673 11.9577 11.9587 15.1663 8.00065 15.1663C4.04261 15.1663 0.833984 11.9577 0.833984 7.99967ZM8.00065 1.83301C4.5949 1.83301 1.83398 4.59392 1.83398 7.99967C1.83398 11.4054 4.5949 14.1663 8.00065 14.1663C11.4064 14.1663 14.1673 11.4054 14.1673 7.99967C14.1673 4.59392 11.4064 1.83301 8.00065 1.83301Z" fill="#71717A"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Upload supporting documents -->
+                    <div class="flex flex-col gap-2">
+                        <label class="block text-sm font-medium text-gray-900" for="file_input">
+                            Upload supporting documents
+                        </label>
+                        <input class="w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100" id="file_input" type="file">
+                        <span class="block text-xs font-normal text-gray-500 md:text-xs">
+                            Max size 5 MB
+                        </span>
+                    </div>
+                    <!-- Property details documents.doc -->
+                    <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-5">
+                        <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg md:p-3 md:gap-3">
+                            <!-- pdf -->
+                            <div class="relative shrink-0 w-7 md:w-9">
+                                <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                                    <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                                    <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                                </svg>
+                                <p class="absolute left-0 right-0 z-20 mx-auto font-medium leading-3 text-center text-white bottom-2 md:bottom-3 text-2xs md:text-xs">
+                                    pdf
+                                </p>
+                            </div>
+                            <!-- Property details documents.doc -->
+                            <div class="flex flex-col justify-between w-full grow-0">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-900 truncate w-28 md:w-24">
+                                        Property details documents.doc
+                                    </span>
+                                    <span class="text-sm font-medium text-gray-900">
+                                        100%
+                                    </span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 p-2 bg-white rounded-lg md:p-3 md:gap-3">
+                            <!-- pdf -->
+                            <div class="relative shrink-0 w-7 md:w-9">
+                                <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                                    <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                                    <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                                </svg>
+                                <p class="absolute left-0 right-0 z-20 mx-auto font-medium leading-3 text-center text-white bottom-2 md:bottom-3 text-2xs md:text-xs">
+                                    pdf
+                                </p>
+                            </div>
+                            <!-- Property details documents.doc -->
+                            <div class="flex flex-col justify-between w-full grow-0">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-900 truncate w-28 md:w-24">
+                                        Property details documents.doc
+                                    </span>
+                                    <span class="text-sm font-medium text-gray-900">
+                                        60%
+                                    </span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-violet-700 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="createhearing" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white border-b rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                    Create Hearing
+                </h3>
+                <button onclick="createhearing.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col gap-3 px-3 pt-3 md:pt-6 md:px-6 md:gap-10">
+                <div class="flex flex-col gap-3 p-2 rounded-lg md:p-4 md:gap-7 bg-gray-50">
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="client" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Client
+                            </label>
+                            <input type="tel" id="client" value="Ahmed Khan" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Ahmed Khan">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="case" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Case*
+                            </label>
+                            <input type="tel" id="case" value="State Vs Ahmed Khan" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. State Vs Ahmed Khan">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="hearingno" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Case hearing no
+                            </label>
+                            <input type="tel" id="hearingno" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. 1235">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="agenda" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Hearing Agenda
+                            </label>
+                            <select id="agenda" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                                <option selected>Choose a Agenda</option>
+                                <option value="US">Notices</option>
+                                <option value="CA">Documents</option>
+                                <option value="FR">Evidence</option>
+                                <option value="DE">Cross examination</option>
+                                <option value="DE">Final Arguments</option>
+                                <option value="DE">Other</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="flex flex-col w-full gap-2">
+                            <label for="date" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Date*
+                            </label>
+                            <div class="relative">
+                                <input datepicker="" type="date" id="date" class="block w-full px-4 py-3 pl-3 text-sm font-normal text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Select date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                        <div class="flex flex-col gap-2">
+                            <label for="court" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Court/Judge
+                            </label>
+                            <input type="tel" id="court" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Special court">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="location" class="block text-xs font-medium text-gray-900 md:text-sm">
+                                Location/Station
+                            </label>
+                            <input type="tel" id="location" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 bg-white border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="e.g. Location/Station">
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+</body>
+
+</html>
