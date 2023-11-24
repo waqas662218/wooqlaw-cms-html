@@ -1175,6 +1175,24 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-60 {
+  height: 15rem;
+}
+.h-\[calc\(100dvh-30rem\)\] {
+  height: calc(100dvh - 30rem);
+}
+.h-\[calc\(100dvh-10rem\)\] {
+  height: calc(100dvh - 10rem);
+}
+.h-\[calc\(100dvh-5rem\)\] {
+  height: calc(100dvh - 5rem);
+}
+.h-\[calc\(100dvh-20rem\)\] {
+  height: calc(100dvh - 20rem);
+}
+.h-\[calc\(100dvh-15rem\)\] {
+  height: calc(100dvh - 15rem);
+}
 .max-h-\[100dvh\] {
   max-height: 100dvh;
 }

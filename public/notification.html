@@ -86,7 +86,7 @@
 
         <!-- profile Menu Toggle -->
         <div class="flex items-center divide-x divide-gray-100">
-            <div class="relative px-3" x-data x-menu>
+            <div class="relative px-3 z-[100]" x-data x-menu>
                 <button type="button" class="relative flex items-center" x-menu:button type="button">
                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.3028 14.49L19.3028 12.83C19.0928 12.46 18.9028 11.76 18.9028 11.35V8.82C18.9028 6.47 17.5228 4.44 15.5328 3.49C15.0128 2.57 14.0528 2 12.9528 2C11.8628 2 10.8828 2.59 10.3628 3.52C8.41283 4.49 7.06283 6.5 7.06283 8.82V11.35C7.06283 11.76 6.87283 12.46 6.66283 12.82L5.65283 14.49C5.25283 15.16 5.16283 15.9 5.41283 16.58C5.65283 17.25 6.22283 17.77 6.96283 18.02C8.90283 18.68 10.9428 19 12.9828 19C15.0228 19 17.0628 18.68 19.0028 18.03C19.7028 17.8 20.2428 17.27 20.5028 16.58C20.7628 15.89 20.6928 15.13 20.3028 14.49Z" fill="#111827"/>
@@ -98,7 +98,7 @@
                     <div class="block px-4 py-2 text-base font-medium text-center text-gray-700 bg-gray-50">
                         Notifications
                     </div>
-                    <div>
+                    <div class="relative overflow-y-auto h-[calc(100dvh-15rem)]">
                     <a x-menu:item href="#" class="flex px-4 py-3 border-b hover:bg-gray-100">
                         <div class="flex-shrink-0">
                         <img class="rounded-full w-11 h-11" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Bonnie Green avatar">
