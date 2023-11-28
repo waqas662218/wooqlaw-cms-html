@@ -4635,6 +4635,10 @@ select {
     text-align: center;
   }
 
+  .md\:text-justify {
+    text-align: justify;
+  }
+
   .md\:text-start {
     text-align: start;
   }
