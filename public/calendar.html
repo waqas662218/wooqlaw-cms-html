@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet">
     <!-- Tailwind CSS-->
     <link href="./css/style.css" rel="stylesheet">
 
@@ -86,6 +87,54 @@
         });
 
     </script>
+   <style>
+    .calendar.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+min-height: auto;
+}
+
+.calendar.fc-theme-standard .fc-scrollgrid {
+border: none;
+}
+
+.calendar.fc-theme-standard td, .fc-theme-standard th {
+border: none;
+}
+
+.calendar a.fc-col-header-cell-cushion {
+color: var(--color-white);
+}
+
+.calendar.fc .fc-daygrid-day-top {
+justify-content: center;
+}
+
+.calendar td.fc-daygrid-day.fc-day.fc-day-past .fc-daygrid-day-number {
+color: #A78BFA;
+}
+
+.calendar td.fc-daygrid-day.fc-day:not(.fc-day-past) .fc-daygrid-day-number {
+color: var(--color-white);
+}
+
+.calendar.fc .fc-toolbar-title {
+color: var(--color-white);
+font-weight: 500;
+font-size: 14px;
+}
+
+.calendar .fc-header-toolbar .fc-toolbar-chunk button {
+color: var(--color-primary);
+background: var(--color-white);
+font-size: 14px;    
+font-weight:500;
+text-transform: capitalize;
+border: 0;
+}
+
+.calendar.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+margin-left: 0.3em;
+}
+</style>
     <title>wooqlaw New Calendar</title>
 </head>
 
@@ -338,7 +387,7 @@
                 </a>
             </div>
         </aside>
-        <div class="relative w-full h-full overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
+        <div class="relative w-full max-h-screen overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
                 <div class="py-1 md:py-5">
                     <div class="flex md:flex-row flex-col items-center gap-2.5 w-full"> 
@@ -380,10 +429,83 @@
                                 Reminder 
                             </span>
                         </label>
-                      </button>
-                      
+                      </button> 
                     </div>
-                    <div id='calendar'></div>
+                    <div id='calendar' class="calendar flex max-w-full max-h-screen mx-auto"></div>
+                </div>
+                <div class="flex flex-col p-4 gap-1 rounded-lg bg-gray-50">
+                    <div class="flex items-center px-6 py-4 text-gray-900 font-semibold text-xl">
+                        Events on 13/06/2024  
+                    </div>
+                    <button onclick="appointmentmodal.showModal()" class="flex p-5 justify-between items-center border border-gray-200 rounded-lg bg-white">
+                        <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 2.5C7.75 2.08579 7.41421 1.75 7 1.75C6.58579 1.75 6.25 2.08579 6.25 2.5V4.07926C4.81067 4.19451 3.86577 4.47737 3.17157 5.17157C2.47737 5.86577 2.19451 6.81067 2.07926 8.25H21.9207C21.8055 6.81067 21.5226 5.86577 20.8284 5.17157C20.1342 4.47737 19.1893 4.19451 17.75 4.07926V2.5C17.75 2.08579 17.4142 1.75 17 1.75C16.5858 1.75 16.25 2.08579 16.25 2.5V4.0129C15.5847 4 14.839 4 14 4H10C9.16097 4 8.41527 4 7.75 4.0129V2.5ZM22 14V12C22 11.161 22 10.4153 21.9871 9.75H2.0129C2 10.4153 2 11.161 2 12V14C2 17.7712 2 19.6569 3.17157 20.8284C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14ZM17.9008 14.3C17.9008 15.018 17.3188 15.6 16.6008 15.6C15.8828 15.6 15.3008 15.018 15.3008 14.3C15.3008 13.582 15.8828 13 16.6008 13C17.3188 13 17.9008 13.582 17.9008 14.3ZM16.6 19.4992C19.2 19.4992 19.2 18.8444 19.2 18.0367C19.2 17.229 18.0359 16.5742 16.6 16.5742C15.1641 16.5742 14 17.229 14 18.0367C14 18.8444 14 19.4992 16.6 19.4992Z" fill="#18181B"/>
+                                    </svg>                                                                                                    
+                            </span>
+                            <span>
+                                Iqbal Khan
+                            </span>
+                        </div>
+                        <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
+                        <span>
+                            09:00 AM
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.00008 3.33337L10.6667 8.00004L6.00008 12.6667" stroke="#18181B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </span>
+                    </div>
+                    </button>
+                    <button onclick="reminder1modal.showModal()" class="flex p-5 justify-between items-center text-left border border-gray-200 rounded-lg bg-white">
+                        <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C16.8362 22 20.7567 18.1162 20.7567 13.3253C20.7567 8.53446 16.8362 4.65069 12 4.65069C7.16383 4.65069 3.24334 8.53446 3.24334 13.3253C3.24334 18.1162 7.16383 22 12 22ZM12 8.74705C12.403 8.74705 12.7297 9.0707 12.7297 9.46994V13.0259L14.9484 15.2238C15.2334 15.5061 15.2334 15.9638 14.9484 16.2461C14.6634 16.5284 14.2014 16.5284 13.9164 16.2461L11.484 13.8365C11.3472 13.7009 11.2703 13.5171 11.2703 13.3253V9.46994C11.2703 9.0707 11.597 8.74705 12 8.74705Z" fill="#1C274C"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.2405 2.33986C8.45409 2.67841 8.3502 3.1244 8.00844 3.33599L4.11657 5.74562C3.77481 5.95722 3.32461 5.8543 3.11102 5.51574C2.89742 5.17718 3.00131 4.7312 3.34307 4.5196L7.23494 2.10998C7.5767 1.89838 8.0269 2.0013 8.2405 2.33986Z" fill="#1C274C"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7595 2.33985C15.9731 2.0013 16.4233 1.89838 16.7651 2.10998L20.6569 4.5196C20.9987 4.7312 21.1026 5.17719 20.889 5.51574C20.6754 5.8543 20.2252 5.95722 19.8834 5.74562L15.9916 3.33599C15.6498 3.1244 15.5459 2.67841 15.7595 2.33985Z" fill="#1C274C"/>
+                                </svg>                                                                
+                        </span>
+                        <span>
+                            Call Iqbal for documents details
+                        </span>
+                    </div>
+                        <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
+                        <span>
+                            11:00 AM
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.00008 3.33337L10.6667 8.00004L6.00008 12.6667" stroke="#18181B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </span>
+                    </div>
+                    </button>
+                    <button onclick="courthearing1modal.showModal()" class="flex p-5 justify-between items-center border border-gray-200 rounded-lg bg-white">
+                        <div class="flex font-medium text-sm md:text-base text-gray-900 gap-2">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10Z" fill="#1F2937"/>
+                                    <path d="M2.72778 5.81803C2.62732 5.41619 2.22012 5.17186 1.81828 5.27233C1.41643 5.37279 1.17211 5.77999 1.27257 6.18184L1.65454 7.7097C2.3593 10.5287 4.49604 12.7495 7.25018 13.5787L7.25018 18.0519C7.25015 18.9504 7.25012 19.6996 7.33009 20.2944C7.41449 20.9222 7.60016 21.489 8.05563 21.9445C8.5111 22.3999 9.0779 22.5856 9.7057 22.67C10.3005 22.75 11.0497 22.75 11.9482 22.7499H12.0522C12.9507 22.75 13.6999 22.75 14.2947 22.67C14.9225 22.5856 15.4892 22.3999 15.9447 21.9445C16.4002 21.489 16.5859 20.9222 16.6703 20.2944C16.7502 19.6996 16.7502 18.9504 16.7502 18.052L16.7502 13.859C17.7313 14.1514 18.4808 15.0039 18.6058 16.067L19.2553 21.5876C19.3037 21.9989 19.6764 22.2932 20.0878 22.2448C20.4992 22.1964 20.7934 21.8237 20.745 21.4123L20.0956 15.8918C19.8512 13.815 18.0912 12.2499 16.0002 12.2499H8.0847C5.64125 11.6764 3.71957 9.78517 3.10975 7.3459L2.72778 5.81803Z" fill="#1F2937"/>
+                                    </svg>                                                                                                                               
+                            </span>
+                            <span>
+                                Iqbal Khan
+                            </span>
+                        </div>
+                        <div class="flex items-center text-sm md:text-base font-semibold text-gray-900 gap-2">
+                        <span>
+                            11:30 AM
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.00008 3.33337L10.6667 8.00004L6.00008 12.6667" stroke="#18181B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </span>
+                    </div>
+                    </button>
                 </div>
             </main>
         </div>
@@ -620,7 +742,7 @@
             </div>
         </form>
     </dialog>
-
+   
     <dialog id="neweventmodal"
         class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
         <form method="dialog">
@@ -737,10 +859,9 @@
                       </div>
                       <div class="flex flex-col gap-2">
                         <label for="message" class="block text-sm font-medium text-gray-900">Note</label>
-                        <textarea id="message" rows="2" class="block px-4 py-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+                        <textarea id="message" rows="2" class="block px-4 py-3 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
                     </div>
                 </div>
-                
             </div>
             <!-- Modal footer -->
             <div class="sticky bottom-0 flex justify-end items-center p-6 bg-white border-t rounded-b gap-x-2"> 
@@ -968,16 +1089,328 @@
     </form>
 </dialog>
 
-    <!-- <script>
-    
-        setTimeout(function() {
-    
-            remindermodal.showModal();
-    
-        }, 2000)
-    
-    </script> -->
 
+<!-- appointment -->
+<dialog id="appointmentmodal"
+        class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-center justify-between p-6 bg-white border-b rounded-t md:p-4">
+                <h3 class="text-lg font-medium text-gray-900 md:text-base">
+                    Appointment
+                </h3>
+                <button onclick="appointmentmodal.close()" type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col p-2 md:p-6 gap-5 bg-white">
+                <div class="flex flex-col item-start p-4 gap-7 border bg-gray-50">
+                    <div class="flex flex-col gap-2">
+                            <label for="title" class="block text-sm font-medium">Title</label>
+                            <input type="text" id="title" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-700 focus:border-primary-600 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                        </div>
+                    <div class="flex flex-col gap-2">
+                            <label for="clientname" class="block text-sm font-medium">Client’s Name</label>
+                            <input type="text" id="clientname" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                    </div>
+                    <div class="flex flex-col items-start gap-2 w-full">
+                        <label for="location" class="text-sm font-medium">Location</label>
+                        <select id="location"
+                          class="flex flex-col items-start p-2.5 border border-gray-300 rounded-lg w-full">
+                          
+                          <option selected class="flex items-center font-normal text-sm text-gray-500">At Office</option>
+                          <option value="1"></option>
+                          <option value="2"></option>   
+                        </select>
+                      </div>
+                      <div class="flex flex-col md:flex-row gap-3">
+                            <div class="date flex flex-col items-start gap-2 md:w-48">
+                              <label for="date" class="flex items-center font-medium text-sm">Date</label>
+                              <div class="relative w-full">
+                               
+                                <input id="date" type="date"
+                                  class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                  placeholder="Select date">
+                              </div>
+                            </div>
+                            <div class="start-time flex flex-col items-start gap-2 md:w-48">
+                                <label for="time" class="flex items-center font-medium text-sm">Start time</label>
+                                <div class="relative w-full">
+                                 
+                                  <input id="time"  type="time"
+                                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    placeholder="Select date">
+                                </div>
+                              </div>
+                              <div class="flex flex-col items-start gap-2  md:w-48">
+                                <label for="duration" class="text-sm font-medium">Duration</label>
+                                <select id="duration"
+                                  class="flex flex-col items-start p-2 border border-gray-300 rounded-lg w-full">
+                                  
+                                  <option selected class="flex items-center font-normal text-sm text-gray-500">e.g. 30 mins</option>
+                                  <option value="1">30 mins</option>
+                                  <option value="2">45 mins</option>   
+                                </select>
+                              </div>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <label for="message" class="block text-sm font-medium text-gray-900">Note</label>
+                        <textarea id="message" rows="2" class="block px-4 py-3 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="sticky bottom-0 flex justify-end items-center gap-2 p-6 bg-white border-t rounded-b gap-x-2"> 
+                <button type="submit"
+                    class="flex px-3 py-2 bg-red-700 hover:bg-red-800 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+                    Delete
+                </button>
+                <button type="submit"
+                    class="flex px-3 py-2 bg-primary-700 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+                    Save
+                </button>
+            </div>
+        </form>
+    </dialog>
+<!-- reminder -->
+    <dialog id="reminder1modal"
+    class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-6 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-lg font-medium text-gray-900 md:text-base">
+                New Event
+            </h3>
+            <button onclick="reminder1modal.close()" type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col p-2 md:p-6 gap-5 bg-white">
+            <div class="flex flex-col item-start p-4 gap-7 border bg-gray-50">
+                <div class="flex flex-col gap-2">
+                        <label for="Title" class="block text-sm font-medium">Title</label>
+                        <input type="text" id="Title" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                </div>
+                
+                  <div class="flex flex-col md:flex-row gap-7 w-full">
+                    <div class="date flex flex-col items-start gap-2 w-full">
+                        <label for="date-2" class="flex items-center font-medium text-sm">Date</label>
+                        <div class="relative w-full">
+                         
+                          <input id="date-2" type="date"
+                            class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                            placeholder="Select date">
+                        </div>
+                      </div>
+                      <div class="start-time flex flex-col items-start gap-2 w-full">
+                          <label for="time-1" class="flex items-center font-medium text-sm">Start time</label>
+                          <div class="relative w-full">
+                           
+                            <input id="time-1"  type="time"
+                              class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                              placeholder="Select date">
+                          </div>
+                        </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="message1" class="block text-sm font-medium text-gray-900">Note</label>
+                    <textarea id="message1" rows="2" class="block px-4 py-3 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+                </div>
+            </div> 
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex justify-end items-center p-6 bg-white border-t rounded-b gap-x-2"> 
+            <button type="submit"
+                class="flex px-3 py-2 bg-primary-700 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+                Save
+            </button>
+        </div>
+    </form>
+</dialog>
+<!-- court hearing -->
+<dialog id="courthearing1modal"
+class="relative right-0 w-full max-w-2xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+<form method="dialog">
+    <!-- Modal header -->
+    <div class="sticky top-0 flex items-center justify-between p-6 bg-white border-b rounded-t md:p-4">
+        <h3 class="text-lg font-medium text-gray-900 md:text-base">
+            Court Hearing
+        </h3>
+        <button onclick="courthearing1modal.close()" type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+            <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <span class="sr-only">Close modal</span>
+        </button>
+    </div>
+    <!-- Modal body -->
+    <div class="flex flex-col p-2 md:p-6 gap-5 bg-white">
+        
+        <div class="flex flex-col item-start p-4 gap-7 border bg-gray-50">
+            <div class="flex flex-col gap-2">
+                    <label for="casehearing" class="block text-sm font-medium">Case Hearing No</label>
+                    <input type="text" id="casehearing" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+            </div>
+            
+              <div class="flex flex-col md:flex-row gap-7 w-full">
+                    <div class="date flex flex-col items-start gap-2 w-full">
+                      <label for="date-1" class="flex items-center font-medium text-sm">Date</label>
+                      <div class="relative w-full">
+                       
+                        <input id="date-1" type="date"
+                          class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                          placeholder="Select date">
+                      </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2 w-full">
+                        <label for="Case-1" class="block text-sm font-medium">Case</label>
+                        <input type="text" id="Case-1" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Rosie property dispute case" required>
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-7 w-full">
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="clientname-1" class="block text-sm font-medium">Court/Judge</label>
+                    <input type="text" id="clientname-1" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Special court" required>
+            </div> 
+                <div class="flex flex-col gap-2 w-full">
+                    <label for="location/station" class="block text-sm font-medium">Location/Station</label>
+                    <input type="text" id="location/station" class="border border-gray-300 text-gray-900 font-normal text-sm rounded-lg focus:ring-primary-700 focus:border-primary-700 block w-full p-2.5" placeholder="e.g. Special court" required>
+            </div>
+          </div>
+          <div class="flex flex-col items-start gap-2 w-full">
+            <label for="Agenda" class="text-sm font-medium">Agenda on next hearing</label>
+            <select id="Agenda"
+              class="flex flex-col items-start p-2.5 border border-gray-300 rounded-lg w-full">
+              
+              <option selected class="flex items-center font-normal text-sm text-gray-500">Select agenda</option>
+              <option value="1"></option>
+              <option value="2"></option>   
+            </select>
+          </div>
+          <div class="flex flex-col gap-2">      
+            <label for="courtsummary" class="flex text-sm font-medium text-gray-900">Court Hearing Summary</label>
+            <textarea id="courtsummary" rows="3" class="block px-5 py-3 w-full text-sm text-gray-900  rounded-lg border border-gray-300 focus:ring-primary-700 focus:border-primary-700" placeholder="Write text here ..."></textarea>
+            <div class="flex items-center w-full gap-2.5">
+            <span class="flex items-center gap-2.5 text-gray-500 text-xs font-normal w-full">
+                Max 4000 characters
+            </span>
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 9C4.41421 9 4.75 9.33579 4.75 9.75V10.75C4.75 14.7541 7.99594 18 12 18C16.0041 18 19.25 14.7541 19.25 10.75V9.75C19.25 9.33579 19.5858 9 20 9C20.4142 9 20.75 9.33579 20.75 9.75V10.75C20.75 15.3298 17.2314 19.0879 12.75 19.4683V21.75C12.75 22.1642 12.4142 22.5 12 22.5C11.5858 22.5 11.25 22.1642 11.25 21.75V19.4683C6.7686 19.0879 3.25 15.3298 3.25 10.75V9.75C3.25 9.33579 3.58579 9 4 9Z" fill="#1C274C"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C8.82436 2 6.25 4.57436 6.25 7.75V10.75C6.25 13.9256 8.82436 16.5 12 16.5C15.1756 16.5 17.75 13.9256 17.75 10.75V7.75C17.75 4.57436 15.1756 2 12 2ZM14 11.5C14.4142 11.5 14.75 11.1642 14.75 10.75C14.75 10.3358 14.4142 10 14 10H10C9.58579 10 9.25 10.3358 9.25 10.75C9.25 11.1642 9.58579 11.5 10 11.5H14ZM13.75 7.75C13.75 8.16421 13.4142 8.5 13 8.5H11C10.5858 8.5 10.25 8.16421 10.25 7.75C10.25 7.33579 10.5858 7 11 7H13C13.4142 7 13.75 7.33579 13.75 7.75Z" fill="#1C274C"/>
+                    </svg>
+                    
+            </button>
+        </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="block text-sm font-medium text-gray-900" for="file_input">
+                Upload supporting documents
+            </label>
+            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+            <span class="block text-xs md:text-xs font-normal text-gray-500">
+                A note for extra info
+            </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5">
+            <div class="flex p-3 gap-2 rounded-lg items-center justify-between">
+                <!-- pdf -->
+                <div class="relative shrink-0 w-7 md:w-9">
+                    <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                      <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                      <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                    </svg>
+                    <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                        pdf
+                    </p>
+                </div>
+                <!-- Property details documents.doc -->
+                <div class="flex flex-col w-full grow-0 justify-between">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-900 truncate w-28 md:w-32">
+                            Property details documents.doc
+                        </span>
+                        <span class="text-sm font-medium text-gray-900">
+                            100%
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 100%"></div>
+                    </div>
+                </div>
+                <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="flex p-3 gap-2 bg-gray-50 rounded-lg items-center justify-between">
+                <!-- pdf -->
+                <div class="relative shrink-0 w-7 md:w-9">
+                    <svg class="shrink-0 w-7 md:w-9" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.9199 0.21582H2.05464C1.12161 0.21582 0.365234 0.972193 0.365234 1.90522V45.5264C0.365234 46.4594 1.12161 47.2158 2.05464 47.2158H35.6743C36.6073 47.2158 37.3637 46.4594 37.3637 45.5264V15.031L20.9199 0.21582Z" fill="#8B5CF6"></path>
+                      <path d="M20.9209 13.3416V0.21582L37.3647 15.031H22.6103C21.6773 15.031 20.9209 14.2747 20.9209 13.3416Z" fill="#5B21B6"></path>
+                      <path d="M37.365 21.1617L25.0322 15.0312H37.365V21.1617Z" fill="#7C3AED"></path>
+                    </svg>
+                    <p class="absolute bottom-2 md:bottom-3 text-center left-0 right-0 z-20 mx-auto text-2xs md:text-xs font-medium leading-3 text-white">
+                        pdf
+                    </p>
+                </div>
+                <!-- Property details documents.doc -->
+                <div class="flex flex-col w-full grow-0 justify-between">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm font-medium text-gray-900 truncate w-32 md:w-36">
+                            Property details documents.doc
+                        </span>
+                        <span class="text-sm font-medium text-gray-900">
+                            60%
+                        </span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-violet-700 h-2.5 rounded-full" style="width: 60%"></div>
+                    </div>
+                </div>
+                <button type="button" class="bg-gray-100 hover:bg-gray-200 rounded-lg p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </div>
+        </div> 
+    </div>
+    <!-- Modal footer -->
+    <div class="sticky bottom-0 flex justify-end items-center p-6 bg-white border-t rounded-b gap-x-2"> 
+        <button type="submit"
+                class="flex px-3 py-2 bg-red-700 hover:bg-red-800 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-700 font-medium rounded-lg text-sm w-full md:w-fit">
+                Delete
+            </button>
+        <button type="submit"
+            class="flex px-3 py-2 bg-primary-700 text-white border border-gray-200 items-center justify-center focus:ring-4 focus:outline-none focus:ring-primary-100 font-medium rounded-lg text-sm w-full md:w-fit">
+            Save
+        </button>
+    </div>
+</form>
+</dialog>
+   
 </body>
 
 </html>
