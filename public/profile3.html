@@ -9,6 +9,8 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+
     <!-- Tailwind CSS-->
     <link href="./css/style.css" rel="stylesheet">
 
@@ -213,7 +215,7 @@
         <div class="relative w-full h-full overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
                 <div class="py-1 md:py-5">
-                    <div class="flex flex-col justify-between w-full gap-3 p-2 mb-5 bg-white md:p-5 md:rounded-xl"> 
+                    <div class="flex flex-col justify-between w-full gap-3 p-2 mb-2 bg-white md:p-5 md:rounded-xl"> 
                         <div class="flex flex-wrap justify-between w-full gap-3">
                             <div class="flex items-center gap-2 md:gap-5">
                                 <div class="relative flex">
@@ -235,66 +237,313 @@
                                 </div>
                             </div>
                             <div class="flex flex-col items-end w-full gap-2 md:w-fit md:gap-8">
-                                <div class="px-3 py-0.5 bg-zinc-400 rounded-md justify-start items-center gap-1 inline-flex">
-                                    <div class="text-sm font-medium leading-tight text-center text-white">Unverified Account</div>
-                                  </div>
+                                <div class="grid w-full grid-cols-4 gap-1 lg:flex lg:flex-row">
+                                    <div class="flex flex-col items-center justify-center w-full h-12 gap-1 md:gap-2 p-1 md:p-2.5 rounded-lg md:h-16 lg:w-28 bg-gray-50">
+                                        <h3 class="flex items-center justify-center gap-1">
+                                            <span class="flex text-sm font-medium text-black md:text-xl">
+                                                0
+                                            </span>
+                                            <span class="font-normal text-black text-2xs md:text-sm">
+                                                years
+                                            </span>
+                                        </h3>
+                                        <h3 class="font-medium text-gray-500 text-2xs md:text-sm">
+                                                Experience
+                                        </h3>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center w-full h-12 gap-1 md:gap-2 p-1 md:p-2.5 rounded-lg md:h-16 lg:w-28 bg-gray-50">
+                                        <h3 class="flex items-center justify-center">
+                                            <span class="flex text-sm font-medium text-black md:text-xl">
+                                            0
+                                        </span>
+                                        </h3>
+                                        <h3 class="font-medium text-gray-500 text-2xs md:text-sm">
+                                            Views
+                                        </h3>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center w-full h-12 gap-1 md:gap-2 p-1 md:p-2.5 rounded-lg md:h-16 lg:w-28 bg-gray-50">
+                                        <h3 class="flex items-center justify-center">
+                                            <span class="flex text-sm font-medium text-black md:text-xl">
+                                            0
+                                        </span>
+                                        </h3>
+                                        <h3 class="font-medium text-gray-500 text-2xs md:text-sm">
+                                            Reviews
+                                        </h3>
+                                    </div>
+                                    <div class="flex flex-col items-center justify-center w-full h-12 gap-1 md:gap-2 p-1 md:p-2.5 rounded-lg md:h-16 lg:w-28 bg-gray-50">
+                                        <h3 class="flex items-center justify-center">
+                                            <span class="flex text-sm font-medium text-black md:text-xl">
+                                            0
+                                        </span>
+                                        </h3>
+                                        <h3 class="font-medium text-gray-500 text-2xs md:text-sm">
+                                            Likes
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="grid items-center w-full gap-4 md:w-fit">
+                                    <span class="flex flex-col items-end gap-1 justify-self-end">
+                                        <svg width="136" height="25" viewBox="0 0 136 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_180496_144159)">
+                                            <path d="M134 9.74L126.81 9.12L124 2.5L121.19 9.13L114 9.74L119.46 14.47L117.82 21.5L124 17.77L130.18 21.5L128.55 14.47L134 9.74ZM124 15.9L120.24 18.17L121.24 13.89L117.92 11.01L122.3 10.63L124 6.6L125.71 10.64L130.09 11.02L126.77 13.9L127.77 18.18L124 15.9Z" fill="#F59E0B"/>
+                                            </g>
+                                            <g clip-path="url(#clip1_180496_144159)">
+                                            <path d="M106.348 9.74L99.1577 9.12L96.3477 2.5L93.5377 9.13L86.3477 9.74L91.8077 14.47L90.1677 21.5L96.3477 17.77L102.528 21.5L100.898 14.47L106.348 9.74ZM96.3477 15.9L92.5877 18.17L93.5877 13.89L90.2677 11.01L94.6477 10.63L96.3477 6.6L98.0577 10.64L102.438 11.02L99.1177 13.9L100.118 18.18L96.3477 15.9Z" fill="#F59E0B"/>
+                                            </g>
+                                            <g clip-path="url(#clip2_180496_144159)">
+                                            <path d="M78.5586 9.74L71.3686 9.12L68.5586 2.5L65.7486 9.13L58.5586 9.74L64.0186 14.47L62.3786 21.5L68.5586 17.77L74.7386 21.5L73.1086 14.47L78.5586 9.74ZM68.5586 15.9L64.7986 18.17L65.7986 13.89L62.4786 11.01L66.8586 10.63L68.5586 6.6L70.2686 10.64L74.6486 11.02L71.3286 13.9L72.3286 18.18L68.5586 15.9Z" fill="#F59E0B"/>
+                                            </g>
+                                            <g clip-path="url(#clip3_180496_144159)">
+                                            <path d="M50.7617 9.74L43.5717 9.12L40.7617 2.5L37.9517 9.13L30.7617 9.74L36.2217 14.47L34.5817 21.5L40.7617 17.77L46.9417 21.5L45.3117 14.47L50.7617 9.74ZM40.7617 15.9L37.0017 18.17L38.0017 13.89L34.6817 11.01L39.0617 10.63L40.7617 6.6L42.4717 10.64L46.8517 11.02L43.5317 13.9L44.5317 18.18L40.7617 15.9Z" fill="#F59E0B"/>
+                                            </g>
+                                            <g clip-path="url(#clip4_180496_144159)">
+                                            <path d="M22.9688 9.74L15.7788 9.12L12.9688 2.5L10.1587 9.13L2.96875 9.74L8.42875 14.47L6.78875 21.5L12.9688 17.77L19.1488 21.5L17.5187 14.47L22.9688 9.74ZM12.9688 15.9L9.20875 18.17L10.2087 13.89L6.88875 11.01L11.2688 10.63L12.9688 6.6L14.6788 10.64L19.0588 11.02L15.7388 13.9L16.7388 18.18L12.9688 15.9Z" fill="#F59E0B"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_180496_144159">
+                                            <rect width="24" height="24" fill="white" transform="translate(112 0.5)"/>
+                                            </clipPath>
+                                            <clipPath id="clip1_180496_144159">
+                                            <rect width="24" height="24" fill="white" transform="translate(84.3477 0.5)"/>
+                                            </clipPath>
+                                            <clipPath id="clip2_180496_144159">
+                                            <rect width="24" height="24" fill="white" transform="translate(56.5586 0.5)"/>
+                                            </clipPath>
+                                            <clipPath id="clip3_180496_144159">
+                                            <rect width="24" height="24" fill="white" transform="translate(28.7617 0.5)"/>
+                                            </clipPath>
+                                            <clipPath id="clip4_180496_144159">
+                                            <rect width="24" height="24" fill="white" transform="translate(0.96875 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                            
+                                        <span class="flex text-sm font-medium text-gray-500">
+                                            0 Rating
+                                        </span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col justify-between w-full gap-3 p-2 mb-4 bg-white md:p-5 md:rounded-xl">
-                        <div class="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-7">
-                            <div class="bg-violet-50 rounded-2xl shadow px-3 py-4 flex gap-2.5 items-center col-span-2 md:col-span-1 order-3 md:order-1">
-                                <div class="relative flex items-center justify-center">
-                                    <svg class="shrink-0" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M48.2246 1.43555C56.646 1.43555 64.9093 3.72254 72.1324 8.05236C79.3554 12.3822 85.2671 18.5923 89.2361 26.0197L77.7529 32.1561C74.8952 26.8084 70.6388 22.3371 65.4382 19.2197C60.2376 16.1022 54.288 14.4555 48.2246 14.4555L48.2246 1.43555Z" fill="#16A34A" stroke="white" stroke-width="2"/>
-                                        <path d="M89.5503 26.618C93.3369 33.9586 95.0999 42.1754 94.658 50.4233C94.2161 58.6712 91.5853 66.6526 87.036 73.5466L76.1688 66.3755C79.4443 61.4118 81.3385 55.6652 81.6567 49.7267C81.9748 43.7882 80.7055 37.8721 77.9791 32.5869L89.5503 26.618Z" fill="#CBD5E1" stroke="white" stroke-width="2"/>
-                                        <path d="M86.7736 73.9398C82.7329 79.9298 77.3519 84.8958 71.0575 88.4437C64.7631 91.9916 57.7285 94.0239 50.5118 94.3793L49.8714 81.375C55.0674 81.1191 60.1323 79.6559 64.6643 77.1014C69.1963 74.5469 73.0706 70.9714 75.9799 66.6586L86.7736 73.9398Z" fill="#CBD5E1" stroke="white" stroke-width="2"/>
-                                        <path d="M50.137 94.3962C41.5806 94.7484 33.0931 92.7309 25.6104 88.5661C18.1276 84.4014 11.9403 78.2512 7.73068 70.7936L19.069 64.3934C22.0999 69.7628 26.5548 74.191 31.9424 77.1896C37.3299 80.1882 43.4409 81.6408 49.6015 81.3872L50.137 94.3962Z" fill="#CBD5E1" stroke="white" stroke-width="2"/>
-                                        <path d="M7.53704 70.4471C3.11556 62.4557 1.14529 53.3392 1.87208 44.2352C2.59886 35.1311 5.99053 26.4427 11.6238 19.2539L21.8721 27.2848C17.8161 32.4607 15.3741 38.7164 14.8508 45.2713C14.3275 51.8262 15.7461 58.3901 18.9296 64.1439L7.53704 70.4471Z" fill="#CBD5E1" stroke="white" stroke-width="2"/>
-                                        <path d="M11.8688 18.9441C16.181 13.5365 21.6452 9.15897 27.8633 6.13042C34.0815 3.10186 40.8969 1.49857 47.8131 1.43737L47.9283 14.4569C42.9487 14.5009 38.0416 15.6553 33.5645 17.8359C29.0874 20.0164 25.1532 23.1682 22.0484 27.0617L11.8688 18.9441Z" fill="#CBD5E1" stroke="white" stroke-width="2"/>
-                                    </svg>                                    
-                                    <div class="absolute text-xs font-semibold leading-10 text-center text-black md:text-lg">16%</div>
+                        <div class="w-full flex flex-col justify-between items-start self-stretch px-2.5 py-5 rounded-lg bg-pink-50 border border-pink-600 border-dashed">
+                            <div class="flex flex-wrap items-center self-stretch justify-between gap-3">
+                                <div class="relative flex items-center justify-start gap-4">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative w-8 h-8 shrink-0" preserveAspectRatio="xMidYMid meet" > <rect width="32" height="32" rx="8" fill="#FBCFE8"></rect> <g clip-path="url(#clip0_228_21605)"> <path d="M16 20.1667V15.1667" stroke="#BE185D" stroke-width="1.5" stroke-linecap="round" ></path> <ellipse cx="0.833333" cy="0.833333" rx="0.833333" ry="0.833333" transform="matrix(1 0 0 -1 15.1667 13.5)" fill="#BE185D" ></ellipse> <path d="M7.66669 16C7.66669 12.0716 7.66669 10.1074 8.88708 8.88704C10.1075 7.66666 12.0716 7.66666 16 7.66666C19.9284 7.66666 21.8926 7.66666 23.113 8.88704C24.3334 10.1074 24.3334 12.0716 24.3334 16C24.3334 19.9284 24.3334 21.8925 23.113 23.1129C21.8926 24.3333 19.9284 24.3333 16 24.3333C12.0716 24.3333 10.1075 24.3333 8.88708 23.1129C7.66669 21.8925 7.66669 19.9284 7.66669 16Z" stroke="#BE185D" stroke-width="1.5" ></path> </g> <defs> <clipPath id="clip0_228_21605"> <rect width="20" height="20" fill="white" transform="translate(6 6)"></rect> </clipPath> </defs> </svg>
+                                    <div class="relative flex flex-col flex-wrap items-start justify-start">
+                                        <p class="text-base font-medium text-left text-pink-700 ">
+                                            Incomplete Profile
+                                        </p>
+                                        <p class="text-xs text-left text-pink-700 ">
+                                            Incomplete profile will not publish on wooqlaw® marketplace!
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="flex gap-1.5 flex-col items-start">
-                                    <h3 class="text-xs font-medium leading-normal text-black md:text-base">Incomplete Profile!</h3>
-                                    <p class="font-normal leading-none text-black text-2xs md:text-xs">Please note, an incomplete and unverified profile can not be published on the wooqlaw(R) marketplace.</p>
-                                    <button type="button" onclick="completeprofile.showModal()" class="font-semibold leading-normal text-2xs md:text-base text-violet-700 hover:text-violet-700">Complete Profile</button>
-                                </div>
+                                <a onclick="completeprofile.showModal()" href="javascript:;" class="relative text-white flex items-center justify-center gap-2 px-3 py-2.5 bg-pink-700 rounded-lg hover:bg-pink-800 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium text-sm">
+                                    <span>
+                                        Click here complete profile
+                                    </span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="relative w-4 h-4 shrink-0" preserveAspectRatio="xMidYMid meet" > <path fill-rule="evenodd" clip-rule="evenodd" d="M8.9798 3.64645C9.17506 3.45118 9.49164 3.45118 9.68691 3.64645L13.6869 7.64645C13.8822 7.84171 13.8822 8.15829 13.6869 8.35355L9.68691 12.3536C9.49164 12.5488 9.17506 12.5488 8.9798 12.3536C8.78454 12.1583 8.78454 11.8417 8.9798 11.6464L12.1262 8.5H2.66669C2.39054 8.5 2.16669 8.27614 2.16669 8C2.16669 7.72386 2.39054 7.5 2.66669 7.5H12.1262L8.9798 4.35355C8.78454 4.15829 8.78454 3.84171 8.9798 3.64645Z" fill="white" ></path> </svg>
+                                </a>
                             </div>
-                            <div class="bg-violet-50 rounded-2xl shadow px-5 py-4 flex gap-2.5 items-center col-span-2 md:col-span-1 order-4 md:order-2">
-                                <div class="relative flex items-center justify-center">
-                                    <svg class="shrink-0" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M48.0332 1.4375C57.3799 1.4375 66.5098 4.25422 74.2318 9.52028C81.9539 14.7863 87.9097 22.2573 91.3226 30.9587C94.7354 39.6601 95.4468 49.188 93.3639 58.2997C91.2811 67.4114 86.5007 75.6839 79.6462 82.0383L70.7946 72.4901C75.7298 67.9149 79.1717 61.9587 80.6713 55.3983C82.171 48.8378 81.6588 41.9777 79.2015 35.7127C76.7443 29.4477 72.4561 24.0687 66.8962 20.2771C61.3363 16.4855 54.7629 14.4575 48.0332 14.4575V1.4375Z" fill="#16A34A" stroke="white" stroke-width="2"/>
-                                        <path d="M79.4315 82.2362C73.7166 87.4678 66.7851 91.1885 59.2668 93.0602C51.7484 94.9319 43.8815 94.8954 36.3808 92.9539C28.8802 91.0123 21.9835 87.2274 16.3175 81.9429C10.6515 76.6584 6.39579 70.0419 3.93696 62.6946L16.2839 58.5626C18.0543 63.8527 21.1184 68.6166 25.1979 72.4214C29.2774 76.2262 34.243 78.9514 39.6435 80.3493C45.044 81.7472 50.7081 81.7735 56.1214 80.4258C61.5346 79.0782 66.5253 76.3993 70.64 72.6325L79.4315 82.2362Z" fill="#CBD5E1" stroke="white" stroke-width="2"/>
-                                        <path d="M4.67009 64.7271C1.94277 57.6831 0.97248 50.0808 1.84314 42.5777C2.7138 35.0745 5.39919 27.8964 9.66706 21.6642C13.9349 15.4319 19.6568 10.3332 26.3377 6.80896C33.0187 3.28472 40.4576 1.44109 48.0111 1.43751L48.0173 14.4575C42.5788 14.4601 37.2228 15.7875 32.4125 18.3249C27.6022 20.8624 23.4824 24.5335 20.4096 29.0207C17.3367 33.5079 15.4032 38.6761 14.7764 44.0784C14.1495 49.4807 14.8481 54.9544 16.8118 60.026L4.67009 64.7271Z" fill="#CBD5E1" stroke="white" stroke-width="2"/>
-                                    </svg>                                                                         
-                                    <div class="absolute text-xs font-semibold leading-10 text-center text-black md:text-lg">30%</div>
-                                </div>
-                                <div class="flex gap-1.5 flex-col items-start">
-                                    <h3 class="text-xs font-medium leading-normal text-black md:text-base">Verify Your Identity</h3>
-                                    <p class="font-normal leading-none text-black text-2xs md:text-xs">Verify your identity to get your profile published on the wooqlaw®️ marketplace.Clients can only reach out to verified lawyers.</p>
-                                    <button type="button" onclick="completeprofile.showModal()" class="font-semibold leading-normal text-2xs md:text-base text-violet-700 hover:text-violet-700">Verify Now</button>
-                                </div>
+                        </div>
+                        <div class="flex flex-col items-start justify-between gap-3 p-3 border border-gray-200 rounded-lg md:items-center md:flex-row">
+                            <div>
+                                <h3 class="mb-1 text-base font-medium text-primary-700">Activate Profile</h3>
+                                <p class="text-xs leading-none text-gray-500">Publish profile on wooqlaw marketplace</p>
                             </div>
-                            <div class="bg-indigo-50 rounded-2xl shadow px-3 py-5 flex flex-col gap-2.5 items-start justify-center order-2 md:order-3">
-                                <h3 class="text-xs font-medium md:text-2xl text-zinc-600">Likes</h3>
-                                <div class="flex items-start justify-between w-full">
-                                    <p class="text-xs font-bold md:text-4xl text-violet-600">02</p>
-                                    <svg class="h-4 md:h-11" viewBox="0 0 56 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M46.9115 30.2957L48.5295 22.8162C48.9336 20.948 47.1365 19.2393 44.7676 19.2393L32.8855 19.2393C31.7078 19.2393 30.811 18.3943 31.0017 17.4643L32.5214 10.0492C32.7683 8.84461 32.6978 7.61198 32.3144 6.43044C31.9968 5.45165 31.0521 4.66572 29.8098 4.34667L29.4773 4.26129C28.7265 4.06847 27.907 4.11334 27.1991 4.38603C26.4199 4.68618 25.8499 5.23366 25.6386 5.88477L24.5477 9.24684C24.2005 10.3166 23.6949 11.3491 23.043 12.3248C22.0904 13.7503 20.6177 14.8912 19.0868 15.9457L15.7872 18.2187C14.8569 18.8596 14.3683 19.8193 14.4742 20.798L16.3368 38.0179C16.5076 39.5974 18.1595 40.81 20.1405 40.81L30.8014 40.81C38.7853 40.81 45.5989 36.363 46.9115 30.2957Z" fill="#7C3AED"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2318 17.8658C8.15204 17.8341 8.94023 18.3875 9.01958 19.1211L11.2478 39.7214C11.3909 41.0446 10.0871 42.1852 8.42214 42.1852C6.85391 42.1852 5.58594 41.1681 5.58594 39.9168L5.58594 19.2395C5.58594 18.5032 6.31156 17.8975 7.2318 17.8658Z" fill="#7C3AED"/>
-                                    </svg>                                        
-                                  </div>
+                            <div class="flex flex-row-reverse items-center justify-between w-full gap-1 px-3 py-2 rounded-lg md:items-end md:flex-col bg-gray-50 md:w-fit" x-data="{prostatus: false}">
+                                <div class="flex items-center gap-2">
+                                    <p class="text-sm leading-tight text-gray-400" x-text=" prostatus ? 'Enabled':'Disabled' "></p>
+                                    <label class="relative flex items-center cursor-pointer sm:mb-0">
+                                        <input type="checkbox" value="" class="sr-only peer">
+                                        <div x-on:click="prostatus=!prostatus" class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-700"></div>
+                                    </label>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 " :class=" prostatus ? 'text-purple-700 hover:text-purple-800':'text-gray-400' ">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_7667_82380)">
+                                        <path d="M7 9C8.10313 9 9 8.04707 9 6.875C9 6.49316 8.87813 6.13457 8.7375 5.82578C8.825 5.81582 8.9125 5.8125 9 5.8125C10.6562 5.8125 12 7.21035 12 9C12 10.7598 10.6562 12.1875 9 12.1875C7.31562 12.1875 6 10.7598 6 9C6 8.90703 6.00312 8.81406 6.0125 8.72109C6.30312 8.87051 6.64062 9 7 9Z"/>
+                                        <path opacity="0.4" d="M2.98188 4.23867C4.45313 2.7857 6.475 1.5625 9 1.5625C11.525 1.5625 13.5469 2.7857 15.0188 4.23867C16.4813 5.67969 17.4594 7.37637 17.9219 8.5916C18.025 8.85391 18.025 9.14609 17.9219 9.4084C17.4594 10.5938 16.4813 12.2904 15.0188 13.7613C13.5469 15.2156 11.525 16.4375 9 16.4375C6.475 16.4375 4.45313 15.2156 2.98188 13.7613C1.51938 12.2904 0.541879 10.5938 0.0769102 9.4084C-0.0256367 9.14609 -0.0256367 8.85391 0.0769102 8.5916C0.541879 7.37637 1.51938 5.67969 2.98188 4.23867ZM9 13.7812C11.4844 13.7812 13.5 11.6396 13.5 9C13.5 6.36035 11.4844 4.21875 9 4.21875C6.51563 4.21875 4.5 6.36035 4.5 9C4.5 11.6396 6.51563 13.7812 9 13.7812Z"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_7667_82380">
+                                        <rect width="18" height="17" fill="white" transform="translate(0 0.5)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>                                                        
+                                    <p class="text-xs font-medium">Profile Preview</p>
+                                </a>
                             </div>
-                            <div class="bg-indigo-50 rounded-2xl shadow px-3 py-5 flex flex-col gap-2.5 items-start justify-center order-1 md:order-4">
-                                <h3 class="text-xs font-medium md:text-2xl text-zinc-600">Profile Views</h3>
-                                <div class="flex items-start justify-between w-full">
-                                    <p class="text-xs font-bold md:text-4xl text-violet-600">33</p>
-                                    <svg class="h-3 md:h-9" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.7037 17.1439C16.7037 14.507 18.8056 12.3694 21.3984 12.3694C23.9912 12.3694 26.093 14.507 26.093 17.1439C26.093 19.7808 23.9912 21.9184 21.3984 21.9184C18.8056 21.9184 16.7037 19.7808 16.7037 17.1439Z" fill="#7C3AED"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.533203 17.1439C0.533203 20.6226 1.4199 21.7942 3.19329 24.1373C6.73426 28.8158 12.6728 34.1198 21.3984 34.1198C30.124 34.1198 36.0625 28.8158 39.6035 24.1373C41.3769 21.7942 42.2635 20.6226 42.2635 17.1439C42.2635 13.6652 41.3769 12.4936 39.6035 10.1505C36.0625 5.47201 30.124 0.167969 21.3984 0.167969C12.6728 0.167969 6.73426 5.47201 3.19329 10.1505C1.4199 12.4936 0.533203 13.6652 0.533203 17.1439ZM21.3984 9.18643C17.0771 9.18643 13.5739 12.7491 13.5739 17.1439C13.5739 21.5387 17.0771 25.1014 21.3984 25.1014C25.7197 25.1014 29.2228 21.5387 29.2228 17.1439C29.2228 12.7491 25.7197 9.18643 21.3984 9.18643Z" fill="#7C3AED"/>
-                                    </svg>                                                                               
-                                  </div>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-between p-3 border border-gray-200 rounded-lg gap-x-10 gap-y-4">
+                            <div class="shrink-0">
+                                <h3 class="mb-1 text-base font-medium text-gray-600">Activate feature</h3>
+                                <p class="text-xs leading-none text-gray-500">Publish profile on wooqlaw marketplace</p>
+                            </div>
+                            <div class="grid items-center grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4 grow">
+                                <div class="flex items-center justify-between w-full p-3 bg-white rounded-lg drop-shadow">
+                                    <div class="flex items-center gap-2">
+                                        <span class="flex items-center justify-center rounded w-7 md:w-10 h-7 md:h-10 bg-emerald-200">
+                                            <svg class="h-5 md:h-6" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_dd_575_28064)">
+                                                <path d="M14.0867 21.3877L14.6288 20.4718C15.0492 19.7614 15.2595 19.4062 15.5972 19.2098C15.9349 19.0134 16.36 19.0061 17.2104 18.9915C18.4658 18.9698 19.2531 18.8929 19.9134 18.6194C21.1386 18.1119 22.1119 17.1386 22.6194 15.9134C23 14.9946 23 13.8297 23 11.5V10.5C23 10.1303 23 9.78153 22.9989 9.45187C22.9976 9.02454 22.4751 8.78307 22.0971 8.9825C21.4709 9.31294 20.7573 9.5 20 9.5C17.5147 9.5 15.5 7.48528 15.5 5C15.5 4.24271 15.6871 3.52911 16.0175 2.90288C16.2169 2.52494 15.9755 2.00244 15.5481 2.00106C15.2185 2 14.8697 2 14.5 2H11.5C8.22657 2 6.58985 2 5.38751 2.7368C4.71473 3.14908 4.14908 3.71473 3.7368 4.38751C3 5.58985 3 7.22657 3 10.5V11.5C3 13.8297 3 14.9946 3.3806 15.9134C3.88807 17.1386 4.86144 18.1119 6.08658 18.6194C6.74689 18.8929 7.53422 18.9698 8.78958 18.9915C9.63992 19.0061 10.0651 19.0134 10.4028 19.2098C10.7405 19.4063 10.9507 19.7614 11.3712 20.4718L11.9133 21.3877C12.3965 22.204 13.6035 22.204 14.0867 21.3877Z" fill="#059669"/>
+                                                <circle cx="20" cy="5" r="3" fill="#059669"/>
+                                                </g>
+                                                <defs>
+                                                <filter id="filter0_dd_575_28064" x="-2" y="-2" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                                <feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect1_dropShadow_575_28064"/>
+                                                <feOffset dy="1"/>
+                                                <feGaussianBlur stdDeviation="1"/>
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_575_28064"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                                <feOffset dy="1"/>
+                                                <feGaussianBlur stdDeviation="1.5"/>
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                                <feBlend mode="normal" in2="effect1_dropShadow_575_28064" result="effect2_dropShadow_575_28064"/>
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_575_28064" result="shape"/>
+                                                </filter>
+                                                </defs>
+                                            </svg>                                              
+                                        </span>  
+                                        <span class="flex flex-col">
+                                            <h3 class="text-sm font-medium md:text-base text-emerald-600">
+                                                Live Chat
+                                            </h3>
+                                            <p class="font-light text-gray-600 text-2xs md:text-xs">
+                                                Usually Responds in an hour
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <label class="relative flex items-center cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer">
+                                        <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-700"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between w-full p-3 bg-white rounded-lg drop-shadow">
+                                    <div class="flex items-center gap-2">
+                                        <span class="flex items-center justify-center bg-orange-200 rounded w-7 md:w-10 h-7 md:h-10">
+                                            <svg class="h-5 md:h-6" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_dd_575_28078)">
+                                                <path d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" fill="#EA580C"/>
+                                                </g>
+                                                <defs>
+                                                <filter id="filter0_dd_575_28078" x="-3" y="-2" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                                <feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect1_dropShadow_575_28078"/>
+                                                <feOffset dy="1"/>
+                                                <feGaussianBlur stdDeviation="1"/>
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_575_28078"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                                <feOffset dy="1"/>
+                                                <feGaussianBlur stdDeviation="1.5"/>
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                                <feBlend mode="normal" in2="effect1_dropShadow_575_28078" result="effect2_dropShadow_575_28078"/>
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_575_28078" result="shape"/>
+                                                </filter>
+                                                </defs>
+                                            </svg>                                                      
+                                        </span>  
+                                        <span class="flex flex-col">
+                                            <h3 class="text-sm font-medium text-orange-600 md:text-base">
+                                                Contact Number
+                                            </h3>
+                                            <p class="font-light text-gray-600 text-2xs md:text-xs">
+                                                03 * *   * * * *   * * *
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <label class="relative flex items-center cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer">
+                                        <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-700"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between w-full p-3 bg-white rounded-lg drop-shadow">
+                                    <div class="flex items-center gap-2">
+                                        <span class="flex items-center justify-center bg-blue-200 rounded w-7 md:w-10 h-7 md:h-10">
+                                            <svg class="h-5 md:h-6" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g filter="url(#filter0_dd_575_28091)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.17157 5.17157C3 6.34315 3 8.22876 3 12C3 15.7712 3 17.6569 4.17157 18.8284C5.34315 20 7.22876 20 11 20H15C18.7712 20 20.6569 20 21.8284 18.8284C23 17.6569 23 15.7712 23 12C23 8.22876 23 6.34315 21.8284 5.17157C20.6569 4 18.7712 4 15 4H11C7.22876 4 5.34315 4 4.17157 5.17157ZM19.5762 7.51986C19.8413 7.83807 19.7983 8.31099 19.4801 8.57617L17.2837 10.4066C16.3973 11.1452 15.6789 11.7439 15.0448 12.1517C14.3843 12.5765 13.7411 12.8449 13 12.8449C12.2589 12.8449 11.6157 12.5765 10.9552 12.1517C10.3211 11.7439 9.60271 11.1452 8.71636 10.4066L6.51986 8.57617C6.20165 8.31099 6.15866 7.83807 6.42383 7.51986C6.68901 7.20165 7.16193 7.15866 7.48014 7.42383L9.63903 9.22291C10.572 10.0004 11.2197 10.5384 11.7666 10.8901C12.2959 11.2306 12.6549 11.3449 13 11.3449C13.3451 11.3449 13.7041 11.2306 14.2334 10.8901C14.7803 10.5384 15.428 10.0004 16.361 9.22291L18.5199 7.42383C18.8381 7.15866 19.311 7.20165 19.5762 7.51986Z" fill="#2563EB"/>
+                                                </g>
+                                                <defs>
+                                                <filter id="filter0_dd_575_28091" x="-2" y="-2" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                                <feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect1_dropShadow_575_28091"/>
+                                                <feOffset dy="1"/>
+                                                <feGaussianBlur stdDeviation="1"/>
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_575_28091"/>
+                                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                                <feOffset dy="1"/>
+                                                <feGaussianBlur stdDeviation="1.5"/>
+                                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                                <feBlend mode="normal" in2="effect1_dropShadow_575_28091" result="effect2_dropShadow_575_28091"/>
+                                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_575_28091" result="shape"/>
+                                                </filter>
+                                                </defs>
+                                            </svg>                                                       
+                                        </span>  
+                                        <span class="flex flex-col">
+                                            <h3 class="text-sm font-medium text-blue-600 md:text-base">
+                                                Email Inquiry
+                                            </h3>
+                                            <p class="font-light text-gray-600 text-2xs md:text-xs">
+                                                Usually Responds in an hour
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <label class="relative flex items-center cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer">
+                                        <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-700"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between w-full p-3 bg-white rounded-lg drop-shadow">
+                                    <div class="flex items-center gap-2">
+                                    <span class="flex items-center justify-center rounded w-7 md:w-10 h-7 md:h-10 bg-primary-200">
+                                        <svg class="h-5 md:h-6" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g filter="url(#filter0_dd_575_28104)">
+                                            <path d="M8.75 3.5C8.75 3.08579 8.41421 2.75 8 2.75C7.58579 2.75 7.25 3.08579 7.25 3.5V5.07926C5.81067 5.19451 4.86577 5.47737 4.17157 6.17157C3.47737 6.86577 3.19451 7.81067 3.07926 9.25H22.9207C22.8055 7.81067 22.5226 6.86577 21.8284 6.17157C21.1342 5.47737 20.1893 5.19451 18.75 5.07926V3.5C18.75 3.08579 18.4142 2.75 18 2.75C17.5858 2.75 17.25 3.08579 17.25 3.5V5.0129C16.5847 5 15.839 5 15 5H11C10.161 5 9.41527 5 8.75 5.0129V3.5Z" fill="#7C3AED"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 13V15C23 18.7712 23 20.6569 21.8284 21.8284C20.6569 23 18.7712 23 15 23H11C7.22876 23 5.34315 23 4.17157 21.8284C3 20.6569 3 18.7712 3 15V13C3 12.161 3 11.4153 3.0129 10.75H22.9871C23 11.4153 23 12.161 23 13ZM17.5 19C18.3284 19 19 18.3284 19 17.5C19 16.6716 18.3284 16 17.5 16C16.6716 16 16 16.6716 16 17.5C16 18.3284 16.6716 19 17.5 19Z" fill="#7C3AED"/>
+                                            </g>
+                                            <defs>
+                                            <filter id="filter0_dd_575_28104" x="-2" y="-1" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect1_dropShadow_575_28104"/>
+                                            <feOffset dy="1"/>
+                                            <feGaussianBlur stdDeviation="1"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_575_28104"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="1"/>
+                                            <feGaussianBlur stdDeviation="1.5"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                                            <feBlend mode="normal" in2="effect1_dropShadow_575_28104" result="effect2_dropShadow_575_28104"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_575_28104" result="shape"/>
+                                            </filter>
+                                            </defs>
+                                            </svg>
+                                        </span>  
+                                        <span class="flex flex-col">
+                                            <h3 class="text-sm font-medium md:text-base text-primary-600">
+                                                Book Appointment
+                                            </h3>
+                                            <p class="font-light text-gray-600 text-2xs md:text-xs">
+                                                Available Today 9:15 pm
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <label class="relative flex items-center cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer">
+                                        <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-700"></div>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -350,8 +599,7 @@
                                 href="javascript:;"
                                 class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
                                 role="tab"
-                                aria-selected="false"
-                                >
+                                aria-selected="false">
                                     <div class="flex items-center gap-2">
                                         <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.16406 2.5C8.16406 2.08579 7.82828 1.75 7.41406 1.75C6.99985 1.75 6.66406 2.08579 6.66406 2.5V4.07926C5.22473 4.19451 4.27983 4.47737 3.58564 5.17157C2.89144 5.86577 2.60858 6.81067 2.49332 8.25H22.3348C22.2195 6.81067 21.9367 5.86577 21.2425 5.17157C20.5483 4.47737 19.6034 4.19451 18.1641 4.07926V2.5C18.1641 2.08579 17.8283 1.75 17.4141 1.75C16.9998 1.75 16.6641 2.08579 16.6641 2.5V4.0129C15.9988 4 15.2531 4 14.4141 4H10.4141C9.57503 4 8.82933 4 8.16406 4.0129V2.5Z"/>
@@ -371,8 +619,7 @@
                                 href="javascript:;"
                                 class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
                                 role="tab"
-                                aria-selected="false"
-                                >
+                                aria-selected="false">
                                     <div class="flex items-center gap-2">
                                         <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.875 12V8C2.875 5.17157 2.875 3.75736 3.75368 2.87868C4.63236 2 6.04657 2 8.875 2H16.875C19.7034 2 21.1176 2 21.9963 2.87868C22.875 3.75736 22.875 5.17157 22.875 8V12C22.875 14.8284 22.875 16.2426 21.9963 17.1213C21.3499 17.7677 20.4138 17.9386 18.838 17.9838C18.8343 17.248 18.5787 16.5132 18.0711 15.9176C18.0424 15.8839 18.0251 15.842 18.0215 15.7979C17.8961 14.2264 16.6483 12.9785 15.0768 12.8531C15.0327 12.8496 14.9908 12.8322 14.9571 12.8035C13.7572 11.781 11.9924 11.781 10.7926 12.8035C10.7589 12.8322 10.717 12.8496 10.6729 12.8531C9.10138 12.9785 7.8535 14.2264 7.72809 15.7979C7.72457 15.842 7.70722 15.8839 7.67852 15.9176C7.17095 16.5132 6.91533 17.248 6.91166 17.9838C5.3361 17.9386 4.40001 17.7677 3.75368 17.1213C2.875 16.2426 2.875 14.8284 2.875 12ZM9.125 6C9.125 5.58579 9.46079 5.25 9.875 5.25H15.875C16.2892 5.25 16.625 5.58579 16.625 6C16.625 6.41421 16.2892 6.75 15.875 6.75H9.875C9.46079 6.75 9.125 6.41421 9.125 6ZM7.875 8.75C7.46079 8.75 7.125 9.08579 7.125 9.5C7.125 9.91421 7.46079 10.25 7.875 10.25H17.875C18.2892 10.25 18.625 9.91421 18.625 9.5C18.625 9.08579 18.2892 8.75 17.875 8.75H7.875Z"/>
@@ -387,12 +634,39 @@
                             </li>
                             <li class="basis-auto shrink-0 grow-0 md:grow">
                                 <a
+                                x-tabs:tab 
+                                :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
+                                href="javascript:;"
+                                class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
+                                role="tab"
+                                aria-selected="false">
+                                    <div class="flex items-center gap-2">   
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1854_20376)">
+                                            <path d="M21.9984 1H7.59844C6.27484 1 5.19844 2.09633 5.19844 3.44444V4.05556H17.1984C19.5144 4.05556 21.3984 5.97444 21.3984 8.33333V18.1111H21.9984C23.322 18.1111 24.3984 17.0148 24.3984 15.6667V3.44444C24.3984 2.09633 23.322 1 21.9984 1Z" fill=""/>
+                                            <path d="M17.1984 5.88889H2.79844C1.47484 5.88889 0.398438 6.98522 0.398438 8.33333V20.5556C0.398438 21.9037 1.47484 23 2.79844 23H17.1984C18.522 23 19.5984 21.9037 19.5984 20.5556V8.33333C19.5984 6.98522 18.522 5.88889 17.1984 5.88889ZM2.79844 20.5556V13.2222H17.1996L17.2008 20.5556H2.79844Z" fill=""/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1854_20376">
+                                            <rect width="24" height="24" fill="white" transform="translate(0.398438)"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>      
+                                        <span>Posts</span>
+                                    </div>
+                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"/>
+                                    </svg> 
+                                </a>
+                            </li>
+                            <li class="basis-auto shrink-0 grow-0 md:grow">
+                                <a
                                 x-tabs:tab
                                 :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
                                 href="javascript:;"
                                 class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
                                 role="tab"
-                                >
+                                aria-selected="false">
                                     <div class="flex items-center gap-2">
                                         <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.8302 7.89712C11.9068 5.96571 12.4452 5 13.25 5C14.0548 5 14.5932 5.96571 15.6698 7.89712L15.9484 8.3968C16.2543 8.94564 16.4073 9.22007 16.6458 9.40114C16.8843 9.5822 17.1814 9.64942 17.7755 9.78384L18.3164 9.90622C20.4071 10.3793 21.4525 10.6158 21.7012 11.4156C21.9499 12.2153 21.2372 13.0487 19.8119 14.7154L19.4432 15.1466C19.0381 15.6203 18.8356 15.8571 18.7445 16.1501C18.6534 16.443 18.684 16.759 18.7453 17.3909L18.801 17.9662C19.0165 20.19 19.1242 21.3019 18.4731 21.7962C17.822 22.2905 16.8432 21.8398 14.8857 20.9385L14.3792 20.7053C13.823 20.4492 13.5448 20.3211 13.25 20.3211C12.9552 20.3211 12.677 20.4492 12.1208 20.7053L11.6143 20.9385C9.65677 21.8398 8.678 22.2905 8.02688 21.7962C7.37575 21.3019 7.4835 20.19 7.69899 17.9662L7.75474 17.3909C7.81597 16.759 7.84659 16.443 7.75548 16.1501C7.66438 15.8571 7.46186 15.6203 7.05683 15.1466L6.68808 14.7154C5.26276 13.0487 4.5501 12.2153 4.79881 11.4156C5.04751 10.6158 6.09288 10.3793 8.18361 9.90622L8.7245 9.78384C9.31862 9.64942 9.61568 9.5822 9.8542 9.40114C10.0927 9.22007 10.2457 8.94565 10.5516 8.3968L10.8302 7.89712Z"/>
@@ -573,165 +847,6 @@
                                             </div>
                                         </div>
                                         <div class="flex flex-col gap-2 md:gap-3">
-                                            <!-- Services -->
-                                            <div class="flex flex-col gap-2 p-2 bg-white border md:p-3 md:gap-5">
-                                                <div class="flex items-center justify-between">
-                                                    <span class="py-1 text-sm font-medium text-gray-600 md:text-lg">
-                                                        Services
-                                                    </span>
-                                                    <a onclick="addservicesmodal.showModal()" href="javascript:;" class="flex items-center justify-center w-6 h-6 bg-gray-100 rounded-lg md:w-8 md:h-8">
-                                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M9.625 6.49996C9.625 6.15478 9.34518 5.87496 9 5.87496C8.65482 5.87496 8.375 6.15478 8.375 6.49996L8.375 8.37498H6.5C6.15482 8.37498 5.875 8.6548 5.875 8.99998C5.875 9.34516 6.15482 9.62498 6.5 9.62498H8.375V11.5C8.375 11.8451 8.65482 12.125 9 12.125C9.34518 12.125 9.625 11.8451 9.625 11.5L9.625 9.62498H11.5C11.8452 9.62498 12.125 9.34516 12.125 8.99998C12.125 8.6548 11.8452 8.37498 11.5 8.37498H9.625V6.49996Z" fill="#6B7280"></path>
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.04782 0.0416261H8.95219C7.02853 0.0416158 5.52099 0.0416076 4.34476 0.199749C3.14081 0.361615 2.19079 0.699399 1.44512 1.44507C0.699441 2.19075 0.361657 3.14077 0.199791 4.34471C0.0416496 5.52095 0.0416577 7.02848 0.0416681 8.95213V9.04777C0.0416577 10.9714 0.0416496 12.479 0.199791 13.6552C0.361657 14.8592 0.699441 15.8092 1.44512 16.5548C2.19079 17.3005 3.14081 17.6383 4.34476 17.8002C5.521 17.9583 7.02853 17.9583 8.95219 17.9583H9.04781C10.9715 17.9583 12.479 17.9583 13.6552 17.8002C14.8592 17.6383 15.8092 17.3005 16.5549 16.5548C17.3006 15.8092 17.6383 14.8592 17.8002 13.6552C17.9584 12.479 17.9583 10.9714 17.9583 9.04777V8.95215C17.9583 7.02849 17.9584 5.52095 17.8002 4.34471C17.6383 3.14077 17.3006 2.19075 16.5549 1.44507C15.8092 0.699399 14.8592 0.361615 13.6552 0.199749C12.479 0.0416076 10.9715 0.0416158 9.04782 0.0416261ZM2.329 2.32896C2.80371 1.85424 3.44598 1.58183 4.51132 1.4386C5.59463 1.29295 7.01815 1.29163 9 1.29163C10.9819 1.29163 12.4054 1.29295 13.4887 1.4386C14.554 1.58183 15.1963 1.85424 15.671 2.32896C16.1457 2.80367 16.4181 3.44594 16.5614 4.51127C16.707 5.59459 16.7083 7.01811 16.7083 8.99996C16.7083 10.9818 16.707 12.4053 16.5614 13.4886C16.4181 14.554 16.1457 15.1962 15.671 15.671C15.1963 16.1457 14.554 16.4181 13.4887 16.5613C12.4054 16.707 10.9819 16.7083 9 16.7083C7.01815 16.7083 5.59463 16.707 4.51132 16.5613C3.44598 16.4181 2.80371 16.1457 2.329 15.671C1.85429 15.1962 1.58187 14.554 1.43864 13.4886C1.293 12.4053 1.29167 10.9818 1.29167 8.99996C1.29167 7.01811 1.293 5.59459 1.43864 4.51127C1.58187 3.44594 1.85429 2.80367 2.329 2.32896Z" fill="#6B7280"></path>
-                                                        </svg>
-                                                            
-                                                    </a>
-                                                </div>
-                                                <!-- Tax Filing FBR -->
-                                                <div x-data="" class="flex flex-col gap-2">
-                                                    <div x-disclosure="" class="overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
-                                                        <button x-disclosure:button="" class="flex items-center justify-between w-full p-2 bg-gray-100 border-b md:p-5" aria-expanded="false" aria-controls="alpine-disclosure-panel-1" type="button">
-                                                            <div class="flex items-center gap-2">
-                                                               
-                                                                <span class="text-xs font-medium text-gray-900 md:text-base">
-                                                                    Tax Filing FBR
-                                                                </span>
-                                                            </div>
-                                                            <div class="flex items-center justify-center gap-2 md:gap-5">
-                                                                <div class="flex items-center gap-2">
-                                                                <a onclick="addservicesmodal.showModal()" href="#" class="flex items-center justify-center w-6 h-6 bg-gray-200 rounded-lg md:w-8 md:h-8">
-                                                                    <svg class="w-4 h-4" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.95349 0.0417482L10.2513 0.0417484C10.5965 0.0417484 10.8763 0.32157 10.8763 0.666748C10.8763 1.01193 10.5965 1.29175 10.2513 1.29175H9.0013C7.01945 1.29175 5.59593 1.29308 4.51262 1.43872C3.44728 1.58195 2.80501 1.85436 2.3303 2.32908C1.85559 2.80379 1.58318 3.44606 1.43994 4.5114C1.2943 5.59471 1.29297 7.01823 1.29297 9.00008C1.29297 10.9819 1.2943 12.4055 1.43994 13.4888C1.58318 14.5541 1.85559 15.1964 2.3303 15.6711C2.80501 16.1458 3.44728 16.4182 4.51262 16.5614C5.59593 16.7071 7.01945 16.7084 9.0013 16.7084C10.9832 16.7084 12.4067 16.7071 13.49 16.5614C14.5553 16.4182 15.1976 16.1458 15.6723 15.6711C16.147 15.1964 16.4194 14.5541 16.5627 13.4888C16.7083 12.4055 16.7096 10.9819 16.7096 9.00008V7.75008C16.7096 7.4049 16.9895 7.12508 17.3346 7.12508C17.6798 7.12508 17.9596 7.4049 17.9596 7.75008V9.04789C17.9596 10.9716 17.9597 12.4791 17.8015 13.6553C17.6396 14.8593 17.3019 15.8093 16.5562 16.555C15.8105 17.3006 14.8605 17.6384 13.6565 17.8003C12.4803 17.9584 10.9728 17.9584 9.04911 17.9584H8.95349C7.02983 17.9584 5.5223 17.9584 4.34606 17.8003C3.14211 17.6384 2.19209 17.3006 1.44642 16.555C0.700741 15.8093 0.362957 14.8593 0.201091 13.6553C0.0429497 12.4791 0.0429582 10.9716 0.0429689 9.0479V8.95227C0.0429582 7.02861 0.0429497 5.52107 0.201091 4.34484C0.362957 3.14089 0.700741 2.19087 1.44642 1.4452C2.19209 0.69952 3.14211 0.361737 4.34606 0.19987C5.5223 0.041729 7.02983 0.0417375 8.95349 0.0417482ZM12.9767 0.896677C14.1167 -0.243228 15.9648 -0.243228 17.1047 0.896677C18.2446 2.03658 18.2446 3.88473 17.1047 5.02464L11.5646 10.5647C11.2552 10.8742 11.0614 11.068 10.8451 11.2367C10.5904 11.4354 10.3147 11.6058 10.0231 11.7448C9.77548 11.8628 9.51543 11.9494 9.10029 12.0878L6.67985 12.8946C6.23298 13.0435 5.74031 12.9272 5.40723 12.5942C5.07415 12.2611 4.95785 11.7684 5.1068 11.3215L5.91361 8.90111C6.05196 8.48596 6.13862 8.22591 6.25663 7.97829C6.39562 7.68665 6.56598 7.41101 6.76467 7.15626C6.93338 6.93997 7.12722 6.74616 7.43667 6.43674L12.9767 0.896677ZM16.2208 1.78056C15.5691 1.12881 14.5124 1.12881 13.8606 1.78056L13.5468 2.09441C13.5657 2.1743 13.5922 2.26947 13.629 2.37563C13.7484 2.71985 13.9744 3.17318 14.4013 3.60008C14.8282 4.02697 15.2815 4.25297 15.6257 4.37239C15.7319 4.40922 15.8271 4.43569 15.907 4.45461L16.2208 4.14076C16.8726 3.48901 16.8726 2.43231 16.2208 1.78056ZM14.9223 5.43932C14.4923 5.25441 13.9914 4.95796 13.5174 4.48396C13.0434 4.00995 12.747 3.5091 12.5621 3.07913L8.34922 7.29196C8.00213 7.63906 7.86601 7.77671 7.75031 7.92504C7.60745 8.1082 7.48497 8.30638 7.38504 8.51607C7.30411 8.68588 7.24186 8.86919 7.08664 9.33487L6.72673 10.4146L7.58678 11.2747L8.66651 10.9147C9.13219 10.7595 9.3155 10.6973 9.48532 10.6163C9.69501 10.5164 9.89318 10.3939 10.0763 10.2511C10.2247 10.1354 10.3623 9.99925 10.7094 9.65216L14.9223 5.43932Z" fill="#6B7280"></path>
-                                                                    </svg>
-                                                                        
-                                                                </a>
-                                                                <a onclick="deletemodal.showModal()" href="#" class="flex items-center justify-center w-6 h-6 bg-red-100 rounded-lg md:w-8 md:h-8">
-                                                                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.73195 0.687514H8.26803C8.43033 0.687411 8.57172 0.687321 8.70524 0.708641C9.23271 0.79287 9.68916 1.12186 9.93587 1.59563C9.99831 1.71555 10.0429 1.84971 10.0942 2.00371L10.1779 2.25488C10.192 2.2974 10.1961 2.30943 10.1995 2.31891C10.3309 2.682 10.6714 2.92745 11.0574 2.93723C11.0675 2.93748 11.08 2.93753 11.125 2.93753H13.375C13.6857 2.93753 13.9375 3.18937 13.9375 3.50003C13.9375 3.81069 13.6857 4.06253 13.375 4.06253H0.624931C0.314271 4.06253 0.0624313 3.81069 0.0624313 3.50003C0.0624313 3.18937 0.314271 2.93753 0.624931 2.93753H2.87499C2.92003 2.93753 2.93246 2.93749 2.94261 2.93723C3.32859 2.92745 3.66911 2.68202 3.80045 2.31893C3.8039 2.30938 3.80787 2.29761 3.82212 2.25488L3.90582 2.00372C3.95704 1.84973 4.00168 1.71555 4.06412 1.59563C4.31083 1.12186 4.76728 0.79287 5.29475 0.708641C5.42827 0.687321 5.56966 0.687411 5.73195 0.687514ZM4.75604 2.93753C4.79468 2.86176 4.82891 2.78303 4.85836 2.70161C4.86731 2.67689 4.87608 2.65057 4.88735 2.61675L4.9622 2.39219C5.03058 2.18706 5.04632 2.14522 5.06194 2.11523C5.14418 1.95731 5.29633 1.84764 5.47215 1.81957C5.50554 1.81423 5.5502 1.81253 5.76644 1.81253H8.23355C8.44978 1.81253 8.49444 1.81423 8.52784 1.81957C8.70366 1.84764 8.85581 1.95731 8.93805 2.11523C8.95367 2.14522 8.96941 2.18705 9.03779 2.39219L9.1126 2.61662L9.14163 2.70163C9.17108 2.78304 9.20531 2.86177 9.24394 2.93753H4.75604Z" fill="#E02424"></path>
-                                                                        <path d="M2.43625 5.33761C2.41558 5.02764 2.14755 4.79311 1.83758 4.81377C1.52761 4.83444 1.29308 5.10247 1.31374 5.41245L1.66133 10.6262C1.72545 11.5883 1.77724 12.3654 1.89872 12.9752C2.02502 13.6092 2.23984 14.1387 2.68353 14.5538C3.12723 14.9689 3.66989 15.1481 4.31088 15.2319C4.9274 15.3126 5.70621 15.3125 6.67038 15.3125H7.32956C8.29373 15.3125 9.07259 15.3126 9.68911 15.2319C10.3301 15.1481 10.8728 14.9689 11.3165 14.5538C11.7602 14.1387 11.975 13.6092 12.1013 12.9752C12.2227 12.3654 12.2745 11.5883 12.3387 10.6263L12.6862 5.41245C12.7069 5.10247 12.4724 4.83444 12.1624 4.81377C11.8524 4.79311 11.5844 5.02764 11.5637 5.33761L11.2188 10.5119C11.1514 11.5228 11.1034 12.2262 10.9979 12.7554C10.8957 13.2688 10.7529 13.5405 10.5479 13.7323C10.3428 13.9242 10.0622 14.0485 9.54319 14.1164C9.00814 14.1864 8.30314 14.1875 7.29 14.1875H6.70998C5.69685 14.1875 4.99185 14.1864 4.4568 14.1164C3.93779 14.0485 3.65718 13.9242 3.45212 13.7323C3.24706 13.5405 3.10431 13.2687 3.00204 12.7554C2.89662 12.2262 2.8486 11.5228 2.7812 10.5119L2.43625 5.33761Z" fill="#E02424"></path>
-                                                                        <path d="M5.06903 6.69032C5.37815 6.65941 5.6538 6.88494 5.68471 7.19406L6.05971 10.9441C6.09062 11.2532 5.86509 11.5288 5.55597 11.5597C5.24685 11.5906 4.9712 11.3651 4.94029 11.056L4.56529 7.306C4.53438 6.99688 4.75991 6.72123 5.06903 6.69032Z" fill="#E02424"></path>
-                                                                        <path d="M8.93097 6.69032C9.24009 6.72123 9.46562 6.99688 9.43471 7.306L9.05971 11.056C9.0288 11.3651 8.75315 11.5906 8.44403 11.5597C8.13491 11.5288 7.90938 11.2532 7.94029 10.9441L8.31529 7.19406C8.3462 6.88494 8.62185 6.65941 8.93097 6.69032Z" fill="#E02424"></path>
-                                                                    </svg>
-                                                                        
-                                                                </a>
-                                                                </div>
-                                                                <span class="">
-                                                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </span>
-                                                            </div>
-                                                        </button>
-                                                        <div x-disclosure:panel="" x-collapse="" id="alpine-disclosure-panel-1" style="display: none;">
-                                                            <div class="flex flex-col w-full gap-2 p-2 bg-white md:p-5">
-                                                                <p class="flex flex-col gap-2 text-xs font-normal text-gray-500 md:text-base">
-                                                                    I will be providing services for filling your FBR Tax and pricing will depend upon case to case
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>  
-                                                    <div x-disclosure="" class="overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
-                                                        <button x-disclosure:button="" class="flex items-center justify-between w-full p-2 bg-gray-100 border-b md:p-5" aria-expanded="false" aria-controls="alpine-disclosure-panel-2" type="button">
-                                                            <div class="flex items-center gap-2">
-                                                                
-                                                                <span class="text-xs font-medium text-gray-900 md:text-base">
-                                                                    File Documentation
-                                                                </span>
-                                                            </div>
-                                                            <div class="flex items-center justify-center gap-2 md:gap-5">
-                                                                <div class="flex items-center gap-2">
-                                                                <a onclick="addservicesmodal.showModal()" href="#" class="flex items-center justify-center w-6 h-6 bg-gray-200 rounded-lg md:w-8 md:h-8">
-                                                                    <svg class="w-4 h-4" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.95349 0.0417482L10.2513 0.0417484C10.5965 0.0417484 10.8763 0.32157 10.8763 0.666748C10.8763 1.01193 10.5965 1.29175 10.2513 1.29175H9.0013C7.01945 1.29175 5.59593 1.29308 4.51262 1.43872C3.44728 1.58195 2.80501 1.85436 2.3303 2.32908C1.85559 2.80379 1.58318 3.44606 1.43994 4.5114C1.2943 5.59471 1.29297 7.01823 1.29297 9.00008C1.29297 10.9819 1.2943 12.4055 1.43994 13.4888C1.58318 14.5541 1.85559 15.1964 2.3303 15.6711C2.80501 16.1458 3.44728 16.4182 4.51262 16.5614C5.59593 16.7071 7.01945 16.7084 9.0013 16.7084C10.9832 16.7084 12.4067 16.7071 13.49 16.5614C14.5553 16.4182 15.1976 16.1458 15.6723 15.6711C16.147 15.1964 16.4194 14.5541 16.5627 13.4888C16.7083 12.4055 16.7096 10.9819 16.7096 9.00008V7.75008C16.7096 7.4049 16.9895 7.12508 17.3346 7.12508C17.6798 7.12508 17.9596 7.4049 17.9596 7.75008V9.04789C17.9596 10.9716 17.9597 12.4791 17.8015 13.6553C17.6396 14.8593 17.3019 15.8093 16.5562 16.555C15.8105 17.3006 14.8605 17.6384 13.6565 17.8003C12.4803 17.9584 10.9728 17.9584 9.04911 17.9584H8.95349C7.02983 17.9584 5.5223 17.9584 4.34606 17.8003C3.14211 17.6384 2.19209 17.3006 1.44642 16.555C0.700741 15.8093 0.362957 14.8593 0.201091 13.6553C0.0429497 12.4791 0.0429582 10.9716 0.0429689 9.0479V8.95227C0.0429582 7.02861 0.0429497 5.52107 0.201091 4.34484C0.362957 3.14089 0.700741 2.19087 1.44642 1.4452C2.19209 0.69952 3.14211 0.361737 4.34606 0.19987C5.5223 0.041729 7.02983 0.0417375 8.95349 0.0417482ZM12.9767 0.896677C14.1167 -0.243228 15.9648 -0.243228 17.1047 0.896677C18.2446 2.03658 18.2446 3.88473 17.1047 5.02464L11.5646 10.5647C11.2552 10.8742 11.0614 11.068 10.8451 11.2367C10.5904 11.4354 10.3147 11.6058 10.0231 11.7448C9.77548 11.8628 9.51543 11.9494 9.10029 12.0878L6.67985 12.8946C6.23298 13.0435 5.74031 12.9272 5.40723 12.5942C5.07415 12.2611 4.95785 11.7684 5.1068 11.3215L5.91361 8.90111C6.05196 8.48596 6.13862 8.22591 6.25663 7.97829C6.39562 7.68665 6.56598 7.41101 6.76467 7.15626C6.93338 6.93997 7.12722 6.74616 7.43667 6.43674L12.9767 0.896677ZM16.2208 1.78056C15.5691 1.12881 14.5124 1.12881 13.8606 1.78056L13.5468 2.09441C13.5657 2.1743 13.5922 2.26947 13.629 2.37563C13.7484 2.71985 13.9744 3.17318 14.4013 3.60008C14.8282 4.02697 15.2815 4.25297 15.6257 4.37239C15.7319 4.40922 15.8271 4.43569 15.907 4.45461L16.2208 4.14076C16.8726 3.48901 16.8726 2.43231 16.2208 1.78056ZM14.9223 5.43932C14.4923 5.25441 13.9914 4.95796 13.5174 4.48396C13.0434 4.00995 12.747 3.5091 12.5621 3.07913L8.34922 7.29196C8.00213 7.63906 7.86601 7.77671 7.75031 7.92504C7.60745 8.1082 7.48497 8.30638 7.38504 8.51607C7.30411 8.68588 7.24186 8.86919 7.08664 9.33487L6.72673 10.4146L7.58678 11.2747L8.66651 10.9147C9.13219 10.7595 9.3155 10.6973 9.48532 10.6163C9.69501 10.5164 9.89318 10.3939 10.0763 10.2511C10.2247 10.1354 10.3623 9.99925 10.7094 9.65216L14.9223 5.43932Z" fill="#6B7280"></path>
-                                                                    </svg>
-                                                                        
-                                                                </a>
-                                                                <a onclick="deletemodal.showModal()" href="#" class="flex items-center justify-center w-6 h-6 bg-red-100 rounded-lg md:w-8 md:h-8">
-                                                                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.73195 0.687514H8.26803C8.43033 0.687411 8.57172 0.687321 8.70524 0.708641C9.23271 0.79287 9.68916 1.12186 9.93587 1.59563C9.99831 1.71555 10.0429 1.84971 10.0942 2.00371L10.1779 2.25488C10.192 2.2974 10.1961 2.30943 10.1995 2.31891C10.3309 2.682 10.6714 2.92745 11.0574 2.93723C11.0675 2.93748 11.08 2.93753 11.125 2.93753H13.375C13.6857 2.93753 13.9375 3.18937 13.9375 3.50003C13.9375 3.81069 13.6857 4.06253 13.375 4.06253H0.624931C0.314271 4.06253 0.0624313 3.81069 0.0624313 3.50003C0.0624313 3.18937 0.314271 2.93753 0.624931 2.93753H2.87499C2.92003 2.93753 2.93246 2.93749 2.94261 2.93723C3.32859 2.92745 3.66911 2.68202 3.80045 2.31893C3.8039 2.30938 3.80787 2.29761 3.82212 2.25488L3.90582 2.00372C3.95704 1.84973 4.00168 1.71555 4.06412 1.59563C4.31083 1.12186 4.76728 0.79287 5.29475 0.708641C5.42827 0.687321 5.56966 0.687411 5.73195 0.687514ZM4.75604 2.93753C4.79468 2.86176 4.82891 2.78303 4.85836 2.70161C4.86731 2.67689 4.87608 2.65057 4.88735 2.61675L4.9622 2.39219C5.03058 2.18706 5.04632 2.14522 5.06194 2.11523C5.14418 1.95731 5.29633 1.84764 5.47215 1.81957C5.50554 1.81423 5.5502 1.81253 5.76644 1.81253H8.23355C8.44978 1.81253 8.49444 1.81423 8.52784 1.81957C8.70366 1.84764 8.85581 1.95731 8.93805 2.11523C8.95367 2.14522 8.96941 2.18705 9.03779 2.39219L9.1126 2.61662L9.14163 2.70163C9.17108 2.78304 9.20531 2.86177 9.24394 2.93753H4.75604Z" fill="#E02424"></path>
-                                                                        <path d="M2.43625 5.33761C2.41558 5.02764 2.14755 4.79311 1.83758 4.81377C1.52761 4.83444 1.29308 5.10247 1.31374 5.41245L1.66133 10.6262C1.72545 11.5883 1.77724 12.3654 1.89872 12.9752C2.02502 13.6092 2.23984 14.1387 2.68353 14.5538C3.12723 14.9689 3.66989 15.1481 4.31088 15.2319C4.9274 15.3126 5.70621 15.3125 6.67038 15.3125H7.32956C8.29373 15.3125 9.07259 15.3126 9.68911 15.2319C10.3301 15.1481 10.8728 14.9689 11.3165 14.5538C11.7602 14.1387 11.975 13.6092 12.1013 12.9752C12.2227 12.3654 12.2745 11.5883 12.3387 10.6263L12.6862 5.41245C12.7069 5.10247 12.4724 4.83444 12.1624 4.81377C11.8524 4.79311 11.5844 5.02764 11.5637 5.33761L11.2188 10.5119C11.1514 11.5228 11.1034 12.2262 10.9979 12.7554C10.8957 13.2688 10.7529 13.5405 10.5479 13.7323C10.3428 13.9242 10.0622 14.0485 9.54319 14.1164C9.00814 14.1864 8.30314 14.1875 7.29 14.1875H6.70998C5.69685 14.1875 4.99185 14.1864 4.4568 14.1164C3.93779 14.0485 3.65718 13.9242 3.45212 13.7323C3.24706 13.5405 3.10431 13.2687 3.00204 12.7554C2.89662 12.2262 2.8486 11.5228 2.7812 10.5119L2.43625 5.33761Z" fill="#E02424"></path>
-                                                                        <path d="M5.06903 6.69032C5.37815 6.65941 5.6538 6.88494 5.68471 7.19406L6.05971 10.9441C6.09062 11.2532 5.86509 11.5288 5.55597 11.5597C5.24685 11.5906 4.9712 11.3651 4.94029 11.056L4.56529 7.306C4.53438 6.99688 4.75991 6.72123 5.06903 6.69032Z" fill="#E02424"></path>
-                                                                        <path d="M8.93097 6.69032C9.24009 6.72123 9.46562 6.99688 9.43471 7.306L9.05971 11.056C9.0288 11.3651 8.75315 11.5906 8.44403 11.5597C8.13491 11.5288 7.90938 11.2532 7.94029 10.9441L8.31529 7.19406C8.3462 6.88494 8.62185 6.65941 8.93097 6.69032Z" fill="#E02424"></path>
-                                                                    </svg>
-                                                                        
-                                                                </a>
-                                                                </div>
-                                                                <span class="">
-                                                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </span>
-                                                            </div>
-                                                        </button>
-                                                        <div x-disclosure:panel="" x-collapse="" id="alpine-disclosure-panel-2" style="display: none;">
-                                                            <div class="flex flex-col w-full gap-2 p-2 bg-white md:p-5">
-                                                                <p class="flex flex-col gap-2 text-xs font-normal text-gray-500 md:text-base">
-                                                                    Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself.
-                                                                <span class="">
-                                                                    With that being said, feel free to use this design kit for your open-source projects.
-                                                                </span>
-                                                                <span class="">
-                                                                    Find out more information by
-                                                                    <a href="#" class="text-xs font-normal md:text-base text-violet-600 hover:underline">
-                                                                        reading the license.
-                                                                    </a>
-                                                                </span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div x-disclosure="" class="overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
-                                                        <button x-disclosure:button="" class="flex items-center justify-between w-full p-2 bg-gray-100 border-b md:p-5" aria-expanded="false" aria-controls="alpine-disclosure-panel-3" type="button">
-                                                            <div class="flex items-center gap-2">
-                                                                
-                                                                <span class="text-xs font-medium text-gray-900 md:text-base">
-                                                                    Making Presentation 
-                                                                </span>
-                                                            </div>
-                                                            <div class="flex items-center justify-center gap-2 md:gap-5">
-                                                                <div class="flex items-center gap-2">
-                                                                <a onclick="addservicesmodal.showModal()" href="#" class="flex items-center justify-center w-6 h-6 bg-gray-200 rounded-lg md:w-8 md:h-8">
-                                                                    <svg class="w-4 h-4" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.95349 0.0417482L10.2513 0.0417484C10.5965 0.0417484 10.8763 0.32157 10.8763 0.666748C10.8763 1.01193 10.5965 1.29175 10.2513 1.29175H9.0013C7.01945 1.29175 5.59593 1.29308 4.51262 1.43872C3.44728 1.58195 2.80501 1.85436 2.3303 2.32908C1.85559 2.80379 1.58318 3.44606 1.43994 4.5114C1.2943 5.59471 1.29297 7.01823 1.29297 9.00008C1.29297 10.9819 1.2943 12.4055 1.43994 13.4888C1.58318 14.5541 1.85559 15.1964 2.3303 15.6711C2.80501 16.1458 3.44728 16.4182 4.51262 16.5614C5.59593 16.7071 7.01945 16.7084 9.0013 16.7084C10.9832 16.7084 12.4067 16.7071 13.49 16.5614C14.5553 16.4182 15.1976 16.1458 15.6723 15.6711C16.147 15.1964 16.4194 14.5541 16.5627 13.4888C16.7083 12.4055 16.7096 10.9819 16.7096 9.00008V7.75008C16.7096 7.4049 16.9895 7.12508 17.3346 7.12508C17.6798 7.12508 17.9596 7.4049 17.9596 7.75008V9.04789C17.9596 10.9716 17.9597 12.4791 17.8015 13.6553C17.6396 14.8593 17.3019 15.8093 16.5562 16.555C15.8105 17.3006 14.8605 17.6384 13.6565 17.8003C12.4803 17.9584 10.9728 17.9584 9.04911 17.9584H8.95349C7.02983 17.9584 5.5223 17.9584 4.34606 17.8003C3.14211 17.6384 2.19209 17.3006 1.44642 16.555C0.700741 15.8093 0.362957 14.8593 0.201091 13.6553C0.0429497 12.4791 0.0429582 10.9716 0.0429689 9.0479V8.95227C0.0429582 7.02861 0.0429497 5.52107 0.201091 4.34484C0.362957 3.14089 0.700741 2.19087 1.44642 1.4452C2.19209 0.69952 3.14211 0.361737 4.34606 0.19987C5.5223 0.041729 7.02983 0.0417375 8.95349 0.0417482ZM12.9767 0.896677C14.1167 -0.243228 15.9648 -0.243228 17.1047 0.896677C18.2446 2.03658 18.2446 3.88473 17.1047 5.02464L11.5646 10.5647C11.2552 10.8742 11.0614 11.068 10.8451 11.2367C10.5904 11.4354 10.3147 11.6058 10.0231 11.7448C9.77548 11.8628 9.51543 11.9494 9.10029 12.0878L6.67985 12.8946C6.23298 13.0435 5.74031 12.9272 5.40723 12.5942C5.07415 12.2611 4.95785 11.7684 5.1068 11.3215L5.91361 8.90111C6.05196 8.48596 6.13862 8.22591 6.25663 7.97829C6.39562 7.68665 6.56598 7.41101 6.76467 7.15626C6.93338 6.93997 7.12722 6.74616 7.43667 6.43674L12.9767 0.896677ZM16.2208 1.78056C15.5691 1.12881 14.5124 1.12881 13.8606 1.78056L13.5468 2.09441C13.5657 2.1743 13.5922 2.26947 13.629 2.37563C13.7484 2.71985 13.9744 3.17318 14.4013 3.60008C14.8282 4.02697 15.2815 4.25297 15.6257 4.37239C15.7319 4.40922 15.8271 4.43569 15.907 4.45461L16.2208 4.14076C16.8726 3.48901 16.8726 2.43231 16.2208 1.78056ZM14.9223 5.43932C14.4923 5.25441 13.9914 4.95796 13.5174 4.48396C13.0434 4.00995 12.747 3.5091 12.5621 3.07913L8.34922 7.29196C8.00213 7.63906 7.86601 7.77671 7.75031 7.92504C7.60745 8.1082 7.48497 8.30638 7.38504 8.51607C7.30411 8.68588 7.24186 8.86919 7.08664 9.33487L6.72673 10.4146L7.58678 11.2747L8.66651 10.9147C9.13219 10.7595 9.3155 10.6973 9.48532 10.6163C9.69501 10.5164 9.89318 10.3939 10.0763 10.2511C10.2247 10.1354 10.3623 9.99925 10.7094 9.65216L14.9223 5.43932Z" fill="#6B7280"></path>
-                                                                    </svg>
-                                                                        
-                                                                </a>
-                                                                <a onclick="deletemodal.showModal()" href="#" class="flex items-center justify-center w-6 h-6 bg-red-100 rounded-lg md:w-8 md:h-8">
-                                                                    <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.73195 0.687514H8.26803C8.43033 0.687411 8.57172 0.687321 8.70524 0.708641C9.23271 0.79287 9.68916 1.12186 9.93587 1.59563C9.99831 1.71555 10.0429 1.84971 10.0942 2.00371L10.1779 2.25488C10.192 2.2974 10.1961 2.30943 10.1995 2.31891C10.3309 2.682 10.6714 2.92745 11.0574 2.93723C11.0675 2.93748 11.08 2.93753 11.125 2.93753H13.375C13.6857 2.93753 13.9375 3.18937 13.9375 3.50003C13.9375 3.81069 13.6857 4.06253 13.375 4.06253H0.624931C0.314271 4.06253 0.0624313 3.81069 0.0624313 3.50003C0.0624313 3.18937 0.314271 2.93753 0.624931 2.93753H2.87499C2.92003 2.93753 2.93246 2.93749 2.94261 2.93723C3.32859 2.92745 3.66911 2.68202 3.80045 2.31893C3.8039 2.30938 3.80787 2.29761 3.82212 2.25488L3.90582 2.00372C3.95704 1.84973 4.00168 1.71555 4.06412 1.59563C4.31083 1.12186 4.76728 0.79287 5.29475 0.708641C5.42827 0.687321 5.56966 0.687411 5.73195 0.687514ZM4.75604 2.93753C4.79468 2.86176 4.82891 2.78303 4.85836 2.70161C4.86731 2.67689 4.87608 2.65057 4.88735 2.61675L4.9622 2.39219C5.03058 2.18706 5.04632 2.14522 5.06194 2.11523C5.14418 1.95731 5.29633 1.84764 5.47215 1.81957C5.50554 1.81423 5.5502 1.81253 5.76644 1.81253H8.23355C8.44978 1.81253 8.49444 1.81423 8.52784 1.81957C8.70366 1.84764 8.85581 1.95731 8.93805 2.11523C8.95367 2.14522 8.96941 2.18705 9.03779 2.39219L9.1126 2.61662L9.14163 2.70163C9.17108 2.78304 9.20531 2.86177 9.24394 2.93753H4.75604Z" fill="#E02424"></path>
-                                                                        <path d="M2.43625 5.33761C2.41558 5.02764 2.14755 4.79311 1.83758 4.81377C1.52761 4.83444 1.29308 5.10247 1.31374 5.41245L1.66133 10.6262C1.72545 11.5883 1.77724 12.3654 1.89872 12.9752C2.02502 13.6092 2.23984 14.1387 2.68353 14.5538C3.12723 14.9689 3.66989 15.1481 4.31088 15.2319C4.9274 15.3126 5.70621 15.3125 6.67038 15.3125H7.32956C8.29373 15.3125 9.07259 15.3126 9.68911 15.2319C10.3301 15.1481 10.8728 14.9689 11.3165 14.5538C11.7602 14.1387 11.975 13.6092 12.1013 12.9752C12.2227 12.3654 12.2745 11.5883 12.3387 10.6263L12.6862 5.41245C12.7069 5.10247 12.4724 4.83444 12.1624 4.81377C11.8524 4.79311 11.5844 5.02764 11.5637 5.33761L11.2188 10.5119C11.1514 11.5228 11.1034 12.2262 10.9979 12.7554C10.8957 13.2688 10.7529 13.5405 10.5479 13.7323C10.3428 13.9242 10.0622 14.0485 9.54319 14.1164C9.00814 14.1864 8.30314 14.1875 7.29 14.1875H6.70998C5.69685 14.1875 4.99185 14.1864 4.4568 14.1164C3.93779 14.0485 3.65718 13.9242 3.45212 13.7323C3.24706 13.5405 3.10431 13.2687 3.00204 12.7554C2.89662 12.2262 2.8486 11.5228 2.7812 10.5119L2.43625 5.33761Z" fill="#E02424"></path>
-                                                                        <path d="M5.06903 6.69032C5.37815 6.65941 5.6538 6.88494 5.68471 7.19406L6.05971 10.9441C6.09062 11.2532 5.86509 11.5288 5.55597 11.5597C5.24685 11.5906 4.9712 11.3651 4.94029 11.056L4.56529 7.306C4.53438 6.99688 4.75991 6.72123 5.06903 6.69032Z" fill="#E02424"></path>
-                                                                        <path d="M8.93097 6.69032C9.24009 6.72123 9.46562 6.99688 9.43471 7.306L9.05971 11.056C9.0288 11.3651 8.75315 11.5906 8.44403 11.5597C8.13491 11.5288 7.90938 11.2532 7.94029 10.9441L8.31529 7.19406C8.3462 6.88494 8.62185 6.65941 8.93097 6.69032Z" fill="#E02424"></path>
-                                                                    </svg>
-                                                                        
-                                                                </a>
-                                                                </div>
-                                                                <span class="">
-                                                                    <svg :class="$disclosure.isOpen &amp;&amp; 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                                                    </svg>
-                                                                </span>
-                                                            </div>
-                                                        </button>
-                                                        <div x-disclosure:panel="" x-collapse="" id="alpine-disclosure-panel-3" style="display: none;">
-                                                            <div class="flex flex-col w-full gap-2 p-2 bg-white md:p-5">
-                                                                    <p class="flex flex-col gap-2 text-xs font-normal text-gray-500 md:text-base">
-                                                                        Generally, it is accepted to use FlowBite in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to FlowBite itself.
-                                                                    <span class="">
-                                                                        With that being said, feel free to use this design kit for your open-source projects.
-                                                                    </span>
-                                                                    <span class="">
-                                                                        Find out more information by
-                                                                        <a href="#" class="text-xs font-normal md:text-base text-violet-600 hover:underline">
-                                                                            reading the license.
-                                                                        </a>
-                                                                    </span>
-                                                                    </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="flex flex-col gap-2 p-2 bg-white border md:p-3 md:gap-5">
                                                 <!-- FAQs -->
                                                 <div class="flex items-center justify-between">
@@ -3014,7 +3129,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        </section>
+                                                    </section>
                                                 </div>
                                             </div>
                                         </div>
@@ -3374,6 +3489,147 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Post -->
+                            <div x-tabs:panel>
+                                <div class="flex flex-col gap-3.5 p-2 max-w-3xl mx-auto border rounded-xl bg-white shadow">
+                                    <div class="flex gap-3 w-full">
+                                        <div>
+                                            <img src="images/post-img.png" alt="">
+                                        </div>
+                                        <a onclick="postmodal.showModal()" class="flex w-full" href="javascript:;">
+                                                <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-800 focus:border-primary-600 block w-full p-2.5" placeholder="Write text here..." required>
+                                        </a>
+                                    </div>   
+                                    <div class="flex justify-end items-end gap-2">
+                                           <a onclick="Photomodal.showModal()" class="flex justify-center items-center gap-2 px-3 py-2 rounded-lg border border-gray-200" href="javascript:;">
+                                            <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6654 5.00065C10.2051 5.00065 9.83203 5.37375 9.83203 5.83398C9.83203 6.29422 10.2051 6.66732 10.6654 6.66732C11.1256 6.66732 11.4987 6.29422 11.4987 5.83398C11.4987 5.37375 11.1256 5.00065 10.6654 5.00065ZM8.83203 5.83398C8.83203 4.82146 9.65284 4.00065 10.6654 4.00065C11.6779 4.00065 12.4987 4.82146 12.4987 5.83398C12.4987 6.84651 11.6779 7.66732 10.6654 7.66732C9.65284 7.66732 8.83203 6.84651 8.83203 5.83398Z" fill="black"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.96045 1.33398H8.03695C9.57588 1.33398 10.7819 1.33397 11.7229 1.46048C12.6861 1.58998 13.4461 1.8602 14.0426 2.45674C14.6391 3.05328 14.9094 3.8133 15.0389 4.77646C15.1654 5.71745 15.1654 6.92347 15.1654 8.4624V8.5389C15.1654 10.0778 15.1654 11.2839 15.0389 12.2248C14.9094 13.188 14.6391 13.948 14.0426 14.5446C13.4461 15.1411 12.6861 15.4113 11.7229 15.5408C10.7819 15.6673 9.57588 15.6673 8.03695 15.6673H7.96045C6.42152 15.6673 5.21549 15.6673 4.2745 15.5408C3.31134 15.4113 2.55133 15.1411 1.95479 14.5446C1.35825 13.948 1.08802 13.188 0.958529 12.2248C0.832016 11.2839 0.832023 10.0778 0.832031 8.5389V8.4624C0.832023 6.92347 0.832016 5.71745 0.958529 4.77646C1.08802 3.8133 1.35825 3.05328 1.95479 2.45674C2.55133 1.8602 3.31134 1.58998 4.2745 1.46048C5.21549 1.33397 6.42152 1.33398 7.96045 1.33398ZM2.6619 13.8375C2.28212 13.4577 2.0642 12.9439 1.94961 12.0916C1.84729 11.3306 1.83401 10.3597 1.83229 9.06074L2.82901 8.18862C3.23842 7.83038 3.85546 7.85093 4.24013 8.2356L7.09995 11.0954C7.72991 11.7254 8.72156 11.8113 9.45046 11.299L9.64926 11.1593C10.2214 10.7572 10.9954 10.8038 11.5152 11.2716L13.6642 13.2057C13.6876 13.2268 13.7124 13.2452 13.7383 13.261C13.6306 13.4883 13.4978 13.6751 13.3355 13.8375C12.9557 14.2172 12.4419 14.4352 11.5896 14.5497C10.723 14.6663 9.58418 14.6673 7.9987 14.6673C6.41321 14.6673 5.2744 14.6663 4.40775 14.5497C3.55548 14.4352 3.04167 14.2172 2.6619 13.8375ZM4.40775 2.45156C3.55548 2.56615 3.04167 2.78408 2.6619 3.16385C2.28212 3.54362 2.0642 4.05743 1.94961 4.9097C1.85286 5.62937 1.83571 6.5367 1.83268 7.73163L2.1705 7.43604C2.97612 6.73113 4.1903 6.77156 4.94724 7.5285L7.80706 10.3883C8.0934 10.6747 8.54415 10.7137 8.87547 10.4809L9.07427 10.3411C10.0278 9.67102 11.3179 9.74866 12.1842 10.5283L14.0335 12.1927C14.0384 12.1595 14.0432 12.1258 14.0478 12.0916C14.1643 11.2249 14.1654 10.0861 14.1654 8.50065C14.1654 6.91517 14.1643 5.77635 14.0478 4.9097C13.9332 4.05743 13.7153 3.54362 13.3355 3.16385C12.9557 2.78408 12.4419 2.56615 11.5896 2.45156C10.723 2.33505 9.58418 2.33398 7.9987 2.33398C6.41321 2.33398 5.2744 2.33505 4.40775 2.45156Z" fill="black"/>
+                                                    </svg>                                                                                                                
+                                            </span>
+                                            <span class="flex font-medium text-sm text-gray-800 gap-1">
+                                                +
+                                                <span>
+                                                    Photo
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a onclick="Videomodal.showModal()"class="flex justify-center items-center gap-2 px-3 py-2 rounded-lg border border-gray-200" href="javascript:;">
+                                            <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.96045 1.33398H8.03695C9.57588 1.33398 10.7819 1.33397 11.7229 1.46048C12.6861 1.58998 13.4461 1.8602 14.0426 2.45674C14.6391 3.05328 14.9094 3.8133 15.0389 4.77645C15.1654 5.71745 15.1654 6.92347 15.1654 8.4624V8.5389C15.1654 10.0778 15.1654 11.2839 15.0389 12.2248C14.9094 13.188 14.6391 13.948 14.0426 14.5446C13.4461 15.1411 12.6861 15.4113 11.7229 15.5408C10.7819 15.6673 9.57588 15.6673 8.03695 15.6673H7.96045C6.42152 15.6673 5.21549 15.6673 4.2745 15.5408C3.31134 15.4113 2.55133 15.1411 1.95479 14.5446C1.35825 13.948 1.08802 13.188 0.958529 12.2248C0.832016 11.2839 0.832023 10.0778 0.832031 8.5389V8.4624C0.832023 6.92347 0.832016 5.71745 0.958529 4.77645C1.08802 3.8133 1.35825 3.05328 1.95479 2.45674C2.55133 1.8602 3.31134 1.58998 4.2745 1.46048C5.21549 1.33397 6.42152 1.33398 7.96045 1.33398ZM4.40775 2.45156C3.55548 2.56615 3.04167 2.78408 2.6619 3.16385C2.28212 3.54362 2.0642 4.05743 1.94961 4.9097C1.93151 5.04434 1.91619 5.18555 1.90324 5.33398H4.39089L6.29496 2.34188C5.54331 2.35342 4.92673 2.38179 4.40775 2.45156ZM7.47014 2.3342C7.45775 2.36911 7.44126 2.40318 7.42053 2.43576L5.5762 5.33398H8.72422L10.6113 2.36859C9.90249 2.33445 9.04851 2.33398 7.9987 2.33398C7.81672 2.33398 7.64062 2.334 7.47014 2.3342ZM11.7308 2.47197L9.90953 5.33398H14.0942C14.0812 5.18555 14.0659 5.04434 14.0478 4.9097C13.9332 4.05743 13.7153 3.54362 13.3355 3.16385C12.9772 2.80552 12.4995 2.59128 11.7308 2.47197ZM14.1475 6.33398H9.00618C9.00088 6.33407 8.99558 6.33407 8.99028 6.33398H4.67284C4.66755 6.33407 4.66225 6.33407 4.65694 6.33398H1.84985C1.83233 6.94847 1.83203 7.66208 1.83203 8.50065C1.83203 10.0861 1.83309 11.2249 1.94961 12.0916C2.0642 12.9439 2.28212 13.4577 2.6619 13.8375C3.04167 14.2172 3.55548 14.4352 4.40775 14.5497C5.2744 14.6663 6.41321 14.6673 7.9987 14.6673C9.58418 14.6673 10.723 14.6663 11.5896 14.5497C12.4419 14.4352 12.9557 14.2172 13.3355 13.8375C13.7153 13.4577 13.9332 12.9439 14.0478 12.0916C14.1643 11.2249 14.1654 10.0861 14.1654 8.50065C14.1654 7.66208 14.1651 6.94847 14.1475 6.33398ZM8.91086 8.44814L8.97861 8.49185C9.39181 8.75842 9.74958 8.98922 9.99893 9.20975C10.2642 9.44436 10.4987 9.74641 10.4987 10.1673C10.4987 10.5882 10.2642 10.8903 9.99893 11.1249C9.74958 11.3454 9.39182 11.5762 8.97863 11.8428L8.91086 11.8865C8.49343 12.1559 8.13065 12.39 7.8293 12.5238C7.51575 12.663 7.11401 12.7633 6.73085 12.5199C6.36774 12.2892 6.25764 11.8955 6.21145 11.5488C6.16532 11.2027 6.16534 10.7456 6.16536 10.2039V10.1307C6.16534 9.58908 6.16532 9.13196 6.21145 8.78583C6.25764 8.43916 6.36774 8.04542 6.73085 7.81474C7.11401 7.57132 7.51575 7.67162 7.8293 7.81084C8.13065 7.94464 8.49343 8.17876 8.91086 8.44814ZM7.23731 8.66845C7.23691 8.66791 7.24002 8.66708 7.24786 8.66756C7.24163 8.66922 7.23771 8.66898 7.23731 8.66845ZM7.26343 8.66948C7.29021 8.67404 7.33995 8.6877 7.42349 8.7248C7.64454 8.82295 7.94099 9.01244 8.40359 9.31093C8.85919 9.60489 9.15105 9.79486 9.33645 9.95882C9.50715 10.1098 9.49936 10.1628 9.49873 10.1671C9.49936 10.1714 9.50715 10.2248 9.33645 10.3758C9.15105 10.5398 8.85919 10.7297 8.40359 11.0237C7.94099 11.3222 7.64454 11.5117 7.42349 11.6098C7.33995 11.6469 7.2902 11.6606 7.26343 11.6652C7.24863 11.6366 7.2228 11.5677 7.20268 11.4167C7.16644 11.1448 7.16536 10.7554 7.16536 10.1673C7.16536 9.57922 7.16644 9.18986 7.20268 8.91792C7.2228 8.76693 7.24863 8.69799 7.26343 8.66948ZM7.23731 11.6662C7.23772 11.6657 7.24164 11.6654 7.24786 11.6671C7.24001 11.6676 7.2369 11.6667 7.23731 11.6662ZM7.27208 11.6794C7.27437 11.6814 7.27536 11.6827 7.27529 11.6829C7.27522 11.6831 7.27407 11.6821 7.27208 11.6794ZM7.27208 8.65519C7.27407 8.65253 7.27522 8.65157 7.27529 8.65176C7.27536 8.65195 7.27437 8.65327 7.27208 8.65519Z" fill="black"/>
+                                                    </svg>                                                                                                                                                                    
+                                            </span>
+                                            <span class="flex font-medium text-sm text-gray-800 gap-1">
+                                                +
+                                                <span>
+                                                    Video
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="flex justify-center items-center gap-2 px-3 py-2 rounded-lg border bg-violet-700" href="">
+                                           <span class="flex font-medium text-sm text-gray-800 gap-2 text-white">
+                                               Post
+                                                <span>
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7612 2.25324C11.9812 2.39199 10.9296 2.74109 9.45382 3.23302L6.11297 4.34664C4.92629 4.7422 4.06677 5.02914 3.45967 5.28735C2.82496 5.5573 2.59917 5.74547 2.52584 5.87161C2.29997 6.26014 2.29997 6.73999 2.52584 7.12851C2.59917 7.25465 2.82496 7.44282 3.45967 7.71277C4.06677 7.97098 4.92629 8.25792 6.11297 8.65348C6.13171 8.65973 6.15021 8.66588 6.16849 8.67196C6.42157 8.75615 6.63066 8.8257 6.81335 8.92122L10.3623 5.41142C10.5634 5.21251 10.8877 5.2143 11.0866 5.41544C11.2855 5.61657 11.2837 5.94088 11.0826 6.13979L7.54932 9.63414C7.65947 9.82868 7.73403 10.0528 7.82609 10.3296C7.83216 10.3478 7.83832 10.3663 7.84457 10.3851C8.24013 11.5718 8.52706 12.4313 8.78527 13.0384C9.05523 13.6731 9.2434 13.8989 9.36954 13.9722C9.75806 14.1981 10.2379 14.1981 10.6264 13.9722C10.7526 13.8989 10.9407 13.6731 11.2107 13.0384C11.4689 12.4313 11.7558 11.5718 12.1514 10.3851L13.265 7.04423C13.757 5.56844 14.1061 4.51686 14.2448 3.73688C14.3842 2.95318 14.2777 2.62028 14.0777 2.42032C13.8778 2.22036 13.5449 2.11382 12.7612 2.25324ZM12.5818 1.24466C13.4499 1.09023 14.2318 1.12562 14.8021 1.69596C15.3724 2.26629 15.4078 3.04816 15.2534 3.91629C15.0999 4.77918 14.7256 5.90211 14.2516 7.32381L13.115 10.7337C12.7294 11.8906 12.4297 12.7896 12.1534 13.4393C11.8868 14.066 11.5909 14.5965 11.1413 14.8578C10.4345 15.2687 9.5615 15.2687 8.85467 14.8578C8.40511 14.5965 8.10914 14.066 7.84258 13.4393C7.56624 12.7896 7.26659 11.8906 6.88095 10.7337L6.87273 10.709C6.73762 10.3037 6.69643 10.1938 6.63809 10.1066C6.57279 10.0091 6.489 9.92526 6.39145 9.85996C6.3043 9.80161 6.19435 9.76043 5.78903 9.62532L5.76433 9.61709C4.6074 9.23145 3.70845 8.9318 3.05873 8.65546C2.43201 8.3889 1.90157 8.09293 1.64022 7.64337C1.2293 6.93654 1.2293 6.06358 1.64022 5.35675C1.90157 4.90719 2.43201 4.61122 3.05873 4.34466C3.70846 4.06832 4.60743 3.76867 5.76438 3.38302L9.17425 2.24639C10.5959 1.77248 11.7189 1.39816 12.5818 1.24466Z" fill="white"/>
+                                                        </svg>
+                                                        
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col flex-wrap max-w-2xl mx-auto gap-2 md:gap-4 bg-white rounded-lg mt-5">
+                                    <!-- Are you looking -->
+                                <div class="flex flex-col w-full rounded-lg bg-bg-white shadow">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex p-2 md:p-4 gap-2 md:gap-3 items-center">
+                                            <div href="#" class="flex w-10 h-10 relative">
+                                                <img class="w-10 h-10" src="images/post-img.png" alt="nimra jalil">  
+                                            </div>
+                                            <span class="flex flex-col">
+                                            <span class="text-sm md:text-base font-medium text-black">
+                                                Nimra Jalil
+                                            </span>
+                                            <span class="text-xs md:text-sm font-normal text-gray-500">
+                                                22 Jun, 2023
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="p-1 mr-2 md:mr-4 rounded-lg bg-white hover:bg-gray-200">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_181819_158546)">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#323232"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_181819_158546">
+                                                <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                                
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col px-2 md:px-4 max-w-2xl">
+                                        <p class="text-xs md:text-sm font-medium text-black">
+                                            Are you looking for a commercial litigator? Someone who can help with your contract?... Commercial agreements can appear to be  simple however it's very easy to miss something crucial. This is a forever changing area of law...
+                                        </p>
+                                        <a href="#" class="text-sm md:text-base font-normal text-violet-700 py-2.5">
+                                            See more
+                                        </a>
+                                    </div>
+                                    <div class="w-full border-t">
+                                        <img class="w-full" src="images/dv.png" alt="dv">
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="flex flex-col flex-wrap max-w-2xl mx-auto gap-2 md:gap-4 bg-white rounded-lg mt-5">
+                                    <!-- Are you looking -->
+                                <div class="flex flex-col w-full rounded-lg bg-bg-white p-2 shadow">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex p-2 md:p-4 gap-2 md:gap-3 items-center">
+                                            <div href="#" class="flex w-10 h-10 relative">
+                                                <img class="w-10 h-10" src="images/post-img.png" alt="nimra jalil">  
+                                            </div>
+                                            <span class="flex flex-col">
+                                            <span class="text-sm md:text-base font-medium text-black">
+                                                Nimra Jalil
+                                            </span>
+                                            <span class="text-xs md:text-sm font-normal text-gray-500">
+                                                22 Jun, 2023
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="p-1 mr-2 md:mr-4 rounded-lg bg-white hover:bg-gray-200">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_181819_158546)">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#323232"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_181819_158546">
+                                                <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                                
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col px-2 md:px-4 max-w-2xl">
+                                        <p class="text-xs md:text-sm font-medium text-black">
+                                            Are you looking for a commercial litigator? Someone who can help with your contract?... Commercial agreements can appear to be  simple however it's very easy to miss something crucial. This is a forever changing area of law...
+                                        </p>
+                                        <a href="#" class="text-sm md:text-base font-normal text-violet-700 py-2.5">
+                                            See more
+                                        </a>
+                                    </div>
+                                    <div class="w-full border-t">
+                                        <img class="w-full" src="images/post-img1.png" alt="dv">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                             <div x-tabs:panel>
                                 <div class="w-full bg-white">
                                     <div class="flex flex-col gap-3 p-2 mx-auto max-w-7xl md:gap-4">
@@ -3729,6 +3985,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
             </main>
@@ -4274,53 +4531,7 @@
             </div>
         </form>
     </dialog>
-
-    <!-- Right Modal -->
-    <!-- Services1 -->
-    <dialog id="addservicesmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
-        <form method="dialog">
-            <!-- Modal header -->
-            <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
-                <h3 class="text-sm font-medium text-gray-900 md:text-base">
-                    Add Services
-                </h3>
-                <button onclick="addservicesmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
-                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-            </div>
-            <!-- Modal body -->
-            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
-                <!-- Add FAQ -->
-                <section class="add-faq">
-                    <div class="flex flex-col gap-3 md:gap-5">
-                        <div class="flex flex-col gap-2">
-                            <label for="services" class="block text-xs font-medium text-gray-900 md:text-sm">
-                                Services
-                            </label>
-                            <input type="text" id="services" class="block w-full px-4 py-3 text-sm font-normal text-gray-500 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500" placeholder="e.g. FBR Tax Return Filling">
-                            <span class="font-normal text-gray-500 text-2xs md:text-xs">
-                                0/25                           
-                            </span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <label for="servicesdetails" class="block text-sm font-medium text-gray-900">
-                                Services Details 
-                            </label>
-                            <textarea id="servicesdetails" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="e.g. You can add pricing and other details etc"></textarea>
-                            <span class="font-normal text-gray-500 text-2xs md:text-xs">
-                                0/45  (You can add up-to 5 services)                            
-                            </span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <!-- Modal footer -->
-            <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
-                <button type="submit" class="md:w-fit w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
-            </div>
-        </form>
-    </dialog>
+    
     <!-- Right Modal -->
     <!-- Add FAQ -->
     <dialog id="addfaqmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
@@ -6513,35 +6724,155 @@
             </div>
         </form>
     </dialog>
- 
-    <!-- Center Modal -->
-    <!-- signin2 -->
-    <dialog id="signin2modal" class="relative flex justify-center w-full bg-white rounded-lg shadow-lg itenm-center md:max-w-md">
-        <form method="dialog">         
-            <!-- signin 2 -->
-            <div class="inline-flex flex-col items-center justify-center gap-4 px-6 py-5 bg-white">
-                <div class="flex flex-col items-center justify-center gap-6 py-3">
-                  <div class="flex flex-col items-center justify-center gap-1">
-                    <div class="relative">
-                      <svg width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0948 9.89754C17.9014 6 24.1009 6 36.5 6C48.8991 6 55.0986 6 56.9052 9.89754C57.0605 10.2326 57.1915 10.5806 57.297 10.9383C58.5243 15.0999 54.1406 19.9233 45.3731 29.5702L39.5 36L45.3731 42.4298C54.1406 52.0767 58.5243 56.9001 57.297 61.0617C57.1915 61.4194 57.0605 61.7674 56.9052 62.1025C55.0986 66 48.8991 66 36.5 66C24.1009 66 17.9014 66 16.0948 62.1025C15.9395 61.7674 15.8085 61.4194 15.703 61.0617C14.4757 56.9001 18.8594 52.0767 27.6269 42.4298L33.5 36L27.6269 29.5702C18.8594 19.9233 14.4757 15.0999 15.703 10.9383C15.8085 10.5806 15.9395 10.2326 16.0948 9.89754ZM30.5 53.25C29.2574 53.25 28.25 54.2574 28.25 55.5C28.25 56.7426 29.2574 57.75 30.5 57.75H42.5C43.7426 57.75 44.75 56.7426 44.75 55.5C44.75 54.2574 43.7426 53.25 42.5 53.25H30.5ZM28.25 16.5C28.25 15.2574 29.2574 14.25 30.5 14.25H42.5C43.7426 14.25 44.75 15.2574 44.75 16.5C44.75 17.7426 43.7426 18.75 42.5 18.75H30.5C29.2574 18.75 28.25 17.7426 28.25 16.5Z" fill="#18181B"/>
-                        </svg>                    
-                    </div>
-                    <div class="text-xl font-semibold text-center text-gray-900 md:text-2xl">Your session is about to expire in</div>
-                    <div class="text-4xl font-semibold text-center text-gray-900 md:text-5xl">30 Sec</div>
-                  </div>
-                  <div class="flex flex-col items-center justify-center h-6 gap-6">
-                    <div class="text-sm font-medium leading-normal text-center text-gray-900 md:text-base">Do you want to stay Signed-in?</div>
-                  </div>
-                </div>
-                <div class="flex flex-col w-full gap-4">
-                    <a type="button" class="focus:outline-none flex text-white items-center justify-center bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 w-full" href="">Stay Signed in</a>
-                    <a onclick="loggedoutmodal.close()" type="button"  class="focus:outline-none flex text-white items-center justify-center bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 w-full" href="./signin2.html">Sign out</a>
-            </div>  
-              </div>
-        </form>   
-    </dialog>
 
+    <!-- Right Modal -->
+    <!-- post -->
+    <dialog id="postmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-sm font-medium text-gray-900 md:text-base">
+                Create Post
+            </h3>
+            <button onclick="postmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <!-- Law Firm Info -->
+            <section class="law-firm-info">
+                <div class="flex flex-col gap-3 w-full">
+                <div class="flex">
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-800 focus:border-primary-600" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="block text-sm font-medium text-gray-900" for="file_input">
+                        Upload supporting documents
+                    </label>
+                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+                    <span class="block text-xs md:text-xs font-normal text-gray-500">
+                        Max size 5 MB
+                    </span>
+                </div>
+            </div>
+            </section>
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+            <button type="submit" class="flex md:w-fit w-full justify-center text-white bg-blue-700 gap-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <span>
+                    Post
+                </span>
+                <span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7631 2.25324C11.9831 2.39199 10.9316 2.74109 9.45578 3.23302L6.11493 4.34664C4.92824 4.7422 4.06872 5.02914 3.46163 5.28735C2.82691 5.5573 2.60113 5.74547 2.52779 5.87161C2.30193 6.26014 2.30193 6.73999 2.52779 7.12851C2.60113 7.25465 2.82691 7.44282 3.46162 7.71277C4.06872 7.97098 4.92824 8.25792 6.11493 8.65348C6.13366 8.65973 6.15217 8.66588 6.17044 8.67196C6.42352 8.75615 6.63262 8.8257 6.8153 8.92122L10.3642 5.41142C10.5654 5.21251 10.8897 5.2143 11.0886 5.41544C11.2875 5.61657 11.2857 5.94088 11.0846 6.13979L7.55127 9.63414C7.66143 9.82868 7.73599 10.0528 7.82804 10.3296C7.83412 10.3478 7.84027 10.3663 7.84652 10.3851C8.24208 11.5718 8.52902 12.4313 8.78722 13.0384C9.05718 13.6731 9.24535 13.8989 9.37149 13.9722C9.76001 14.1981 10.2399 14.1981 10.6284 13.9722C10.7545 13.8989 10.9427 13.6731 11.2127 13.0384C11.4709 12.4313 11.7578 11.5718 12.1534 10.3851L13.267 7.04423C13.7589 5.56844 14.108 4.51686 14.2468 3.73688C14.3862 2.95318 14.2796 2.62028 14.0797 2.42032C13.8797 2.22036 13.5468 2.11382 12.7631 2.25324ZM12.5837 1.24466C13.4518 1.09023 14.2337 1.12562 14.804 1.69596C15.3744 2.26629 15.4098 3.04816 15.2553 3.91629C15.1018 4.77918 14.7275 5.90211 14.2536 7.32381L13.117 10.7337C12.7313 11.8906 12.4317 12.7896 12.1553 13.4393C11.8888 14.066 11.5928 14.5965 11.1432 14.8578C10.4364 15.2687 9.56345 15.2687 8.85663 14.8578C8.40707 14.5965 8.11109 14.066 7.84454 13.4393C7.5682 12.7896 7.26855 11.8906 6.8829 10.7337L6.87468 10.709C6.73957 10.3037 6.69839 10.1938 6.64004 10.1066C6.57474 10.0091 6.49095 9.92526 6.39341 9.85996C6.30625 9.80161 6.19631 9.76043 5.79098 9.62532L5.76629 9.61709C4.60936 9.23145 3.7104 8.9318 3.06068 8.65546C2.43396 8.3889 1.90352 8.09293 1.64217 7.64337C1.23126 6.93654 1.23126 6.06358 1.64217 5.35675C1.90352 4.90719 2.43396 4.61122 3.06068 4.34466C3.71041 4.06832 4.60938 3.76867 5.76633 3.38302L9.17621 2.24639C10.5979 1.77248 11.7208 1.39816 12.5837 1.24466Z" fill="white"/>
+                        </svg>                        
+                </span>
+            </button>
+        </div>
+    </form>
+    </dialog>
+    <!-- Right Modal -->
+    <!-- photo -->
+    <dialog id="Photomodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-sm font-medium text-gray-900 md:text-base">
+                Create Photo Post
+            </h3>
+            <button onclick="Photomodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <!-- Law Firm Info -->
+            <section class="law-firm-info">
+                <div class="flex flex-col gap-3 w-full">
+                <div class="flex">
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-800 focus:border-primary-600" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="block text-sm font-medium text-gray-900" for="file_input">
+                        Upload supporting documents
+                    </label>
+                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+                    <span class="block text-xs md:text-xs font-normal text-gray-500">
+                        Max size 5 MB
+                    </span>
+                </div>
+            </div>
+            </section>
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+            <button type="submit" class="flex md:w-fit w-full justify-center text-white bg-blue-700 gap-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <span>
+                    Post
+                </span>
+                <span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7631 2.25324C11.9831 2.39199 10.9316 2.74109 9.45578 3.23302L6.11493 4.34664C4.92824 4.7422 4.06872 5.02914 3.46163 5.28735C2.82691 5.5573 2.60113 5.74547 2.52779 5.87161C2.30193 6.26014 2.30193 6.73999 2.52779 7.12851C2.60113 7.25465 2.82691 7.44282 3.46162 7.71277C4.06872 7.97098 4.92824 8.25792 6.11493 8.65348C6.13366 8.65973 6.15217 8.66588 6.17044 8.67196C6.42352 8.75615 6.63262 8.8257 6.8153 8.92122L10.3642 5.41142C10.5654 5.21251 10.8897 5.2143 11.0886 5.41544C11.2875 5.61657 11.2857 5.94088 11.0846 6.13979L7.55127 9.63414C7.66143 9.82868 7.73599 10.0528 7.82804 10.3296C7.83412 10.3478 7.84027 10.3663 7.84652 10.3851C8.24208 11.5718 8.52902 12.4313 8.78722 13.0384C9.05718 13.6731 9.24535 13.8989 9.37149 13.9722C9.76001 14.1981 10.2399 14.1981 10.6284 13.9722C10.7545 13.8989 10.9427 13.6731 11.2127 13.0384C11.4709 12.4313 11.7578 11.5718 12.1534 10.3851L13.267 7.04423C13.7589 5.56844 14.108 4.51686 14.2468 3.73688C14.3862 2.95318 14.2796 2.62028 14.0797 2.42032C13.8797 2.22036 13.5468 2.11382 12.7631 2.25324ZM12.5837 1.24466C13.4518 1.09023 14.2337 1.12562 14.804 1.69596C15.3744 2.26629 15.4098 3.04816 15.2553 3.91629C15.1018 4.77918 14.7275 5.90211 14.2536 7.32381L13.117 10.7337C12.7313 11.8906 12.4317 12.7896 12.1553 13.4393C11.8888 14.066 11.5928 14.5965 11.1432 14.8578C10.4364 15.2687 9.56345 15.2687 8.85663 14.8578C8.40707 14.5965 8.11109 14.066 7.84454 13.4393C7.5682 12.7896 7.26855 11.8906 6.8829 10.7337L6.87468 10.709C6.73957 10.3037 6.69839 10.1938 6.64004 10.1066C6.57474 10.0091 6.49095 9.92526 6.39341 9.85996C6.30625 9.80161 6.19631 9.76043 5.79098 9.62532L5.76629 9.61709C4.60936 9.23145 3.7104 8.9318 3.06068 8.65546C2.43396 8.3889 1.90352 8.09293 1.64217 7.64337C1.23126 6.93654 1.23126 6.06358 1.64217 5.35675C1.90352 4.90719 2.43396 4.61122 3.06068 4.34466C3.71041 4.06832 4.60938 3.76867 5.76633 3.38302L9.17621 2.24639C10.5979 1.77248 11.7208 1.39816 12.5837 1.24466Z" fill="white"/>
+                        </svg>                        
+                </span>
+            </button>
+        </div>
+    </form>
+    </dialog>
+    <!-- Right Modal -->
+    <!-- video dialog -->
+    <dialog id="Videomodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-sm font-medium text-gray-900 md:text-base">
+                Create Video Post
+            </h3>
+            <button onclick="Videomodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <!-- Law Firm Info -->
+            <section class="law-firm-info">
+                <div class="flex flex-col gap-3 w-full">
+                <div class="flex">
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-800 focus:border-primary-600" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="block text-sm font-medium text-gray-900" for="file_input">
+                        Upload supporting documents
+                    </label>
+                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+                    <span class="block text-xs md:text-xs font-normal text-gray-500">
+                        Max size 5 MB
+                    </span>
+                </div>
+            </div>
+            </section>
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+            <button type="submit" class="flex md:w-fit w-full justify-center text-white bg-blue-700 gap-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <span>
+                    Post
+                </span>
+                <span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7631 2.25324C11.9831 2.39199 10.9316 2.74109 9.45578 3.23302L6.11493 4.34664C4.92824 4.7422 4.06872 5.02914 3.46163 5.28735C2.82691 5.5573 2.60113 5.74547 2.52779 5.87161C2.30193 6.26014 2.30193 6.73999 2.52779 7.12851C2.60113 7.25465 2.82691 7.44282 3.46162 7.71277C4.06872 7.97098 4.92824 8.25792 6.11493 8.65348C6.13366 8.65973 6.15217 8.66588 6.17044 8.67196C6.42352 8.75615 6.63262 8.8257 6.8153 8.92122L10.3642 5.41142C10.5654 5.21251 10.8897 5.2143 11.0886 5.41544C11.2875 5.61657 11.2857 5.94088 11.0846 6.13979L7.55127 9.63414C7.66143 9.82868 7.73599 10.0528 7.82804 10.3296C7.83412 10.3478 7.84027 10.3663 7.84652 10.3851C8.24208 11.5718 8.52902 12.4313 8.78722 13.0384C9.05718 13.6731 9.24535 13.8989 9.37149 13.9722C9.76001 14.1981 10.2399 14.1981 10.6284 13.9722C10.7545 13.8989 10.9427 13.6731 11.2127 13.0384C11.4709 12.4313 11.7578 11.5718 12.1534 10.3851L13.267 7.04423C13.7589 5.56844 14.108 4.51686 14.2468 3.73688C14.3862 2.95318 14.2796 2.62028 14.0797 2.42032C13.8797 2.22036 13.5468 2.11382 12.7631 2.25324ZM12.5837 1.24466C13.4518 1.09023 14.2337 1.12562 14.804 1.69596C15.3744 2.26629 15.4098 3.04816 15.2553 3.91629C15.1018 4.77918 14.7275 5.90211 14.2536 7.32381L13.117 10.7337C12.7313 11.8906 12.4317 12.7896 12.1553 13.4393C11.8888 14.066 11.5928 14.5965 11.1432 14.8578C10.4364 15.2687 9.56345 15.2687 8.85663 14.8578C8.40707 14.5965 8.11109 14.066 7.84454 13.4393C7.5682 12.7896 7.26855 11.8906 6.8829 10.7337L6.87468 10.709C6.73957 10.3037 6.69839 10.1938 6.64004 10.1066C6.57474 10.0091 6.49095 9.92526 6.39341 9.85996C6.30625 9.80161 6.19631 9.76043 5.79098 9.62532L5.76629 9.61709C4.60936 9.23145 3.7104 8.9318 3.06068 8.65546C2.43396 8.3889 1.90352 8.09293 1.64217 7.64337C1.23126 6.93654 1.23126 6.06358 1.64217 5.35675C1.90352 4.90719 2.43396 4.61122 3.06068 4.34466C3.71041 4.06832 4.60938 3.76867 5.76633 3.38302L9.17621 2.24639C10.5979 1.77248 11.7208 1.39816 12.5837 1.24466Z" fill="white"/>
+                        </svg>                        
+                </span>
+            </button>
+        </div>
+    </form>
+    </dialog>
+        
     <script>
         function focusNextInput(el, prevId, nextId) {
             if (el.value.length === 0) {
@@ -6552,15 +6883,7 @@
         }
     </script>
 
-    <script>
-
-        // setTimeout(function() {
-
-        //     signin2modal.showModal();
-
-        // }, 2000)
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
 </body>
 </html>
