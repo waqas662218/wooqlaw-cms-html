@@ -959,6 +959,9 @@ select {
 .mr-20 {
   margin-right: 5rem;
 }
+.mt-11 {
+  margin-top: 2.75rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -982,9 +985,6 @@ select {
 }
 .mt-px {
   margin-top: 1px;
-}
-.mt-11 {
-  margin-top: 2.75rem;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -1733,14 +1733,6 @@ select {
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
-}
-.rounded-t-full {
-  border-top-left-radius: 9999px;
-  border-top-right-radius: 9999px;
-}
-.rounded-t-2xl {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 .rounded-bl-xl {
   border-bottom-left-radius: 0.75rem;
@@ -4310,6 +4302,10 @@ select {
 
   .md\:text-center {
     text-align: center;
+  }
+
+  .md\:text-justify {
+    text-align: justify;
   }
 
   .md\:text-start {
