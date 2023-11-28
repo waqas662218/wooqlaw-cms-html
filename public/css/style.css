@@ -4253,10 +4253,6 @@ select {
     padding: 1.5rem;
   }
 
-  .md\:p-0\.5 {
-    padding: 0.125rem;
-  }
-
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
