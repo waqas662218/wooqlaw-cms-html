@@ -2106,13 +2106,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
-.bg-zinc-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
-}
 .bg-zinc-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity));
+}
+.bg-zinc-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
 }
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
@@ -2912,10 +2912,6 @@ select {
   --tw-content: attr(data-active);
   content: var(--tw-content);
 }
-.before\:content-\[attr\(data-agenda\)\]::before {
-  --tw-content: attr(data-agenda);
-  content: var(--tw-content);
-}
 .before\:content-\[attr\(data-attachment\)\]::before {
   --tw-content: attr(data-attachment);
   content: var(--tw-content);
@@ -2980,6 +2976,10 @@ select {
   --tw-content: attr(data-payment);
   content: var(--tw-content);
 }
+.before\:content-\[attr\(data-proceeding\)\]::before {
+  --tw-content: attr(data-proceeding);
+  content: var(--tw-content);
+}
 .before\:content-\[attr\(data-start-date\)\]::before {
   --tw-content: attr(data-start-date);
   content: var(--tw-content);
@@ -2990,10 +2990,6 @@ select {
 }
 .before\:content-\[attr\(data-subject\)\]::before {
   --tw-content: attr(data-subject);
-  content: var(--tw-content);
-}
-.before\:content-\[attr\(data-proceeding\)\]::before {
-  --tw-content: attr(data-proceeding);
   content: var(--tw-content);
 }
 .after\:absolute::after {
@@ -3160,6 +3156,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+.hover\:bg-green-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
 .hover\:bg-green-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 101 52 / var(--tw-bg-opacity));
@@ -3208,6 +3208,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }
+.hover\:bg-violet-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
+}
 .hover\:bg-violet-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
@@ -3219,14 +3223,6 @@ select {
 .hover\:bg-violet-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(91 33 182 / var(--tw-bg-opacity));
-}
-.hover\:bg-green-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
-}
-.hover\:bg-violet-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(221 214 254 / var(--tw-bg-opacity));
 }
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
@@ -4531,6 +4527,11 @@ select {
     padding-right: 0px;
   }
 
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -4604,11 +4605,6 @@ select {
   .md\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 
   .md\:pl-0 {
