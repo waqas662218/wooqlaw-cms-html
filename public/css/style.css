@@ -763,12 +763,6 @@ select {
 .bottom-6 {
   bottom: 1.5rem;
 }
-.end-2 {
-  inset-inline-end: 0.5rem;
-}
-.end-2\.5 {
-  inset-inline-end: 0.625rem;
-}
 .end-auto {
   inset-inline-end: auto;
 }
@@ -813,6 +807,12 @@ select {
 }
 .top-9 {
   top: 2.25rem;
+}
+.end-2 {
+  inset-inline-end: 0.5rem;
+}
+.end-2\.5 {
+  inset-inline-end: 0.625rem;
 }
 .z-10 {
   z-index: 10;
@@ -2395,14 +2395,6 @@ select {
 .pr-4 {
   padding-right: 1rem;
 }
-.ps-10 {
-  -webkit-padding-start: 2.5rem;
-          padding-inline-start: 2.5rem;
-}
-.ps-3 {
-  -webkit-padding-start: 0.75rem;
-          padding-inline-start: 0.75rem;
-}
 .pt-0 {
   padding-top: 0px;
 }
@@ -2423,6 +2415,14 @@ select {
 }
 .pt-5 {
   padding-top: 1.25rem;
+}
+.ps-10 {
+  -webkit-padding-start: 2.5rem;
+          padding-inline-start: 2.5rem;
+}
+.ps-3 {
+  -webkit-padding-start: 0.75rem;
+          padding-inline-start: 0.75rem;
 }
 .text-left {
   text-align: left;
@@ -3357,10 +3357,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(139 92 246 / var(--tw-border-opacity));
 }
-.focus\:border-red-500:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -3459,10 +3455,6 @@ select {
 .focus\:ring-violet-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(124 58 237 / var(--tw-ring-opacity));
-}
-.focus\:ring-red-500:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
 }
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
