@@ -9,6 +9,8 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+
     <!-- Tailwind CSS-->
     <link href="./css/style.css" rel="stylesheet">
 
@@ -26,7 +28,6 @@
 <body class="overflow-hidden">
     <header class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14 md:h-18">
 
-        
         <div class="flex items-center gap-3">
             <!-- Logo -->
             <a href="./index.html" class="text-lg font-bold">
@@ -597,8 +598,7 @@
                                 href="javascript:;"
                                 class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
                                 role="tab"
-                                aria-selected="false"
-                                >
+                                aria-selected="false">
                                     <div class="flex items-center gap-2">
                                         <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.16406 2.5C8.16406 2.08579 7.82828 1.75 7.41406 1.75C6.99985 1.75 6.66406 2.08579 6.66406 2.5V4.07926C5.22473 4.19451 4.27983 4.47737 3.58564 5.17157C2.89144 5.86577 2.60858 6.81067 2.49332 8.25H22.3348C22.2195 6.81067 21.9367 5.86577 21.2425 5.17157C20.5483 4.47737 19.6034 4.19451 18.1641 4.07926V2.5C18.1641 2.08579 17.8283 1.75 17.4141 1.75C16.9998 1.75 16.6641 2.08579 16.6641 2.5V4.0129C15.9988 4 15.2531 4 14.4141 4H10.4141C9.57503 4 8.82933 4 8.16406 4.0129V2.5Z"/>
@@ -618,8 +618,7 @@
                                 href="javascript:;"
                                 class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
                                 role="tab"
-                                aria-selected="false"
-                                >
+                                aria-selected="false">
                                     <div class="flex items-center gap-2">
                                         <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.875 12V8C2.875 5.17157 2.875 3.75736 3.75368 2.87868C4.63236 2 6.04657 2 8.875 2H16.875C19.7034 2 21.1176 2 21.9963 2.87868C22.875 3.75736 22.875 5.17157 22.875 8V12C22.875 14.8284 22.875 16.2426 21.9963 17.1213C21.3499 17.7677 20.4138 17.9386 18.838 17.9838C18.8343 17.248 18.5787 16.5132 18.0711 15.9176C18.0424 15.8839 18.0251 15.842 18.0215 15.7979C17.8961 14.2264 16.6483 12.9785 15.0768 12.8531C15.0327 12.8496 14.9908 12.8322 14.9571 12.8035C13.7572 11.781 11.9924 11.781 10.7926 12.8035C10.7589 12.8322 10.717 12.8496 10.6729 12.8531C9.10138 12.9785 7.8535 14.2264 7.72809 15.7979C7.72457 15.842 7.70722 15.8839 7.67852 15.9176C7.17095 16.5132 6.91533 17.248 6.91166 17.9838C5.3361 17.9386 4.40001 17.7677 3.75368 17.1213C2.875 16.2426 2.875 14.8284 2.875 12ZM9.125 6C9.125 5.58579 9.46079 5.25 9.875 5.25H15.875C16.2892 5.25 16.625 5.58579 16.625 6C16.625 6.41421 16.2892 6.75 15.875 6.75H9.875C9.46079 6.75 9.125 6.41421 9.125 6ZM7.875 8.75C7.46079 8.75 7.125 9.08579 7.125 9.5C7.125 9.91421 7.46079 10.25 7.875 10.25H17.875C18.2892 10.25 18.625 9.91421 18.625 9.5C18.625 9.08579 18.2892 8.75 17.875 8.75H7.875Z"/>
@@ -634,12 +633,39 @@
                             </li>
                             <li class="basis-auto shrink-0 grow-0 md:grow">
                                 <a
+                                x-tabs:tab 
+                                :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
+                                href="javascript:;"
+                                class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
+                                role="tab"
+                                aria-selected="false">
+                                    <div class="flex items-center gap-2">   
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1854_20376)">
+                                            <path d="M21.9984 1H7.59844C6.27484 1 5.19844 2.09633 5.19844 3.44444V4.05556H17.1984C19.5144 4.05556 21.3984 5.97444 21.3984 8.33333V18.1111H21.9984C23.322 18.1111 24.3984 17.0148 24.3984 15.6667V3.44444C24.3984 2.09633 23.322 1 21.9984 1Z" fill=""/>
+                                            <path d="M17.1984 5.88889H2.79844C1.47484 5.88889 0.398438 6.98522 0.398438 8.33333V20.5556C0.398438 21.9037 1.47484 23 2.79844 23H17.1984C18.522 23 19.5984 21.9037 19.5984 20.5556V8.33333C19.5984 6.98522 18.522 5.88889 17.1984 5.88889ZM2.79844 20.5556V13.2222H17.1996L17.2008 20.5556H2.79844Z" fill=""/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_1854_20376">
+                                            <rect width="24" height="24" fill="white" transform="translate(0.398438)"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>      
+                                        <span>Posts</span>
+                                    </div>
+                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z" fill="#4B5563"/>
+                                    </svg> 
+                                </a>
+                            </li>
+                            <li class="basis-auto shrink-0 grow-0 md:grow">
+                                <a
                                 x-tabs:tab
                                 :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
                                 href="javascript:;"
                                 class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
                                 role="tab"
-                                >
+                                aria-selected="false">
                                     <div class="flex items-center gap-2">
                                         <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.8302 7.89712C11.9068 5.96571 12.4452 5 13.25 5C14.0548 5 14.5932 5.96571 15.6698 7.89712L15.9484 8.3968C16.2543 8.94564 16.4073 9.22007 16.6458 9.40114C16.8843 9.5822 17.1814 9.64942 17.7755 9.78384L18.3164 9.90622C20.4071 10.3793 21.4525 10.6158 21.7012 11.4156C21.9499 12.2153 21.2372 13.0487 19.8119 14.7154L19.4432 15.1466C19.0381 15.6203 18.8356 15.8571 18.7445 16.1501C18.6534 16.443 18.684 16.759 18.7453 17.3909L18.801 17.9662C19.0165 20.19 19.1242 21.3019 18.4731 21.7962C17.822 22.2905 16.8432 21.8398 14.8857 20.9385L14.3792 20.7053C13.823 20.4492 13.5448 20.3211 13.25 20.3211C12.9552 20.3211 12.677 20.4492 12.1208 20.7053L11.6143 20.9385C9.65677 21.8398 8.678 22.2905 8.02688 21.7962C7.37575 21.3019 7.4835 20.19 7.69899 17.9662L7.75474 17.3909C7.81597 16.759 7.84659 16.443 7.75548 16.1501C7.66438 15.8571 7.46186 15.6203 7.05683 15.1466L6.68808 14.7154C5.26276 13.0487 4.5501 12.2153 4.79881 11.4156C5.04751 10.6158 6.09288 10.3793 8.18361 9.90622L8.7245 9.78384C9.31862 9.64942 9.61568 9.5822 9.8542 9.40114C10.0927 9.22007 10.2457 8.94565 10.5516 8.3968L10.8302 7.89712Z"/>
@@ -3102,7 +3128,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        </section>
+                                                    </section>
                                                 </div>
                                             </div>
                                         </div>
@@ -3462,6 +3488,147 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Post -->
+                            <div x-tabs:panel>
+                                <div class="flex flex-col gap-3.5 p-2 max-w-3xl mx-auto border rounded-xl bg-white shadow">
+                                    <div class="flex gap-3 w-full">
+                                        <div>
+                                            <img src="images/post-img.png" alt="">
+                                        </div>
+                                        <a onclick="postmodal.showModal()" class="flex w-full" href="javascript:;">
+                                                <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-800 focus:border-primary-600 block w-full p-2.5" placeholder="Write text here..." required>
+                                        </a>
+                                    </div>   
+                                    <div class="flex justify-end items-end gap-2">
+                                           <a onclick="Photomodal.showModal()" class="flex justify-center items-center gap-2 px-3 py-2 rounded-lg border border-gray-200" href="javascript:;">
+                                            <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6654 5.00065C10.2051 5.00065 9.83203 5.37375 9.83203 5.83398C9.83203 6.29422 10.2051 6.66732 10.6654 6.66732C11.1256 6.66732 11.4987 6.29422 11.4987 5.83398C11.4987 5.37375 11.1256 5.00065 10.6654 5.00065ZM8.83203 5.83398C8.83203 4.82146 9.65284 4.00065 10.6654 4.00065C11.6779 4.00065 12.4987 4.82146 12.4987 5.83398C12.4987 6.84651 11.6779 7.66732 10.6654 7.66732C9.65284 7.66732 8.83203 6.84651 8.83203 5.83398Z" fill="black"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.96045 1.33398H8.03695C9.57588 1.33398 10.7819 1.33397 11.7229 1.46048C12.6861 1.58998 13.4461 1.8602 14.0426 2.45674C14.6391 3.05328 14.9094 3.8133 15.0389 4.77646C15.1654 5.71745 15.1654 6.92347 15.1654 8.4624V8.5389C15.1654 10.0778 15.1654 11.2839 15.0389 12.2248C14.9094 13.188 14.6391 13.948 14.0426 14.5446C13.4461 15.1411 12.6861 15.4113 11.7229 15.5408C10.7819 15.6673 9.57588 15.6673 8.03695 15.6673H7.96045C6.42152 15.6673 5.21549 15.6673 4.2745 15.5408C3.31134 15.4113 2.55133 15.1411 1.95479 14.5446C1.35825 13.948 1.08802 13.188 0.958529 12.2248C0.832016 11.2839 0.832023 10.0778 0.832031 8.5389V8.4624C0.832023 6.92347 0.832016 5.71745 0.958529 4.77646C1.08802 3.8133 1.35825 3.05328 1.95479 2.45674C2.55133 1.8602 3.31134 1.58998 4.2745 1.46048C5.21549 1.33397 6.42152 1.33398 7.96045 1.33398ZM2.6619 13.8375C2.28212 13.4577 2.0642 12.9439 1.94961 12.0916C1.84729 11.3306 1.83401 10.3597 1.83229 9.06074L2.82901 8.18862C3.23842 7.83038 3.85546 7.85093 4.24013 8.2356L7.09995 11.0954C7.72991 11.7254 8.72156 11.8113 9.45046 11.299L9.64926 11.1593C10.2214 10.7572 10.9954 10.8038 11.5152 11.2716L13.6642 13.2057C13.6876 13.2268 13.7124 13.2452 13.7383 13.261C13.6306 13.4883 13.4978 13.6751 13.3355 13.8375C12.9557 14.2172 12.4419 14.4352 11.5896 14.5497C10.723 14.6663 9.58418 14.6673 7.9987 14.6673C6.41321 14.6673 5.2744 14.6663 4.40775 14.5497C3.55548 14.4352 3.04167 14.2172 2.6619 13.8375ZM4.40775 2.45156C3.55548 2.56615 3.04167 2.78408 2.6619 3.16385C2.28212 3.54362 2.0642 4.05743 1.94961 4.9097C1.85286 5.62937 1.83571 6.5367 1.83268 7.73163L2.1705 7.43604C2.97612 6.73113 4.1903 6.77156 4.94724 7.5285L7.80706 10.3883C8.0934 10.6747 8.54415 10.7137 8.87547 10.4809L9.07427 10.3411C10.0278 9.67102 11.3179 9.74866 12.1842 10.5283L14.0335 12.1927C14.0384 12.1595 14.0432 12.1258 14.0478 12.0916C14.1643 11.2249 14.1654 10.0861 14.1654 8.50065C14.1654 6.91517 14.1643 5.77635 14.0478 4.9097C13.9332 4.05743 13.7153 3.54362 13.3355 3.16385C12.9557 2.78408 12.4419 2.56615 11.5896 2.45156C10.723 2.33505 9.58418 2.33398 7.9987 2.33398C6.41321 2.33398 5.2744 2.33505 4.40775 2.45156Z" fill="black"/>
+                                                    </svg>                                                                                                                
+                                            </span>
+                                            <span class="flex font-medium text-sm text-gray-800 gap-1">
+                                                +
+                                                <span>
+                                                    Photo
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a onclick="Videomodal.showModal()"class="flex justify-center items-center gap-2 px-3 py-2 rounded-lg border border-gray-200" href="javascript:;">
+                                            <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.96045 1.33398H8.03695C9.57588 1.33398 10.7819 1.33397 11.7229 1.46048C12.6861 1.58998 13.4461 1.8602 14.0426 2.45674C14.6391 3.05328 14.9094 3.8133 15.0389 4.77645C15.1654 5.71745 15.1654 6.92347 15.1654 8.4624V8.5389C15.1654 10.0778 15.1654 11.2839 15.0389 12.2248C14.9094 13.188 14.6391 13.948 14.0426 14.5446C13.4461 15.1411 12.6861 15.4113 11.7229 15.5408C10.7819 15.6673 9.57588 15.6673 8.03695 15.6673H7.96045C6.42152 15.6673 5.21549 15.6673 4.2745 15.5408C3.31134 15.4113 2.55133 15.1411 1.95479 14.5446C1.35825 13.948 1.08802 13.188 0.958529 12.2248C0.832016 11.2839 0.832023 10.0778 0.832031 8.5389V8.4624C0.832023 6.92347 0.832016 5.71745 0.958529 4.77645C1.08802 3.8133 1.35825 3.05328 1.95479 2.45674C2.55133 1.8602 3.31134 1.58998 4.2745 1.46048C5.21549 1.33397 6.42152 1.33398 7.96045 1.33398ZM4.40775 2.45156C3.55548 2.56615 3.04167 2.78408 2.6619 3.16385C2.28212 3.54362 2.0642 4.05743 1.94961 4.9097C1.93151 5.04434 1.91619 5.18555 1.90324 5.33398H4.39089L6.29496 2.34188C5.54331 2.35342 4.92673 2.38179 4.40775 2.45156ZM7.47014 2.3342C7.45775 2.36911 7.44126 2.40318 7.42053 2.43576L5.5762 5.33398H8.72422L10.6113 2.36859C9.90249 2.33445 9.04851 2.33398 7.9987 2.33398C7.81672 2.33398 7.64062 2.334 7.47014 2.3342ZM11.7308 2.47197L9.90953 5.33398H14.0942C14.0812 5.18555 14.0659 5.04434 14.0478 4.9097C13.9332 4.05743 13.7153 3.54362 13.3355 3.16385C12.9772 2.80552 12.4995 2.59128 11.7308 2.47197ZM14.1475 6.33398H9.00618C9.00088 6.33407 8.99558 6.33407 8.99028 6.33398H4.67284C4.66755 6.33407 4.66225 6.33407 4.65694 6.33398H1.84985C1.83233 6.94847 1.83203 7.66208 1.83203 8.50065C1.83203 10.0861 1.83309 11.2249 1.94961 12.0916C2.0642 12.9439 2.28212 13.4577 2.6619 13.8375C3.04167 14.2172 3.55548 14.4352 4.40775 14.5497C5.2744 14.6663 6.41321 14.6673 7.9987 14.6673C9.58418 14.6673 10.723 14.6663 11.5896 14.5497C12.4419 14.4352 12.9557 14.2172 13.3355 13.8375C13.7153 13.4577 13.9332 12.9439 14.0478 12.0916C14.1643 11.2249 14.1654 10.0861 14.1654 8.50065C14.1654 7.66208 14.1651 6.94847 14.1475 6.33398ZM8.91086 8.44814L8.97861 8.49185C9.39181 8.75842 9.74958 8.98922 9.99893 9.20975C10.2642 9.44436 10.4987 9.74641 10.4987 10.1673C10.4987 10.5882 10.2642 10.8903 9.99893 11.1249C9.74958 11.3454 9.39182 11.5762 8.97863 11.8428L8.91086 11.8865C8.49343 12.1559 8.13065 12.39 7.8293 12.5238C7.51575 12.663 7.11401 12.7633 6.73085 12.5199C6.36774 12.2892 6.25764 11.8955 6.21145 11.5488C6.16532 11.2027 6.16534 10.7456 6.16536 10.2039V10.1307C6.16534 9.58908 6.16532 9.13196 6.21145 8.78583C6.25764 8.43916 6.36774 8.04542 6.73085 7.81474C7.11401 7.57132 7.51575 7.67162 7.8293 7.81084C8.13065 7.94464 8.49343 8.17876 8.91086 8.44814ZM7.23731 8.66845C7.23691 8.66791 7.24002 8.66708 7.24786 8.66756C7.24163 8.66922 7.23771 8.66898 7.23731 8.66845ZM7.26343 8.66948C7.29021 8.67404 7.33995 8.6877 7.42349 8.7248C7.64454 8.82295 7.94099 9.01244 8.40359 9.31093C8.85919 9.60489 9.15105 9.79486 9.33645 9.95882C9.50715 10.1098 9.49936 10.1628 9.49873 10.1671C9.49936 10.1714 9.50715 10.2248 9.33645 10.3758C9.15105 10.5398 8.85919 10.7297 8.40359 11.0237C7.94099 11.3222 7.64454 11.5117 7.42349 11.6098C7.33995 11.6469 7.2902 11.6606 7.26343 11.6652C7.24863 11.6366 7.2228 11.5677 7.20268 11.4167C7.16644 11.1448 7.16536 10.7554 7.16536 10.1673C7.16536 9.57922 7.16644 9.18986 7.20268 8.91792C7.2228 8.76693 7.24863 8.69799 7.26343 8.66948ZM7.23731 11.6662C7.23772 11.6657 7.24164 11.6654 7.24786 11.6671C7.24001 11.6676 7.2369 11.6667 7.23731 11.6662ZM7.27208 11.6794C7.27437 11.6814 7.27536 11.6827 7.27529 11.6829C7.27522 11.6831 7.27407 11.6821 7.27208 11.6794ZM7.27208 8.65519C7.27407 8.65253 7.27522 8.65157 7.27529 8.65176C7.27536 8.65195 7.27437 8.65327 7.27208 8.65519Z" fill="black"/>
+                                                    </svg>                                                                                                                                                                    
+                                            </span>
+                                            <span class="flex font-medium text-sm text-gray-800 gap-1">
+                                                +
+                                                <span>
+                                                    Video
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a class="flex justify-center items-center gap-2 px-3 py-2 rounded-lg border bg-violet-700" href="">
+                                           <span class="flex font-medium text-sm text-gray-800 gap-2 text-white">
+                                               Post
+                                                <span>
+                                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7612 2.25324C11.9812 2.39199 10.9296 2.74109 9.45382 3.23302L6.11297 4.34664C4.92629 4.7422 4.06677 5.02914 3.45967 5.28735C2.82496 5.5573 2.59917 5.74547 2.52584 5.87161C2.29997 6.26014 2.29997 6.73999 2.52584 7.12851C2.59917 7.25465 2.82496 7.44282 3.45967 7.71277C4.06677 7.97098 4.92629 8.25792 6.11297 8.65348C6.13171 8.65973 6.15021 8.66588 6.16849 8.67196C6.42157 8.75615 6.63066 8.8257 6.81335 8.92122L10.3623 5.41142C10.5634 5.21251 10.8877 5.2143 11.0866 5.41544C11.2855 5.61657 11.2837 5.94088 11.0826 6.13979L7.54932 9.63414C7.65947 9.82868 7.73403 10.0528 7.82609 10.3296C7.83216 10.3478 7.83832 10.3663 7.84457 10.3851C8.24013 11.5718 8.52706 12.4313 8.78527 13.0384C9.05523 13.6731 9.2434 13.8989 9.36954 13.9722C9.75806 14.1981 10.2379 14.1981 10.6264 13.9722C10.7526 13.8989 10.9407 13.6731 11.2107 13.0384C11.4689 12.4313 11.7558 11.5718 12.1514 10.3851L13.265 7.04423C13.757 5.56844 14.1061 4.51686 14.2448 3.73688C14.3842 2.95318 14.2777 2.62028 14.0777 2.42032C13.8778 2.22036 13.5449 2.11382 12.7612 2.25324ZM12.5818 1.24466C13.4499 1.09023 14.2318 1.12562 14.8021 1.69596C15.3724 2.26629 15.4078 3.04816 15.2534 3.91629C15.0999 4.77918 14.7256 5.90211 14.2516 7.32381L13.115 10.7337C12.7294 11.8906 12.4297 12.7896 12.1534 13.4393C11.8868 14.066 11.5909 14.5965 11.1413 14.8578C10.4345 15.2687 9.5615 15.2687 8.85467 14.8578C8.40511 14.5965 8.10914 14.066 7.84258 13.4393C7.56624 12.7896 7.26659 11.8906 6.88095 10.7337L6.87273 10.709C6.73762 10.3037 6.69643 10.1938 6.63809 10.1066C6.57279 10.0091 6.489 9.92526 6.39145 9.85996C6.3043 9.80161 6.19435 9.76043 5.78903 9.62532L5.76433 9.61709C4.6074 9.23145 3.70845 8.9318 3.05873 8.65546C2.43201 8.3889 1.90157 8.09293 1.64022 7.64337C1.2293 6.93654 1.2293 6.06358 1.64022 5.35675C1.90157 4.90719 2.43201 4.61122 3.05873 4.34466C3.70846 4.06832 4.60743 3.76867 5.76438 3.38302L9.17425 2.24639C10.5959 1.77248 11.7189 1.39816 12.5818 1.24466Z" fill="white"/>
+                                                        </svg>
+                                                        
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col flex-wrap max-w-2xl mx-auto gap-2 md:gap-4 bg-white rounded-lg mt-5">
+                                    <!-- Are you looking -->
+                                <div class="flex flex-col w-full rounded-lg bg-bg-white shadow">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex p-2 md:p-4 gap-2 md:gap-3 items-center">
+                                            <div href="#" class="flex w-10 h-10 relative">
+                                                <img class="w-10 h-10" src="images/post-img.png" alt="nimra jalil">  
+                                            </div>
+                                            <span class="flex flex-col">
+                                            <span class="text-sm md:text-base font-medium text-black">
+                                                Nimra Jalil
+                                            </span>
+                                            <span class="text-xs md:text-sm font-normal text-gray-500">
+                                                22 Jun, 2023
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="p-1 mr-2 md:mr-4 rounded-lg bg-white hover:bg-gray-200">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_181819_158546)">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#323232"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_181819_158546">
+                                                <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                                
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col px-2 md:px-4 max-w-2xl">
+                                        <p class="text-xs md:text-sm font-medium text-black">
+                                            Are you looking for a commercial litigator? Someone who can help with your contract?... Commercial agreements can appear to be  simple however it's very easy to miss something crucial. This is a forever changing area of law...
+                                        </p>
+                                        <a href="#" class="text-sm md:text-base font-normal text-violet-700 py-2.5">
+                                            See more
+                                        </a>
+                                    </div>
+                                    <div class="w-full border-t">
+                                        <img class="w-full" src="images/dv.png" alt="dv">
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="flex flex-col flex-wrap max-w-2xl mx-auto gap-2 md:gap-4 bg-white rounded-lg mt-5">
+                                    <!-- Are you looking -->
+                                <div class="flex flex-col w-full rounded-lg bg-bg-white p-2 shadow">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex p-2 md:p-4 gap-2 md:gap-3 items-center">
+                                            <div href="#" class="flex w-10 h-10 relative">
+                                                <img class="w-10 h-10" src="images/post-img.png" alt="nimra jalil">  
+                                            </div>
+                                            <span class="flex flex-col">
+                                            <span class="text-sm md:text-base font-medium text-black">
+                                                Nimra Jalil
+                                            </span>
+                                            <span class="text-xs md:text-sm font-normal text-gray-500">
+                                                22 Jun, 2023
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <a href="#" class="p-1 mr-2 md:mr-4 rounded-lg bg-white hover:bg-gray-200">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_181819_158546)">
+                                                <path d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z" fill="#323232"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_181819_158546">
+                                                <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>
+                                                
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-col px-2 md:px-4 max-w-2xl">
+                                        <p class="text-xs md:text-sm font-medium text-black">
+                                            Are you looking for a commercial litigator? Someone who can help with your contract?... Commercial agreements can appear to be  simple however it's very easy to miss something crucial. This is a forever changing area of law...
+                                        </p>
+                                        <a href="#" class="text-sm md:text-base font-normal text-violet-700 py-2.5">
+                                            See more
+                                        </a>
+                                    </div>
+                                    <div class="w-full border-t">
+                                        <img class="w-full" src="images/post-img1.png" alt="dv">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                             <div x-tabs:panel>
                                 <div class="w-full bg-white">
                                     <div class="flex flex-col gap-3 p-2 mx-auto max-w-7xl md:gap-4">
@@ -3817,6 +3984,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
             </main>
@@ -6555,35 +6723,155 @@
             </div>
         </form>
     </dialog>
- 
-    <!-- Center Modal -->
-    <!-- signin2 -->
-    <dialog id="signin2modal" class="relative flex justify-center w-full bg-white rounded-lg shadow-lg itenm-center md:max-w-md">
-        <form method="dialog">         
-            <!-- signin 2 -->
-            <div class="inline-flex flex-col items-center justify-center gap-4 px-6 py-5 bg-white">
-                <div class="flex flex-col items-center justify-center gap-6 py-3">
-                  <div class="flex flex-col items-center justify-center gap-1">
-                    <div class="relative">
-                      <svg width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0948 9.89754C17.9014 6 24.1009 6 36.5 6C48.8991 6 55.0986 6 56.9052 9.89754C57.0605 10.2326 57.1915 10.5806 57.297 10.9383C58.5243 15.0999 54.1406 19.9233 45.3731 29.5702L39.5 36L45.3731 42.4298C54.1406 52.0767 58.5243 56.9001 57.297 61.0617C57.1915 61.4194 57.0605 61.7674 56.9052 62.1025C55.0986 66 48.8991 66 36.5 66C24.1009 66 17.9014 66 16.0948 62.1025C15.9395 61.7674 15.8085 61.4194 15.703 61.0617C14.4757 56.9001 18.8594 52.0767 27.6269 42.4298L33.5 36L27.6269 29.5702C18.8594 19.9233 14.4757 15.0999 15.703 10.9383C15.8085 10.5806 15.9395 10.2326 16.0948 9.89754ZM30.5 53.25C29.2574 53.25 28.25 54.2574 28.25 55.5C28.25 56.7426 29.2574 57.75 30.5 57.75H42.5C43.7426 57.75 44.75 56.7426 44.75 55.5C44.75 54.2574 43.7426 53.25 42.5 53.25H30.5ZM28.25 16.5C28.25 15.2574 29.2574 14.25 30.5 14.25H42.5C43.7426 14.25 44.75 15.2574 44.75 16.5C44.75 17.7426 43.7426 18.75 42.5 18.75H30.5C29.2574 18.75 28.25 17.7426 28.25 16.5Z" fill="#18181B"/>
-                        </svg>                    
-                    </div>
-                    <div class="text-xl font-semibold text-center text-gray-900 md:text-2xl">Your session is about to expire in</div>
-                    <div class="text-4xl font-semibold text-center text-gray-900 md:text-5xl">30 Sec</div>
-                  </div>
-                  <div class="flex flex-col items-center justify-center h-6 gap-6">
-                    <div class="text-sm font-medium leading-normal text-center text-gray-900 md:text-base">Do you want to stay Signed-in?</div>
-                  </div>
-                </div>
-                <div class="flex flex-col w-full gap-4">
-                    <a type="button" class="focus:outline-none flex text-white items-center justify-center bg-primary-700 hover:bg-primary-800 font-medium rounded-lg text-sm px-5 py-2.5 w-full" href="">Stay Signed in</a>
-                    <a onclick="loggedoutmodal.close()" type="button"  class="focus:outline-none flex text-white items-center justify-center bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 w-full" href="./signin2.html">Sign out</a>
-            </div>  
-              </div>
-        </form>   
-    </dialog>
 
+    <!-- Right Modal -->
+    <!-- post -->
+    <dialog id="postmodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-sm font-medium text-gray-900 md:text-base">
+                Create Post
+            </h3>
+            <button onclick="postmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <!-- Law Firm Info -->
+            <section class="law-firm-info">
+                <div class="flex flex-col gap-3 w-full">
+                <div class="flex">
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-800 focus:border-primary-600" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="block text-sm font-medium text-gray-900" for="file_input">
+                        Upload supporting documents
+                    </label>
+                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+                    <span class="block text-xs md:text-xs font-normal text-gray-500">
+                        Max size 5 MB
+                    </span>
+                </div>
+            </div>
+            </section>
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+            <button type="submit" class="flex md:w-fit w-full justify-center text-white bg-blue-700 gap-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <span>
+                    Post
+                </span>
+                <span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7631 2.25324C11.9831 2.39199 10.9316 2.74109 9.45578 3.23302L6.11493 4.34664C4.92824 4.7422 4.06872 5.02914 3.46163 5.28735C2.82691 5.5573 2.60113 5.74547 2.52779 5.87161C2.30193 6.26014 2.30193 6.73999 2.52779 7.12851C2.60113 7.25465 2.82691 7.44282 3.46162 7.71277C4.06872 7.97098 4.92824 8.25792 6.11493 8.65348C6.13366 8.65973 6.15217 8.66588 6.17044 8.67196C6.42352 8.75615 6.63262 8.8257 6.8153 8.92122L10.3642 5.41142C10.5654 5.21251 10.8897 5.2143 11.0886 5.41544C11.2875 5.61657 11.2857 5.94088 11.0846 6.13979L7.55127 9.63414C7.66143 9.82868 7.73599 10.0528 7.82804 10.3296C7.83412 10.3478 7.84027 10.3663 7.84652 10.3851C8.24208 11.5718 8.52902 12.4313 8.78722 13.0384C9.05718 13.6731 9.24535 13.8989 9.37149 13.9722C9.76001 14.1981 10.2399 14.1981 10.6284 13.9722C10.7545 13.8989 10.9427 13.6731 11.2127 13.0384C11.4709 12.4313 11.7578 11.5718 12.1534 10.3851L13.267 7.04423C13.7589 5.56844 14.108 4.51686 14.2468 3.73688C14.3862 2.95318 14.2796 2.62028 14.0797 2.42032C13.8797 2.22036 13.5468 2.11382 12.7631 2.25324ZM12.5837 1.24466C13.4518 1.09023 14.2337 1.12562 14.804 1.69596C15.3744 2.26629 15.4098 3.04816 15.2553 3.91629C15.1018 4.77918 14.7275 5.90211 14.2536 7.32381L13.117 10.7337C12.7313 11.8906 12.4317 12.7896 12.1553 13.4393C11.8888 14.066 11.5928 14.5965 11.1432 14.8578C10.4364 15.2687 9.56345 15.2687 8.85663 14.8578C8.40707 14.5965 8.11109 14.066 7.84454 13.4393C7.5682 12.7896 7.26855 11.8906 6.8829 10.7337L6.87468 10.709C6.73957 10.3037 6.69839 10.1938 6.64004 10.1066C6.57474 10.0091 6.49095 9.92526 6.39341 9.85996C6.30625 9.80161 6.19631 9.76043 5.79098 9.62532L5.76629 9.61709C4.60936 9.23145 3.7104 8.9318 3.06068 8.65546C2.43396 8.3889 1.90352 8.09293 1.64217 7.64337C1.23126 6.93654 1.23126 6.06358 1.64217 5.35675C1.90352 4.90719 2.43396 4.61122 3.06068 4.34466C3.71041 4.06832 4.60938 3.76867 5.76633 3.38302L9.17621 2.24639C10.5979 1.77248 11.7208 1.39816 12.5837 1.24466Z" fill="white"/>
+                        </svg>                        
+                </span>
+            </button>
+        </div>
+    </form>
+    </dialog>
+    <!-- Right Modal -->
+    <!-- photo -->
+    <dialog id="Photomodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-sm font-medium text-gray-900 md:text-base">
+                Create Photo Post
+            </h3>
+            <button onclick="Photomodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <!-- Law Firm Info -->
+            <section class="law-firm-info">
+                <div class="flex flex-col gap-3 w-full">
+                <div class="flex">
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-800 focus:border-primary-600" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="block text-sm font-medium text-gray-900" for="file_input">
+                        Upload supporting documents
+                    </label>
+                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+                    <span class="block text-xs md:text-xs font-normal text-gray-500">
+                        Max size 5 MB
+                    </span>
+                </div>
+            </div>
+            </section>
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+            <button type="submit" class="flex md:w-fit w-full justify-center text-white bg-blue-700 gap-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <span>
+                    Post
+                </span>
+                <span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7631 2.25324C11.9831 2.39199 10.9316 2.74109 9.45578 3.23302L6.11493 4.34664C4.92824 4.7422 4.06872 5.02914 3.46163 5.28735C2.82691 5.5573 2.60113 5.74547 2.52779 5.87161C2.30193 6.26014 2.30193 6.73999 2.52779 7.12851C2.60113 7.25465 2.82691 7.44282 3.46162 7.71277C4.06872 7.97098 4.92824 8.25792 6.11493 8.65348C6.13366 8.65973 6.15217 8.66588 6.17044 8.67196C6.42352 8.75615 6.63262 8.8257 6.8153 8.92122L10.3642 5.41142C10.5654 5.21251 10.8897 5.2143 11.0886 5.41544C11.2875 5.61657 11.2857 5.94088 11.0846 6.13979L7.55127 9.63414C7.66143 9.82868 7.73599 10.0528 7.82804 10.3296C7.83412 10.3478 7.84027 10.3663 7.84652 10.3851C8.24208 11.5718 8.52902 12.4313 8.78722 13.0384C9.05718 13.6731 9.24535 13.8989 9.37149 13.9722C9.76001 14.1981 10.2399 14.1981 10.6284 13.9722C10.7545 13.8989 10.9427 13.6731 11.2127 13.0384C11.4709 12.4313 11.7578 11.5718 12.1534 10.3851L13.267 7.04423C13.7589 5.56844 14.108 4.51686 14.2468 3.73688C14.3862 2.95318 14.2796 2.62028 14.0797 2.42032C13.8797 2.22036 13.5468 2.11382 12.7631 2.25324ZM12.5837 1.24466C13.4518 1.09023 14.2337 1.12562 14.804 1.69596C15.3744 2.26629 15.4098 3.04816 15.2553 3.91629C15.1018 4.77918 14.7275 5.90211 14.2536 7.32381L13.117 10.7337C12.7313 11.8906 12.4317 12.7896 12.1553 13.4393C11.8888 14.066 11.5928 14.5965 11.1432 14.8578C10.4364 15.2687 9.56345 15.2687 8.85663 14.8578C8.40707 14.5965 8.11109 14.066 7.84454 13.4393C7.5682 12.7896 7.26855 11.8906 6.8829 10.7337L6.87468 10.709C6.73957 10.3037 6.69839 10.1938 6.64004 10.1066C6.57474 10.0091 6.49095 9.92526 6.39341 9.85996C6.30625 9.80161 6.19631 9.76043 5.79098 9.62532L5.76629 9.61709C4.60936 9.23145 3.7104 8.9318 3.06068 8.65546C2.43396 8.3889 1.90352 8.09293 1.64217 7.64337C1.23126 6.93654 1.23126 6.06358 1.64217 5.35675C1.90352 4.90719 2.43396 4.61122 3.06068 4.34466C3.71041 4.06832 4.60938 3.76867 5.76633 3.38302L9.17621 2.24639C10.5979 1.77248 11.7208 1.39816 12.5837 1.24466Z" fill="white"/>
+                        </svg>                        
+                </span>
+            </button>
+        </div>
+    </form>
+    </dialog>
+    <!-- Right Modal -->
+    <!-- video dialog -->
+    <dialog id="Videomodal" class="relative right-0 w-full max-w-xl p-0 bg-white shadow start-auto h-full max-h-[100dvh]">
+    <form method="dialog">
+        <!-- Modal header -->
+        <div class="sticky top-0 flex items-center justify-between p-2 bg-white border-b rounded-t md:p-4">
+            <h3 class="text-sm font-medium text-gray-900 md:text-base">
+                Create Video Post
+            </h3>
+            <button onclick="Videomodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <!-- Law Firm Info -->
+            <section class="law-firm-info">
+                <div class="flex flex-col gap-3 w-full">
+                <div class="flex">
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-800 focus:border-primary-600" placeholder="Write your thoughts here..."></textarea>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="block text-sm font-medium text-gray-900" for="file_input">
+                        Upload supporting documents
+                    </label>
+                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" id="file_input" type="file">
+                    <span class="block text-xs md:text-xs font-normal text-gray-500">
+                        Max size 5 MB
+                    </span>
+                </div>
+            </div>
+            </section>
+        </div>
+        <!-- Modal footer -->
+        <div class="sticky bottom-0 flex items-center justify-end p-4 bg-white border-t border-gray-200 rounded-b gap-x-2">
+            <button type="submit" class="flex md:w-fit w-full justify-center text-white bg-blue-700 gap-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                <span>
+                    Post
+                </span>
+                <span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7631 2.25324C11.9831 2.39199 10.9316 2.74109 9.45578 3.23302L6.11493 4.34664C4.92824 4.7422 4.06872 5.02914 3.46163 5.28735C2.82691 5.5573 2.60113 5.74547 2.52779 5.87161C2.30193 6.26014 2.30193 6.73999 2.52779 7.12851C2.60113 7.25465 2.82691 7.44282 3.46162 7.71277C4.06872 7.97098 4.92824 8.25792 6.11493 8.65348C6.13366 8.65973 6.15217 8.66588 6.17044 8.67196C6.42352 8.75615 6.63262 8.8257 6.8153 8.92122L10.3642 5.41142C10.5654 5.21251 10.8897 5.2143 11.0886 5.41544C11.2875 5.61657 11.2857 5.94088 11.0846 6.13979L7.55127 9.63414C7.66143 9.82868 7.73599 10.0528 7.82804 10.3296C7.83412 10.3478 7.84027 10.3663 7.84652 10.3851C8.24208 11.5718 8.52902 12.4313 8.78722 13.0384C9.05718 13.6731 9.24535 13.8989 9.37149 13.9722C9.76001 14.1981 10.2399 14.1981 10.6284 13.9722C10.7545 13.8989 10.9427 13.6731 11.2127 13.0384C11.4709 12.4313 11.7578 11.5718 12.1534 10.3851L13.267 7.04423C13.7589 5.56844 14.108 4.51686 14.2468 3.73688C14.3862 2.95318 14.2796 2.62028 14.0797 2.42032C13.8797 2.22036 13.5468 2.11382 12.7631 2.25324ZM12.5837 1.24466C13.4518 1.09023 14.2337 1.12562 14.804 1.69596C15.3744 2.26629 15.4098 3.04816 15.2553 3.91629C15.1018 4.77918 14.7275 5.90211 14.2536 7.32381L13.117 10.7337C12.7313 11.8906 12.4317 12.7896 12.1553 13.4393C11.8888 14.066 11.5928 14.5965 11.1432 14.8578C10.4364 15.2687 9.56345 15.2687 8.85663 14.8578C8.40707 14.5965 8.11109 14.066 7.84454 13.4393C7.5682 12.7896 7.26855 11.8906 6.8829 10.7337L6.87468 10.709C6.73957 10.3037 6.69839 10.1938 6.64004 10.1066C6.57474 10.0091 6.49095 9.92526 6.39341 9.85996C6.30625 9.80161 6.19631 9.76043 5.79098 9.62532L5.76629 9.61709C4.60936 9.23145 3.7104 8.9318 3.06068 8.65546C2.43396 8.3889 1.90352 8.09293 1.64217 7.64337C1.23126 6.93654 1.23126 6.06358 1.64217 5.35675C1.90352 4.90719 2.43396 4.61122 3.06068 4.34466C3.71041 4.06832 4.60938 3.76867 5.76633 3.38302L9.17621 2.24639C10.5979 1.77248 11.7208 1.39816 12.5837 1.24466Z" fill="white"/>
+                        </svg>                        
+                </span>
+            </button>
+        </div>
+    </form>
+    </dialog>
+        
     <script>
         function focusNextInput(el, prevId, nextId) {
             if (el.value.length === 0) {
@@ -6594,15 +6882,7 @@
         }
     </script>
 
-    <script>
-
-        setTimeout(function() {
-
-            signin2modal.showModal();
-
-        }, 2000)
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
 </body>
 </html>

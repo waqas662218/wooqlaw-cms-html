@@ -21,7 +21,7 @@
     <script defer src="https://unpkg.com/@alpinejs/ui@3.12.1-beta.0/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/@alpinejs/focus@3.12.1/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
-    <title>lawyers sign-in</title>
+    <title>signin1</title>
 </head>
 
 <body>
@@ -190,7 +190,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center items-center  py-2 md:py-6 md:px-4">
+            <div class="flex justify-center items-center py-2 md:py-6 md:px-4">
                 <form class="flex max-w-md xl:max-w-xl" action="#">
                     <div class="flex items-start lg:p-7 gap-2.5">
                         <div class="flex flex-col  items-start gap-4 md:gap-20">
@@ -205,17 +205,17 @@
                                     </label>
                                     <input type="text" id="Your email Or mobile number"
                                         class="border border-gray-300 text-gray-900 bg-gray-50 text-xs md:text-sm rounded-lg
-                                             focus:ring-primary-800 focus:border-primary-800 block w-72 md:w-80 py-3 px-4" placeholder="" required>
+                                             focus:ring-blue-500 focus:border-blue-500 block w-72 md:w-80 py-3 px-4" placeholder="" required>
                                 </div>
                                 <div class="flex flex-col gap-2">
                                     <label for="Password" class="block text-sm font-medium text-gray-900">
                                         Password*</label>
                                     <input type="password" name="password" id="Password" placeholder=""
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-800 focus:border-primary-800 block w-72 md:w-80 py-3 px-4"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-72 md:w-80 py-3 px-4"
                                         required="">
                                 </div>
                                 <button class="flex px-5 py-2.5 w-full md:w-fit text-white bg-violet-700 items-center rounded-lg justify-center">
-                                    <a class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">Sign in
+                                    <span class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">Sign in
                                         <span>
                                             <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +224,7 @@
                                                     fill="white" />
                                             </svg>
                                         </span>
-                                    </a>
+                                    </span>
                                 </button>
                             </div>
                             <div class="flex flex-col gap-4 justify-center items-center md:items-start w-full">
@@ -255,6 +255,71 @@
             </div>
         </div>
     </section>
-</body>
 
+    <!-- Center Modal -->
+    <!-- Signin1 Modal -->
+    <dialog id="signin1modal" class="w-full md:max-w-xl p-0 bg-white rounded-lg shadow">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between px-4 pt-4 bg-white rounded-t">
+                <h3 class="text-sm font-medium text-gray-900 md:text-base">
+                    
+                </h3>
+                <button onclick="signin1modal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Signin1 Modal -->
+            <section class="signin1-modal">
+                <div class="flex flex-col px-6 py-5 gap-4">
+                    <div class="flex flex-col items-center py-3 gap-6">
+                        <div class="flex flex-col gap-1 items-center">
+                            <span class="">
+                                <svg width="72" height="73" viewBox="0 0 72 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1218 7.72609C27 9.60706 27 13.0478 27 19.9292V53.0708C27 59.9522 27 63.3929 29.1218 65.2739C31.2435 67.1549 34.4866 66.5892 40.9728 65.4579L47.9592 64.2394C55.1426 62.9865 58.7344 62.36 60.8672 59.7252C63 57.0904 63 53.2799 63 45.6587V27.3413C63 19.7201 63 15.9096 60.8672 13.2748C58.7344 10.64 55.1426 10.0135 47.9592 8.76061L40.9728 7.54207C34.4866 6.41077 31.2435 5.84512 29.1218 7.72609ZM36 31.0059C37.2426 31.0059 38.25 32.0601 38.25 33.3605V39.6395C38.25 40.9399 37.2426 41.9941 36 41.9941C34.7574 41.9941 33.75 40.9399 33.75 39.6395V33.3605C33.75 32.0601 34.7574 31.0059 36 31.0059Z" fill="#27272A"/>
+                                    <path d="M22.6415 14C16.4667 14.009 13.248 14.1448 11.1967 16.1961C9 18.3928 9 21.9283 9 28.9994V43.9994C9 51.0704 9 54.606 11.1967 56.8027C13.248 58.8539 16.4667 58.9897 22.6415 58.9987C22.4995 57.1288 22.4998 54.967 22.5 52.6305V20.3681C22.4998 18.0316 22.4995 15.8699 22.6415 14Z" fill="#27272A"/>
+                                </svg>
+                            </span>
+                            <span class="text-lg font-semibold text-gray-900 md:text-2xl">
+                                You've been logged out!
+                            </span>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900 md:text-base text-center">
+                            Another session has been created with same user credentials. To keep using wooqlaw®️, please sign in again.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center bg-white border-gray-200 rounded-b gap-y-4">
+                        <button type="submit" class="flex px-5 py-2.5 w-full max-w-sm rounded-lg text-sm font-medium text-center text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 items-center justify-center">
+                            <div class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">
+                                Signin
+                                <span>
+                                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.3051 0.681488L15.7861 5.16245C15.8825 5.25892 15.9323 5.3865 15.9323 5.48608C15.9323 5.58565 15.8837 5.74087 15.7864 5.83802L11.3055 10.319C11.111 10.5135 10.7958 10.5135 10.6016 10.319C10.4074 10.1245 10.4071 9.80927 10.6016 9.6151L14.233 5.98365H0.497885C0.222679 5.98365 0 5.76097 0 5.51377C0 5.23857 0.222679 5.01589 0.497885 5.01589H14.2333L10.6018 1.38444C10.4073 1.18995 10.4073 0.87473 10.6018 0.680555C10.7963 0.48638 11.1122 0.486691 11.3051 0.681488Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </button>
+                        <button type="submit" class="flex px-5 py-2.5 mb-10 md:mb-18 w-full max-w-sm border rounded-lg text-sm font-medium text-center text-gray-900 bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300 items-center justify-center">
+                            <div class="flex items-center gap-2 text-xs md:text-sm font-normal" href="#">
+                                Cancel
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </dialog>
+    
+<script>
+    setTimeout(function() {
+        signin1modal.showModal();
+    }, 2000)
+
+</script>
+
+</body>
 </html>

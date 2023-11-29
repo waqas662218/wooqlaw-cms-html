@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+    <title>wooqlaw New Dashboard</title>
+
+    <style>
+        /*****
+    Print-container
+    *****/
+        @media print {
+            * {
+                color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            body::before {
+                display: none;
+            }
+
+            body *:not(.print-container):not(.print-container *) {
+                visibility: hidden;
+            }
+
+            .print-container,
+            .print-container * {
+                visibility: visible;
+            }
+
+            .print-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .print-container h2 {
+            font-size: 11px;
+            color: black;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            margin-bottom: 4px;
+        }
+
+        .print-container p,
+        .print-container a {
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 12px;
+            color: #000000 !important;
+            margin-bottom: 4px;
+        }
+
+        .print-container .textarea {
+            background: #FAFAFA;
+            border: 0.646516px solid #ECEFF1;
+            border-radius: 2.58607px;
+            padding: 8px 6px;
+        }
+
+        .print-container .logo {
+            height: 46px;
+        }
+
+        .print-container label {
+            font-size: 12px;
+            line-height: 15px;
+            color: #757575;
+            margin-bottom: 4px;
+        }
+
+        .print-container input {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000;
+            width: 100%;
+            border: 0;
+        }
+        .print-container .invoice input {
+            background: #FAFAFA;
+            border: 0.646516px solid #F5F5F5;
+            border-radius: 2.58607px;
+            padding: 6px;
+        }
+        .print-container .custom-table thead{
+            background: #F4F4F4;
+        }
+
+        .print-container .custom-table thead tr th{
+            color: #673AB7;
+            margin-bottom: 0;
+            padding: 10px 0 !important;
+        }
+        .print-container .custom-table tbody tr{
+            border-bottom: 0.646516px solid #E0E0E0;
+        }
+        .print-container .payment-method h3{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        .print-container .net-payable {
+            padding: 12px 8px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #673AB7;
+            background: #FAFAFA;
+            border: 0.7151px solid #ECEFF1;
+            border-radius: 2.8604px;
+        }
+        .print-container span {
+            font-size: 12px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        .create-invoice-modal .custom-table td:nth-child(1), .create-invoice-modal .custom-table th:nth-child(1) {
+            width: 36%;
+        }
+
+        .create-invoice-modal .custom-table td:nth-child(2), .create-invoice-modal .custom-table th:nth-child(2), .create-invoice-modal .custom-table td:nth-child(4), .create-invoice-modal .custom-table th:nth-child(4) {
+            width: 12%;
+        }
+
+        .create-invoice-modal .custom-table td:nth-child(3), .create-invoice-modal .custom-table th:nth-child(3), .create-invoice-modal .custom-table td:nth-child(5), .create-invoice-modal .custom-table th:nth-child(5) {
+            width: 18%;
+        }
+    }
+    .print-container h2 {
+            font-size: 11px;
+            color: black;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            margin-bottom: 4px;
+        }
+
+        .print-container p,
+        .print-container a {
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 12px;
+            color: #000000 !important;
+            margin-bottom: 4px;
+        }
+
+        .print-container .textarea {
+            background: #FAFAFA;
+            border: 0.646516px solid #ECEFF1;
+            border-radius: 2.58607px;
+            padding: 8px 6px;
+        }
+
+        .print-container .logo {
+            height: 46px;
+        }
+
+        .print-container label {
+            font-size: 12px;
+            line-height: 15px;
+            color: #757575;
+            margin-bottom: 4px;
+        }
+
+        .print-container input {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000;
+            width: 100%;
+            border: 0;
+        }
+        .print-container .invoice input {
+            background: #FAFAFA;
+            border: 0.646516px solid #F5F5F5;
+            border-radius: 2.58607px;
+            padding: 6px;
+        }
+        .print-container .custom-table thead{
+            background: #F4F4F4;
+        }
+
+        .print-container .custom-table thead tr th{
+            color: #673AB7;
+            margin-bottom: 0;
+            padding: 10px 0 !important;
+        }
+        .print-container .custom-table tbody tr{
+            border-bottom: 0.646516px solid #E0E0E0;
+        }
+        .print-container .payment-method h3{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        .print-container .net-payable {
+            padding: 12px 8px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #673AB7;
+            background: #FAFAFA;
+            border: 0.7151px solid #ECEFF1;
+            border-radius: 2.8604px;
+        }
+        .print-container span {
+            font-size: 12px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        .create-invoice-modal .custom-table td:nth-child(1), .create-invoice-modal .custom-table th:nth-child(1) {
+            width: 36%;
+        }
+
+        .create-invoice-modal .custom-table td:nth-child(2), .create-invoice-modal .custom-table th:nth-child(2), .create-invoice-modal .custom-table td:nth-child(4), .create-invoice-modal .custom-table th:nth-child(4) {
+            width: 12%;
+        }
+
+        .create-invoice-modal .custom-table td:nth-child(3), .create-invoice-modal .custom-table th:nth-child(3), .create-invoice-modal .custom-table td:nth-child(5), .create-invoice-modal .custom-table th:nth-child(5) {
+            width: 18%;
+        }
+    </style>
+
+</head>
+
+<body class="overflow-hidden">
+
+ 
+
+
+    <div class="py-4 print-container">
+        <div class="flex flex-wrap mb-4">
+            <div class="w-1/4">
+                <img src="../img/wooqlaw-print-logo.svg" class="logo">
+            </div>
+            <div class="w-2/5"></div>
+            <div class="flex flex-col w-1/3">
+                <h2>Royal Advocate Ltd</h2>
+                <p class="mb-0">Office 360, Al Noor Plaza, Jinnah Road, Blue Area</p>
+                <p>Islamabad</p>
+                <a href="mailto:accounts@wooqlaw.com">accounts@wooqlaw.com</a>
+                <a href="tel:+921234350244">+92 1234 350 244</a>
+            </div>
+        </div>
+        <div class="flex flex-wrap ">
+            <div class="w-3/4">
+                <div class="flex flex-col content-end pb-4 textarea" >
+                    <label class="mb-3">Bill To</label>
+                    <h2>Faizan Iqbal</h2>
+                    <p>house no 16, Street 3, Sector 1, Airport housing society</p>
+                    <p>Rawalpindi</p>
+                    <a href="mailto:faizan.iqbal@email.com">faizan.iqbal@email.com</a>
+                    <a href="tel:03341567895">0334 1567 895</a>
+                </div>
+            </div>
+            <div class="w-1/4 mb-4">
+                <div class="flex flex-col invoice">
+                    <div class="flex flex-col mb-1">
+                        <label for="InvoiceInput">Invoice #</label>
+                        <input type="text" value="INV0001">
+                    </div>
+                    <div class="flex flex-col mb-1">
+                        <label for="invoicedate">Invoice date:</label>
+                        <input type="text" value="16/06/2022">
+                    </div>
+                    <div class="flex flex-col mb-1">
+                        <label>Due date:</label>
+                        <input type="text" value="30-06-2022">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="block w-full mb-4 overflow-auto scrolling-touch create-invoice-modal">
+                <table class="w-full max-w-full mb-4 bg-transparent custom-table table-borderless">
+                    <thead>
+                        <tr class="">
+                            <th scope="col">Details</th>
+                            <th scope="col">Unit</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Discount</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="mb-1">
+                            <th scope="row">
+                                <h2>litigation for property dispute on</h2>
+                            </th>
+                            <td>
+                                <label>Fixed</label>
+                                <input type="text" value="1">
+                            </td>
+                            <td>
+                                <label>PKR</label>
+                                <input type="text" value="10">
+                            </td>
+                            <td>
+                                <label>%</label>
+                                <input type="text" value="2500">
+                            </td>
+                            <td>
+                                <label>PKR</label>
+                                <input class="fw-bold" type="text" value="Rs1,000">
+                            </td>
+                        </tr>
+                        <tr class="mb-1">
+                            <th scope="row">
+                                <h2>Agent fee for valuation</h2>
+                            </th>
+                            <td>
+                                <label>Per Hour</label>
+                                <input type="text" value="1">
+                            </td>
+                            <td>
+                                <label>PKR</label>
+                                <input type="text" value="10">
+                            </td>
+                            <td>
+                                <label>Amount</label>
+                                <input type="text" value="2500">
+                            </td>
+                            <td>
+                                <label>PKR</label>
+                                <input class="fw-bold" type="text" value="Rs1,000">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="flex flex-wrap mb-4">
+            <div class="w-1/2">
+                <label class="text-black">Note</label>
+                <div class="mb-3 textarea">
+                    <p>This case include some extra charges of external parties, which were essantial for this case, charged amount are in pakistani rupees.</p>
+                </div>
+            </div>
+            <div class="w-1/2">
+                <div class="flex flex-wrap mb-2">
+                    <div class="w-1/2"><span class="text-green-500 fw-bold">Discount</span></div>
+                    <div class="w-1/2"><span class="text-green-500 fw-bold">Rs 725.00</span></div>
+                </div>
+                <div class="flex flex-wrap mb-2">
+                    <div class="w-1/2">
+                        <span class="text-black fw-bold">Subtotal</span>
+                        <span class="block tax-note text-gray">
+                            (This invoice includes sales tax of Rs382.5)
+                        </span>
+                    </div>
+                    <div class="w-1/2"><span class="text-black fw-bold">Rs 3750</span></div>
+                </div>
+                <div class="flex flex-wrap mb-2">
+                    <div class="w-1/2"><span class="text-red-600 fw-bold">Arrears</span></div>
+                    <div class="w-1/2"><span class="text-red-600 fw-bold">Rs 2,000.00</span></div>
+                </div>
+                <div class="flex flex-wrap net-payable">
+                    <div class="w-1/2 px-1"><span class="text-purple fw-bolder">Net Payable</span></div>
+                    <div class="w-1/2"><span class="text-purple fw-bolder">Rs 5750.5</span></div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="flex flex-wrap mb-3 payment-method">
+            <div class="w-1/3 ">
+                <h2 class="title">Payment Details</h2>
+                <label for="FromPaymentMethod">Payment method</label>
+                <h3>Bank Transfer</h3>
+            </div>
+            <div class="w-1/5"></div>
+            <div class="w-1/2 pt-4">
+                <div class="flex flex-wrap mb-2 net-payable">
+                    <div class="w-1/2 px-1"><span class="text-purple fw-bold">Payment</span></div>
+                    <div class="w-1/2"><span class="text-black fw-bold">Rs 2500.00</span></div>
+                </div>
+                <div class="flex flex-wrap ">
+                    <div class="w-1/2"><span class="text-black fw-bold">Balance</span></div>
+                    <div class="w-1/2"><span class="text-black fw-bold">Rs 3250</span></div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="flex flex-wrap ">
+            <div class="w-1/2">
+                <div class="mb-3 textarea" rows="3">
+                    <h2 class="mb-2 fw-bolder">Thank you & have a wonderful day!</h2>
+                    <h2 class="mb-3">Account Details</h2>
+                    <h2 class="fw-bold">Royal Advocates Ltd</h2>
+                    <h2 class="fw-bold">Al Faysal Bank</h2>
+                    <h2 class="fw-bold">IBAN: PAK0040333312820498</h2>
+                    <h2 class="fw-bold">Branch Code: 00841</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+    <title>subscription-list</title>
+</head>
+<body class="pt-5">
+<section>
+    <div class="flex flex-col md:flex-row items-center p-4 gap-6 justify-between w-full">
+        <span class="font-medium text-center text-sm md:text-base text-gray-900">
+            Your subscription for wooqlaw® Pro expired on 
+            <span class="font-semibold text-sm md:text-base text-orange-500">
+                12-03-2023.
+            </span>  Subscribe now?
+        </span>
+        <a class="flex justify-center items-center gap-2 px-5 py-3 shadow font-medium text-sm nd:text-base rounded-lg bg-orange-600 text-white" href="">
+            Subscribe Pro
+        </a>
+    </div>
+    <div class="grid gap-3 md:table shadow-sm overflow-hidden rounded-lg md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 p-4">
+        <header class="hidden items-center md:table-row h-12 bg-gray-100 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
+            <div class="text-xs font-bold text-center w-11">
+                <div class="flex items-center justify-center w-4 px-4 py-3">
+                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                </div>
+            </div>
+            <div class="text-xs font-bold text-gray-900">Plan Name</div>
+            <div class="hidden text-center md:table-cell text-xs font-bold text-gray-900">Start Date</div>
+            <div class="hidden text-center md:table-cell text-xs font-bold text-gray-900">End date</div>
+            <div class="hidden text-center md:table-cell text-xs font-bold text-gray-900">Payment VIA</div>
+            <div class="hidden text-xs font-bold text-center md:table-cell text-gray-900">Attachments</div>
+           
+        </header>
+        <div class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
+            <div class="hidden gap-1 items-center md:table-cell text-xs md:w-11 md:text-center after:content-[attr(data-pn)] md:after:hidden after:" data-pn="Plan Name:">
+                <div class="flex items-center justify-center w-4 px-4 py-3">
+                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                </div>
+            </div>
+            <div class=" text-xs border-b border-gray-300 align-middle flex !border-solid md:!border-solid">
+                <span class="flex items-center :hidden gap-2 md:gap-5">
+                    <span>
+                        <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1313_41390)">
+                            <path d="M14.3446 36.6692H14.2845C10.8563 36.6692 8.07008 33.8729 8.07008 30.4384V16.9086C8.07008 16.0814 7.3981 15.4077 6.57316 15.4077C5.74821 15.4077 5.07624 16.0814 5.07624 16.9086V25.2428H0.356018V16.9086C0.356018 13.4713 3.14499 10.6777 6.57042 10.6777C9.99586 10.6777 12.7876 13.4741 12.7876 16.9086V30.4384C12.7876 31.2655 13.4595 31.9392 14.2845 31.9392H14.3446C15.1695 31.9392 15.8415 31.2655 15.8415 30.4384V16.9086C15.8415 13.4713 18.6305 10.6777 22.0559 10.6777H22.1761C25.6043 10.6777 28.3905 13.4741 28.3905 16.9086V30.0166H23.6703V16.9086C23.6703 16.0814 22.9983 15.4077 22.1734 15.4077H22.0532C21.2282 15.4077 20.5563 16.0814 20.5563 16.9086V30.4384C20.5563 33.8756 17.7673 36.6692 14.3418 36.6692H14.3446Z" fill="url(#paint0_linear_1313_41390)"/>
+                            <path d="M22.0129 8.59278C24.2321 8.59278 26.0311 6.78902 26.0311 4.56397C26.0311 2.33892 24.2321 0.535156 22.0129 0.535156C19.7937 0.535156 17.9947 2.33892 17.9947 4.56397C17.9947 6.78902 19.7937 8.59278 22.0129 8.59278Z" fill="#7413FF"/>
+                            <path d="M6.45058 8.5919C7.92451 8.5919 9.11936 7.39389 9.11936 5.91607C9.11936 4.43825 7.92451 3.24023 6.45058 3.24023C4.97665 3.24023 3.7818 4.43825 3.7818 5.91607C3.7818 7.39389 4.97665 8.5919 6.45058 8.5919Z" fill="#FF7244"/>
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_1313_41390" x1="0.295923" y1="24.5636" x2="28.8669" y2="22.0707" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDD62C"/>
+                            <stop offset="0.27" stop-color="#FF7244"/>
+                            <stop offset="0.63" stop-color="#CC38FF"/>
+                            <stop offset="1" stop-color="#7413FF"/>
+                            </linearGradient>
+                            <clipPath id="clip0_1313_41390">
+                            <rect width="28.0345" height="36.1333" fill="white" transform="translate(0.356018 0.535156)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                    </span>
+                    <span>
+                        <svg width="28" height="11" viewBox="0 0 28 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.183039 10.5117V0.3299H4.20008C4.97234 0.3299 5.63025 0.477391 6.17381 0.772372C6.71737 1.06404 7.13167 1.47005 7.4167 1.99041C7.70506 2.50746 7.84923 3.10405 7.84923 3.78018C7.84923 4.45632 7.7034 5.05291 7.41173 5.56996C7.12007 6.087 6.69748 6.4897 6.14398 6.77805C5.59379 7.06641 4.92759 7.21058 4.1454 7.21058H1.58503V5.48544H3.79739C4.21168 5.48544 4.55307 5.41418 4.82153 5.27166C5.09331 5.12583 5.29549 4.92531 5.42807 4.6701C5.56396 4.41158 5.6319 4.11494 5.6319 3.78018C5.6319 3.44212 5.56396 3.14713 5.42807 2.89524C5.29549 2.64003 5.09331 2.44283 4.82153 2.30362C4.54975 2.1611 4.20506 2.08984 3.78744 2.08984H2.33574V10.5117H0.183039ZM9.24749 10.5117V0.3299H13.2645C14.0335 0.3299 14.6897 0.467448 15.2333 0.742542C15.7802 1.01432 16.1961 1.40045 16.4812 1.90092C16.7695 2.39808 16.9137 2.98307 16.9137 3.65589C16.9137 4.33203 16.7679 4.91371 16.4762 5.40092C16.1845 5.88482 15.7619 6.25604 15.2084 6.51456C14.6582 6.77308 13.992 6.90234 13.2099 6.90234H10.5202V5.17223H12.8618C13.2728 5.17223 13.6142 5.11589 13.886 5.0032C14.1578 4.89051 14.3599 4.72147 14.4925 4.49609C14.6284 4.27071 14.6964 3.99065 14.6964 3.65589C14.6964 3.31783 14.6284 3.03279 14.4925 2.80078C14.3599 2.56877 14.1561 2.39311 13.881 2.27379C13.6092 2.15116 13.2662 2.08984 12.8519 2.08984H11.4002V10.5117H9.24749ZM14.7461 5.8782L17.2766 10.5117H14.9002L12.4243 5.8782H14.7461ZM27.7915 5.42081C27.7915 6.53113 27.5811 7.47573 27.1601 8.25462C26.7425 9.0335 26.1724 9.62843 25.4499 10.0394C24.7307 10.4471 23.922 10.6509 23.0238 10.6509C22.1189 10.6509 21.3069 10.4454 20.5877 10.0344C19.8685 9.62346 19.3 9.02853 18.8824 8.24964C18.4648 7.47076 18.256 6.52782 18.256 5.42081C18.256 4.31049 18.4648 3.36589 18.8824 2.587C19.3 1.80812 19.8685 1.21484 20.5877 0.807173C21.3069 0.396188 22.1189 0.190696 23.0238 0.190696C23.922 0.190696 24.7307 0.396188 25.4499 0.807173C26.1724 1.21484 26.7425 1.80812 27.1601 2.587C27.5811 3.36589 27.7915 4.31049 27.7915 5.42081ZM25.609 5.42081C25.609 4.70159 25.5013 4.09505 25.2858 3.60121C25.0737 3.10736 24.7738 2.73284 24.386 2.47763C23.9982 2.22242 23.5441 2.09482 23.0238 2.09482C22.5034 2.09482 22.0493 2.22242 21.6616 2.47763C21.2738 2.73284 20.9722 3.10736 20.7567 3.60121C20.5446 4.09505 20.4385 4.70159 20.4385 5.42081C20.4385 6.14003 20.5446 6.74657 20.7567 7.24041C20.9722 7.73426 21.2738 8.10878 21.6616 8.36399C22.0493 8.6192 22.5034 8.7468 23.0238 8.7468C23.5441 8.7468 23.9982 8.6192 24.386 8.36399C24.7738 8.10878 25.0737 7.73426 25.2858 7.24041C25.5013 6.74657 25.609 6.14003 25.609 5.42081Z" fill="#EA580C"/>
+                            </svg> 
+                    </span>     
+                </span>  
+            </div>
+            <div class="border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Start Date">
+                        MON 12-05-2022
+            </div>
+            <div class=" border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
+            <div class="flex justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
+                 <a class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs" href="">Jazz Cash</a>
+            </div>
+            <div class="border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid flex justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+            <a class="flex justify-center md:mx-auto font-medium text-xs text-blue-600" href="">file.pdf</a>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
+            <div class="hidden gap-1 items-center md:table-cell text-xs md:w-11 md:text-center after:content-[attr(data-pn)] md:after:hidden after:" data-pn="Plan Name:">
+                <div class="flex items-center justify-center w-4 px-4 py-3">
+                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
+                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                </div>
+            </div>
+            <div class=" text-xs border-b border-gray-300 align-middle flex !border-solid md:!border-solid">
+                <span class="flex items-center :hidden gap-2 md:gap-5">
+                    <span>
+                        <svg width="29" height="37" viewBox="0 0 29 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1313_41390)">
+                            <path d="M14.3446 36.6692H14.2845C10.8563 36.6692 8.07008 33.8729 8.07008 30.4384V16.9086C8.07008 16.0814 7.3981 15.4077 6.57316 15.4077C5.74821 15.4077 5.07624 16.0814 5.07624 16.9086V25.2428H0.356018V16.9086C0.356018 13.4713 3.14499 10.6777 6.57042 10.6777C9.99586 10.6777 12.7876 13.4741 12.7876 16.9086V30.4384C12.7876 31.2655 13.4595 31.9392 14.2845 31.9392H14.3446C15.1695 31.9392 15.8415 31.2655 15.8415 30.4384V16.9086C15.8415 13.4713 18.6305 10.6777 22.0559 10.6777H22.1761C25.6043 10.6777 28.3905 13.4741 28.3905 16.9086V30.0166H23.6703V16.9086C23.6703 16.0814 22.9983 15.4077 22.1734 15.4077H22.0532C21.2282 15.4077 20.5563 16.0814 20.5563 16.9086V30.4384C20.5563 33.8756 17.7673 36.6692 14.3418 36.6692H14.3446Z" fill="url(#paint0_linear_1313_41390)"/>
+                            <path d="M22.0129 8.59278C24.2321 8.59278 26.0311 6.78902 26.0311 4.56397C26.0311 2.33892 24.2321 0.535156 22.0129 0.535156C19.7937 0.535156 17.9947 2.33892 17.9947 4.56397C17.9947 6.78902 19.7937 8.59278 22.0129 8.59278Z" fill="#7413FF"/>
+                            <path d="M6.45058 8.5919C7.92451 8.5919 9.11936 7.39389 9.11936 5.91607C9.11936 4.43825 7.92451 3.24023 6.45058 3.24023C4.97665 3.24023 3.7818 4.43825 3.7818 5.91607C3.7818 7.39389 4.97665 8.5919 6.45058 8.5919Z" fill="#FF7244"/>
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_1313_41390" x1="0.295923" y1="24.5636" x2="28.8669" y2="22.0707" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDD62C"/>
+                            <stop offset="0.27" stop-color="#FF7244"/>
+                            <stop offset="0.63" stop-color="#CC38FF"/>
+                            <stop offset="1" stop-color="#7413FF"/>
+                            </linearGradient>
+                            <clipPath id="clip0_1313_41390">
+                            <rect width="28.0345" height="36.1333" fill="white" transform="translate(0.356018 0.535156)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
+                    <span>
+                        <svg width="28" height="11" viewBox="0 0 28 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.183039 10.5117V0.3299H4.20008C4.97234 0.3299 5.63025 0.477391 6.17381 0.772372C6.71737 1.06404 7.13167 1.47005 7.4167 1.99041C7.70506 2.50746 7.84923 3.10405 7.84923 3.78018C7.84923 4.45632 7.7034 5.05291 7.41173 5.56996C7.12007 6.087 6.69748 6.4897 6.14398 6.77805C5.59379 7.06641 4.92759 7.21058 4.1454 7.21058H1.58503V5.48544H3.79739C4.21168 5.48544 4.55307 5.41418 4.82153 5.27166C5.09331 5.12583 5.29549 4.92531 5.42807 4.6701C5.56396 4.41158 5.6319 4.11494 5.6319 3.78018C5.6319 3.44212 5.56396 3.14713 5.42807 2.89524C5.29549 2.64003 5.09331 2.44283 4.82153 2.30362C4.54975 2.1611 4.20506 2.08984 3.78744 2.08984H2.33574V10.5117H0.183039ZM9.24749 10.5117V0.3299H13.2645C14.0335 0.3299 14.6897 0.467448 15.2333 0.742542C15.7802 1.01432 16.1961 1.40045 16.4812 1.90092C16.7695 2.39808 16.9137 2.98307 16.9137 3.65589C16.9137 4.33203 16.7679 4.91371 16.4762 5.40092C16.1845 5.88482 15.7619 6.25604 15.2084 6.51456C14.6582 6.77308 13.992 6.90234 13.2099 6.90234H10.5202V5.17223H12.8618C13.2728 5.17223 13.6142 5.11589 13.886 5.0032C14.1578 4.89051 14.3599 4.72147 14.4925 4.49609C14.6284 4.27071 14.6964 3.99065 14.6964 3.65589C14.6964 3.31783 14.6284 3.03279 14.4925 2.80078C14.3599 2.56877 14.1561 2.39311 13.881 2.27379C13.6092 2.15116 13.2662 2.08984 12.8519 2.08984H11.4002V10.5117H9.24749ZM14.7461 5.8782L17.2766 10.5117H14.9002L12.4243 5.8782H14.7461ZM27.7915 5.42081C27.7915 6.53113 27.5811 7.47573 27.1601 8.25462C26.7425 9.0335 26.1724 9.62843 25.4499 10.0394C24.7307 10.4471 23.922 10.6509 23.0238 10.6509C22.1189 10.6509 21.3069 10.4454 20.5877 10.0344C19.8685 9.62346 19.3 9.02853 18.8824 8.24964C18.4648 7.47076 18.256 6.52782 18.256 5.42081C18.256 4.31049 18.4648 3.36589 18.8824 2.587C19.3 1.80812 19.8685 1.21484 20.5877 0.807173C21.3069 0.396188 22.1189 0.190696 23.0238 0.190696C23.922 0.190696 24.7307 0.396188 25.4499 0.807173C26.1724 1.21484 26.7425 1.80812 27.1601 2.587C27.5811 3.36589 27.7915 4.31049 27.7915 5.42081ZM25.609 5.42081C25.609 4.70159 25.5013 4.09505 25.2858 3.60121C25.0737 3.10736 24.7738 2.73284 24.386 2.47763C23.9982 2.22242 23.5441 2.09482 23.0238 2.09482C22.5034 2.09482 22.0493 2.22242 21.6616 2.47763C21.2738 2.73284 20.9722 3.10736 20.7567 3.60121C20.5446 4.09505 20.4385 4.70159 20.4385 5.42081C20.4385 6.14003 20.5446 6.74657 20.7567 7.24041C20.9722 7.73426 21.2738 8.10878 21.6616 8.36399C22.0493 8.6192 22.5034 8.7468 23.0238 8.7468C23.5441 8.7468 23.9982 8.6192 24.386 8.36399C24.7738 8.10878 25.0737 7.73426 25.2858 7.24041C25.5013 6.74657 25.609 6.14003 25.609 5.42081Z" fill="#EA580C"/>
+                            </svg> 
+                    </span>     
+                </span>  
+            </div>
+            <div class="border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Start Date">
+                        MON 12-05-2022
+            </div>
+            <div class=" border-gray-300 !border-solid md:!border-solid flex border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
+            <div class="flex justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
+                 <a class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs" href="">Easy Paisa</a>
+            </div>
+            <div class="border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid flex justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+            <a class="flex justify-center md:mx-auto font-medium text-xs text-blue-600" href="">file.pdf</a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <!-- Tailwind CSS-->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Googel Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.12.0-beta.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/@alpinejs/focus@3.12.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.12.0/dist/cdn.min.js"></script>
+    <title>subscription remainder</title>
+</head>
+<body class="bg-gray-200">
+    <dialog id="trialexpiringsmodal" class="relative right-0 w-full max-w-xl p-0 bg-white rounded-lg shadow-lg">
+        <form method="dialog">
+            <!-- Modal header -->
+            <div class="sticky top-0 flex items-start justify-between p-4 bg-white rounded-t">
+                <h3 class="text-xl font-semibold text-gray-900">
+                   
+                </h3>
+                <button onclick="trialexpiringsmodal.close()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col py-3 px-6 w-full">
+                <div class="flex relative items-center overflow-hidden rounded-lg justify-center bg-cover w-full h-[200px]" style="background-image: url(../public/images/Placeholder.png);">
+                        <svg class="w-36 md:w-48 h-20 md:h-28" viewBox="0 0 208 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_1479_9793)">
+                                    <path d="M52.0185 124.187H51.8135C40.1208 124.187 30.6175 114.649 30.6175 102.935V56.7872C30.6175 53.9661 28.3255 51.6681 25.5118 51.6681C22.6981 51.6681 20.4061 53.9661 20.4061 56.7872V85.2137H4.3064V56.7872C4.3064 45.0636 13.819 35.5352 25.5025 35.5352C37.1859 35.5352 46.7078 45.0729 46.7078 56.7872V102.935C46.7078 105.756 48.9998 108.054 51.8135 108.054H52.0185C54.8322 108.054 57.1242 105.756 57.1242 102.935V56.7872C57.1242 45.0636 66.6368 35.5352 78.3203 35.5352H78.7302C90.423 35.5352 99.9263 45.0729 99.9263 56.7872V101.496H83.8266V56.7872C83.8266 53.9661 81.5346 51.6681 78.7209 51.6681H78.3109C75.4972 51.6681 73.2053 53.9661 73.2053 56.7872V102.935C73.2053 114.658 63.6926 124.187 52.0092 124.187H52.0185Z" fill="white"/>
+                                    </g>
+                                    <g filter="url(#filter1_d_1479_9793)">
+                                    <path d="M78.1713 28.4243C85.7405 28.4243 91.8765 22.2721 91.8765 14.6829C91.8765 7.09367 85.7405 0.941406 78.1713 0.941406C70.6021 0.941406 64.4661 7.09367 64.4661 14.6829C64.4661 22.2721 70.6021 28.4243 78.1713 28.4243Z" fill="white"/>
+                                    </g>
+                                    <g filter="url(#filter2_d_1479_9793)">
+                                    <path d="M25.0927 28.4214C30.1199 28.4214 34.1953 24.3352 34.1953 19.2947C34.1953 14.2541 30.1199 10.168 25.0927 10.168C20.0654 10.168 15.99 14.2541 15.99 19.2947C15.99 24.3352 20.0654 28.4214 25.0927 28.4214Z" fill="white"/>
+                                    </g>
+                                    <g filter="url(#filter3_d_1479_9793)">
+                                    <path d="M124.989 80.6465V51.5556H136.466C138.673 51.5556 140.553 51.977 142.106 52.8198C143.659 53.6531 144.842 54.8132 145.657 56.2999C146.481 57.7772 146.893 59.4817 146.893 61.4135C146.893 63.3453 146.476 65.0499 145.643 66.5272C144.809 68.0044 143.602 69.155 142.02 69.9789C140.448 70.8027 138.545 71.2147 136.31 71.2147H128.995V66.2857H135.316C136.5 66.2857 137.475 66.0821 138.242 65.6749C139.018 65.2582 139.596 64.6853 139.975 63.9561C140.363 63.2175 140.557 62.37 140.557 61.4135C140.557 60.4476 140.363 59.6048 139.975 58.8851C139.596 58.156 139.018 57.5925 138.242 57.1948C137.465 56.7876 136.481 56.584 135.287 56.584H131.14V80.6465H124.989ZM150.888 80.6465V51.5556H162.365C164.562 51.5556 166.437 51.9486 167.99 52.7346C169.552 53.5111 170.741 54.6143 171.555 56.0442C172.379 57.4647 172.791 59.1361 172.791 61.0584C172.791 62.9902 172.374 64.6522 171.541 66.0442C170.708 67.4268 169.5 68.4874 167.919 69.226C166.347 69.9647 164.443 70.334 162.209 70.334H154.524V65.3908H161.214C162.388 65.3908 163.364 65.2298 164.14 64.9078C164.917 64.5859 165.495 64.1029 165.873 63.459C166.262 62.815 166.456 62.0149 166.456 61.0584C166.456 60.0925 166.262 59.2781 165.873 58.6152C165.495 57.9524 164.912 57.4505 164.126 57.1096C163.35 56.7592 162.37 56.584 161.186 56.584H157.038V80.6465H150.888ZM166.598 67.4078L173.828 80.6465H167.038L159.964 67.4078H166.598ZM203.87 66.101C203.87 69.2734 203.269 71.9722 202.067 74.1976C200.873 76.423 199.245 78.1228 197.18 79.2971C195.125 80.4618 192.815 81.0442 190.248 81.0442C187.663 81.0442 185.343 80.4571 183.288 79.2828C181.233 78.1086 179.609 76.4088 178.416 74.1834C177.223 71.958 176.626 69.2639 176.626 66.101C176.626 62.9287 177.223 60.2298 178.416 58.0044C179.609 55.7791 181.233 54.084 183.288 52.9192C185.343 51.745 187.663 51.1578 190.248 51.1578C192.815 51.1578 195.125 51.745 197.18 52.9192C199.245 54.084 200.873 55.7791 202.067 58.0044C203.269 60.2298 203.87 62.9287 203.87 66.101ZM197.635 66.101C197.635 64.0461 197.327 62.3132 196.711 60.9022C196.105 59.4912 195.248 58.4211 194.14 57.6919C193.032 56.9628 191.735 56.5982 190.248 56.5982C188.762 56.5982 187.464 56.9628 186.356 57.6919C185.248 58.4211 184.387 59.4912 183.771 60.9022C183.165 62.3132 182.862 64.0461 182.862 66.101C182.862 68.156 183.165 69.8889 183.771 71.2999C184.387 72.7109 185.248 73.781 186.356 74.5101C187.464 75.2393 188.762 75.6039 190.248 75.6039C191.735 75.6039 193.032 75.2393 194.14 74.5101C195.248 73.781 196.105 72.7109 196.711 71.2999C197.327 69.8889 197.635 68.156 197.635 66.101Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <filter id="filter0_d_1479_9793" x="0.306396" y="35.5352" width="103.62" height="96.6523" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1479_9793"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1479_9793" result="shape"/>
+                                    </filter>
+                                    <filter id="filter1_d_1479_9793" x="60.4661" y="0.941406" width="35.4105" height="35.4824" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1479_9793"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1479_9793" result="shape"/>
+                                    </filter>
+                                    <filter id="filter2_d_1479_9793" x="11.99" y="10.168" width="26.2053" height="26.2539" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1479_9793"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1479_9793" result="shape"/>
+                                    </filter>
+                                    <filter id="filter3_d_1479_9793" x="120.989" y="51.1582" width="86.8813" height="37.8867" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1479_9793"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1479_9793" result="shape"/>
+                                    </filter>
+                                    </defs>
+                         </svg>
+                </div>  
+                <div class="flex flex-col justify-center items-center gap-3 py-5 w-full">
+                    <span class="font-semibold text-sm md:text-xl text-gray-900">
+                        Hey 
+                        <span class="text-primary-700">
+                            wooq
+                            <span class="font-semibold text-base md:text-xl text-gray-900">
+                                lawyer! Your trial is expiring
+                            </span>
+                        </span>
+                    </span>
+                    
+                    <span class="text-center font-medium text-sm md:text-base text-gray-600 w-full">
+                        Your free trial expires in 3 days. Subscribe to 
+                        <span class="font-bold text-sm md:text-base text-orange-400">
+                            PRO
+                        </span> 
+                        to keep enjoying our incredible features and practice like a pro.
+                    </span>
+                </div>   
+            </div>
+            <!-- Modal footer -->
+            <div class="flex flex-col-reverse md:flex-row w-full justify-center items-center gap-2 md:gap-7 mb-7">
+                <a class="flex items-center justify-center px-3 py-2 border border-primary-700 rounded-md text-primary-700 font-medium text-xs" href="">Remind Me Later</a>
+                <a class="flex items-center justify-center px-3 py-2 border border-primary-700 rounded-md text-white bg-primary-700 font-medium text-xs" href="">Go to Subscription</a>
+            </div>
+        </form>
+    </dialog>
+
+    <script>
+
+        setTimeout(function() {
+    
+            trialexpiringsmodal.showModal();
+    
+        }, 2000)
+    
+    </script>
+
+    
+</body>
+</html>
