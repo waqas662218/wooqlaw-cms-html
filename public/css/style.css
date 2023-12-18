@@ -3958,6 +3958,10 @@ select {
     margin-bottom: 1.75rem;
   }
 
+  .md\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .md\:ml-2 {
     margin-left: 0.5rem;
   }
