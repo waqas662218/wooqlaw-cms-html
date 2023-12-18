@@ -26,8 +26,7 @@
 </head>
 
 <body class="overflow-hidden">
-    <header
-        class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14 md:h-18">
+    <header class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14">
 
 
         <div class="flex items-center gap-3">
@@ -203,7 +202,7 @@
         </div>
     </header>
 
-    <div class="flex bg-gray-200 h-[calc(100dvh-7rem)] md:h-[calc(100vh-4.5rem)] overflow-hidden"
+    <div class="flex bg-gray-200 h-[calc(100dvh-7rem)] md:h-[calc(100vh-3.5rem)] overflow-hidden"
         x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
         x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }">
         <!-- code for swipe 
@@ -309,9 +308,9 @@
                         </ol>
                     </nav>        
                     <div x-data x-tabs class="flex flex-col gap-3">
-                        <ul class="grid md:grid-cols-6 w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl"
+                        <ul class="grid w-full gap-1 mb-1 text-sm font-medium md:grid-cols-6 md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl"
                             x-tabs:list>
-                            <li class="basis-auto shrink-0 grow-0 md:grow">
+                            <li class="">
                                 <a x-tabs:tab
                                     :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
                                     href="javascript:;"
@@ -328,7 +327,7 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li class="basis-auto shrink-0 grow-0 md:grow">
+                            <li class="">
                                 <a x-tabs:tab
                                     :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
                                     href="javascript:;"
@@ -348,13 +347,13 @@
                         </ul>     
                         <div class="relative w-full content" x-tabs:panels>
                             <div x-tabs:panel>
-                                <section class="Categories">
-                                    <div class="flex flex-col md:flex-row gap-3 md:gap-8 w-full" x-data="{step:1}">
-                                        <div class="flex flex-col gap-2 md:gap-6 px-3 md:px-9 py-3 md:py-7 rounded-xl shadow w-full bg-white">
-                                            <form class="flex w-full">
+                                <section class="Categories" >
+                                    <div class="flex flex-col w-full gap-3 md:flex-row md:gap-8" x-data="{step:1}">
+                                        <div class="flex flex-col w-full gap-2 py-3 bg-white shadow md:gap-4 md:py-4 rounded-xl">
+                                            <form class="flex w-full px-3 md:px-4">
                                                 <div class="relative w-full">
                                                     <div
-                                                        class="absolute inset-y-0 flex items-center ps-3 pointer-events-none">
+                                                        class="absolute inset-y-0 flex items-center pointer-events-none ps-3">
                                                         <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
                                                             xmlns="http://www.w3.org/2000/svg" fill="none"
                                                             viewBox="0 0 20 20">
@@ -364,41 +363,28 @@
                                                         </svg>
                                                     </div>
                                                     <input type="search" id="default-search"
-                                                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-violot-500 focus:border-violet-500"
+                                                        class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg ps-10 bg-gray-50 focus:ring-violot-500 focus:border-violet-500"
                                                         placeholder="Search" required>
                                                     <button type="submit"
                                                         class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-3 py-2">Search</button>
                                                 </div>
                                             </form>
-                                            <div class="flex flex-col gap-2 md:gap-4">
+                                            <div class="flex flex-col gap-2 md:gap-3 overflow-y-auto h-[calc(100dvh-20rem)] px-3 md:px-4">
                                                 <div x-data="{open: false}">
                                                     <button x-on:click="[open=true, step=2]"
                                                         :class="open?'bg-violet-200':'bg-gray-100'"
-                                                        class="flex justify-between items-center border rounded-md px-4 py-3 w-full hover:bg-gray-200">
-                                                        <div class="flex gap-2">
-                                                            <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
-                                                                <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M11.6386 4.99648C11.2786 4.30315 10.7786 3.78315 10.1386 3.43648C9.49861 3.07648 8.75861 2.89648 7.91861 2.89648C6.99861 2.89648 6.17861 3.10315 5.45861 3.51648C4.73861 3.92982 4.17195 4.51648 3.75861 5.27648C3.35861 6.03648 3.15861 6.91648 3.15861 7.91648C3.15861 8.91648 3.35861 9.80315 3.75861 10.5765C4.17195 11.3365 4.73861 11.9232 5.45861 12.3365C6.17861 12.7498 6.99861 12.9565 7.91861 12.9565C9.15861 12.9565 10.1653 12.6098 10.9386 11.9165C11.7119 11.2232 12.1853 10.2832 12.3586 9.09648H7.13861V7.27648H14.7986V9.05648C14.6519 10.1365 14.2653 11.1298 13.6386 12.0365C13.0253 12.9432 12.2186 13.6698 11.2186 14.2165C10.2319 14.7498 9.13195 15.0165 7.91861 15.0165C6.61195 15.0165 5.41861 14.7165 4.33861 14.1165C3.25861 13.5032 2.39861 12.6565 1.75861 11.5765C1.13195 10.4965 0.818613 9.27648 0.818613 7.91648C0.818613 6.55648 1.13195 5.33648 1.75861 4.25648C2.39861 3.17648 3.25861 2.33648 4.33861 1.73648C5.43195 1.12315 6.62528 0.816483 7.91861 0.816483C9.39861 0.816483 10.7119 1.18315 11.8586 1.91648C13.0186 2.63648 13.8586 3.66315 14.3786 4.99648H11.6386Z"
-                                                                        fill="#374151" />
-                                                                </svg>
-                                                            </span>
-                                                            <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
-                                                                General
-                                                            </span>
-                                                        </div>
-                                                        <span class="font-medium text-sm md:text-base">
-                                                            109_120-B
-                                                        </span>
+                                                        class="flex flex-col w-full px-4 py-3 border rounded-md hover:bg-gray-200">
+                                                        <div class="flex items-start justify-between w-full">
+                                                            <div class="text-base font-semibold leading-normal text-zinc-800">Chapter V</div>
+                                                            <div class="text-sm font-semibold leading-tight text-zinc-800">Sections: 109-120B</div>
+                                                          </div>
+                                                          <div class="text-sm font-medium leading-tight text-zinc-800">Abetment</div>
                                                     </button>
                                                 </div>
-                                                <div  class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div  class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -407,18 +393,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -427,18 +413,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -447,18 +433,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -467,18 +453,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -487,18 +473,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -507,18 +493,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -527,18 +513,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -547,18 +533,18 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
-                                                <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                     <div class="flex gap-2">
                                                         <span
-                                                            class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                             <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -567,19 +553,19 @@
                                                             </svg>
                                                         </span>
                                                         <span
-                                                            class="flex items-center font-medium text-sm md:text-base">
+                                                            class="flex items-center text-sm font-medium md:text-base">
                                                             General
                                                         </span>
                                                     </div>
-                                                    <span class="font-medium text-sm md:text-base">
+                                                    <span class="text-sm font-medium md:text-base">
                                                         109_120-B
                                                     </span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div :class="step==1?'justify-center':''" class="flex flex-col gap-6 md:px-9 py-3 md:py-7 rounded-xl shadow w-full bg-white"  x-cloak>
+                                        <div :class="step==1?'justify-center':''" class="flex flex-col w-full gap-2 py-3 bg-white shadow md:gap-4 md:py-4 rounded-xl"  x-cloak>
                                             <div x-show="step==1"
-                                                class="flex flex-col justify-center items-center w-full">
+                                                class="flex flex-col items-center justify-center w-full">
                                                 <span>
                                                     <svg width="264" height="168" viewBox="0 0 264 168" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -672,15 +658,15 @@
                                                         </defs>
                                                     </svg>
                                                 </span>
-                                                <span class="font-bold text-sm text-gray-500">
+                                                <span class="text-sm font-bold text-gray-500">
                                                     Select a Category
                                                 </span>
                                             </div>
-                                            <div x-show="step>=2" class="flex flex-col items-center gap-2 md:gap-6 w-full">
-                                                <form class="flex w-full">
+                                            <div x-show="step>=2" class="flex flex-col items-center w-full gap-2 md:gap-6">
+                                                <form class="flex w-full px-3 md:px-4">
                                                     <div class="relative w-full">
                                                         <div
-                                                            class="absolute inset-y-0 flex items-center ps-3 pointer-events-none">
+                                                            class="absolute inset-y-0 flex items-center pointer-events-none ps-3">
                                                             <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
                                                                 xmlns="http://www.w3.org/2000/svg" fill="none"
                                                                 viewBox="0 0 20 20">
@@ -690,41 +676,26 @@
                                                             </svg>
                                                         </div>
                                                         <input type="search" id="default-search"
-                                                            class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-violot-500 focus:border-violet-500"
+                                                            class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg ps-10 bg-gray-50 focus:ring-violot-500 focus:border-violet-500"
                                                             placeholder="Search" required>
                                                         <button type="submit"
                                                             class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-3 py-2">Search</button>
                                                     </div>
                                                 </form>
-                                                <div class="flex flex-col gap-2 md:gap-4 w-full">
+                                                <div class="flex flex-col w-full gap-2 px-3 md:gap-3 overflow-y-auto h-[calc(100dvh-20rem)] md:px-4">
                                                     <div x-data="{open: false}">
                                                         <button x-on:click="[open=true, step=3]"
                                                             :class="open?'bg-violet-200':'bg-gray-100'"
-                                                            class="flex justify-between items-center border rounded-md px-4 py-3 w-full hover:bg-gray-200">
-                                                            <div class="flex gap-2">
-                                                                <span
-                                                                    class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
-                                                                    <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M11.6386 4.99648C11.2786 4.30315 10.7786 3.78315 10.1386 3.43648C9.49861 3.07648 8.75861 2.89648 7.91861 2.89648C6.99861 2.89648 6.17861 3.10315 5.45861 3.51648C4.73861 3.92982 4.17195 4.51648 3.75861 5.27648C3.35861 6.03648 3.15861 6.91648 3.15861 7.91648C3.15861 8.91648 3.35861 9.80315 3.75861 10.5765C4.17195 11.3365 4.73861 11.9232 5.45861 12.3365C6.17861 12.7498 6.99861 12.9565 7.91861 12.9565C9.15861 12.9565 10.1653 12.6098 10.9386 11.9165C11.7119 11.2232 12.1853 10.2832 12.3586 9.09648H7.13861V7.27648H14.7986V9.05648C14.6519 10.1365 14.2653 11.1298 13.6386 12.0365C13.0253 12.9432 12.2186 13.6698 11.2186 14.2165C10.2319 14.7498 9.13195 15.0165 7.91861 15.0165C6.61195 15.0165 5.41861 14.7165 4.33861 14.1165C3.25861 13.5032 2.39861 12.6565 1.75861 11.5765C1.13195 10.4965 0.818613 9.27648 0.818613 7.91648C0.818613 6.55648 1.13195 5.33648 1.75861 4.25648C2.39861 3.17648 3.25861 2.33648 4.33861 1.73648C5.43195 1.12315 6.62528 0.816483 7.91861 0.816483C9.39861 0.816483 10.7119 1.18315 11.8586 1.91648C13.0186 2.63648 13.8586 3.66315 14.3786 4.99648H11.6386Z"
-                                                                            fill="#374151" />
-                                                                    </svg>
-                                                                </span>
-                                                                <span
-                                                                    class="flex items-center font-medium text-sm md:text-base">
-                                                                    General
-                                                                </span>
-                                                            </div>
-                                                            <span class="font-medium text-sm md:text-base">
-                                                                109_120-B
-                                                            </span>
+                                                            class="flex flex-col w-full gap-1 px-4 py-3 border rounded-md hover:bg-gray-200">
+                                                            <div class="text-base font-semibold leading-normal text-zinc-800">Section 110</div>
+                                                            <p class="text-sm font-medium text-left text-gray-800">Punishment of abetment if the act abetted is committed in consequence and where no express provision is made for its punishment. Whoever abets any offence shall, </p>
+                                                            <a href="#" class="text-sm font-medium leading-tight text-blue-700">Show More</a>
                                                         </button>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -733,18 +704,18 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -753,18 +724,18 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -773,17 +744,17 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
-                                                            <span class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                            <span class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -791,18 +762,18 @@
                                                                         fill="#374151" />
                                                                 </svg>
                                                             </span>
-                                                            <span class="flex items-center font-medium text-sm md:text-base">
+                                                            <span class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -811,18 +782,18 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -831,18 +802,18 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -851,18 +822,18 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div  class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div  class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -871,18 +842,18 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
-                                                    <div class="flex justify-between items-center border rounded-md bg-gray-100 px-4 py-3 w-full">
+                                                    <div class="flex items-center justify-between w-full px-4 py-3 bg-gray-100 border rounded-md">
                                                         <div class="flex gap-2">
                                                             <span
-                                                                class="flex w-8 h-8 rounded-full items-center justify-center bg-gray-300">
+                                                                class="flex items-center justify-center w-8 h-8 bg-gray-300 rounded-full">
                                                                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 15 16"
                                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -891,19 +862,19 @@
                                                                 </svg>
                                                             </span>
                                                             <span
-                                                                class="flex items-center font-medium text-sm md:text-base">
+                                                                class="flex items-center text-sm font-medium md:text-base">
                                                                 General
                                                             </span>
                                                         </div>
-                                                        <span class="font-medium text-sm md:text-base">
+                                                        <span class="text-sm font-medium md:text-base">
                                                             109_120-B
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div :class="step==2 && step==3?'':'justify-center'" class="flex flex-col gap-6 px-3 md:px-9 py-3 md:py-7 rounded-xl shadow w-full bg-white"  x-cloak>
-                                            <div x-show="step==1 || step==2" class="flex flex-col justify-center items-center w-full">
+                                        <div :class="step==2 && step==3?'':'justify-center'" class="flex flex-col w-full gap-2 py-3 bg-white shadow md:gap-4 md:py-4 rounded-xl"  x-cloak>
+                                            <div x-show="step==1 || step==2" class="flex flex-col items-center justify-center w-full">
                                                 <span>
                                                     <svg width="264" height="168" viewBox="0 0 264 168" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <ellipse cx="132" cy="122" rx="132" ry="46" fill="url(#paint0_radial_2371_57673)"/>
@@ -958,106 +929,211 @@
                                                         </svg>
                                                         
                                                 </span>
-                                                <span class="font-bold text-sm text-gray-500">
+                                                <span class="text-sm font-bold text-gray-500">
                                                     Select a Category
                                                 </span>
                                             </div>
-                                            <div x-show="step>=3" class="flex flex-col gap-2 md:gap-4">
-                                                <div class="bg-purple-50 rounded-md">
-                                                    <h2>
-                                                        <div
-                                                            class="flex items-center justify-between w-full p-2 text-sm font-medium text-left text-purple-700 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
-                                                            <span>Offence</span></div>
-                                                    </h2>
-                                                    <div>
-                                                        <div class="p-2 border border-gray-200 rounded-b-xl text-sm">
-                                                            <p class="text-gray-900">Abetment of any offence, if the Act
-                                                                abetted committed in consequence and where no express
-                                                                provision is made for its punishment.</p>
+                                            <div x-show="step>=3" class="flex flex-col gap-2 md:gap-4 overflow-y-auto h-[calc(100dvh-15rem)] px-3 md:px-4">
+                                                <div x-data="" class="flex flex-col gap-2">
+                                                    <div x-disclosure="" class="overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
+                                                        <button x-disclosure:button="" class="flex flex-col w-full gap-1 p-2 bg-gray-100 border-b" aria-expanded="false" aria-controls="alpine-disclosure-panel-1" type="button">
+                                                            <div class="text-sm font-medium leading-tight text-zinc-500">Offence</div>
+                                                            <div class="flex justify-between w-full gap-2">
+                                                                <div class="text-sm font-semibold leading-tight text-left text-zinc-900">Abetment of any offence, if the Act abetted committed in consequence and where no express provision is made for its punishment.</div>
+                                                                <span class="">
+                                                                    <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                        <div x-disclosure:panel="" x-collapse="" class="bg-white">
+                                                            <div class="flex flex-col w-full gap-3 p-2 bg-whitemd:gap-4 md:p-3">
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Whether the police mayarrest without warrant or
+                                                                                not</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">May arrest without warrant if
+                                                                                arrest for the offence abetted may be made without
+                                                                                warrant but not otherwise.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Whether a warrant or a summon shall ordinarily be
+                                                                                issued in the first instance.</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">According as a warrant or summons
+                                                                                may issue for the offence abetted.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Whether bailable or not</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">According as the offence abetted is
+                                                                                bailable or not.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>whether compounda ble or not</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">According as the offence abetted is
+                                                                                compound-able or not.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Punishment under the PPC</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">The same punishment as for the
+                                                                                offence abetted.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>By what Court triable</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">The Court by which the offence
+                                                                                abetted is triable.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-purple-50 rounded-md">
-                                                    <h2>
-                                                        <div
-                                                            class="flex items-center justify-between w-full p-2 text-sm font-medium text-left text-purple-700 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
-                                                            <span>Whether the police mayarrest without warrant or
-                                                                not</span></div>
-                                                    </h2>
-                                                    <div>
-                                                        <div class="p-2 border border-gray-200 rounded-b-xl text-sm">
-                                                            <p class="text-gray-900">May arrest without warrant if
-                                                                arrest for the offence abetted may be made without
-                                                                warrant but not otherwise.</p>
+                                                    </div>  
+                                                    <div x-disclosure="" class="overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
+                                                        <button x-disclosure:button="" class="flex flex-col w-full gap-1 p-2 bg-gray-100 border-b" aria-expanded="false" aria-controls="alpine-disclosure-panel-1" type="button">
+                                                            <div class="text-sm font-medium leading-tight text-zinc-500">Offence</div>
+                                                            <div class="flex justify-between w-full gap-2">
+                                                                <div class="text-sm font-semibold leading-tight text-left text-zinc-900">Abetment of any offence, if the Act abetted committed in consequence and where no express provision is made for its punishment.</div>
+                                                                <span class="">
+                                                                    <svg :class="$disclosure.isOpen && 'rotate-180'" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                                    </svg>
+                                                                </span>
+                                                            </div>
+                                                        </button>
+                                                        <div x-disclosure:panel="" x-collapse="" class="bg-white">
+                                                            <div class="flex flex-col w-full gap-3 p-2 bg-whitemd:gap-4 md:p-3">
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Whether the police mayarrest without warrant or
+                                                                                not</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">May arrest without warrant if
+                                                                                arrest for the offence abetted may be made without
+                                                                                warrant but not otherwise.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Whether a warrant or a summon shall ordinarily be
+                                                                                issued in the first instance.</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">According as a warrant or summons
+                                                                                may issue for the offence abetted.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Whether bailable or not</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">According as the offence abetted is
+                                                                                bailable or not.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>whether compounda ble or not</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">According as the offence abetted is
+                                                                                compound-able or not.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1 pb-3 border-b border-gray-200 ">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>Punishment under the PPC</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">The same punishment as for the
+                                                                                offence abetted.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex flex-col gap-1">
+                                                                    <h2>
+                                                                        <div
+                                                                            class="flex items-center justify-between w-full text-base font-semibold text-left text-purple-700">
+                                                                            <span>By what Court triable</span></div>
+                                                                    </h2>
+                                                                    <div>
+                                                                        <div class="text-base">
+                                                                            <p class="text-gray-900">The Court by which the offence
+                                                                                abetted is triable.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    </div>  
+                                                    
                                                 </div>
-                                                <div class="bg-purple-50 rounded-md">
-                                                    <h2>
-                                                        <div
-                                                            class="flex items-center justify-between w-full p-2 text-sm font-medium text-left text-purple-700 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
-                                                            <span>Whether a warrant or a summon shall ordinarily be
-                                                                issued in the first instance.</span></div>
-                                                    </h2>
-                                                    <div>
-                                                        <div class="p-2 border border-gray-200 rounded-b-xl text-sm">
-                                                            <p class="text-gray-900">According as a warrant or summons
-                                                                may issue for the offence abetted.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-purple-50 rounded-md">
-                                                    <h2>
-                                                        <div
-                                                            class="flex items-center justify-between w-full p-2 text-sm font-medium text-left text-purple-700 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
-                                                            <span>Whether bailable or not</span></div>
-                                                    </h2>
-                                                    <div>
-                                                        <div class="p-2 border border-gray-200 rounded-b-xl text-sm">
-                                                            <p class="text-gray-900">According as the offence abetted is
-                                                                bailable or not.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-purple-50 rounded-md">
-                                                    <h2>
-                                                        <div
-                                                            class="flex items-center justify-between w-full p-2 text-sm font-medium text-left text-purple-700 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
-                                                            <span>whether compounda ble or not</span></div>
-                                                    </h2>
-                                                    <div>
-                                                        <div class="p-2 border border-gray-200 rounded-b-xl text-sm">
-                                                            <p class="text-gray-900">According as the offence abetted is
-                                                                compound-able or not.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-purple-50 rounded-md">
-                                                    <h2>
-                                                        <div
-                                                            class="flex items-center justify-between w-full p-2 text-sm font-medium text-left text-purple-700 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
-                                                            <span>Punishment under the PPC</span></div>
-                                                    </h2>
-                                                    <div>
-                                                        <div class="p-2 border border-gray-200 rounded-b-xl text-sm">
-                                                            <p class="text-gray-900">The same punishment as for the
-                                                                offence abetted.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bg-purple-50 rounded-md">
-                                                    <h2>
-                                                        <div
-                                                            class="flex items-center justify-between w-full p-2 text-sm font-medium text-left text-purple-700 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
-                                                            <span>By what Court triable</span></div>
-                                                    </h2>
-                                                    <div>
-                                                        <div class="p-2 border border-gray-200 rounded-b-xl text-sm">
-                                                            <p class="text-gray-900">The Court by which the offence
-                                                                abetted is triable.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
