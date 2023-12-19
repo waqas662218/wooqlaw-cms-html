@@ -1184,6 +1184,9 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-\[calc\(100dvh-3rem\)\] {
+  height: calc(100dvh - 3rem);
+}
 .max-h-\[100dvh\] {
   max-height: 100dvh;
 }

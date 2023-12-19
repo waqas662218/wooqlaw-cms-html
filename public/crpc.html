@@ -26,7 +26,7 @@
 </head>
 
 <body class="overflow-hidden">
-    <header class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14">
+    <header class="relative z-30 items-center justify-between hidden w-full px-3 py-2 bg-white md:flex md:py-3 md:px-5 drop-shadow h-14">
 
 
         <div class="flex items-center gap-3">
@@ -202,7 +202,7 @@
         </div>
     </header>
 
-    <div class="flex bg-gray-200 h-[calc(100dvh-7rem)] md:h-[calc(100vh-3.5rem)] overflow-hidden"
+    <div class="flex bg-gray-200 h-[calc(100dvh-3rem)] md:h-[calc(100vh-3.5rem)] overflow-hidden"
         x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
         x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }">
         <!-- code for swipe 
@@ -211,7 +211,7 @@
         <aside
             class="absolute bottom-0 z-30 flex flex-shrink-0 w-full bg-white rounded-t drop-shadow md:h-full md:rounded-t-none md:flex-col md:relative"
             :class="menu ? 'md:w-20' : 'md:w-0'">
-            <div class="relative flex w-full min-h-0 pt-0 border-gray-200 md:border-t md:flex-1 md:flex-col">
+            <div class="relative flex w-full min-h-0 pt-0 border-t border-gray-200 md:flex-1 md:flex-col">
                 <div class="flex w-full py-2 overflow-y-auto md:py-5 md:flex-1 md:flex-col">
                     <div class="w-full px-3 space-y-1 md:flex-1">
                         <ul class="flex justify-around w-full gap-2 md:gap-5 md:flex-col">
@@ -280,7 +280,15 @@
             class="relative w-full h-full overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
                 <div class="py-1 md:py-5"> 
-                    <nav class="flex px-3 mt-3 mb-3 md:mt-0 md:mb-5" aria-label="Breadcrumb">
+                    <div class="flex p-2 gap-3 w-full md:hidden bg-white drop-shadow-md items-center mb-1 top-0 h-12 z-[100]">
+                        <a href="javascript:;" class="w-5 h-5 hover:bg-gray-50">
+                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.77544 4.55806C9.01952 4.80214 9.01952 5.19786 8.77544 5.44194L4.84238 9.375H16.6668C17.012 9.375 17.2918 9.65482 17.2918 10C17.2918 10.3452 17.012 10.625 16.6668 10.625H4.84238L8.77544 14.5581C9.01952 14.8021 9.01952 15.1979 8.77544 15.4419C8.53136 15.686 8.13563 15.686 7.89155 15.4419L2.89155 10.4419C2.64748 10.1979 2.64748 9.80214 2.89155 9.55806L7.89155 4.55806C8.13563 4.31398 8.53136 4.31398 8.77544 4.55806Z" fill="#111827"></path></svg>
+                        </a>
+                        <div class="flex items-center gap-1">
+                            <span class="text-sm font-medium text-gray-900">CRPC > Category</span>
+                        </div>
+                    </div>
+                    <nav class="hidden mb-4 md:flex" aria-label="Breadcrumb">
                         <ol class="inline-flex items-center space-x-1 md:space-x-3">
                             <li class="inline-flex items-center">
                                 <a href="#"
@@ -315,7 +323,7 @@
                                     <a x-tabs:tab
                                         :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
                                         href="javascript:;"
-                                        class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
+                                        class="flex items-center justify-center gap-1 px-2 py-4 bg-white border-b-2 md:px-4"
                                         role="tab" aria-selected="true">
                                         <div class="flex items-center">
                                             <span>Categories</span>
@@ -326,7 +334,7 @@
                                     <a x-tabs:tab
                                         :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
                                         href="javascript:;"
-                                        class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
+                                        class="flex items-center justify-center gap-1 px-2 py-4 bg-white border-b-2 md:px-4"
                                         role="tab" aria-selected="true">
                                         <div class="flex items-center">
                                             <span>Sections</span>
