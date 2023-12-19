@@ -1799,6 +1799,10 @@ select {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
 }
+.rounded-e-xl {
+  border-start-end-radius: 0.75rem;
+  border-end-end-radius: 0.75rem;
+}
 .rounded-bl-xl {
   border-bottom-left-radius: 0.75rem;
 }
@@ -4142,6 +4146,10 @@ select {
 
   .md\:h-\[calc\(100dvh-19\.5rem\)\] {
     height: calc(100dvh - 19.5rem);
+  }
+
+  .md\:h-\[calc\(100dvh-15\.5rem\)\] {
+    height: calc(100dvh - 15.5rem);
   }
 
   .md\:w-0 {

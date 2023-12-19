@@ -308,47 +308,37 @@
                         </ol>
                     </nav>        
                     <div x-data x-tabs class="flex flex-col gap-3">
-                        <ul class="grid w-full gap-1 mb-1 text-sm font-medium md:grid-cols-6 md:gap-px md:overflow-x-auto md:flex-row md:flex-nowrap md:rounded-t-xl"
-                            x-tabs:list>
-                            <li class="">
-                                <a x-tabs:tab
-                                    :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
-                                    href="javascript:;"
-                                    class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
-                                    role="tab" aria-selected="true">
-                                    <div class="flex items-center">
-                                        <span>Categories</span>
-                                    </div>
-                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z"
-                                            fill="#4B5563" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a x-tabs:tab
-                                    :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
-                                    href="javascript:;"
-                                    class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
-                                    role="tab" aria-selected="true">
-                                    <div class="flex items-center">
-                                        <span>Sections</span>
-                                    </div>
-                                    <svg class="md:hidden" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M7.09327 3.69344C7.35535 3.46881 7.74991 3.49916 7.97455 3.76124L12.9745 9.59457C13.1752 9.82863 13.1752 10.174 12.9745 10.4081L7.97455 16.2414C7.74991 16.5035 7.35535 16.5338 7.09327 16.3092C6.83119 16.0845 6.80084 15.69 7.02548 15.4279L11.6768 10.0013L7.02548 4.57472C6.80084 4.31265 6.83119 3.91808 7.09327 3.69344Z"
-                                            fill="#4B5563" />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>     
+                        <div class="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
+                            <ul class="grid w-full grid-cols-2 gap-1 mb-1 overflow-x-hidden text-sm font-medium md:gap-px rounded-t-xl"
+                                x-tabs:list>
+                                <li class="">
+                                    <a x-tabs:tab
+                                        :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
+                                        href="javascript:;"
+                                        class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
+                                        role="tab" aria-selected="true">
+                                        <div class="flex items-center">
+                                            <span>Categories</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a x-tabs:tab
+                                        :class="$tab.isSelected ? 'text-violet-700 border-violet-700' : 'text-gray-500 border-white'"
+                                        href="javascript:;"
+                                        class="flex items-center justify-between gap-1 px-2 py-4 bg-white md:justify-center md:border-b-2 md:px-4"
+                                        role="tab" aria-selected="true">
+                                        <div class="flex items-center">
+                                            <span>Sections</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>     
+                        </div>
                         <div class="relative w-full content" x-tabs:panels>
                             <div x-tabs:panel>
                                 <section class="Categories" >
-                                    <div class="flex flex-col w-full gap-3 md:flex-row md:gap-8" x-data="{step:1}">
+                                    <div class="grid w-full grid-cols-1 gap-3 md:grid-cols-3 md:gap-4" x-data="{step:1}">
                                         <div class="flex flex-col w-full gap-2 py-3 bg-white shadow md:gap-4 md:py-4 rounded-xl">
                                             <form class="flex w-full px-3 md:px-4">
                                                 <div class="relative w-full">
@@ -933,7 +923,7 @@
                                                     Select a Category
                                                 </span>
                                             </div>
-                                            <div x-show="step>=3" class="flex flex-col gap-2 md:gap-4 overflow-y-auto md:h-[calc(100dvh-15rem)] px-3 md:px-4">
+                                            <div x-show="step>=3" class="flex flex-col gap-2 md:gap-4 overflow-y-auto md:h-[calc(100dvh-15.5rem)] px-3 md:px-4">
                                                 <div x-data="" class="flex flex-col gap-2">
                                                     <div x-disclosure="" class="overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
                                                         <button x-disclosure:button="" class="flex flex-col w-full gap-1 p-2 bg-gray-100 border-b" aria-expanded="false" aria-controls="alpine-disclosure-panel-1" type="button">
