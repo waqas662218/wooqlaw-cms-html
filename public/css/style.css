@@ -4155,6 +4155,14 @@ select {
     height: calc(100dvh - 15.5rem);
   }
 
+  .md\:h-\[calc\(100dvh-18\.75rem\)\] {
+    height: calc(100dvh - 18.75rem);
+  }
+
+  .md\:h-\[calc\(100dvh-14\.5rem\)\] {
+    height: calc(100dvh - 14.5rem);
+  }
+
   .md\:w-0 {
     width: 0px;
   }

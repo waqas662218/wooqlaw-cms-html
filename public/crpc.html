@@ -279,7 +279,7 @@
         <div
             class="relative w-full h-full overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
-                <div class="py-1 md:py-5"> 
+                <div class="md:py-4"> 
                     <div class="flex p-2 gap-3 w-full md:hidden bg-white drop-shadow-md items-center mb-1 top-0 h-12 z-[100]">
                         <a href="javascript:;" class="w-5 h-5 hover:bg-gray-50">
                             <svg class="w-5 h-5 shrink-0" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.77544 4.55806C9.01952 4.80214 9.01952 5.19786 8.77544 5.44194L4.84238 9.375H16.6668C17.012 9.375 17.2918 9.65482 17.2918 10C17.2918 10.3452 17.012 10.625 16.6668 10.625H4.84238L8.77544 14.5581C9.01952 14.8021 9.01952 15.1979 8.77544 15.4419C8.53136 15.686 8.13563 15.686 7.89155 15.4419L2.89155 10.4419C2.64748 10.1979 2.64748 9.80214 2.89155 9.55806L7.89155 4.55806C8.13563 4.31398 8.53136 4.31398 8.77544 4.55806Z" fill="#111827"></path></svg>
@@ -367,7 +367,7 @@
                                                         class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-3 py-2">Search</button>
                                                 </div>
                                             </form>
-                                            <div class="flex flex-col gap-2 md:gap-3 overflow-y-auto md:h-[calc(100dvh-19.5rem)] px-3 md:px-4">
+                                            <div class="flex flex-col gap-2 md:gap-3 overflow-y-auto md:h-[calc(100dvh-18.75rem)] px-3 md:px-4">
                                                 <div x-data="{open: false}">
                                                     <button x-on:click="[open=true, step=2]"
                                                         :class="open?'bg-violet-200':'bg-gray-100'"
@@ -511,7 +511,7 @@
                                                             class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-3 py-2">Search</button>
                                                     </div>
                                                 </form>
-                                                <div class="flex flex-col w-full gap-2 px-3 md:gap-3 overflow-y-auto md:h-[calc(100dvh-19.5rem)] md:px-4">
+                                                <div class="flex flex-col w-full gap-2 px-3 md:gap-3 overflow-y-auto md:h-[calc(100dvh-18.75rem)] md:px-4">
                                                     <div x-data="{open: false}">
                                                         <button x-on:click="[open=true, step=3]"
                                                             :class="open?'bg-violet-200':'bg-gray-100'"
@@ -611,7 +611,7 @@
                                                     Select a Category
                                                 </span>
                                             </div>
-                                            <div x-show="step>=3" class="flex flex-col gap-2 md:gap-4 overflow-y-auto md:h-[calc(100dvh-15.5rem)] px-3 md:px-4">
+                                            <div x-show="step>=3" class="flex flex-col gap-2 md:gap-4 overflow-y-auto md:h-[calc(100dvh-14.5rem)] px-3 md:px-4">
                                                 <div x-data="" class="flex flex-col gap-2">
                                                     <div x-disclosure="" class="overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
                                                         <button x-disclosure:button="" class="flex flex-col w-full gap-1 p-2 bg-gray-100 border-b" aria-expanded="false" aria-controls="alpine-disclosure-panel-1" type="button">
