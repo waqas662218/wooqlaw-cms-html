@@ -1320,9 +1320,6 @@ select {
 .w-8 {
   width: 2rem;
 }
-.w-80 {
-  width: 20rem;
-}
 .w-9 {
   width: 2.25rem;
 }
@@ -2258,6 +2255,9 @@ select {
 .p-7 {
   padding: 1.75rem;
 }
+.p-16 {
+  padding: 4rem;
+}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2369,6 +2369,10 @@ select {
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
+}
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .\!pl-10 {
   padding-left: 2.5rem !important;
@@ -2967,10 +2971,6 @@ select {
 .placeholder\:text-slate-400::placeholder {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
-}
-.before\:hidden::before {
-  content: var(--tw-content);
-  display: none;
 }
 .before\:content-\[attr\(data-active\)\]::before {
   --tw-content: attr(data-active);
@@ -4415,6 +4415,10 @@ select {
     gap: 1px;
   }
 
+  .md\:gap-28 {
+    gap: 7rem;
+  }
+
   .md\:gap-x-16 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
@@ -4636,6 +4640,10 @@ select {
 
   .md\:p-6 {
     padding: 1.5rem;
+  }
+
+  .md\:p-16 {
+    padding: 4rem;
   }
 
   .md\:px-0 {
@@ -4912,10 +4920,6 @@ select {
 
   .lg\:flex {
     display: flex;
-  }
-
-  .lg\:table-cell {
-    display: table-cell;
   }
 
   .lg\:h-screen {
