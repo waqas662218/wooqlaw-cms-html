@@ -2247,9 +2247,6 @@ select {
 .p-7 {
   padding: 1.75rem;
 }
-.p-8 {
-  padding: 2rem;
-}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -4160,6 +4157,10 @@ select {
 
   .md\:w-12 {
     width: 3rem;
+  }
+
+  .md\:w-14 {
+    width: 3.5rem;
   }
 
   .md\:w-16 {
