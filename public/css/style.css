@@ -1166,6 +1166,9 @@ select {
 .h-\[calc\(100dvh-3\.8rem\)\] {
   height: calc(100dvh - 3.8rem);
 }
+.h-\[calc\(100dvh-3rem\)\] {
+  height: calc(100dvh - 3rem);
+}
 .h-\[calc\(100dvh-6rem\)\] {
   height: calc(100dvh - 6rem);
 }
@@ -1183,9 +1186,6 @@ select {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[calc\(100dvh-3rem\)\] {
-  height: calc(100dvh - 3rem);
 }
 .max-h-\[100dvh\] {
   max-height: 100dvh;
@@ -1802,10 +1802,6 @@ select {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
 }
-.rounded-e-xl {
-  border-start-end-radius: 0.75rem;
-  border-end-end-radius: 0.75rem;
-}
 .rounded-bl-xl {
   border-bottom-left-radius: 0.75rem;
 }
@@ -2251,9 +2247,6 @@ select {
 .p-7 {
   padding: 1.75rem;
 }
-.p-16 {
-  padding: 4rem;
-}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2365,10 +2358,6 @@ select {
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
-}
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 .\!pl-10 {
   padding-left: 2.5rem !important;
@@ -4097,20 +4086,20 @@ select {
     height: calc(100dvh - 12rem);
   }
 
-  .md\:h-\[calc\(100dvh-14rem\)\] {
-    height: calc(100dvh - 14rem);
+  .md\:h-\[calc\(100dvh-14\.5rem\)\] {
+    height: calc(100dvh - 14.5rem);
   }
 
-  .md\:h-\[calc\(100dvh-15rem\)\] {
-    height: calc(100dvh - 15rem);
+  .md\:h-\[calc\(100dvh-14rem\)\] {
+    height: calc(100dvh - 14rem);
   }
 
   .md\:h-\[calc\(100dvh-174px\)\] {
     height: calc(100dvh - 174px);
   }
 
-  .md\:h-\[calc\(100dvh-20rem\)\] {
-    height: calc(100dvh - 20rem);
+  .md\:h-\[calc\(100dvh-18\.75rem\)\] {
+    height: calc(100dvh - 18.75rem);
   }
 
   .md\:h-\[calc\(100dvh-5\.3rem\)\] {
@@ -4152,22 +4141,6 @@ select {
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-\[calc\(100dvh-19\.5rem\)\] {
-    height: calc(100dvh - 19.5rem);
-  }
-
-  .md\:h-\[calc\(100dvh-15\.5rem\)\] {
-    height: calc(100dvh - 15.5rem);
-  }
-
-  .md\:h-\[calc\(100dvh-18\.75rem\)\] {
-    height: calc(100dvh - 18.75rem);
-  }
-
-  .md\:h-\[calc\(100dvh-14\.5rem\)\] {
-    height: calc(100dvh - 14.5rem);
   }
 
   .md\:w-0 {
@@ -4447,10 +4420,6 @@ select {
     gap: 1px;
   }
 
-  .md\:gap-28 {
-    gap: 7rem;
-  }
-
   .md\:gap-x-16 {
     -moz-column-gap: 4rem;
          column-gap: 4rem;
@@ -4672,10 +4641,6 @@ select {
 
   .md\:p-6 {
     padding: 1.5rem;
-  }
-
-  .md\:p-16 {
-    padding: 4rem;
   }
 
   .md\:px-0 {
