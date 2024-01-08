@@ -1536,9 +1536,6 @@ select {
 .content-end {
   align-content: flex-end;
 }
-.content-between {
-  align-content: space-between;
-}
 .items-start {
   align-items: flex-start;
 }
@@ -1568,12 +1565,6 @@ select {
 }
 .justify-around {
   justify-content: space-around;
-}
-.justify-evenly {
-  justify-content: space-evenly;
-}
-.justify-stretch {
-  justify-content: stretch;
 }
 .gap-0 {
   gap: 0px;
@@ -2767,10 +2758,6 @@ select {
 .text-zinc-900 {
   --tw-text-opacity: 1;
   color: rgb(24 24 27 / var(--tw-text-opacity));
-}
-.text-violet-500 {
-  --tw-text-opacity: 1;
-  color: rgb(139 92 246 / var(--tw-text-opacity));
 }
 .underline {
   text-decoration-line: underline;
