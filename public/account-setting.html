@@ -143,10 +143,10 @@
                 :aria-expanded="openMenu" aria-controls="navigation" aria-label="Navigation Menu" x-on:click.outside="openMenu = false">
                     <div class="relative w-8 h-8 shrink-0">
                         <img class="w-8 h-8 rounded" src="./images/profile-picture.jpg" alt="">
-                        <span class="absolute top-0 left-6 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                        <span class="absolute top-0 left-6 transform -translate-y-1/2 w-3.5 h-3.5 bg-red-400 border-2 border-white rounded-full"></span>
                     </div>
                 </button>
-                <div x-show="openMenu" id="userDropdown" :class="openMenu ? 'visible absolute right-0 transition-all' : 'invisible' " class="right-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow backdrop-blur-sm w-44 dark:bg-gray-700 dark:divide-gray-600" x-cloak>
+                <div x-show="openMenu" id="userDropdown" :class="openMenu ? 'visible absolute right-0 transition-all' : 'invisible' " class="right-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow backdrop-blur-sm w-44" x-cloak>
                     <div class="px-4 py-3 text-sm text-gray-900">
                     <div>Bonnie Green</div>
                     <div class="font-medium truncate">name@flowbite.com</div>
@@ -253,7 +253,7 @@
                 
                 <div class="py-5">
                     <div class="flex md:flex-row flex-col  gap-3 w-full">
-                    <div class="flex flex-col items-start gap-1 rounded-lg bg-white  shadow p-2 shrink-0 md:p-4 w-72 md:w-96">
+                    <div class="flex flex-col items-start gap-1 rounded-lg bg-white  shadow p-2 shrink-0 md:p-4 md:w-96">
                         <div class="md:flex w-full">
                             <ul class="flex-column space-y space-y-4 text-sm font-medium mb-3 md:mb-0 w-full">
                                 <li class="flex items-center px-4 py-3 rounded-lg active w-full bg-gray-100">
@@ -386,7 +386,7 @@
                         </div>
                             <hr class="border border-gray-200 w-full">
                         </div>
-                        <form action="#" class="mt-5">
+                        <form action="#" class="mt-2 md:mt-4">
                             <div class="grid grid-cols-6 gap-6">
                                 <div class="col-span-6 sm:col-span-3">
                                     <label for="first-name" class="block mb-2 text-sm font-medium text-gray-900">First Name</label>
@@ -409,9 +409,9 @@
                             </span>
                            <hr class="border border-gray-200 w-full">
                         </div>
-                        <form action="#" class="flex flex-col gap-4">
-                            <div class="grid grid-cols-6 gap-4">
-                                <div class="col-span-6 sm:col-span-3 mt-4">
+                        <form action="#" class="flex flex-col gap-2 md:gap-4">
+                            <div class="grid grid-cols-6 gap-2 md:gap-4">
+                                <div class="col-span-6 sm:col-span-3 mt-2 md:mt-4">
                                     <label for="confirm-password" class="block mb-2 text-sm font-medium text-gray-900">Confirm password</label>
                                     <input type="password" name="confirm-password" id="confirm-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-violot-500 focus:border-violot-500 block w-full p-2.5" placeholder="••••••••" required="">
                                 </div>
@@ -440,7 +440,7 @@
                             <h3 class="flex text-base md:text-xl font-semibold text-gray-900">Export Account Data</h3>
                             <hr class="border border-gray-200 w-full">
                         </div>
-                            <div class="divide-y divide-gray-200 dark:divide-gray-700">
+                            <div class="divide-y divide-gray-200">
                                 <!-- Item 1 -->
                                 <div class="flex justify-between items-center py-4 w-full">
                                     <div class="flex flex-col flex-grow w-full">
@@ -460,9 +460,9 @@
                             <h3 class="flex text-base md:text-xl font-semibold text-gray-900">Delete Account</h3>
                             <hr class="border border-gray-200 w-full">
                         </div>
-                            <div class="divide-y divide-gray-200 dark:divide-gray-700">
+                            <div class="divide-y divide-gray-200">
                                 <!-- Item 1 -->
-                                <div class="flex justify-between items-center py-4 w-full">
+                                <div class="flex justify-between items-center py-2 md:py-4 w-full">
                                     <div class="flex flex-col flex-grow w-full">
                                         <div class="text-base md:text-lg font-semibold text-gray-900">Delete my account</div>
                                         <div class="text-sm md:text-base font-normal text-gray-500">Export your personal data, Inquiry, Messages, Documents.</div>
@@ -834,8 +834,8 @@
                 </section>
             </div>
             <!-- Modal footer -->
-            <div class="sticky bottom-0 flex flex-col md:flex-row items-start p-3 md:p-6 gap-3 bg-white rounded-b border-t">
-                <button type="submit" class="w-full md:w-fit px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+            <div class="sticky bottom-0 flex flex-col md:flex-row items-center jus p-3 md:p-6 gap-3 bg-white rounded-b border-t">
+                <button type="submit" class="w-full md:max-w-sm px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
                     Done
                 </button>
             </div>
