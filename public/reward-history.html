@@ -840,7 +840,9 @@
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Start Date</div>
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">End date</div>
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Payment VIA</div>
+                                            <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Status</div>
                                             <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Attachments</div>
+                                            <div class="hidden text-xs font-bold text-center text-gray-900 md:table-cell">Amount</div>
                                            
                                         </header>
                                         <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
@@ -883,12 +885,18 @@
                                                         MON 12-05-2022
                                             </div>
                                             <div :class="open?'flex':'hidden md:flex'" class=" border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-b justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
                                                  <span class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">Jazz Cash</span>
                                             </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle  justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Status">
+                                                <span class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">Submitted</span>
+                                           </div>
                                             <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
                                             <a class="flex justify-center text-xs font-medium text-blue-600 md:mx-auto" href="">file.pdf</a>
                                             </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+                                                <span class="flex justify-center text-xs font-medium text-blue-600 md:mx-auto">Rs. 2,999</a>
+                                                </div>
                                         </div>
                                         <!-- 2 -->
                                         <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
@@ -931,12 +939,18 @@
                                                         MON 12-05-2022
                                             </div>
                                             <div :class="open?'flex':'hidden md:flex'" class=" border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between  gap-1 items-center md:table-cell text-center font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="End date">Tuesday 12-05-2023</div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-b justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Payment VIA">
                                                  <span class="flex justify-center md:mx-auto w-16 h-4 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">Jazz Cash</span>
                                             </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle  justify-between gap-1 items-center md:table-cell text-center font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Status">
+                                                <span class="flex justify-center md:mx-auto w-12 h-4 align-middle items-center px-1 py-0.5 text-green-800 rounded-md bg-green-100 font-medium text-xs">Paid</span>
+                                           </div>
                                             <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
                                             <a class="flex justify-center text-xs font-medium text-blue-600 md:mx-auto" href="">file.pdf</a>
                                             </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between text-center gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+                                                <span class="flex justify-center text-xs font-medium text-blue-600 md:mx-auto">Rs. 2,999</a>
+                                                </div>
                                         </div>
                                     </div>
                                 </section>
