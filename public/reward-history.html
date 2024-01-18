@@ -269,7 +269,7 @@
                     </nav>
 
                     <div x-data x-tabs class="mb-3">
-                        <ul class="flex flex-col md:flex-row w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-nowrap md:rounded-t-xl" x-tabs:list>
+                        <ul class="flex flex-col w-full gap-1 mb-1 text-sm font-medium md:flex-row md:gap-px md:overflow-x-auto md:flex-nowrap md:rounded-t-xl" x-tabs:list>
                             <li class="grow">
                                 <a
                                     x-tabs:tab
@@ -958,71 +958,71 @@
                             <div x-tabs:panel class="flex flex-col gap-3">
                                 <section class="flex flex-col gap-3">
                                     
-                                <div class="flex flex-col md:flex-row gap-2 md:gap-3 items-start w-full">
-                                    <div class="flex border border-gray-300 rounded-xl w-full bg-white items-center justify-between p-4">
+                                <div class="flex flex-col items-start w-full gap-2 md:flex-row md:gap-3">
+                                    <div class="flex items-center justify-between w-full p-4 bg-white border border-gray-300 rounded-xl">
                                         <div class="flex flex-col">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 2.5C8.25 2.08579 7.91421 1.75 7.5 1.75C7.08579 1.75 6.75 2.08579 6.75 2.5V4.07926C5.31067 4.19451 4.36577 4.47737 3.67157 5.17157C2.97737 5.86577 2.69451 6.81067 2.57926 8.25H22.4207C22.3055 6.81067 22.0226 5.86577 21.3284 5.17157C20.6342 4.47737 19.6893 4.19451 18.25 4.07926V2.5C18.25 2.08579 17.9142 1.75 17.5 1.75C17.0858 1.75 16.75 2.08579 16.75 2.5V4.0129C16.0847 4 15.339 4 14.5 4H10.5C9.66097 4 8.91527 4 8.25 4.0129V2.5ZM22.5 14V12C22.5 11.161 22.5 10.4153 22.4871 9.75H2.5129C2.5 10.4153 2.5 11.161 2.5 12V14C2.5 17.7712 2.5 19.6569 3.67157 20.8284C4.84315 22 6.72876 22 10.5 22H14.5C18.2712 22 20.1569 22 21.3284 20.8284C22.5 19.6569 22.5 17.7712 22.5 14ZM18.4008 14.3C18.4008 15.018 17.8188 15.6 17.1008 15.6C16.3828 15.6 15.8008 15.018 15.8008 14.3C15.8008 13.582 16.3828 13 17.1008 13C17.8188 13 18.4008 13.582 18.4008 14.3ZM17.1 19.4992C19.7 19.4992 19.7 18.8444 19.7 18.0367C19.7 17.229 18.5359 16.5742 17.1 16.5742C15.6641 16.5742 14.5 17.229 14.5 18.0367C14.5 18.8444 14.5 19.4992 17.1 19.4992Z" fill="#27272A"/>
                                                     </svg> 
                                             </span>
-                                            <span class="text-sm">
+                                            <span class="text-sm font-medium">
                                                 Signups
                                             </span>
                                         </div>
                                        <div class="flex flex-col">
-                                        <span class="font-semibold text-2xl">
+                                        <span class="text-2xl font-semibold">
                                             20
                                         </span>
-                                        <span class="font-semibold text-xs text-gray-500">
+                                        <span class="text-xs font-semibold text-gray-500">
                                             March 2023
                                         </span>
                                        </div>
                                     </div>
-                                    <div class="flex border border-gray-300 rounded-xl w-full bg-white items-center justify-between p-4">
+                                    <div class="flex items-center justify-between w-full p-4 bg-white border border-gray-300 rounded-xl">
                                         <div class="flex flex-col">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 2.5C8.25 2.08579 7.91421 1.75 7.5 1.75C7.08579 1.75 6.75 2.08579 6.75 2.5V4.07926C5.31067 4.19451 4.36577 4.47737 3.67157 5.17157C2.97737 5.86577 2.69451 6.81067 2.57926 8.25H22.4207C22.3055 6.81067 22.0226 5.86577 21.3284 5.17157C20.6342 4.47737 19.6893 4.19451 18.25 4.07926V2.5C18.25 2.08579 17.9142 1.75 17.5 1.75C17.0858 1.75 16.75 2.08579 16.75 2.5V4.0129C16.0847 4 15.339 4 14.5 4H10.5C9.66097 4 8.91527 4 8.25 4.0129V2.5ZM22.5 14V12C22.5 11.161 22.5 10.4153 22.4871 9.75H2.5129C2.5 10.4153 2.5 11.161 2.5 12V14C2.5 17.7712 2.5 19.6569 3.67157 20.8284C4.84315 22 6.72876 22 10.5 22H14.5C18.2712 22 20.1569 22 21.3284 20.8284C22.5 19.6569 22.5 17.7712 22.5 14ZM18.4008 14.3C18.4008 15.018 17.8188 15.6 17.1008 15.6C16.3828 15.6 15.8008 15.018 15.8008 14.3C15.8008 13.582 16.3828 13 17.1008 13C17.8188 13 18.4008 13.582 18.4008 14.3ZM17.1 19.4992C19.7 19.4992 19.7 18.8444 19.7 18.0367C19.7 17.229 18.5359 16.5742 17.1 16.5742C15.6641 16.5742 14.5 17.229 14.5 18.0367C14.5 18.8444 14.5 19.4992 17.1 19.4992Z" fill="#27272A"/>
                                                     </svg> 
                                             </span>
-                                            <span class="text-sm">
-                                                Signups
+                                            <span class="text-sm font-medium">
+                                                Subscriptions
                                             </span>
                                         </div>
                                        <div class="flex flex-col">
-                                        <span class="font-semibold text-2xl">
+                                        <span class="text-2xl font-semibold">
                                             05
                                         </span>
-                                        <span class="font-semibold text-xs text-gray-500">
+                                        <span class="text-xs font-semibold text-gray-500">
                                             March 2023
                                         </span>
                                        </div>
                                     </div>
-                                    <div class="flex border border-gray-300 rounded-xl w-full bg-white items-center justify-between p-4">
+                                    <div class="flex items-center justify-between w-full p-4 bg-white border border-gray-300 rounded-xl">
                                         <div class="flex flex-col">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 2.5C8.25 2.08579 7.91421 1.75 7.5 1.75C7.08579 1.75 6.75 2.08579 6.75 2.5V4.07926C5.31067 4.19451 4.36577 4.47737 3.67157 5.17157C2.97737 5.86577 2.69451 6.81067 2.57926 8.25H22.4207C22.3055 6.81067 22.0226 5.86577 21.3284 5.17157C20.6342 4.47737 19.6893 4.19451 18.25 4.07926V2.5C18.25 2.08579 17.9142 1.75 17.5 1.75C17.0858 1.75 16.75 2.08579 16.75 2.5V4.0129C16.0847 4 15.339 4 14.5 4H10.5C9.66097 4 8.91527 4 8.25 4.0129V2.5ZM22.5 14V12C22.5 11.161 22.5 10.4153 22.4871 9.75H2.5129C2.5 10.4153 2.5 11.161 2.5 12V14C2.5 17.7712 2.5 19.6569 3.67157 20.8284C4.84315 22 6.72876 22 10.5 22H14.5C18.2712 22 20.1569 22 21.3284 20.8284C22.5 19.6569 22.5 17.7712 22.5 14ZM18.4008 14.3C18.4008 15.018 17.8188 15.6 17.1008 15.6C16.3828 15.6 15.8008 15.018 15.8008 14.3C15.8008 13.582 16.3828 13 17.1008 13C17.8188 13 18.4008 13.582 18.4008 14.3ZM17.1 19.4992C19.7 19.4992 19.7 18.8444 19.7 18.0367C19.7 17.229 18.5359 16.5742 17.1 16.5742C15.6641 16.5742 14.5 17.229 14.5 18.0367C14.5 18.8444 14.5 19.4992 17.1 19.4992Z" fill="#27272A"/>
                                                     </svg> 
                                             </span>
-                                            <span class="text-sm">
-                                                Signups
+                                            <span class="text-sm font-medium">
+                                                Total Rewards
                                             </span>
                                         </div>
                                        <div class="flex flex-col">
-                                        <span class="font-semibold text-2xl">
+                                        <span class="text-2xl font-semibold">
                                             PKR500
                                         </span>
-                                        <span class="font-semibold text-xs text-gray-500">
+                                        <span class="text-xs font-semibold text-gray-500">
                                             March 2023
                                         </span>
                                        </div>
                                     </div>
                                 </div>
-                                <div class="flex p-2 justify-end w-full bg-white">
-                                    <div class="flex flex-col gap-2 items-start">
-                                        <span class="font-medium text-sm text-gray-900 w-full">
+                                <div class="flex justify-end w-full p-2 bg-white">
+                                    <div class="flex flex-col items-start gap-2">
+                                        <span class="w-full text-sm font-medium text-gray-900">
                                             Filter By Month
                                         </span>
                                         <div class="relative" x-data x-menu>
@@ -1067,7 +1067,7 @@
                                                         <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                                                     </div>
                                                 </div>
-                                                <div class="flex items-center gap-2 justify-between w-full md:hidden"> 
+                                                <div class="flex items-center justify-between w-full gap-2 md:hidden"> 
                                                     <span class="flex justify-center md:mx-auto items-center px-1 py-0.5 rounded-md font-medium text-sm">Alex Jon</span>
                                                     <svg :class="open?'rotate-180':''"  width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"/>
@@ -1102,7 +1102,7 @@
                                                         <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                                                     </div>
                                                 </div>
-                                                <div class="flex items-center gap-2 justify-between w-full md:hidden"> 
+                                                <div class="flex items-center justify-between w-full gap-2 md:hidden"> 
                                                     <span class="flex justify-center md:mx-auto items-center px-1 py-0.5 rounded-md font-medium text-sm">Umair Ali</span>
                                                     <svg :class="open?'rotate-180':''"  width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"/>
