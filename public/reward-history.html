@@ -1045,13 +1045,7 @@
                                 </div>
                                  
                                     <div class="grid gap-3 md:table shadow-sm overflow-hidden md:[&>*]:table-row md:[&>*>div]:table-cell w-full [&>*>div]:p-3 md:border-collapse border-gray-300 md:rounded-b-lg p-4 bg-white">
-                                        <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">
-                                            <div class="text-xs font-bold text-center w-11">
-                                                <div class="flex items-center justify-center w-4 px-4 py-3">
-                                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
-                                                    <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                                </div>
-                                            </div>
+                                        <header class="hidden items-center md:table-row h-12 bg-gray-50 [&>*]:align-middle md:[&>*:not(:last-child)] md:[&>*]:border-gray-300">     
                                             <div class="text-xs font-bold text-gray-900">DATE</div>
                                             <div class="hidden text-xs font-bold text-gray-900 md:table-cell">NAME</div>
                                             <div class="hidden text-xs font-bold text-gray-900 md:table-cell">PHONE</div>
@@ -1060,41 +1054,77 @@
                                             <div class="hidden text-xs font-bold text-gray-900 md:table-cell">REWARD RECIEVED</div>
                                         </header>
                                         <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
-                                            <div x-on:click="open=!open" :class="open? 'border-b':''" class="text-xs border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
-                                                <div class="hidden gap-1 items-center md:table-cell text-xs md:w-11 md:text-center after:content-[attr(data-pn)] md:after:hidden after:" data-pn="Plan Name:">
-                                                    <div class="flex items-center justify-center w-4 px-4 py-3">
-                                                        <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 focus:ring-2">
-                                                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center gap-2 justify-between w-full md:hidden"> 
-                                                    <span class="flex justify-center md:mx-auto items-center px-1 py-0.5 rounded-md font-medium text-sm">Alex Jon</span>
-                                                    <svg :class="open?'rotate-180':''"  width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"/>
-                                                    </svg>      
-                                                </div>                                              
-                                            </div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Date">
+                                            
+                                            
+
+                                            <div :class="open?'flex':'hidden md:flex'" class="border-gray-300 order-2 md:order-1 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Date">
                                                         MON 12-05-2022
                                             </div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="flex border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="Name">Alex Jon</div>
-                                            <div :class="open?'flex':'hidden md:flex'" class=" border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="Phone">03445676788</div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Subscription Status">
+                                            
+                                            <div :class="open?'flex':''" class="flex order-1 md:order-2 border-gray-300 !border-solid md:!border-solid border-b justify-between gap-1 items-center md:table-cell font-medium text-xs  md:before:hidden" >
+                                                <div x-on:click="open=!open" :class="open? 'md:border-b':''" class="text-xs border-gray-300  items-center justify-between flex !border-solid md:!border-solid w-full">
+                                                
+                                                    <div class="flex items-center gap-2 justify-between w-full "> 
+                                                        <span class="flex items-center px-1 py-0.5 rounded-md font-medium text-sm">Alex Jon</span>
+                                                        <span class="md:hidden">
+                                                        <svg :class="open?'rotate-180':''"  width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"/>
+                                                        </svg> 
+                                                    </span>     
+                                                    </div>                                              
+                                                </div>
+                                                </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class=" order-3 border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="Phone">03445676788</div>
+                                            <div :class="open?'flex':'hidden md:flex'" class=" order-4 align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Subscription Status">
                                                  <span class="flex justify-center w-8 h-5 align-middle items-center px-1 py-0.5 text-red-800 rounded-md bg-red-100 font-medium text-xs">No</span>
                                             </div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward">
+                                            <div :class="open?'flex':'hidden md:flex'" class="order-5 align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward">
                                             <span class="text-xs font-bold text-blue-600">
                                                 Rs.0
                                             </span>
                                             </div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward Recived">
+                                            <div :class="open?'flex':'hidden md:flex'" class="order-6 align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward Recived">
                                                 <span class="text-xs font-bold text-blue-600">
                                                 No    
                                                 </span>
                                             </div>
                                         </div>
-                                        <!-- 2 -->
                                         <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
+                                         
+                                            <div :class="open?'flex':'hidden md:flex'" class="border-gray-300 order-2 md:order-1 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-start-date)] md:before:hidden" data-start-date="Date">
+                                                        MON 12-05-2022
+                                            </div>
+                                            
+                                            <div :class="open?'flex':''" class="flex order-1 md:order-2 border-gray-300 !border-solid md:!border-solid border-b justify-between gap-1 items-center md:table-cell font-medium text-xs  md:before:hidden" >
+                                                <div x-on:click="open=!open" :class="open? 'md:border-b':''" class="text-xs border-gray-300  items-center justify-between flex !border-solid md:!border-solid w-full">
+                                                
+                                                    <div class="flex items-center gap-2 justify-between w-full "> 
+                                                        <span class="flex items-center px-1 py-0.5 rounded-md font-medium text-sm">Alex Jon</span>
+                                                        <span class="md:hidden">
+                                                        <svg :class="open?'rotate-180':''"  width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66518 7.33841C3.85862 7.10458 4.19426 7.08082 4.41488 7.28534L8.98285 11.5202L13.6396 7.38312C13.8645 7.18331 14.1995 7.21418 14.388 7.45206C14.5764 7.68995 14.5468 8.04476 14.3219 8.24456L9.31618 12.6918C9.11533 12.8702 8.82178 12.8671 8.62476 12.6844L3.7144 8.13213C3.49378 7.9276 3.47175 7.57224 3.66518 7.33841Z" fill="#1C274C"/>
+                                                        </svg> 
+                                                    </span>     
+                                                    </div>                                              
+                                                </div>
+                                                </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class=" order-3 border-gray-300 !border-solid md:!border-solid  border-b align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before:content-[attr(data-end-date)] md:before:hidden" data-end-date="Phone">03445676788</div>
+                                            <div :class="open?'flex':'hidden md:flex'" class=" order-4 align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Subscription Status">
+                                                 <span class="flex justify-center w-8 h-5 align-middle items-center px-1 py-0.5 text-green-800 rounded-md bg-green-200 font-medium text-xs">Yes</span>
+                                            </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="order-5 align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward">
+                                            <span class="text-xs font-bold text-blue-600">
+                                                Rs.0
+                                            </span>
+                                            </div>
+                                            <div :class="open?'flex':'hidden md:flex'" class="order-6 align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward Recived">
+                                                <span class="text-xs font-bold text-blue-600">
+                                                yes    
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <!-- <div x-data="{open:false}" class="grid rounded-md drop-shadow md:rounded-none md:drop-shadow-none grid-rows-[9] grid-cols-1 bg-gray-50 md:bg-white md:[&>*:not(:last-child)] [&>*]:border-solid [&>*]:border-gray-300 md:border-b md:border-solid md:border-gray-300">
                                             <div x-on:click="open=!open" :class="open? 'border-b':''" class="text-xs  border-gray-300 align-middle items-center justify-between flex !border-solid md:!border-solid">
                                                 <div class="hidden gap-1 items-center md:table-cell text-xs md:w-11 md:text-center after:content-[attr(data-pn)] md:after:hidden after:" data-pn="Plan Name:">
                                                     <div class="flex items-center justify-center w-4 px-4 py-3">
@@ -1128,7 +1158,7 @@
                                                 Yes    
                                                 </span>
                                                 </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </section>
                             </div>
