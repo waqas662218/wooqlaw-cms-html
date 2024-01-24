@@ -269,7 +269,7 @@
                     </nav>
 
                     <div x-data x-tabs class="mb-3">
-                        <ul class="flex flex-col md:flex-row w-full gap-1 mb-1 text-sm font-medium md:gap-px md:overflow-x-auto md:flex-nowrap md:rounded-t-xl" x-tabs:list>
+                        <ul class="flex flex-col w-full gap-1 mb-1 text-sm font-medium md:flex-row md:gap-px md:overflow-x-auto md:flex-nowrap md:rounded-t-xl" x-tabs:list>
                             <li class="grow">
                                 <a
                                     x-tabs:tab
@@ -958,71 +958,75 @@
                             <div x-tabs:panel class="flex flex-col gap-3">
                                 <section class="flex flex-col gap-3">
                                     
-                                <div class="flex flex-col md:flex-row gap-2 md:gap-3 items-start w-full">
-                                    <div class="flex border border-gray-300 rounded-xl w-full bg-white items-center justify-between p-4">
+                                <div class="flex flex-col items-start w-full gap-2 md:flex-row md:gap-3">
+                                    <div class="flex items-center justify-between w-full p-4 bg-white border border-gray-300 rounded-xl">
                                         <div class="flex flex-col">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 2.5C8.25 2.08579 7.91421 1.75 7.5 1.75C7.08579 1.75 6.75 2.08579 6.75 2.5V4.07926C5.31067 4.19451 4.36577 4.47737 3.67157 5.17157C2.97737 5.86577 2.69451 6.81067 2.57926 8.25H22.4207C22.3055 6.81067 22.0226 5.86577 21.3284 5.17157C20.6342 4.47737 19.6893 4.19451 18.25 4.07926V2.5C18.25 2.08579 17.9142 1.75 17.5 1.75C17.0858 1.75 16.75 2.08579 16.75 2.5V4.0129C16.0847 4 15.339 4 14.5 4H10.5C9.66097 4 8.91527 4 8.25 4.0129V2.5ZM22.5 14V12C22.5 11.161 22.5 10.4153 22.4871 9.75H2.5129C2.5 10.4153 2.5 11.161 2.5 12V14C2.5 17.7712 2.5 19.6569 3.67157 20.8284C4.84315 22 6.72876 22 10.5 22H14.5C18.2712 22 20.1569 22 21.3284 20.8284C22.5 19.6569 22.5 17.7712 22.5 14ZM18.4008 14.3C18.4008 15.018 17.8188 15.6 17.1008 15.6C16.3828 15.6 15.8008 15.018 15.8008 14.3C15.8008 13.582 16.3828 13 17.1008 13C17.8188 13 18.4008 13.582 18.4008 14.3ZM17.1 19.4992C19.7 19.4992 19.7 18.8444 19.7 18.0367C19.7 17.229 18.5359 16.5742 17.1 16.5742C15.6641 16.5742 14.5 17.229 14.5 18.0367C14.5 18.8444 14.5 19.4992 17.1 19.4992Z" fill="#27272A"/>
                                                     </svg> 
                                             </span>
-                                            <span class="text-sm">
+                                            <span class="text-sm font-medium">
                                                 Signups
                                             </span>
                                         </div>
                                        <div class="flex flex-col">
-                                        <span class="font-semibold text-2xl">
+                                        <span class="text-2xl font-semibold">
                                             20
                                         </span>
-                                        <span class="font-semibold text-xs text-gray-500">
+                                        <span class="text-xs font-semibold text-gray-500">
                                             March 2023
                                         </span>
                                        </div>
                                     </div>
-                                    <div class="flex border border-gray-300 rounded-xl w-full bg-white items-center justify-between p-4">
+                                    <div class="flex items-center justify-between w-full p-4 bg-white border border-gray-300 rounded-xl">
                                         <div class="flex flex-col">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 2.5C8.25 2.08579 7.91421 1.75 7.5 1.75C7.08579 1.75 6.75 2.08579 6.75 2.5V4.07926C5.31067 4.19451 4.36577 4.47737 3.67157 5.17157C2.97737 5.86577 2.69451 6.81067 2.57926 8.25H22.4207C22.3055 6.81067 22.0226 5.86577 21.3284 5.17157C20.6342 4.47737 19.6893 4.19451 18.25 4.07926V2.5C18.25 2.08579 17.9142 1.75 17.5 1.75C17.0858 1.75 16.75 2.08579 16.75 2.5V4.0129C16.0847 4 15.339 4 14.5 4H10.5C9.66097 4 8.91527 4 8.25 4.0129V2.5ZM22.5 14V12C22.5 11.161 22.5 10.4153 22.4871 9.75H2.5129C2.5 10.4153 2.5 11.161 2.5 12V14C2.5 17.7712 2.5 19.6569 3.67157 20.8284C4.84315 22 6.72876 22 10.5 22H14.5C18.2712 22 20.1569 22 21.3284 20.8284C22.5 19.6569 22.5 17.7712 22.5 14ZM18.4008 14.3C18.4008 15.018 17.8188 15.6 17.1008 15.6C16.3828 15.6 15.8008 15.018 15.8008 14.3C15.8008 13.582 16.3828 13 17.1008 13C17.8188 13 18.4008 13.582 18.4008 14.3ZM17.1 19.4992C19.7 19.4992 19.7 18.8444 19.7 18.0367C19.7 17.229 18.5359 16.5742 17.1 16.5742C15.6641 16.5742 14.5 17.229 14.5 18.0367C14.5 18.8444 14.5 19.4992 17.1 19.4992Z" fill="#27272A"/>
                                                     </svg> 
                                             </span>
-                                            <span class="text-sm">
-                                                Signups
+                                            <span class="text-sm font-medium">
+                                                Subscriptions
                                             </span>
                                         </div>
                                        <div class="flex flex-col">
-                                        <span class="font-semibold text-2xl">
+                                        <span class="text-2xl font-semibold">
                                             05
                                         </span>
-                                        <span class="font-semibold text-xs text-gray-500">
+                                        <span class="text-xs font-semibold text-gray-500">
                                             March 2023
                                         </span>
                                        </div>
                                     </div>
-                                    <div class="flex border border-gray-300 rounded-xl w-full bg-white items-center justify-between p-4">
+                                    <div class="flex items-center justify-between w-full p-4 bg-white border border-gray-300 rounded-xl">
                                         <div class="flex flex-col">
                                             <span>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 2.5C8.25 2.08579 7.91421 1.75 7.5 1.75C7.08579 1.75 6.75 2.08579 6.75 2.5V4.07926C5.31067 4.19451 4.36577 4.47737 3.67157 5.17157C2.97737 5.86577 2.69451 6.81067 2.57926 8.25H22.4207C22.3055 6.81067 22.0226 5.86577 21.3284 5.17157C20.6342 4.47737 19.6893 4.19451 18.25 4.07926V2.5C18.25 2.08579 17.9142 1.75 17.5 1.75C17.0858 1.75 16.75 2.08579 16.75 2.5V4.0129C16.0847 4 15.339 4 14.5 4H10.5C9.66097 4 8.91527 4 8.25 4.0129V2.5ZM22.5 14V12C22.5 11.161 22.5 10.4153 22.4871 9.75H2.5129C2.5 10.4153 2.5 11.161 2.5 12V14C2.5 17.7712 2.5 19.6569 3.67157 20.8284C4.84315 22 6.72876 22 10.5 22H14.5C18.2712 22 20.1569 22 21.3284 20.8284C22.5 19.6569 22.5 17.7712 22.5 14ZM18.4008 14.3C18.4008 15.018 17.8188 15.6 17.1008 15.6C16.3828 15.6 15.8008 15.018 15.8008 14.3C15.8008 13.582 16.3828 13 17.1008 13C17.8188 13 18.4008 13.582 18.4008 14.3ZM17.1 19.4992C19.7 19.4992 19.7 18.8444 19.7 18.0367C19.7 17.229 18.5359 16.5742 17.1 16.5742C15.6641 16.5742 14.5 17.229 14.5 18.0367C14.5 18.8444 14.5 19.4992 17.1 19.4992Z" fill="#27272A"/>
                                                     </svg> 
                                             </span>
-                                            <span class="text-sm">
-                                                Signups
+                                            <span class="text-sm font-medium">
+                                                Total Rewards
                                             </span>
                                         </div>
                                        <div class="flex flex-col">
-                                        <span class="font-semibold text-2xl">
+                                        <span class="text-2xl font-semibold">
                                             PKR500
                                         </span>
-                                        <span class="font-semibold text-xs text-gray-500">
+                                        <span class="text-xs font-semibold text-gray-500">
                                             March 2023
                                         </span>
                                        </div>
                                     </div>
                                 </div>
-                                <div class="flex p-2 justify-end w-full bg-white">
-                                    <div class="flex flex-col gap-2 items-start">
-                                        <span class="font-medium text-sm text-gray-900 w-full">
+                                <div class="flex items-center justify-between w-full p-2 bg-white md:p-5">
+                                    <div>
+                                        <h3 class="mb-1 text-base font-medium leading-normal text-black">Reward Account: N/A</h3>
+                                        <a href="#" class="text-sm font-medium leading-tight text-blue-700 w-44">Setup Receivable Account</a>
+                                    </div>
+                                    <div class="flex flex-col items-start gap-2">
+                                        <span class="w-full text-sm font-medium text-gray-900">
                                             Filter By Month
                                         </span>
                                         <div class="relative" x-data x-menu>
@@ -1148,14 +1152,14 @@
                                             <div :class="open?'flex':'hidden md:flex'" class="align-middle justify-between gap-1 items-center md:table-cell font-medium text-xs before: before:content-[attr(data-payment)] md:before:hidden" data-payment="Subscription Status">
                                                  <span class="flex justify-center w-8 h-5 align-middle items-center px-1 py-0.5 rounded-md bg-green-200 font-medium text-xs">Yes</span>
                                             </div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+                                            <div :class="open?'flex':'hidden md:flex'" class="order-5 align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward">
                                             <span class="text-xs font-bold text-blue-600">
                                                 Rs.0
                                             </span>
                                             </div>
-                                            <div :class="open?'flex':'hidden md:flex'" class="align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Attachments">
+                                            <div :class="open?'flex':'hidden md:flex'" class="order-6 align-middle border-t border-gray-300 !border-solid md:border-t-0 md:!border-solid  justify-between gap-1 items-center md:table-cell font-medium text-xs  before:content-[attr(data-attachment)] md:before:hidden before:" data-attachment="Reward Recived">
                                                 <span class="text-xs font-bold text-blue-600">
-                                                Yes    
+                                                yes    
                                                 </span>
                                                 </div>
                                         </div> -->
