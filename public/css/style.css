@@ -1196,6 +1196,28 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-\[calc\(100dvh-17rem\)\] {
+  height: calc(100dvh - 17rem);
+}
+.h-\[calc\(100dvh-12rem\)\] {
+  height: calc(100dvh - 12rem);
+}
+.h-\[calc\(100dvh-50rem\)\] {
+  height: calc(100dvh - 50rem);
+}
+.h-\[calc\(100dvh-2rem\)\] {
+  height: calc(100dvh - 2rem);
+}
+.h-\[calc\(100dvh-5rem\)\] {
+  height: calc(100dvh - 5rem);
+}
+.h-\[calc\(100dvh-10rem\)\] {
+  height: calc(100dvh - 10rem);
+}
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .max-h-\[100dvh\] {
   max-height: 100dvh;
 }
@@ -4218,16 +4240,24 @@ select {
     height: 100%;
   }
 
-  .md\:h-\[calc\(120dvh-18\.75rem\)\] {
-    height: calc(120dvh - 18.75rem);
+  .md\:h-\[calc\(100dvh-17rem\)\] {
+    height: calc(100dvh - 17rem);
   }
 
-  .md\:h-\[calc\(150dvh-18\.75rem\)\] {
-    height: calc(150dvh - 18.75rem);
+  .md\:h-\[calc\(100dvh-20rem\)\] {
+    height: calc(100dvh - 20rem);
   }
 
-  .md\:h-\[calc\(200dvh-18\.75rem\)\] {
-    height: calc(200dvh - 18.75rem);
+  .md\:h-\[calc\(100dvh-15rem\)\] {
+    height: calc(100dvh - 15rem);
+  }
+
+  .md\:h-\[calc\(100dvh-13rem\)\] {
+    height: calc(100dvh - 13rem);
+  }
+
+  .md\:h-\[calc\(100dvh-11rem\)\] {
+    height: calc(100dvh - 11rem);
   }
 
   .md\:w-0 {
