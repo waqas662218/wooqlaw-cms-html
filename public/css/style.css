@@ -1850,9 +1850,6 @@ select {
 .\!border-solid {
   border-style: solid !important;
 }
-.border-solid {
-  border-style: solid;
-}
 .border-dashed {
   border-style: dashed;
 }
