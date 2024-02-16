@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+       var socket;
+       var connectedClients = 0;
+
+        function connect() {
+            var host = "ws://localhost:8080";
+
+            try {
+                socket = new WebSocket(host);
+                log('<span style="color:green;">WebSocket</span>');
+
+                // Listen for messages from the server
+                socket.onmessage = function (msg) {
+                    var data = JSON.parse(msg.data);
+                    console.log("121 message", data.count, data.message);
+                    if (data.count !== undefined) {
+                        connectedClients = data.count;
+                        updateClientCount();
+                        if (data.message !== undefined) {
+                            if (data.sender === getClientId()) { // Message sent by this client
+                                log('<span style="color:green;">Sent:</span> ' + data.message);
+                            } else { // Message sent by other clients
+                                log('<span style="color:blue;">Received:</span> ' + data.message);
+                            }
+                        }
+                    } 
+                };
+
+            } catch (ex) {
+                log('<span style="color:red;">Error:</span> ' + ex);
+            }
+        }
+
+        function send() {
+            var textInput = document.getElementById("textInput");
+
+            try {
+              //var messageData = { message: textInput.value, count: connectedClients, sender: getClientId() };
+              var messageData = textInput.value ;
+              socket.send(messageData);
+              log('<span style="color:green;">You:</span> ' + textInput.value);
+              console.log("122", messageData);
+
+              // Clear input field after sending message
+              textInput.value = "";
+
+          } catch (ex) {
+             log('<span style="color:red;">Error:</span> '+ ex);
+          }
+      }
+
+      function log(message) {
+          var consoleElement = document.getElementById("console");
+          consoleElement.innerHTML += message + "<br>";
+      }
+
+      function getClientId() {
+        var clientId = localStorage.getItem("clientId");
+        if (!clientId) {
+            clientId = Math.random().toString(36).substr(2, 9);;
+            localStorage.setItem("clientId", clientId);
+        }
+        return clientId;
+    }
+
+
+       function updateClientCount() { 
+         var clientCountElement=  document.getElementById("clientCount");
+         clientCountElement.innerText=connectedClients;
+       }
+    </script>
+</head>
+
+<body onload="connect()">
+    <p>Total Connected Clients: <b id="clientCount">0</b></p>
+    <div id="console"></div>
+
+    <input type="text" id="textInput">
+    <button onclick="send()">Send Message</button>
+    
+</body>
+
+</html>

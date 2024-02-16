@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo List</title>
+  <style>
+    #todo-list {
+      margin-bottom: 10px;
+    }
+    .completed {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Todo List</h1>
+
+<input type="text" id="task-input">
+<button id="add-task">Add Task</button>
+
+<ul id="todo-list"></ul>
+
+
+ <script>
+    const socket = new WebSocket('ws://localhost:8080');
+
+    socket.addEventListener('open', () => {
+    console.log('WebSocket connection opened');
+
+    document.getElementById('add-task').addEventListener('click', () => {
+        const input = document.getElementById('task-input');
+        
+            if (!input.value) return; // Ignore empty tasks
+        
+            const task = { 
+            name: input.value,
+            completed: false 
+            };
+        
+            socket.send(JSON.stringify({ action: 'add', task }));
+            
+            input.value = '';
+        });
+    });
+
+    socket.addEventListener('message', event => {
+        const { action, task } = JSON.parse(event.data);
+        
+            if (action === 'add') {
+                addTask(task);
+            } else if (action === 'toggle') {
+                toggleTask(task);
+        }
+    });
+
+    function addTask(task) {
+        const listItem = document.createElement('li');
+        
+        listItem.textContent = task.name;
+
+        if (task.completed) {
+            listItem.classList.add("completed");
+        }
+
+        listItem.addEventListener("click", () => toggleTask(task));
+
+        document.getElementById("todo-list").appendChild(listItem);
+    }
+
+    function toggleTask(task) {
+        task.completed = !task.completed;
+
+        socket.send(JSON.stringify({ action: 'toggle', task }));
+        
+        const listItem = document.getElementById("todo-list").querySelectorAll("li")[task.index];
+
+        if (task.completed) {
+            listItem.classList.add("completed");
+        } else {
+            listItem.classList.remove("completed");
+        }
+    }
+ </script>
+</body>
+</html>
