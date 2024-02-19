@@ -2,7 +2,7 @@
     "name": "Quick Start Tailwind VS Code by ARM",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "websocket.js",
     "scripts": {
         "start": "postcss src/tailwind.css -o ./public/css/style.css -w --verbose",
         "build": "cross-env NODE_ENV=production postcss src/tailwind.css -o ./public/css/style.css --verbose"

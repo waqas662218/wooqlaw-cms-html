@@ -8,9 +8,9 @@
 
         function connect() {
             // local
-            //var host = "ws://localhost:8080";
+            var host = "ws://localhost:8080";
 
-            var host = "wss://echo.websocket.org";
+            //var host = "wss://echo.websocket.org";
 
             try {
                 socket = new WebSocket(host);
@@ -19,7 +19,7 @@
                 // Listen for messages from the server
                 socket.onmessage = function (msg) {
                     var data = JSON.parse(msg.data);
-                    console.log("121 message", data.count, data.message);
+                    console.log("121 message", data);
                     if (data.count !== undefined) {
                         connectedClients = data.count;
                         updateClientCount();
@@ -27,7 +27,14 @@
                             if (data.sender === getClientId()) { // Message sent by this client
                                 log('<span style="color:green;">Sent:</span> ' + data.message);
                             } else { // Message sent by other clients
-                                log('<span style="color:blue;">Received:</span> ' + data.message);
+                                const bufferData = data.message;
+                                if (bufferData.data && Array.isArray(bufferData.data) && bufferData.data.length > 0) {
+                                    const stringData = String.fromCharCode(...bufferData.data);
+                                    log('<span style="color:blue;">Received:</span> ' + stringData);
+                                } else {
+                                    console.error('Invalid or empty data array');
+                                }
+                                
                             }
                         }
                     } 
