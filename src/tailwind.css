@@ -71,3 +71,7 @@
 /* scrollbar-width: none;   */
 /* Firefox */
 /*}*/
+
+ol{
+  @apply list-decimal list-inside
+}
