@@ -1217,6 +1217,12 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-\[calc\(100dvh-8\.4rem\)\] {
+  height: calc(100dvh - 8.4rem);
+}
+.h-\[calc\(100dvh-7\.9rem\)\] {
+  height: calc(100dvh - 7.9rem);
+}
 .max-h-\[100dvh\] {
   max-height: 100dvh;
 }
@@ -1977,6 +1983,10 @@ select {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-primary-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(191 219 254 / var(--tw-border-opacity));
 }
 .border-l-black {
   --tw-border-opacity: 1;

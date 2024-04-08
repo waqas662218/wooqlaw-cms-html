@@ -29,7 +29,7 @@
 </head>
 
 <body class="overflow-hidden">
-    <header class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14 md:h-18">
+    <header class="relative z-30 flex items-center justify-between w-full h-12 px-3 py-1 bg-white md:py-3 md:px-5 drop-shadow">
 
         
         <div class="flex items-center gap-3">
@@ -159,7 +159,7 @@
             </div>
         </div>
     </header>
-    <div class="flex bg-gray-200 h-[calc(100dvh-7rem)] md:h-[calc(100vh-4.5rem)] overflow-hidden" 
+    <div class="ktcontainer flex bg-gray-200 md:h-[calc(100vh-3rem)] h-[calc(100dvh-6rem)] overflow-hidden" 
         x-on:resize.window="chats = (window.innerWidth < 768) ? false : true"
         x-data="{ menu: true, chats: (window.innerWidth < 768)? false : true }"   
     >
@@ -250,14 +250,11 @@
                 </a>
             </div>
         </aside>
-        <div class="relative w-full h-full overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
+        <div class="relative w-full h-full px-0 overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
-                <div class="py-1 md:py-5">
+                <div class="md:py-4">
                     <div class="w-full max-w-4xl mx-auto">
-                        <div class="relative p-4 bg-white md:col-span-2 rounded-xl">
-                            <div class="absolute flex top-2 right-2">
-                                <button type="submit" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
-                            </div>
+                        <div class="p-4 bg-white md:col-span-2 rounded-xl h-[calc(100dvh-7.9rem)] overflow-y-auto">
                             <div class="flex flex-col items-center gap-3">
                                 <p>WAKALATNAMA</p>
                                 <p class="font-bold underline">POWER OF ATTORNEY</p>
@@ -380,6 +377,17 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="flex justify-end gap-1 pt-2">
+                            <button type="button" class="flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 focus:ring-gray-200 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                Print
+                            </button>
+                            <button type="button" class="flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 focus:ring-gray-200 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                Save As
+                            </button>
+                            <button type="submit" class="flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-center text-white border rounded-lg bg-primary-700 border-primary-200 hover:bg-primary-800 focus:ring-primary-300 focus:ring-4 focus:outline-none disabled:bg-gray-400">
+                                <span class="">Save</span>
+                            </button>
                         </div>
                     </div>
                 </div>
