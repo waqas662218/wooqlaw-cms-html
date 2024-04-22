@@ -32,9 +32,9 @@
     <header class="relative z-30 flex items-center justify-between w-full px-3 py-2 bg-white md:py-3 md:px-5 drop-shadow h-14 md:h-18">
 
         
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2">
             <!-- Logo -->
-            <a href="./index.html" class="text-lg font-bold">
+            <a href="./index.html" class="text-base font-bold">
                 <!-- Desktop -->
                 <svg class="hidden md:block" width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_7374_81287)">
@@ -108,7 +108,7 @@
         <!-- profile Menu Toggle -->
         <div class="flex items-center divide-x divide-gray-100">
             <!-- Notification Icon -->
-            <div class="flex items-center gap-3 px-3">
+            <div class="flex items-center gap-2 px-3">
                 <a href="#" type="button" class="relative inline-flex items-center">
                     <svg class="w-6 h-6 shrink-0" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.3028 14.49L19.3028 12.83C19.0928 12.46 18.9028 11.76 18.9028 11.35V8.82C18.9028 6.47 17.5228 4.44 15.5328 3.49C15.0128 2.57 14.0528 2 12.9528 2C11.8628 2 10.8828 2.59 10.3628 3.52C8.41283 4.49 7.06283 6.5 7.06283 8.82V11.35C7.06283 11.76 6.87283 12.46 6.66283 12.82L5.65283 14.49C5.25283 15.16 5.16283 15.9 5.41283 16.58C5.65283 17.25 6.22283 17.77 6.96283 18.02C8.90283 18.68 10.9428 19 12.9828 19C15.0228 19 17.0628 18.68 19.0028 18.03C19.7028 17.8 20.2428 17.27 20.5028 16.58C20.7628 15.89 20.6928 15.13 20.3028 14.49Z" fill="#111827"></path>
@@ -254,151 +254,261 @@
         <div class="relative w-full h-full overflow-x-hidden overflow-y-auto bg-gray-100 md:px-5 2xl:px-16 scrollbar-hide">
             <main class="overflow-hidden">
                 <div class="py-1 md:py-5">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 items-stretch">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 items-stretch">
                         <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start justify-between w-full h-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                            <div class="flex flex-col items-start justify-between w-full gap-4">
-                              <div class="flex flex-row items-center justify-start gap-1">
-                                <img src="images/inquiries.png" alt="inquiries">
-                                <div class="flex items-center justify-center text-lg font-semibold leading-none text-center text-gray-800">Inquiries</div>
+                          <a href="#" class="flex flex-row items-start justify-between w-full h-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                            <div class="flex flex-col items-start justify-between w-full gap-2">
+                              <div class="flex flex-row items-center justify-start gap-2">
+                                <img class="w-6 h-6 shrink-0" src="images/magzine.png" alt="magzine">
+                                <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">E-Wakalatnama</div>
                               </div>
-                              <div class="flex flex-row items-center justify-between w-full gap-6">
-                                <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
-                               <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                              <div class="flex flex-row items-center justify-between w-full gap-2">
+                                <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                               <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
                               </div>
                             </div>
                           </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                            <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Help video for inquiries</span>
-                            <img src="images/youtube.png" alt="youtube">
-                          </a>
+                          <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                            <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for E-Wakalatnama</span>
+                            <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                </svg>                                          
+                        </a>
                         </div>
                         <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                            <div class="flex flex-col items-start justify-between w-full gap-4">
-                              <div class="flex flex-row items-center justify-start gap-1">
-                                <img src="images/cause-list.png" alt="">
-                                <div class="flex items-center justify-center text-lg font-semibold leading-none text-center text-gray-800">Cause List</div>
+                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                            <div class="flex flex-col items-start justify-between w-full gap-2">
+                              <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                <img class="w-6 h-6 shrink-0" src="images/cause-list.png" alt="">
+                                <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Cause List</div>
                               </div>
-                              <div class="flex flex-row items-center justify-between w-full gap-6">
-                                <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Connecting lawyers with prospective clients online</div>
-                                <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                              <div class="flex flex-row items-center justify-between w-full gap-2">
+                                <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
                               </div>
                             </div>
                           </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                            <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Help video for cause list</span>
-                            <img src="images/youtube.png" alt="youtube">
-                          </a>
+                          <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                            <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for Cause List</span>
+                            <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                </svg>                                          
+                        </a>
                         </div>
                         <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                            <div class="flex flex-col items-start justify-between w-full gap-4">
-                              <div class="flex flex-row items-center justify-start gap-1">
-                                <img src="images/profile.png" alt="profile">
-                                <div class="flex items-center justify-center text-lg font-semibold leading-none text-center text-gray-800">Profile</div>
-                              </div>
-                              <div class="flex flex-row items-center justify-between w-full gap-6">
-                                <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Create your wooqlaw® business profile and get online clients.</div>
-                                <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                            <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Help video for profile</span>
-                            <img src="images/youtube.png" alt="youtube">
-                          </a>
+                            <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                                <div class="flex flex-col items-start justify-between w-full gap-2">
+                                    <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                        <img class="w-6 h-6 shrink-0" src="images/case-law-search.png" alt="case-law-search">
+                                        <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-gray-800">Case Law Search (CLS)</div>
+                                    </div>
+                                    <div class="flex items-center justify-between w-full gap-2 ">
+                                        <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                        <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for CLS</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
                         </div>
                         <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                            <div class="flex flex-col items-start justify-between w-full gap-4">
-                              <div class="flex flex-row items-center justify-start gap-1">
-                                <img src="images/contacts.png" alt="contacts">
-                                <div class="flex items-center justify-center text-lg font-semibold leading-none text-center text-gray-800">Contacts</div>
+                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                            <div class="flex flex-col items-start justify-between w-full gap-2">
+                              <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                <img class="w-6 h-6 shrink-0" src="images/crpc.png" alt="crpc">
+                                <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-gray-800">Code of Criminal Procedure (CRPC)</div>
                               </div>
-                              <div class="flex flex-row items-center justify-between w-full gap-6">
-                                <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Manage your contacts.</div>
-                                <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                              <div class="flex flex-row items-center justify-between w-full gap-2">
+                                <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
                               </div>
                             </div>
                           </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                            <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Watch how to contacts</span>
-                            <img src="images/youtube.png" alt="youtube">
+                          <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                            <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for CRPC</span>
+                            <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                </svg>                                          
+                        </a>
+                        </div>
+                        <!-- 2 -->
+                        <div class="flex flex-col items-start justify-center gap-0.5">
+                            <a href="#" class="flex flex-row items-start justify-between w-full h-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                              <div class="flex flex-col items-start justify-between w-full gap-2">
+                                <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                  <img class="w-6 h-6 shrink-0" src="images/inquiries.png" alt="inquiries">
+                                  <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Inquiries</div>
+                                </div>
+                                <div class="flex flex-row items-center justify-between w-full gap-2">
+                                  <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                 <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for Inquiries</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
+                          </div>
+                        <div class="flex flex-col items-start justify-center gap-0.5">
+                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                            <div class="flex flex-col items-start justify-between w-full gap-2">
+                              <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                <img class="w-6 h-6 shrink-0" src="images/appointment.png" alt="appointment">
+                                <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Appointments</div>
+                              </div>
+                              <div class="flex flex-row items-center justify-between w-full gap-2">
+                                <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                              </div>
+                            </div>
                           </a>
+                          <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                            <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for Appointments</span>
+                            <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                </svg>                                          
+                        </a>
                         </div>
                         <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                            <div class="flex flex-col items-start justify-between w-full gap-4">
-                              <div class="flex flex-row items-center justify-start gap-1">
-                                <img src="images/cases.png" alt="cases">
-                                <div class="flex items-center justify-center text-lg font-semibold leading-none text-center text-gray-800">Cases</div>
+                            <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                              <div class="flex flex-col items-start justify-between w-full gap-2">
+                                <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                  <img class="w-6 h-6 shrink-0" src="images/cases.png" alt="cases">
+                                  <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Cases</div>
+                                </div>
+                                <div class="flex flex-row items-center justify-between w-full gap-2">
+                                  <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                  <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                </div>
                               </div>
-                              <div class="flex flex-row items-center justify-between w-full gap-6">
-                                <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Manage your client cases.</div>
-                                <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for Cases</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
+                          </div>
+                        <div class="flex flex-col items-start justify-center gap-0.5">
+                            <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                              <div class="flex flex-col items-start justify-between w-full gap-2">
+                                <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                  <img class="w-6 h-6 shrink-0" src="images/contacts.png" alt="contacts">
+                                  <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Contacts</div>
+                                </div>
+                                <div class="flex flex-row items-center justify-between w-full gap-2">
+                                  <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                  <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                </div>
                               </div>
-                            </div>
-                          </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                            <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Help video for cases</span>
-                            <img src="images/youtube.png" alt="youtube">
-                          </a>
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Watch how to contacts</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
+                          </div>   
+                        <!-- 3 -->
+                        <div class="flex flex-col items-start justify-center gap-0.5">
+                            <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                              <div class="flex flex-col items-start justify-between w-full gap-2">
+                                <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                  <img class="w-6 h-6 shrink-0" src="images/profile.png" alt="profile">
+                                  <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Profile</div>
+                                </div>
+                                <div class="flex flex-row items-center justify-between w-full gap-2">
+                                  <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Create your wooqlaw® business profile and get online clients.</div>
+                                  <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for Profile</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
+                          </div>
+                          <div class="flex flex-col items-start justify-center gap-0.5">
+                            <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                                <div class="flex flex-col items-start justify-between w-full gap-2">
+                                    <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                        <img class="w-6 h-6 shrink-0" src="images/calendar.png" alt="calendar">
+                                        <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-gray-800">Calendar</div>
+                                    </div>
+                                    <div class="flex items-center justify-between w-full gap-2 ">
+                                        <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                        <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for Calendar</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
                         </div>
-                        <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                              <div class="flex flex-col items-start justify-between w-full gap-4">
-                                  <div class="flex flex-row items-center justify-start gap-1">
-                                      <img src="images/case-law-search.png" alt="case-law-search">
-                                      <div class="flex items-center justify-center text-lg font-semibold leading-none text-gray-800">Case Law Search(CLS)</div>
-                                  </div>
-                                  <div class="flex items-center justify-between w-full gap-6 ">
-                                      <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Search for laws, judgements or citation. Prepare documents, copy, paste, download & print with the wooqlaw® LRE</div>
-                                      <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
-                                  </div>
+                          <div class="flex flex-col items-start justify-center gap-0.5">
+                            <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                              <div class="flex flex-col items-start justify-between w-full gap-2">
+                                <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                  <img class="w-6 h-6 shrink-0" src="images/subscription.png" alt="subscription">
+                                  <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Subscription</div>
+                                </div>
+                                <div class="flex flex-row items-center justify-between w-full gap-2">
+                                  <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                  <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                </div>
                               </div>
-                          </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                              <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Help video for CLS</span>
-                              <img src="images/youtube.png" alt="youtube">
-                          </a>
-                      </div>
-                        <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                            <div class="flex flex-col items-start justify-between w-full gap-4">
-                              <div class="flex flex-row items-center justify-start gap-1">
-                                <img src="images/subscription.png" alt="subscription">
-                                <div class="flex items-center justify-center text-lg font-semibold leading-none text-center text-gray-800">Subscription</div>
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for Subscription</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
+                          </div>
+                          <div class="flex flex-col items-start justify-center gap-0.5">
+                            <a href="#" class="flex flex-row items-start h-full justify-between w-full p-3 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
+                              <div class="flex flex-col items-start justify-between w-full gap-2">
+                                <div class="flex flex-row items-center justify-start gap-1 md:gap-2">
+                                  <img class="w-6 h-6 shrink-0" src="images/bar-membership.png" alt="bar-membership">
+                                  <div class="flex items-center justify-center text-sm md:text-base font-semibold leading-none text-center text-gray-800">Bar Member</div>
+                                </div>
+                                <div class="flex flex-row items-center justify-between w-full gap-2">
+                                  <div class="flex items-center justify-start text-xs md:text-sm font-normal text-left text-gray-800">Get online inquiries for perspective client from wooqlaw® Jobs.</div>
+                                  <img class="w-5 h-5 shrink-0" src="images/chevron-right-outline.png" alt="chevron-right-outline">
+                                </div>
                               </div>
-                              <div class="flex flex-row items-center justify-between w-full gap-6">
-                                <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Manage your wooqlaw® subscription & billings.</div>
-                                <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                            <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Help video for subscription</span>
-                            <img src="images/youtube.png" alt="youtube">
-                          </a>
-                        </div>
-                        <div class="flex flex-col items-start justify-center gap-0.5">
-                          <a href="#" class="flex flex-row items-start h-full justify-between w-full p-6 bg-white shadow rounded-tl-xl rounded-tr-xl hover:bg-gray-50">
-                            <div class="flex flex-col items-start justify-between w-full gap-4">
-                              <div class="flex flex-row items-center justify-start gap-1">
-                                <img src="images/Settings.png" alt="Settings">
-                                <div class="flex items-center justify-center text-lg font-semibold leading-none text-center text-gray-800">Settings</div>
-                              </div>
-                              <div class="flex flex-row items-center justify-between w-full gap-6">
-                                <div class="flex items-center justify-start text-sm font-normal text-left text-gray-800">Business Hours, Notifications, Account Settings.</div>
-                                <img src="images/chevron-right-outline.png" alt="chevron-right-outline">
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="flex flex-row items-center justify-between w-full pt-3 pb-3 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50">
-                            <span class="flex items-center justify-center text-xs font-medium leading-none text-center text-gray-600">Help video for setting</span>
-                            <img src="images/youtube.png" alt="youtube">
-                          </a>
-                        </div>                  
+                            </a>
+                            <a href="#" class="flex flex-row items-center justify-between w-full pt-2 pb-2 pl-6 pr-6 bg-white shadow rounded-bl-xl rounded-br-xl hover:bg-gray-50 group">
+                                <span class="flex items-center justify-center text-xs font-medium leading-none text-gray-600">Help video for CRPC</span>
+                                <svg class="flex group-hover:text-red-500 text-gray-500 w-6 h-4" viewBox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.29 2.92C22.1656 2.45196 21.9205 2.0248 21.5792 1.68127C21.2378 1.33773 20.8122 1.08988 20.345 0.9625C18.625 0.5 11.75 0.5 11.75 0.5C11.75 0.5 4.875 0.5 3.155 0.9625C2.68777 1.08988 2.26219 1.33773 1.92085 1.68127C1.57951 2.0248 1.33438 2.45196 1.21 2.92C0.75 4.6475 0.75 8.25 0.75 8.25C0.75 8.25 0.75 11.8525 1.21 13.58C1.33438 14.048 1.57951 14.4752 1.92085 14.8187C2.26219 15.1623 2.68777 15.4101 3.155 15.5375C4.875 16 11.75 16 11.75 16C11.75 16 18.625 16 20.345 15.5375C20.8122 15.4101 21.2378 15.1623 21.5792 14.8187C21.9205 14.4752 22.1656 14.048 22.29 13.58C22.75 11.8525 22.75 8.25 22.75 8.25C22.75 8.25 22.75 4.6475 22.29 2.92Z" fill="currentcolor"/>
+                                    <path d="M9.50002 11.5213V4.97878L15.25 8.25003L9.50002 11.5213Z" fill="white"/>
+                                    </svg>                                          
+                            </a>
+                          </div> 
                       </div>      
                 </div>
             </main>
@@ -524,7 +634,7 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <div class="flex flex-col gap-2 p-3 md:p-3 md:gap-10">
                 <h3>Right Modal Content</h3>
                 <button onclick="innermodal.showModal()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Center Modal</button>
             </div>
@@ -547,7 +657,7 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <div class="flex flex-col gap-2 p-3 md:p-3 md:gap-10">
                 <h3>Inner Modal Content</h3>
             </div>
             <!-- Modal footer -->
@@ -569,7 +679,7 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <div class="flex flex-col gap-2 p-3 md:p-3 md:gap-10">
                 <h3>Left Modal Content</h3>
             </div>
             <!-- Modal footer -->
@@ -591,7 +701,7 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <div class="flex flex-col gap-3 p-3 md:p-6 md:gap-10">
+            <div class="flex flex-col gap-2 p-3 md:p-3 md:gap-10">
                 <h3>Center Modal Content</h3>
             </div>
             <!-- Modal footer -->

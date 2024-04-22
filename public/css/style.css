@@ -1055,12 +1055,6 @@ select {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
 }
-.line-clamp-4 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-}
 .block {
   display: block;
 }
@@ -3823,6 +3817,11 @@ ol {
 .group:hover .group-hover\:text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .peer:checked ~ .peer-checked\:flex {
